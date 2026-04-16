@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Accenture uses Graphik — we use Inter as closest available Google Font with similar metrics */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 4%;
+    --foreground: 0 0% 100%;
+
+    --card: 220 20% 8%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 220 20% 8%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 220 80% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 20% 14%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 65%;
+
+    --accent: 36 100% 50%;
+    --accent-foreground: 220 20% 4%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 220 80% 50%;
+
+    --radius: 0rem;
+
+    /* CAP360 brand colors from logo */
+    --cap-blue: 220 80% 50%;
+    --cap-green: 152 65% 38%;
+    --cap-orange: 36 100% 50%;
+    --cap-red: 15 79% 54%;
+    --cap-dark-blue: 220 60% 25%;
+    --cap-navy: 220 40% 10%;
+    --cap-yellow: 42 99% 48%;
+
+    --sidebar-background: 220 20% 6%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 220 80% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 14%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 220 80% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-sm font-medium text-foreground/80 hover:text-foreground transition-colors duration-200 cursor-pointer flex items-center gap-1;
+  }
+
+  .section-dark {
+    @apply bg-background;
+  }
+
+  .section-navy {
+    @apply bg-cap-navy;
+  }
+
+  .hero-title {
+    @apply text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-none;
+  }
+
+  .hero-subtitle {
+    @apply text-lg md:text-xl font-normal text-foreground/80 leading-relaxed;
+  }
+
+  .accent-bar {
+    @apply w-10 h-1 bg-cap-orange;
+  }
+
+  .insight-card {
+    @apply relative overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.02];
+  }
+
+  .insight-card-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent;
+  }
+
+  .cta-link {
+    @apply inline-flex items-center gap-2 text-foreground font-semibold hover:gap-3 transition-all duration-300;
+  }
+
+  .news-item {
+    @apply py-6 border-b border-border hover:bg-secondary/30 px-4 -mx-4 transition-colors cursor-pointer;
+  }
+}
+
+.mosaic-card .mosaic-desc  { opacity: 0; transition: opacity 250ms ease; }
+.mosaic-card .mosaic-title { opacity: 1; transition: opacity 250ms ease; }
+.mosaic-card .mosaic-overlay { display: block !important; opacity: 0; transition: opacity 300ms ease; }
+
+.mosaic-card:hover .mosaic-desc    { opacity: 1; }
+.mosaic-card:hover .mosaic-title   { opacity: 0; }
+.mosaic-card:hover .mosaic-overlay { opacity: 1; }
