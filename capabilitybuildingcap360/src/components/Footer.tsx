@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import logo from "@/assets/cap360-logo.png";
 
@@ -56,7 +56,7 @@ const Footer = () => {
             />
             <button className="bg-cap-orange text-background px-6 py-3 text-sm font-semibold hover:bg-cap-orange/90 transition-colors flex items-center gap-2">
               Subscribe
-              <ArrowRight className="w-4 h-4" />
+              <ChevronRight className="w-6 h-6" />
             </button>
           </div>
         </motion.div>
