@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Search } from "lucide-react";
+import { ChevronRight, Search } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
@@ -45,8 +45,8 @@ const CareersPage = () => {
           title="Create the future you imagine"
           subtitle="At CAP360, you'll grow in a culture of innovation, learning, and belonging — building skills that last a lifetime."
           image={heroImg}
-          ctaText="Search open roles"
-          ctaHref="#jobs"
+          // ctaText="Search open roles"
+          // ctaHref="#jobs"
         />
         <StatsBanner stats={stats} />
 
@@ -104,7 +104,7 @@ const CareersPage = () => {
                     <h3 className="text-lg font-semibold group-hover:text-cap-blue transition-colors">{cat.name}</h3>
                     <span className="text-sm text-muted-foreground">{cat.count.toLocaleString()} open positions</span>
                   </div>
-                  <ArrowRight className="w-5 h-5 text-cap-orange opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                  <ChevronRight className="w-5 h-5 text-cap-orange opacity-0 group-hover:opacity-100 transition-all duration-300" />
                 </motion.a>
               ))}
             </div>

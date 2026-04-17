@@ -365,7 +365,7 @@ const HRCAMS = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            HR consulting, advisory & managed services
+            HR Consulting, Advisory & Managed Services
           </motion.h1>
           <motion.p
             className="text-[18px] md:text-[20px] text-muted-White leading-[1.6] max-w-2xl mb-8"
@@ -501,9 +501,10 @@ const HRCAMS = () => {
       </section>
 
       {/* ===== SERVICES — ACCENTURE MOSAIC GRID ===== */}
+    {/* ===== SERVICES — ACCENTURE MOSAIC GRID ===== */}
       <section id="services" className="py-24" ref={servicesRef}>
         <div className="container mx-auto px-4 lg:px-8">
-          {/* Header — unchanged */}
+          {/* Header */}
           <motion.h2
             className="text-[34px] md:text-[40px] font-bold mb-4"
             initial={{ opacity: 0, y: 20 }}
@@ -530,7 +531,7 @@ const HRCAMS = () => {
                 key={rowIdx}
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "1fr 1fr",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 340px), 1fr))",
                   gap: 8,
                 }}
               >
@@ -540,7 +541,7 @@ const HRCAMS = () => {
                       <div
                         key={`img-${rowIdx}-${colIdx}`}
                         style={{
-                          height: 340,
+                          height: "clamp(200px, 30vw, 340px)",
                           overflow: "hidden",
                           background: "#111",
                         }}
@@ -558,24 +559,10 @@ const HRCAMS = () => {
                       </div>
                     );
                   }
+
                   /* ── Card cell ── */
                   const s = cell.item;
-                  const accentColors = [
-                    "bg-cap-yellow",
-                    "bg-cap-yellow",
-                    "bg-cap-green",
-                    "bg-cap-red",
-                    "bg-cap-dark-yellow",
-                    "bg-cap-yellow",
-                  ];
-                  const accentHex = [
-                    "#F6AE01",
-                    "#F6AE01",
-                    "#F6AE01",
-                    "#F6AE01",
-                    "#F6AE01",
-                    "#F6AE01",
-                  ];
+                  const accentHex = "#F6AE01";
 
                   return (
                     <motion.div
@@ -588,8 +575,8 @@ const HRCAMS = () => {
                       style={{
                         position: "relative",
                         background: "hsl(var(--card))",
-                        height: 340,
-                        padding: "60px 36px 28px",
+                        height: "clamp(260px, 30vw, 340px)",
+                        padding: "clamp(28px, 4vw, 60px) clamp(20px, 3vw, 36px) 28px",
                         cursor: "pointer",
                         overflow: "hidden",
                         display: "flex",
@@ -603,7 +590,7 @@ const HRCAMS = () => {
                         style={{
                           width: 32,
                           height: 3,
-                          background: accentHex[cell.index % accentHex.length],
+                          background: accentHex,
                           marginBottom: 16,
                           flexShrink: 0,
                         }}
@@ -612,7 +599,7 @@ const HRCAMS = () => {
                       {/* Label */}
                       <div
                         style={{
-                          fontSize: "1.15rem",
+                          fontSize: "clamp(0.85rem, 1.5vw, 1.15rem)",
                           fontWeight: 700,
                           letterSpacing: "0.08em",
                           textTransform: "uppercase",
@@ -628,12 +615,12 @@ const HRCAMS = () => {
                       <div
                         className="mosaic-title"
                         style={{
-                          fontSize: "1.5rem",
+                          fontSize: "clamp(1.1rem, 2vw, 1.5rem)",
                           fontWeight: 700,
                           lineHeight: 1.25,
                           color: "hsl(var(--white))",
                           flex: 1,
-                          marginTop: 35,
+                          marginTop: "clamp(16px, 3vw, 35px)",
                         }}
                       >
                         {s.title2}
@@ -643,14 +630,14 @@ const HRCAMS = () => {
                       <div
                         className="mosaic-desc"
                         style={{
-                          fontSize: "1.3rem",
+                          fontSize: "clamp(1rem, 1.5vw, 1.3rem)",
                           fontWeight: 400,
                           lineHeight: 1.65,
                           color: "hsl(var(--muted-white))",
                           position: "absolute",
-                          top: 135,
-                          left: 36,
-                          right: 36,
+                          top: "clamp(110px, 18vw, 135px)",
+                          left: "clamp(20px, 3vw, 36px)",
+                          right: "clamp(20px, 3vw, 36px)",
                           bottom: 60,
                           overflow: "hidden",
                           pointerEvents: "none",
@@ -685,8 +672,7 @@ const HRCAMS = () => {
                           style={{
                             width: 24,
                             height: 24,
-                            background:
-                              accentHex[cell.index % accentHex.length],
+                            background: accentHex,
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
@@ -703,9 +689,9 @@ const HRCAMS = () => {
                         style={{
                           position: "absolute",
                           inset: 0,
-                          display: "block", // ← CHANGED from "none"
+                          display: "block",
                           transition: "opacity 300ms ease",
-                          background: `linear-gradient(135deg, ${accentHex[cell.index % accentHex.length]}18, transparent)`,
+                          background: `linear-gradient(135deg, ${accentHex}18, transparent)`,
                           pointerEvents: "none",
                           zIndex: 0,
                         }}
@@ -969,7 +955,7 @@ const HRCAMS = () => {
       </section>
 
       {/* ===== TRENDING ===== */}
-      <section id="trending" className="py-24" ref={trendingRef}>
+      {/* <section id="trending" className="py-24" ref={trendingRef}>
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between mb-4">
             <motion.h2
@@ -1037,7 +1023,7 @@ const HRCAMS = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ===== PARTNERS ===== */}
       {/* <section id="partners" className="py-24 section-navy" ref={partnersRef}>

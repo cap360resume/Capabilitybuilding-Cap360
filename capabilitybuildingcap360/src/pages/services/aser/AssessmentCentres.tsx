@@ -14,6 +14,20 @@ const AssessmentCentres = () => {
   const { ref: bRef, isInView: bInView } = useScrollAnimation(0.1);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
+  // ── Responsive visible cards ──────────────────────────────────────────────
+  const [visibleCards, setVisibleCards] = useState(3);
+  useEffect(() => {
+    const updateVisible = () => {
+      const w = window.innerWidth;
+      if (w < 640) setVisibleCards(1);
+      else if (w < 1024) setVisibleCards(2);
+      else setVisibleCards(3);
+    };
+    updateVisible();
+    window.addEventListener("resize", updateVisible);
+    return () => window.removeEventListener("resize", updateVisible);
+  }, []);
+
   const solutions = [
     {
       icon: Layers,
@@ -74,9 +88,7 @@ const AssessmentCentres = () => {
     { icon: <Layers className="w-8 h-8 text-cap-red" />, title: "Scalable virtual delivery", desc: "Hybrid and fully virtual assessment centres that maintain rigour while reducing cost and complexity." },
   ];
 
-  const visibleCards = 3;
-  const GAP = 24;
-
+  const GAP = visibleCards === 1 ? 16 : 24;
   const infiniteCards = [...cards, ...cards, ...cards];
   const cloneOffset = cards.length;
 
@@ -93,13 +105,30 @@ const AssessmentCentres = () => {
     const containerWidth = containerRef.current.offsetWidth;
     const totalGaps = GAP * (visibleCards - 1);
     return (containerWidth - totalGaps) / visibleCards + GAP;
-  }, []);
+  }, [GAP, visibleCards]);
 
+  // Initial setup
   useEffect(() => {
     const w = getCardWidth();
-    if (w > 0) { setOffset(w * cloneOffset); setCarouselReady(true); }
+    if (w > 0) {
+      setOffset(w * cloneOffset);
+      setCarouselReady(true);
+    }
   }, [getCardWidth, cloneOffset]);
 
+  // Re-calculate when visibleCards changes (breakpoint switch)
+  useEffect(() => {
+    setIsTransitioning(false);
+    isTransitioningRef.current = false;
+    setCurrentIndex(0);
+    const w = getCardWidth();
+    if (w > 0) {
+      setOffset(w * cloneOffset);
+      setCarouselReady(true);
+    }
+  }, [visibleCards]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Handle window resize without breakpoint change
   useEffect(() => {
     const onResize = () => {
       const w = getCardWidth();
@@ -219,13 +248,19 @@ const AssessmentCentres = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-card/30" ref={bRef}>
+      <section className="py-12 md:py-20 bg-card/30" ref={bRef}>
         <div className="container mx-auto px-4 lg:px-8">
-          <motion.h2 className="text-[28px] md:text-[36px] font-bold mb-10" initial={{ opacity: 0, y: 20 }} animate={bInView ? { opacity: 1, y: 0 } : {}}>What you'll achieve</motion.h2>
+          <motion.h2
+            className="text-[24px] md:text-[28px] lg:text-[36px] font-bold mb-6 md:mb-10"
+            initial={{ opacity: 0, y: 20 }}
+            animate={bInView ? { opacity: 1, y: 0 } : {}}
+          >
+            What you'll achieve
+          </motion.h2>
           <div className="overflow-hidden" ref={containerRef}>
             <div
               ref={trackRef}
-              className="flex gap-6"
+              className="flex gap-4 md:gap-6"
               style={{
                 transform: `translateX(-${offset}px)`,
                 transition: isTransitioning ? "transform 500ms ease" : "none",
@@ -237,22 +272,22 @@ const AssessmentCentres = () => {
                 <div
                   key={i}
                   data-card
-                  className="bg-card border border-border/30 p-8 flex-shrink-0"
+                  className="bg-card border border-border/30 p-5 md:p-8 flex-shrink-0"
                   style={{
                     width: `calc((100% - ${GAP * (visibleCards - 1)}px) / ${visibleCards})`,
                     minWidth: `calc((100% - ${GAP * (visibleCards - 1)}px) / ${visibleCards})`,
                   }}
                 >
                   {card.icon}
-                  <h3 className="text-[24px] font-bold mt-4 mb-2">{card.title}</h3>
-                  <p className="text-[18px] text-muted-white leading-relaxed">{card.desc}</p>
+                  <h3 className="text-[20px] md:text-[24px] font-bold mt-3 md:mt-4 mb-1 md:mb-2">{card.title}</h3>
+                  <p className="text-[15px] md:text-[18px] text-muted-white leading-relaxed">{card.desc}</p>
                 </div>
               ))}
             </div>
           </div>
-          <div className="flex gap-3 mt-6">
-            <button onClick={handlePrev} className="w-10 h-10 border border-border/50 flex items-center justify-center hover:bg-card transition-colors text-lg">←</button>
-            <button onClick={handleNext} className="w-10 h-10 border border-border/50 flex items-center justify-center hover:bg-card transition-colors text-lg">→</button>
+          <div className="flex gap-3 mt-4 md:mt-6">
+            <button onClick={handlePrev} className="w-9 h-9 md:w-10 md:h-10 border border-border/50 flex items-center justify-center hover:bg-card transition-colors text-base md:text-lg">←</button>
+            <button onClick={handleNext} className="w-9 h-9 md:w-10 md:h-10 border border-border/50 flex items-center justify-center hover:bg-card transition-colors text-base md:text-lg">→</button>
           </div>
         </div>
       </section>
@@ -269,3 +304,4 @@ const AssessmentCentres = () => {
 };
 
 export default AssessmentCentres;
+

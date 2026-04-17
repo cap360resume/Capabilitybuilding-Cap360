@@ -500,24 +500,23 @@ const ASER = () => {
       </section>
 
       {/* ===== SERVICES — MOSAIC GRID ===== */}
-      <section id="services" className="py-24" ref={servicesRef}>
-       <div className="container mx-auto px-4 lg:px-8">
+  <section id="services" className="py-24" ref={servicesRef}>
+  <div className="container mx-auto px-4 lg:px-8">
     <motion.h2
       className="text-[34px] md:text-[40px] font-bold mb-4"
       initial={{ opacity: 0, y: 20 }}
       animate={servicesInView ? { opacity: 1, y: 0 } : {}}
     >
-            Reinvent with ASER
-          </motion.h2>
-          <p className="text-[18px] text-muted-whitemb-14 max-w-2xl mb-5">
-            Six integrated assessment solutions designed to transform every
-            stage of the talent lifecycle. Each solution is modular yet
-            interconnected — choose one or combine multiple for end-to-end
-            talent intelligence.
-          </p>
+      Reinvent with ASER
+    </motion.h2>
+    <p className="text-[18px] text-muted-white mb-14 max-w-2xl mb-5">
+      Six integrated assessment solutions designed to transform every stage of
+      the talent lifecycle. Each solution is modular yet interconnected — choose
+      one or combine multiple for end-to-end talent intelligence.
+    </p>
 
-          {/* Mosaic grid */}
-        <motion.div
+    {/* Mosaic grid */}
+    <motion.div
       initial={{ opacity: 0 }}
       animate={servicesInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.4 }}
@@ -528,7 +527,7 @@ const ASER = () => {
           key={rowIdx}
           style={{
             display: "grid",
-            gridTemplateColumns: "1fr 1fr",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 340px), 1fr))",
             gap: 8,
           }}
         >
@@ -538,7 +537,7 @@ const ASER = () => {
                 <div
                   key={`img-${rowIdx}-${colIdx}`}
                   style={{
-                    height: 340,
+                    height: "clamp(200px, 30vw, 340px)",
                     overflow: "hidden",
                     background: "#111",
                   }}
@@ -556,18 +555,12 @@ const ASER = () => {
                 </div>
               );
             }
-                  /* ── Card cell ── */
-                  const s = cell.item;
-                  const accentHex = [
-                    "#E85C2D",
-                    "#E85C2D",
-                    "#E85C2D",
-                    "#E85C2D",
-                    "#E85C2D",
-                    "#E85C2D",
-                  ];
 
-                return (
+            /* ── Card cell ── */
+            const s = cell.item;
+            const accentHex = "#E85C2D";
+
+            return (
               <motion.div
                 key={s.title}
                 className="mosaic-card group"
@@ -578,8 +571,8 @@ const ASER = () => {
                 style={{
                   position: "relative",
                   background: "hsl(var(--card))",
-                  height: 340,
-                  padding: "60px 36px 28px",
+                  height: "clamp(260px, 30vw, 340px)",
+                  padding: "clamp(28px, 4vw, 60px) clamp(20px, 3vw, 36px) 28px",
                   cursor: "pointer",
                   overflow: "hidden",
                   display: "flex",
@@ -593,7 +586,7 @@ const ASER = () => {
                   style={{
                     width: 32,
                     height: 3,
-                    background: accentHex[cell.index % accentHex.length],
+                    background: accentHex,
                     marginBottom: 16,
                     flexShrink: 0,
                   }}
@@ -602,14 +595,13 @@ const ASER = () => {
                 {/* Label */}
                 <div
                   style={{
-                    fontSize: "1.15rem",
+                    fontSize: "clamp(0.85rem, 1.5vw, 1.15rem)",
                     fontWeight: 700,
                     letterSpacing: "0.08em",
                     textTransform: "uppercase",
                     color: "hsl(var(--muted-white))",
                     marginBottom: 12,
                     flexShrink: 0,
-                    
                   }}
                 >
                   {s.title}
@@ -619,14 +611,12 @@ const ASER = () => {
                 <div
                   className="mosaic-title"
                   style={{
-                    fontSize: "1.5rem",
+                    fontSize: "clamp(1.1rem, 2vw, 1.5rem)",
                     fontWeight: 700,
                     lineHeight: 1.25,
                     color: "hsl(var(--white))",
                     flex: 1,
-                    marginTop: 35,
-                   
-                    
+                    marginTop: "clamp(16px, 3vw, 35px)",
                   }}
                 >
                   {s.title2}
@@ -636,14 +626,14 @@ const ASER = () => {
                 <div
                   className="mosaic-desc"
                   style={{
-                    fontSize: "1.3rem",
+                    fontSize: "clamp(1rem, 1.5vw, 1.3rem)",
                     fontWeight: 400,
                     lineHeight: 1.65,
                     color: "hsl(var(--muted-white))",
                     position: "absolute",
-                    top: 135,
-                    left: 36,
-                    right: 36,
+                    top: "clamp(110px, 18vw, 135px)",
+                    left: "clamp(20px, 3vw, 36px)",
+                    right: "clamp(20px, 3vw, 36px)",
                     bottom: 60,
                     overflow: "hidden",
                     pointerEvents: "none",
@@ -678,7 +668,7 @@ const ASER = () => {
                     style={{
                       width: 24,
                       height: 24,
-                      background: accentHex[cell.index % accentHex.length],
+                      background: accentHex,
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -695,21 +685,21 @@ const ASER = () => {
                   style={{
                     position: "absolute",
                     inset: 0,
-                    display: "block",          // ← CHANGED from "none"
+                    display: "block",
                     transition: "opacity 300ms ease",
-                    background: `linear-gradient(135deg, ${accentHex[cell.index % accentHex.length]}18, transparent)`,
+                    background: `linear-gradient(135deg, ${accentHex}18, transparent)`,
                     pointerEvents: "none",
                     zIndex: 0,
                   }}
                 />
               </motion.div>
-                  );
-                })}
-              </div>
-            ))}
-          </motion.div>
+            );
+          })}
         </div>
-      </section>
+      ))}
+    </motion.div>
+  </div>
+</section>
 
       {/* ── Why Choose Us ──────────────────────────────────────────────────────── */}
       <section
@@ -947,7 +937,7 @@ const ASER = () => {
       </section>
 
       {/* ===== TRENDING ===== */}
-      <section id="trending" className="py-24" ref={trendingRef}>
+      {/* <section id="trending" className="py-24" ref={trendingRef}>
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between mb-4">
             <motion.h2
@@ -1015,7 +1005,7 @@ const ASER = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ===== PARTNERS ===== */}
       {/* <section id="partners" className="py-24 section-navy" ref={partnersRef}>

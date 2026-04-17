@@ -114,6 +114,7 @@
   }
 }
 
+
 .mosaic-card .mosaic-desc  { opacity: 0; transition: opacity 250ms ease; }
 .mosaic-card .mosaic-title { opacity: 1; transition: opacity 250ms ease; }
 .mosaic-card .mosaic-overlay { display: block !important; opacity: 0; transition: opacity 300ms ease; }

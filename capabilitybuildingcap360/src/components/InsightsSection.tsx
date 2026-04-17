@@ -62,10 +62,10 @@ const InsightsSection = () => {
                     <h3 className="text-lg font-bold leading-snug text-foreground group-hover:text-cap-blue transition-colors duration-300">
                       {insight.title}
                     </h3>
-                     <a href="#" className="cta-link text-sm mt-6">
+                     {/* <a href="#" className="cta-link text-sm mt-6">
                     Read more
                     <ChevronRight className="w-6 h-6 text-cap-orange" />
-                  </a>
+                  </a> */}
 
                   </div>
                 </>
@@ -79,10 +79,10 @@ const InsightsSection = () => {
                       {insight.title}
                     </h3>
                   </div>
-                  <a href="/blog" className="cta-link text-sm mt-6">
+                  {/* <a href="/blog" className="cta-link text-sm mt-6">
                     Read more
                     <ChevronRight className="w-6 h-6 text-cap-orange" />
-                  </a>
+                  </a> */}
                 </div>
               )}
             </motion.div>

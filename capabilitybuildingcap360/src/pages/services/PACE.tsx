@@ -355,7 +355,7 @@ const PACE = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Professional alignment & career enhancement
+            Professional Alignment & Career Enhancement
           </motion.h1>
           <motion.p
             className="text-[18px] md:text-[20px] text-muted-white leading-[1.6] max-w-2xl mb-8"
@@ -491,215 +491,207 @@ const PACE = () => {
       </section>
 
       {/* ===== SERVICES — MOSAIC GRID ===== */}
-     <section id="services" className="py-24" ref={servicesRef}>
-  <div className="container mx-auto px-4 lg:px-8">
-    <motion.h2
-      className="text-[34px] md:text-[40px] font-bold mb-4"
-      initial={{ opacity: 0, y: 20 }}
-      animate={servicesInView ? { opacity: 1, y: 0 } : {}}
-    >
-      Reinvent with PACE
-    </motion.h2>
-    <p className="text-[18px] text-muted-white mb-14 max-w-2xl">
-      Six integrated service lines designed to transform every dimension
-      of your people's careers. Each service line is modular yet
-      interconnected—choose one solution or combine multiple for
-      comprehensive transformation.
-    </p>
+    {/* ===== SERVICES — MOSAIC GRID ===== */}
+      <section id="services" className="py-24" ref={servicesRef}>
+        <div className="container mx-auto px-4 lg:px-8">
+          <motion.h2
+            className="text-[34px] md:text-[40px] font-bold mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={servicesInView ? { opacity: 1, y: 0 } : {}}
+          >
+            Reinvent with PACE
+          </motion.h2>
+          <p className="text-[18px] text-muted-white mb-14 max-w-2xl">
+            Six integrated service lines designed to transform every dimension
+            of your people's careers. Each service line is modular yet
+            interconnected—choose one solution or combine multiple for
+            comprehensive transformation.
+          </p>
 
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={servicesInView ? { opacity: 1 } : {}}
-      transition={{ duration: 0.4 }}
-      style={{ display: "flex", flexDirection: "column", gap: 8 }}
-    >
-      {mosaicRows.map((row, rowIdx) => (
-        <div
-          key={rowIdx}
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: 8,
-          }}
-        >
-          {row.map((cell, colIdx) => {
-            if (cell.type === "image") {
-              return (
-                <div
-                  key={`img-${rowIdx}-${colIdx}`}
-                  style={{
-                    height: 340,
-                    overflow: "hidden",
-                    background: "#111",
-                  }}
-                >
-                  <img
-                    src={cell.src}
-                    alt="service visual"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      display: "block",
-                    }}
-                  />
-                </div>
-              );
-            }
-
-            const s = cell.item;
-            const accentHex = [
-              "#20915C",
-              "#20915C",
-              "#20915C",
-              "#20915C",
-              "#20915C",
-              "#20915C",
-            ];
-
-            return (
-              <motion.div
-                key={s.title}
-                className="mosaic-card group"
-                initial={{ opacity: 0, y: 24 }}
-                animate={servicesInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.08 * cell.index, duration: 0.4 }}
-                onClick={() => navigate(s.path)}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={servicesInView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.4 }}
+            style={{ display: "flex", flexDirection: "column", gap: 8 }}
+          >
+            {mosaicRows.map((row, rowIdx) => (
+              <div
+                key={rowIdx}
                 style={{
-                  position: "relative",
-                  background: "hsl(var(--card))",
-                  height: 340,
-                  padding: "60px 36px 28px",
-                  cursor: "pointer",
-                  overflow: "hidden",
-                  display: "flex",
-                  flexDirection: "column",
-                  fontFamily: "inherit",
-                  border: "1px solid hsl(var(--border) / 0.3)",
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 340px), 1fr))",
+                  gap: 8,
                 }}
               >
-                {/* Accent bar */}
-                <div
-                  style={{
-                    width: 32,
-                    height: 3,
-                    background: accentHex[cell.index % accentHex.length],
-                    marginBottom: 16,
-                    flexShrink: 0,
-                  }}
-                />
+                {row.map((cell, colIdx) => {
+                  if (cell.type === "image") {
+                    return (
+                      <div
+                        key={`img-${rowIdx}-${colIdx}`}
+                        style={{
+                          height: "clamp(200px, 30vw, 340px)",
+                          overflow: "hidden",
+                          background: "#111",
+                        }}
+                      >
+                        <img
+                          src={cell.src}
+                          alt="service visual"
+                          style={{
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                            display: "block",
+                          }}
+                        />
+                      </div>
+                    );
+                  }
 
-                {/* Label */}
-                <div
-                  style={{
-                    fontSize: "1.15rem",
-                    fontWeight: 700,
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                    color: "hsl(var(--muted-white))",
-                    marginBottom: 12,
-                    flexShrink: 0,
-                    
-                  }}
-                >
-                  {s.title}
-                </div>
+                  const s = cell.item;
+                  const accentHex = "#20915C";
 
-                {/* Title — fades out on hover */}
-                <div
-                  className="mosaic-title"
-                  style={{
-                    fontSize: "1.5rem",
-                    fontWeight: 700,
-                    lineHeight: 1.25,
-                    color: "hsl(var(--white))",
-                    flex: 1,
-                    marginTop: 35,
-                   
-                    
-                  }}
-                >
-                  {s.title2}
-                </div>
+                  return (
+                    <motion.div
+                      key={s.title}
+                      className="mosaic-card group"
+                      initial={{ opacity: 0, y: 24 }}
+                      animate={servicesInView ? { opacity: 1, y: 0 } : {}}
+                      transition={{ delay: 0.08 * cell.index, duration: 0.4 }}
+                      onClick={() => navigate(s.path)}
+                      style={{
+                        position: "relative",
+                        background: "hsl(var(--card))",
+                        height: "clamp(260px, 30vw, 340px)",
+                        padding: "clamp(28px, 4vw, 60px) clamp(20px, 3vw, 36px) 28px",
+                        cursor: "pointer",
+                        overflow: "hidden",
+                        display: "flex",
+                        flexDirection: "column",
+                        fontFamily: "inherit",
+                        border: "1px solid hsl(var(--border) / 0.3)",
+                      }}
+                    >
+                      {/* Accent bar */}
+                      <div
+                        style={{
+                          width: 32,
+                          height: 3,
+                          background: accentHex,
+                          marginBottom: 16,
+                          flexShrink: 0,
+                        }}
+                      />
 
-                {/* Description — fades in on hover */}
-                <div
-                  className="mosaic-desc"
-                  style={{
-                    fontSize: "1.3rem",
-                    fontWeight: 400,
-                    lineHeight: 1.65,
-                    color: "hsl(var(--muted-white))",
-                    position: "absolute",
-                    top: 135,
-                    left: 36,
-                    right: 36,
-                    bottom: 60,
-                    overflow: "hidden",
-                    pointerEvents: "none",
-                  }}
-                >
-                  {s.description}
-                </div>
+                      {/* Label */}
+                      <div
+                        style={{
+                          fontSize: "clamp(0.85rem, 1.5vw, 1.15rem)",
+                          fontWeight: 700,
+                          letterSpacing: "0.08em",
+                          textTransform: "uppercase",
+                          color: "hsl(var(--muted-white))",
+                          marginBottom: 12,
+                          flexShrink: 0,
+                        }}
+                      >
+                        {s.title}
+                      </div>
 
-                {/* Learn more */}
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 8,
-                    marginTop: "auto",
-                    paddingTop: 16,
-                    flexShrink: 0,
-                    position: "relative",
-                    zIndex: 2,
-                  }}
-                >
-                  <span
-                    style={{
-                      fontSize: "1rem",
-                      fontWeight: 600,
-                      color: "hsl(var(--white))",
-                    }}
-                  >
-                    Learn more
-                  </span>
-                  <div
-                    style={{
-                      width: 24,
-                      height: 24,
-                      background: accentHex[cell.index % accentHex.length],
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      flexShrink: 0,
-                    }}
-                  >
-                    <ChevronRight size={18} color="#fff" />
-                  </div>
-                </div>
+                      {/* Title — fades out on hover */}
+                      <div
+                        className="mosaic-title"
+                        style={{
+                          fontSize: "clamp(1.1rem, 2vw, 1.5rem)",
+                          fontWeight: 700,
+                          lineHeight: 1.25,
+                          color: "hsl(var(--white))",
+                          flex: 1,
+                          marginTop: "clamp(16px, 3vw, 35px)",
+                        }}
+                      >
+                        {s.title2}
+                      </div>
 
-                {/* Overlay — fades in on hover */}
-                <div
-                  className="mosaic-overlay"
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    display: "block",          // ← CHANGED from "none"
-                    transition: "opacity 300ms ease",
-                    background: `linear-gradient(135deg, ${accentHex[cell.index % accentHex.length]}18, transparent)`,
-                    pointerEvents: "none",
-                    zIndex: 0,
-                  }}
-                />
-              </motion.div>
-            );
-          })}
+                      {/* Description — fades in on hover */}
+                      <div
+                        className="mosaic-desc"
+                        style={{
+                          fontSize: "clamp(1rem, 1.5vw, 1.3rem)",
+                          fontWeight: 400,
+                          lineHeight: 1.65,
+                          color: "hsl(var(--muted-white))",
+                          position: "absolute",
+                          top: "clamp(110px, 18vw, 135px)",
+                          left: "clamp(20px, 3vw, 36px)",
+                          right: "clamp(20px, 3vw, 36px)",
+                          bottom: 60,
+                          overflow: "hidden",
+                          pointerEvents: "none",
+                        }}
+                      >
+                        {s.description}
+                      </div>
+
+                      {/* Learn more */}
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: 8,
+                          marginTop: "auto",
+                          paddingTop: 16,
+                          flexShrink: 0,
+                          position: "relative",
+                          zIndex: 2,
+                        }}
+                      >
+                        <span
+                          style={{
+                            fontSize: "1rem",
+                            fontWeight: 600,
+                            color: "hsl(var(--white))",
+                          }}
+                        >
+                          Learn more
+                        </span>
+                        <div
+                          style={{
+                            width: 24,
+                            height: 24,
+                            background: accentHex,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            flexShrink: 0,
+                          }}
+                        >
+                          <ChevronRight size={18} color="#fff" />
+                        </div>
+                      </div>
+
+                      {/* Overlay — fades in on hover */}
+                      <div
+                        className="mosaic-overlay"
+                        style={{
+                          position: "absolute",
+                          inset: 0,
+                          display: "block",
+                          transition: "opacity 300ms ease",
+                          background: `linear-gradient(135deg, ${accentHex}18, transparent)`,
+                          pointerEvents: "none",
+                          zIndex: 0,
+                        }}
+                      />
+                    </motion.div>
+                  );
+                })}
+              </div>
+            ))}
+          </motion.div>
         </div>
-      ))}
-    </motion.div>
-  </div>
       </section>
+      {/* =====  Why Cap360 (TAB SECTION) ===== */}
  <section
         id="why-us"
         className="py-28 section-navy relative overflow-hidden"
@@ -919,7 +911,7 @@ const PACE = () => {
       </section>
 
       {/* ===== TRENDING ===== */}
-      <section id="trending" className="py-24" ref={trendingRef}>
+      {/* <section id="trending" className="py-24" ref={trendingRef}>
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between mb-4">
             <motion.h2
@@ -987,7 +979,7 @@ const PACE = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
 
       {/* ===== MEET OUR LEADER ===== */}

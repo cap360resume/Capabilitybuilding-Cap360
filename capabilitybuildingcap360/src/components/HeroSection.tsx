@@ -63,7 +63,7 @@ const HeroSection = () => {
               strategy. That's why we work with organizations to rewrite the
               rules of growth, innovation and resilience.
             </motion.p>
-            <motion.a
+            {/* <motion.a
               href="/what-we-do"
               className="cta-link text-lg"
               initial={{ opacity: 0 }}
@@ -73,7 +73,7 @@ const HeroSection = () => {
             >
               See what we do
               < ChevronRight className="w-6 h-6 text-cap-orange" />
-            </motion.a>
+            </motion.a> */}
           </div>
         </div>
       </div>

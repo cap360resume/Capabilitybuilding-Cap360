@@ -6,22 +6,22 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const awards = [
   {
     tab: "Business Transformation",
-    title: "A Leader in Transformation",
+    title: "From Strategy to Scalable Impact",
     description:
-      "Our Chair and CEO is recognized among the Most Powerful People in Business. Every day, our people demonstrate why CAP360 is our clients' transformation partner of choice.",
+      "' Transformation isn’t about intent—it’s about execution that delivers results",
   },
   {
     tab: "People Strategy",
-    title: "A Great Place To Work®",
+    title: "Building Organizations that Perform & Endure",
     description:
-      "We are proud to have earned a top spot on the Great Place To Work® list of the World's Best Workplaces™. This recognition is based on feedback from our people worldwide.",
-  },
+"Great businesses are built on strong people systems—not just great talent."  },
   {
-    tab: "Sectors",
-    title: "A Trusted Industry Leader",
+    tab: "Sectors We Serve",
+    title: "Deep Expertise. Contextual Solutions.",
     description:
-      "CAP360 is a Leader in multiple industry analyst reports for cloud transformation, AI strategy, and digital consulting services.",
-  },
+"Global Capability Centers Build, scale, and optimize GCCs with the right talent architecture, operating models, and governance frameworks."
+
+},
 ];
 
 const AwardsSection = () => {
