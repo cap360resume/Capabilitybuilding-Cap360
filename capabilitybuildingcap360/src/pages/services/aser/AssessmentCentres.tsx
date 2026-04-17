@@ -81,14 +81,19 @@ const AssessmentCentres = () => {
 
   // ─── Infinite carousel ────────────────────────────────────────────────────
   const cards = [
-    { icon: <Target className="w-8 h-8 text-cap-red" />, title: "Bespoke assessment design", desc: "Custom centres built around your business context, competency framework, and specific role requirements." },
-    { icon: <Award className="w-8 h-8 text-cap-red" />, title: "Accelerated leadership pipeline", desc: "Identify high-potential talent earlier and build robust succession pipelines through development centres." },
-    { icon: <ClipboardList className="w-8 h-8 text-cap-red" />, title: "Objective selection decisions", desc: "Reduce bias in hiring and promotion with standardised, multi-method assessment processes." },
-    { icon: <CheckCircle className="w-8 h-8 text-cap-red" />, title: "Actionable development insights", desc: "Rich individual feedback reports with clear development recommendations and coaching pathways." },
-    { icon: <Layers className="w-8 h-8 text-cap-red" />, title: "Scalable virtual delivery", desc: "Hybrid and fully virtual assessment centres that maintain rigour while reducing cost and complexity." },
+    { icon: <Target className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-red" />, title: "Bespoke assessment design", desc: "Custom centres built around your business context, competency framework, and specific role requirements." },
+    { icon: <Award className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-red" />, title: "Accelerated leadership pipeline", desc: "Identify high-potential talent earlier and build robust succession pipelines through development centres." },
+    { icon: <ClipboardList className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-red" />, title: "Objective selection decisions", desc: "Reduce bias in hiring and promotion with standardised, multi-method assessment processes." },
+    { icon: <CheckCircle className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-red" />, title: "Actionable development insights", desc: "Rich individual feedback reports with clear development recommendations and coaching pathways." },
+    { icon: <Layers className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-red" />, title: "Scalable virtual delivery", desc: "Hybrid and fully virtual assessment centres that maintain rigour while reducing cost and complexity." },
   ];
 
-  const GAP = visibleCards === 1 ? 16 : 24;
+  /**
+   * GAP is 0 on mobile so the single card fills exactly 100% of the container
+   * and getCardWidth returns containerWidth with no gap arithmetic at all.
+   */
+  const GAP = visibleCards === 1 ? 0 : 24;
+
   const infiniteCards = [...cards, ...cards, ...cards];
   const cloneOffset = cards.length;
 
@@ -100,9 +105,16 @@ const AssessmentCentres = () => {
   const [carouselReady, setCarouselReady] = useState(false);
   const isTransitioningRef = useRef(false);
 
+  /**
+   * Returns the pixel distance to translate per slide step.
+   *   mobile  → containerWidth          (1 full-width card, no gap)
+   *   tablet  → cardWidth + 24px gap
+   *   desktop → cardWidth + 24px gap
+   */
   const getCardWidth = useCallback((): number => {
     if (!containerRef.current) return 0;
     const containerWidth = containerRef.current.offsetWidth;
+    if (visibleCards === 1) return containerWidth;
     const totalGaps = GAP * (visibleCards - 1);
     return (containerWidth - totalGaps) / visibleCards + GAP;
   }, [GAP, visibleCards]);
@@ -248,11 +260,10 @@ const AssessmentCentres = () => {
         </div>
       </section>
 
-      {/* ── "What you'll achieve" carousel — fully responsive ── */}
+      {/* ── "What you'll achieve" carousel ── */}
       <section className="py-10 sm:py-14 md:py-20 bg-card/30" ref={bRef}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
-          {/* Section heading — 4-step responsive scale */}
           <motion.h2
             className="text-[22px] sm:text-[26px] md:text-[30px] lg:text-[36px] font-bold mb-6 sm:mb-8 md:mb-10"
             initial={{ opacity: 0, y: 20 }}
@@ -261,13 +272,11 @@ const AssessmentCentres = () => {
             What you'll achieve
           </motion.h2>
 
-          {/* Carousel wrapper — clips the sliding track */}
           <div className="overflow-hidden w-full" ref={containerRef}>
             <div
               ref={trackRef}
               className="flex"
               style={{
-                /* Gap is applied via inline style so JS offset calc always stays in sync */
                 gap: `${GAP}px`,
                 transform: `translateX(-${offset}px)`,
                 transition: isTransitioning ? "transform 500ms ease" : "none",
@@ -281,14 +290,22 @@ const AssessmentCentres = () => {
                   data-card
                   className="bg-card border border-border/30 flex-shrink-0 flex flex-col p-4 sm:p-6 md:p-8"
                   style={{
-                    width: `calc((100% - ${GAP * (visibleCards - 1)}px) / ${visibleCards})`,
-                    minWidth: `calc((100% - ${GAP * (visibleCards - 1)}px) / ${visibleCards})`,
+                    /*
+                     * Mobile  (visibleCards=1, GAP=0): card fills 100% — no gap subtraction needed
+                     * Tablet  (visibleCards=2, GAP=24): (100% - 24) / 2
+                     * Desktop (visibleCards=3, GAP=24): (100% - 48) / 3
+                     */
+                    width: visibleCards === 1
+                      ? "100%"
+                      : `calc((100% - ${GAP * (visibleCards - 1)}px) / ${visibleCards})`,
+                    minWidth: visibleCards === 1
+                      ? "100%"
+                      : `calc((100% - ${GAP * (visibleCards - 1)}px) / ${visibleCards})`,
+                    overflow: "hidden",
+                    wordBreak: "break-word",
                   }}
                 >
-                  {/* Icon wrapper scales the SVG at each breakpoint */}
-                  <div className="[&>svg]:w-6 [&>svg]:h-6 sm:[&>svg]:w-7 sm:[&>svg]:h-7 md:[&>svg]:w-8 md:[&>svg]:h-8">
-                    {card.icon}
-                  </div>
+                  {card.icon}
 
                   <h3 className="text-[15px] sm:text-[17px] md:text-[20px] lg:text-[22px] font-bold mt-3 sm:mt-4 mb-1 sm:mb-2 leading-snug">
                     {card.title}
@@ -302,7 +319,6 @@ const AssessmentCentres = () => {
             </div>
           </div>
 
-          {/* Navigation buttons — scale with breakpoint */}
           <div className="flex gap-2 sm:gap-3 mt-4 sm:mt-5 md:mt-6">
             <button
               onClick={handlePrev}

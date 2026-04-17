@@ -14,6 +14,20 @@ const CompetencyAssessments = () => {
   const { ref: bRef, isInView: bInView } = useScrollAnimation(0.1);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
+  // ── Responsive visible cards ──────────────────────────────────────────────
+  const [visibleCards, setVisibleCards] = useState(3);
+  useEffect(() => {
+    const updateVisible = () => {
+      const w = window.innerWidth;
+      if (w < 640) setVisibleCards(1);
+      else if (w < 1024) setVisibleCards(2);
+      else setVisibleCards(3);
+    };
+    updateVisible();
+    window.addEventListener("resize", updateVisible);
+    return () => window.removeEventListener("resize", updateVisible);
+  }, []);
+
   const solutions = [
     {
       icon: Target,
@@ -67,15 +81,14 @@ const CompetencyAssessments = () => {
 
   // ─── Infinite carousel ────────────────────────────────────────────────────
   const cards = [
-    { icon: <Target className="w-8 h-8 text-cap-red" />, title: "Validated competency frameworks", desc: "Organisation-specific competency models aligned to strategy, culture, and role requirements for accurate talent assessment." },
-    { icon: <ClipboardList className="w-8 h-8 text-cap-red" />, title: "Objective talent evaluation", desc: "Multi-method assessments that eliminate bias and deliver reliable, comparable competency data across the workforce." },
-    { icon: <BarChart3 className="w-8 h-8 text-cap-red" />, title: "Data-driven talent decisions", desc: "Rich analytics and heatmaps that inform succession planning, talent reviews, and strategic workforce investments." },
-    { icon: <CheckCircle className="w-8 h-8 text-cap-red" />, title: "Targeted development plans", desc: "Personalised development roadmaps based on assessed competency gaps, linked to business-critical capability needs." },
-    { icon: <Layers className="w-8 h-8 text-cap-red" />, title: "Scalable assessment solutions", desc: "Digital and in-person assessment platforms that scale from team-level evaluations to enterprise-wide programmes." },
+    { icon: <Target className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-red" />, title: "Validated competency frameworks", desc: "Organisation-specific competency models aligned to strategy, culture, and role requirements for accurate talent assessment." },
+    { icon: <ClipboardList className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-red" />, title: "Objective talent evaluation", desc: "Multi-method assessments that eliminate bias and deliver reliable, comparable competency data across the workforce." },
+    { icon: <BarChart3 className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-red" />, title: "Data-driven talent decisions", desc: "Rich analytics and heatmaps that inform succession planning, talent reviews, and strategic workforce investments." },
+    { icon: <CheckCircle className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-red" />, title: "Targeted development plans", desc: "Personalised development roadmaps based on assessed competency gaps, linked to business-critical capability needs." },
+    { icon: <Layers className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-red" />, title: "Scalable assessment solutions", desc: "Digital and in-person assessment platforms that scale from team-level evaluations to enterprise-wide programmes." },
   ];
 
-  const visibleCards = 3;
-  const GAP = 24;
+  const GAP = visibleCards === 1 ? 0 : 24;
 
   const infiniteCards = [...cards, ...cards, ...cards];
   const cloneOffset = cards.length;
@@ -91,14 +104,29 @@ const CompetencyAssessments = () => {
   const getCardWidth = useCallback((): number => {
     if (!containerRef.current) return 0;
     const containerWidth = containerRef.current.offsetWidth;
+    if (visibleCards === 1) return containerWidth;
     const totalGaps = GAP * (visibleCards - 1);
     return (containerWidth - totalGaps) / visibleCards + GAP;
-  }, []);
+  }, [GAP, visibleCards]);
 
   useEffect(() => {
     const w = getCardWidth();
-    if (w > 0) { setOffset(w * cloneOffset); setCarouselReady(true); }
+    if (w > 0) {
+      setOffset(w * cloneOffset);
+      setCarouselReady(true);
+    }
   }, [getCardWidth, cloneOffset]);
+
+  useEffect(() => {
+    setIsTransitioning(false);
+    isTransitioningRef.current = false;
+    setCurrentIndex(0);
+    const w = getCardWidth();
+    if (w > 0) {
+      setOffset(w * cloneOffset);
+      setCarouselReady(true);
+    }
+  }, [visibleCards]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     const onResize = () => {
@@ -219,14 +247,24 @@ const CompetencyAssessments = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-card/30" ref={bRef}>
-        <div className="container mx-auto px-4 lg:px-8">
-          <motion.h2 className="text-[28px] md:text-[36px] font-bold mb-10" initial={{ opacity: 0, y: 20 }} animate={bInView ? { opacity: 1, y: 0 } : {}}>What you'll achieve</motion.h2>
-          <div className="overflow-hidden" ref={containerRef}>
+      {/* ── "What you'll achieve" carousel ── */}
+      <section className="py-10 sm:py-14 md:py-20 bg-card/30" ref={bRef}>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+
+          <motion.h2
+            className="text-[22px] sm:text-[26px] md:text-[30px] lg:text-[36px] font-bold mb-6 sm:mb-8 md:mb-10"
+            initial={{ opacity: 0, y: 20 }}
+            animate={bInView ? { opacity: 1, y: 0 } : {}}
+          >
+            What you'll achieve
+          </motion.h2>
+
+          <div className="overflow-hidden w-full" ref={containerRef}>
             <div
               ref={trackRef}
-              className="flex gap-6"
+              className="flex"
               style={{
+                gap: `${GAP}px`,
                 transform: `translateX(-${offset}px)`,
                 transition: isTransitioning ? "transform 500ms ease" : "none",
                 visibility: carouselReady ? "visible" : "hidden",
@@ -237,22 +275,47 @@ const CompetencyAssessments = () => {
                 <div
                   key={i}
                   data-card
-                  className="bg-card border border-border/30 p-8 flex-shrink-0"
+                  className="bg-card border border-border/30 flex-shrink-0 flex flex-col p-4 sm:p-6 md:p-8"
                   style={{
-                    width: `calc((100% - ${GAP * (visibleCards - 1)}px) / ${visibleCards})`,
-                    minWidth: `calc((100% - ${GAP * (visibleCards - 1)}px) / ${visibleCards})`,
+                    width: visibleCards === 1
+                      ? "100%"
+                      : `calc((100% - ${GAP * (visibleCards - 1)}px) / ${visibleCards})`,
+                    minWidth: visibleCards === 1
+                      ? "100%"
+                      : `calc((100% - ${GAP * (visibleCards - 1)}px) / ${visibleCards})`,
+                    overflow: "hidden",
+                    wordBreak: "break-word",
                   }}
                 >
                   {card.icon}
-                  <h3 className="text-[24px] font-bold mt-4 mb-2">{card.title}</h3>
-                  <p className="text-[18px] text-muted-white leading-relaxed">{card.desc}</p>
+
+                  <h3 className="text-[15px] sm:text-[17px] md:text-[20px] lg:text-[22px] font-bold mt-3 sm:mt-4 mb-1 sm:mb-2 leading-snug">
+                    {card.title}
+                  </h3>
+
+                  <p className="text-[13px] sm:text-[14px] md:text-[16px] lg:text-[17px] text-muted-white leading-relaxed">
+                    {card.desc}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
-          <div className="flex gap-3 mt-6">
-            <button onClick={handlePrev} className="w-10 h-10 border border-border/50 flex items-center justify-center hover:bg-card transition-colors text-lg">←</button>
-            <button onClick={handleNext} className="w-10 h-10 border border-border/50 flex items-center justify-center hover:bg-card transition-colors text-lg">→</button>
+
+          <div className="flex gap-2 sm:gap-3 mt-4 sm:mt-5 md:mt-6">
+            <button
+              onClick={handlePrev}
+              aria-label="Previous slide"
+              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 border border-border/50 flex items-center justify-center hover:bg-card transition-colors text-sm sm:text-base md:text-lg"
+            >
+              ←
+            </button>
+            <button
+              onClick={handleNext}
+              aria-label="Next slide"
+              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 border border-border/50 flex items-center justify-center hover:bg-card transition-colors text-sm sm:text-base md:text-lg"
+            >
+              →
+            </button>
           </div>
         </div>
       </section>

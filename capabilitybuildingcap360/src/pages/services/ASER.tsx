@@ -84,22 +84,22 @@ const subServices = [
       "Data-driven talent analytics that benchmark individual and team capabilities against industry standards, revealing gaps and opportunities across your entire workforce.",
     path: "/what-we-do/services/aser/talent-analytics",
   },
-  {
-    icon: ClipboardList,
-    title: "360° Feedback & Leadership Diagnostics",
-    title2: "Unlocking Self-Awareness and Leadership Growth",
-    description:
-      "Structured multi-rater feedback processes that help leaders understand their impact, identify blind spots, and accelerate personal and professional development.",
-    path: "/what-we-do/services/aser/360-feedback",
-  },
-  {
-    icon: Lightbulb,
-    title: "AI-Powered Talent Intelligence",
-    title2: "Redefining Assessment with Generative AI",
-    description:
-      "Leverage AI-driven simulations, adaptive assessments, and predictive models to identify high-potential talent faster and with greater precision than traditional methods.",
-    path: "/what-we-do/services/aser/ai-talent-intelligence",
-  },
+  // {
+  //   icon: ClipboardList,
+  //   title: "360° Feedback & Leadership Diagnostics",
+  //   title2: "Unlocking Self-Awareness and Leadership Growth",
+  //   description:
+  //     "Structured multi-rater feedback processes that help leaders understand their impact, identify blind spots, and accelerate personal and professional development.",
+  //   path: "/what-we-do/services/aser/360-feedback",
+  // },
+  // {
+  //   icon: Lightbulb,
+  //   title: "AI-Powered Talent Intelligence",
+  //   title2: "Redefining Assessment with Generative AI",
+  //   description:
+  //     "Leverage AI-driven simulations, adaptive assessments, and predictive models to identify high-potential talent faster and with greater precision than traditional methods.",
+  //   path: "/what-we-do/services/aser/talent",
+  // },
 ];
 
 const trendingInsights = [
