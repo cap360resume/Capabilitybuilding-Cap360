@@ -156,8 +156,7 @@ const OurCompany = () => {
             </div>
           </div>
         </section>
-
-        {/* Slider */}
+      {/* Slider */}
         <section ref={sliderRef} className={`py-16 lg:py-24 transition-all duration-700 ${sliderVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <div className="container mx-auto px-4 lg:px-8">
             <div className="flex items-center justify-between mb-10">
