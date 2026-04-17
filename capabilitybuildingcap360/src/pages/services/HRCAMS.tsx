@@ -293,8 +293,8 @@ const HRCAMS = () => {
 
   const stats = [
     {
-      value: "500+",
-      desc: "organizations served across MENA, Africa and South Asia",
+      value: "50+",
+      desc: "organizations served across Asia",
     },
     {
       value: "40%",

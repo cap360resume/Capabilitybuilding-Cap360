@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useNavigate } from "react-router-dom";
 
@@ -71,7 +71,7 @@ const ContentGrid = ({ sectionLabel, heading, cards, columns = 3, variant = "dar
                 {card.link && (
                   <span className="cta-link text-sm">
                     {card.link}
-                    <ArrowRight className="w-4 h-4 text-cap-orange" />
+                    <ChevronRight className="w-6 h-6 text-cap-orange" />
                   </span>
                 )}
               </div>

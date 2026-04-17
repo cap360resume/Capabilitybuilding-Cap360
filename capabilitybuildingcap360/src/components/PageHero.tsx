@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 interface PageHeroProps {
   label: string;
@@ -57,7 +57,7 @@ const PageHero = ({ label, title, subtitle, image, ctaText, ctaHref = "#" }: Pag
             whileHover={{ x: 5 }}
           >
             {ctaText}
-            <ArrowRight className="w-5 h-5 text-cap-orange" />
+            <ChevronRight className="w-6 h-6 text-cap-orange" />
           </motion.a>
         )}
       </div>

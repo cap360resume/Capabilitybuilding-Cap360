@@ -27,6 +27,7 @@ import trending1 from "@/assets/trending-1.jpg";
 import trending2 from "@/assets/trending-2.jpg";
 import trending3 from "@/assets/trending-3.jpg";
 import trending4 from "@/assets/trending-4.jpg";
+import ShivinderMandhotra from "@/assets/ShivinderMandhotra.jpeg"
 
 const serviceSubNav = [
   { label: "Overview", path: "#overview" },
@@ -184,7 +185,7 @@ const programStreams = [
 ];
 
 const stats = [
-  { value: "100K+", desc: "Professionals trained across all programmes" },
+  { value: "10K+", desc: "Professionals trained across all programmes" },
   { value: "95%", desc: "Participant satisfaction rate" },
   { value: "60%", desc: "Average capability uplift measured" },
   { value: "28+", desc: "Years of corporate leadership experience" },
@@ -862,7 +863,7 @@ const TCB = () => {
       </section> */}
 
       {/* ── Trending / Insights ────────────────────────────────────────────────── */}
-      <section id="trending" className="py-24">
+      {/* <section id="trending" className="py-24">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="flex items-center justify-between mb-12">
             <motion.div
@@ -938,7 +939,7 @@ const TCB = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── Meet Our Trainer ───────────────────────────────────────────────────── */}
       <section
@@ -974,7 +975,7 @@ const TCB = () => {
               <div className="md:col-span-1">
                 <div className="w-full max-w-sm mx-auto aspect-square rounded-xl overflow-hidden border border-border/40">
                   <img
-                    src={card1} // make sure card1 is imported or defined
+                    src={ShivinderMandhotra} // make sure card1 is imported or defined
                     alt="Shivinder Mandhotra"
                     className="object-cover w-full h-full"
                   />

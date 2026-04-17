@@ -22,7 +22,7 @@ const services = [
   },
   {
     name: "HRCAMS",
-    tag: "HR Systems",
+    tag: "People Processes",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
         <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2" />
@@ -41,7 +41,7 @@ const services = [
   },
   {
     name: "TCB",
-    tag: "Capability",
+    tag: "Training & Capability",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
         <path
@@ -60,7 +60,7 @@ const services = [
   },
   {
     name: "PACE",
-    tag: "Performance",
+    tag: "Career Accelerator",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
         <path
@@ -73,7 +73,7 @@ const services = [
       </svg>
     ),
     description:
-      "Performance acceleration framework focused on measurable outcomes and business impact.",
+      "Professional alignment framework focused on measurable outcomes and business impact.",
     color: "green",
     href: "/services/pace",
   },

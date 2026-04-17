@@ -248,20 +248,27 @@ const AssessmentCentres = () => {
         </div>
       </section>
 
-      <section className="py-12 md:py-20 bg-card/30" ref={bRef}>
-        <div className="container mx-auto px-4 lg:px-8">
+      {/* ── "What you'll achieve" carousel — fully responsive ── */}
+      <section className="py-10 sm:py-14 md:py-20 bg-card/30" ref={bRef}>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Section heading — 4-step responsive scale */}
           <motion.h2
-            className="text-[24px] md:text-[28px] lg:text-[36px] font-bold mb-6 md:mb-10"
+            className="text-[22px] sm:text-[26px] md:text-[30px] lg:text-[36px] font-bold mb-6 sm:mb-8 md:mb-10"
             initial={{ opacity: 0, y: 20 }}
             animate={bInView ? { opacity: 1, y: 0 } : {}}
           >
             What you'll achieve
           </motion.h2>
-          <div className="overflow-hidden" ref={containerRef}>
+
+          {/* Carousel wrapper — clips the sliding track */}
+          <div className="overflow-hidden w-full" ref={containerRef}>
             <div
               ref={trackRef}
-              className="flex gap-4 md:gap-6"
+              className="flex"
               style={{
+                /* Gap is applied via inline style so JS offset calc always stays in sync */
+                gap: `${GAP}px`,
                 transform: `translateX(-${offset}px)`,
                 transition: isTransitioning ? "transform 500ms ease" : "none",
                 visibility: carouselReady ? "visible" : "hidden",
@@ -272,22 +279,45 @@ const AssessmentCentres = () => {
                 <div
                   key={i}
                   data-card
-                  className="bg-card border border-border/30 p-5 md:p-8 flex-shrink-0"
+                  className="bg-card border border-border/30 flex-shrink-0 flex flex-col p-4 sm:p-6 md:p-8"
                   style={{
                     width: `calc((100% - ${GAP * (visibleCards - 1)}px) / ${visibleCards})`,
                     minWidth: `calc((100% - ${GAP * (visibleCards - 1)}px) / ${visibleCards})`,
                   }}
                 >
-                  {card.icon}
-                  <h3 className="text-[20px] md:text-[24px] font-bold mt-3 md:mt-4 mb-1 md:mb-2">{card.title}</h3>
-                  <p className="text-[15px] md:text-[18px] text-muted-white leading-relaxed">{card.desc}</p>
+                  {/* Icon wrapper scales the SVG at each breakpoint */}
+                  <div className="[&>svg]:w-6 [&>svg]:h-6 sm:[&>svg]:w-7 sm:[&>svg]:h-7 md:[&>svg]:w-8 md:[&>svg]:h-8">
+                    {card.icon}
+                  </div>
+
+                  <h3 className="text-[15px] sm:text-[17px] md:text-[20px] lg:text-[22px] font-bold mt-3 sm:mt-4 mb-1 sm:mb-2 leading-snug">
+                    {card.title}
+                  </h3>
+
+                  <p className="text-[13px] sm:text-[14px] md:text-[16px] lg:text-[17px] text-muted-white leading-relaxed">
+                    {card.desc}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
-          <div className="flex gap-3 mt-4 md:mt-6">
-            <button onClick={handlePrev} className="w-9 h-9 md:w-10 md:h-10 border border-border/50 flex items-center justify-center hover:bg-card transition-colors text-base md:text-lg">←</button>
-            <button onClick={handleNext} className="w-9 h-9 md:w-10 md:h-10 border border-border/50 flex items-center justify-center hover:bg-card transition-colors text-base md:text-lg">→</button>
+
+          {/* Navigation buttons — scale with breakpoint */}
+          <div className="flex gap-2 sm:gap-3 mt-4 sm:mt-5 md:mt-6">
+            <button
+              onClick={handlePrev}
+              aria-label="Previous slide"
+              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 border border-border/50 flex items-center justify-center hover:bg-card transition-colors text-sm sm:text-base md:text-lg"
+            >
+              ←
+            </button>
+            <button
+              onClick={handleNext}
+              aria-label="Next slide"
+              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 border border-border/50 flex items-center justify-center hover:bg-card transition-colors text-sm sm:text-base md:text-lg"
+            >
+              →
+            </button>
           </div>
         </div>
       </section>
@@ -304,4 +334,3 @@ const AssessmentCentres = () => {
 };
 
 export default AssessmentCentres;
-

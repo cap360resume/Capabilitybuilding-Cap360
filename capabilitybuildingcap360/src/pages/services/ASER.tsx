@@ -321,8 +321,8 @@ const ASER = () => {
 
   const stats = [
     {
-      value: "50K+",
-      desc: "professionals assessed across MENA, Africa and South Asia",
+      value: "10K+",
+      desc: "professionals assessed across Asia",
     },
     {
       value: "85%+",
