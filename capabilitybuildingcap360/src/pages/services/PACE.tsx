@@ -37,9 +37,9 @@ import digitalcapability from "@/assets/digital capability.png";
 
 const serviceSubNav = [
   { label: "What to do", path: "#services" },
-  { label: "What's trending", path: "#trending" },
-  { label: "Partners", path: "#partners" },
-  { label: "How we work", path: "#how-we-work" },
+  { label: "Why Choose Cap360", path: "#trending" },
+  { label: "How We work", path: "#howWeWork" },
+  {label: "Leaders", path: "#leaders" },
   { label: "Careers", path: "/careers" },
 ];
 
@@ -231,7 +231,7 @@ const PACE = () => {
   const { ref: gcRef, isInView: gcInView } = useScrollAnimation(0.1);
   const { ref: trendingRef, isInView: trendingInView } =
     useScrollAnimation(0.1);
-  const { ref: partnersRef, isInView: partnersInView } =
+  const { ref: howWeWorkRef, isInView: howWeWorkInView } =
     useScrollAnimation(0.1);
   const { ref: leadersRef, isInView: leadersInView } = useScrollAnimation(0.1);
   const { ref: phaseRef, isInView: phaseInView } = useScrollAnimation(0.1);
@@ -310,7 +310,7 @@ const PACE = () => {
 
   const stats = [
     {
-      value: "300+",
+      value: "50+",
       desc: "career transformation programmes delivered across India.",
     },
     {
@@ -693,8 +693,9 @@ const PACE = () => {
       </section>
       {/* =====  Why Cap360 (TAB SECTION) ===== */}
  <section
-        id="why-us"
-        className="py-28 section-navy relative overflow-hidden"
+        id="trending"
+        className="py-28 section-navy relative overflow-hidden" ref={trendingRef}
+        
       >
         <div className="absolute top-0 right-0 w-[28rem] h-[28rem] bg-cap-green/10 rounded-full blur-[120px] -z-0" />
         <div className="absolute bottom-0 left-0 w-[22rem] h-[22rem] bg-cap-green/10 rounded-full blur-[100px] -z-0" />
@@ -755,7 +756,7 @@ const PACE = () => {
       </section>
 
       {/* ===== HOW WE WORK ===== */}
-      <section id="approach" className="py-28 relative">
+      <section id="howWeWork" className="py-28 relative" ref={howWeWorkRef}>
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -984,8 +985,8 @@ const PACE = () => {
 
       {/* ===== MEET OUR LEADER ===== */}
     <section
-        id="founder"
-        className="py-24 section-navy relative overflow-hidden"
+        id="leaders"
+        className="py-24 section-navy relative overflow-hidden" ref={leadersRef}
       >
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-cap-green/5 rounded-full blur-3xl -z-0" />
         <div className="w-full px-6 lg:px-16 xl:px-24 relative z-10">

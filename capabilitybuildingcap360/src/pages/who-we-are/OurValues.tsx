@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { ChevronRight, Plus, Minus, ChevronLeft } from "lucide-react";
+import { useState, useRef, useEffect, useCallback } from "react";
+import { ChevronRight, Plus, Minus } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
@@ -60,14 +60,112 @@ const sliderCards = [
 
 const OurValues = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
-  const [sliderIndex, setSliderIndex] = useState(0);
   const navigate = useNavigate();
   const { ref: contextRef, isInView: contextVisible } = useScrollAnimation();
   const { ref: visionRef, isInView: visionVisible } = useScrollAnimation();
   const { ref: accordionRef, isInView: accordionVisible } = useScrollAnimation();
   const { ref: sliderRef, isInView: sliderVisible } = useScrollAnimation();
 
-  const maxSlider = sliderCards.length - 3;
+  // ─── Responsive visible cards ─────────────────────────────────────────────
+  const [visibleCards, setVisibleCards] = useState(3);
+  useEffect(() => {
+    const updateVisible = () => {
+      const w = window.innerWidth;
+      if (w < 640) setVisibleCards(1);
+      else if (w < 1024) setVisibleCards(2);
+      else setVisibleCards(3);
+    };
+    updateVisible();
+    window.addEventListener("resize", updateVisible);
+    return () => window.removeEventListener("resize", updateVisible);
+  }, []);
+
+  // ─── Infinite carousel ────────────────────────────────────────────────────
+  const GAP = visibleCards === 1 ? 0 : 24;
+  const cards = sliderCards;
+  const infiniteCards = [...cards, ...cards, ...cards];
+  const cloneOffset = cards.length;
+
+  const trackRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [offset, setOffset] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [carouselReady, setCarouselReady] = useState(false);
+  const isTransitioningRef = useRef(false);
+
+  const getCardWidth = useCallback((): number => {
+    if (!containerRef.current) return 0;
+    const containerWidth = containerRef.current.offsetWidth;
+    if (visibleCards === 1) return containerWidth;
+    const totalGaps = GAP * (visibleCards - 1);
+    return (containerWidth - totalGaps) / visibleCards + GAP;
+  }, [GAP, visibleCards]);
+
+  useEffect(() => {
+    const w = getCardWidth();
+    if (w > 0) {
+      setOffset(w * cloneOffset);
+      setCarouselReady(true);
+    }
+  }, [getCardWidth, cloneOffset]);
+
+  useEffect(() => {
+    setIsTransitioning(false);
+    isTransitioningRef.current = false;
+    setCurrentIndex(0);
+    const w = getCardWidth();
+    if (w > 0) {
+      setOffset(w * cloneOffset);
+      setCarouselReady(true);
+    }
+  }, [visibleCards]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    const onResize = () => {
+      const w = getCardWidth();
+      if (w > 0) {
+        setOffset(w * (cloneOffset + currentIndex));
+      }
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, [getCardWidth, cloneOffset, currentIndex]);
+
+  const slideTo = useCallback(
+    (newIndex: number) => {
+      if (isTransitioningRef.current) return;
+      const w = getCardWidth();
+      if (w === 0) return;
+      isTransitioningRef.current = true;
+      setIsTransitioning(true);
+      setCurrentIndex(newIndex);
+      setOffset(w * (cloneOffset + newIndex));
+    },
+    [getCardWidth, cloneOffset]
+  );
+
+  const handleNext = useCallback(() => slideTo(currentIndex + 1), [currentIndex, slideTo]);
+  const handlePrev = useCallback(() => slideTo(currentIndex - 1), [currentIndex, slideTo]);
+
+  const handleTransitionEnd = useCallback(() => {
+    const w = getCardWidth();
+    let newIndex = currentIndex;
+    if (currentIndex >= cards.length) {
+      newIndex = currentIndex - cards.length;
+    } else if (currentIndex < 0) {
+      newIndex = currentIndex + cards.length;
+    }
+    if (newIndex !== currentIndex) {
+      setIsTransitioning(false);
+      setCurrentIndex(newIndex);
+      setOffset(w * (cloneOffset + newIndex));
+    } else {
+      setIsTransitioning(false);
+    }
+    isTransitioningRef.current = false;
+  }, [currentIndex, cards.length, getCardWidth, cloneOffset]);
+  // ─────────────────────────────────────────────────────────────────────────
 
   return (
     <div className="min-h-screen bg-background">
@@ -152,28 +250,69 @@ const OurValues = () => {
           </div>
         </section>
 
-        <section ref={sliderRef} className={`py-16 lg:py-24 transition-all duration-700 ${sliderVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="flex items-center justify-between mb-10">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">What We Stand For</h2>
-              <div className="flex gap-2">
-                <button onClick={() => setSliderIndex(Math.max(0, sliderIndex - 1))} disabled={sliderIndex === 0} className="p-2 rounded-full border border-border hover:bg-secondary disabled:opacity-30 transition-colors"><ChevronLeft className="w-5 h-5" /></button>
-                <button onClick={() => setSliderIndex(Math.min(maxSlider, sliderIndex + 1))} disabled={sliderIndex >= maxSlider} className="p-2 rounded-full border border-border hover:bg-secondary disabled:opacity-30 transition-colors"><ChevronRight className="w-5 h-5" /></button>
-              </div>
-            </div>
-            <div className="overflow-hidden">
-              <div className="flex gap-6 transition-transform duration-500" style={{ transform: `translateX(-${sliderIndex * 33.33}%)` }}>
-                {sliderCards.map((card, i) => (
-                  <div key={i} className="min-w-[calc(33.33%-16px)] bg-card border border-border/50 rounded-xl p-8">
-                    <card.icon className="w-10 h-10 text-cap-orange mb-4" />
-                    <h3 className="text-xl font-bold text-foreground mb-2">{card.title}</h3>
-                    <p className="text-muted-foreground text-sm">{card.description}</p>
+        {/* ── Infinite Carousel: What We Stand For ────────────────────────────── */}
+        <section ref={sliderRef} className={`py-10 sm:py-14 md:py-20 transition-all duration-700 ${sliderVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6 sm:mb-8 md:mb-10">What We Stand For</h2>
+
+            <div className="overflow-hidden w-full" ref={containerRef}>
+              <div
+                ref={trackRef}
+                className="flex"
+                style={{
+                  gap: `${GAP}px`,
+                  transform: `translateX(-${offset}px)`,
+                  transition: isTransitioning ? "transform 500ms ease" : "none",
+                  visibility: carouselReady ? "visible" : "hidden",
+                }}
+                onTransitionEnd={handleTransitionEnd}
+              >
+                {infiniteCards.map((card, i) => (
+                  <div
+                    key={i}
+                    className="bg-card border border-border/50 rounded-xl flex-shrink-0 flex flex-col p-4 sm:p-6 md:p-8"
+                    style={{
+                      width: visibleCards === 1
+                        ? "100%"
+                        : `calc((100% - ${GAP * (visibleCards - 1)}px) / ${visibleCards})`,
+                      minWidth: visibleCards === 1
+                        ? "100%"
+                        : `calc((100% - ${GAP * (visibleCards - 1)}px) / ${visibleCards})`,
+                      overflow: "hidden",
+                      wordBreak: "break-word",
+                    }}
+                  >
+                    <card.icon className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 text-cap-orange mb-4" />
+                    <h3 className="text-[15px] sm:text-[17px] md:text-[18px] lg:text-xl font-bold text-foreground mb-2 leading-snug">
+                      {card.title}
+                    </h3>
+                    <p className="text-[13px] sm:text-[14px] md:text-[15px] text-muted-foreground leading-relaxed">
+                      {card.description}
+                    </p>
                   </div>
                 ))}
               </div>
             </div>
+
+            <div className="flex gap-2 sm:gap-3 mt-4 sm:mt-5 md:mt-6">
+              <button
+                onClick={handlePrev}
+                aria-label="Previous slide"
+                className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 border border-border hover:bg-secondary flex items-center justify-center transition-colors rounded-full text-sm sm:text-base md:text-lg"
+              >
+                ←
+              </button>
+              <button
+                onClick={handleNext}
+                aria-label="Next slide"
+                className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 border border-border hover:bg-secondary flex items-center justify-center transition-colors rounded-full text-sm sm:text-base md:text-lg"
+              >
+                →
+              </button>
+            </div>
           </div>
         </section>
+        {/* ─────────────────────────────────────────────────────────────────────── */}
 
         <section className="py-16 lg:py-24 bg-cap-navy">
           <div className="container mx-auto px-4 lg:px-8 text-center">

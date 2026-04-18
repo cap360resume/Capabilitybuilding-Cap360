@@ -943,8 +943,8 @@ const TCB = () => {
 
       {/* ── Meet Our Trainer ───────────────────────────────────────────────────── */}
       <section
-        id="founder"
-        className="py-24 section-navy relative overflow-hidden"
+        id="leaders"
+        className="py-24 section-navy relative overflow-hidden" ref={leadersRef}
       >
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-cap-blue/5 rounded-full blur-3xl -z-0" />
 

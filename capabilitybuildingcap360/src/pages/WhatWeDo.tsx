@@ -46,69 +46,82 @@ const services = [
 
 const industries = [
   {
-    title: "Banking & Capital Markets",
+    title: "Banking & Financial Services",
     description:
-      "Drive growth with personalized customer experiences and modernized core operations.",
+      "Build high-performance teams and future-ready leaders equipped to navigate regulatory complexity and digital transformation in financial services.",
   },
   {
-    title: "Communications & Media",
+    title: "Manufacturing & Engineering",
     description:
-      "Transform content strategies and monetize platforms with next-gen digital solutions.",
+      "Develop technical talent pipelines and upskill frontline-to-leadership workforces to drive operational excellence and Industry 4.0 readiness.",
   },
   {
-    title: "Health & Public Service",
+    title: "Healthcare & Pharmaceuticals",
     description:
-      "Improve citizen outcomes and operational efficiency through digital innovation.",
+      "Strengthen clinical and administrative capability through targeted assessment, hiring, and learning solutions built for complex healthcare environments.",
   },
   {
-    title: "High Tech",
+    title: "Information Technology & SaaS",
     description:
-      "Accelerate innovation cycles and create new revenue streams with cutting-edge technology.",
-  },
-  {
-    title: "Insurance",
-    description:
-      "Modernize underwriting, claims and distribution with AI-powered platforms.",
+      "Accelerate talent acquisition and capability building for fast-scaling tech organizations — from engineering roles to product leadership.",
   },
   {
     title: "Retail & Consumer Goods",
     description:
-      "Create seamless omnichannel experiences and agile supply chains.",
+      "Build agile, customer-centric teams with the skills to adapt to evolving market demands, omnichannel growth, and supply chain complexity.",
+  },
+  {
+    title: "Infrastructure & Energy",
+    description:
+      "Develop workforce capability and succession pipelines for large-scale infrastructure and energy enterprises operating in high-stakes environments.",
   },
 ];
 
+// Change the section label from "PLATFORMS" to:
+"OUR ECOSYSTEM"
+
+// Change the heading from "Technology platforms that drive innovation" to:
+"Five pillars. One integrated capability ecosystem."
+
+// Change the platforms array to:
 const platforms = [
   {
-    title: "Cloud",
+    title: "HireTek",
     description:
-      "Migrate, modernize and manage applications across multi-cloud environments.",
-    link: "Explore",
+      "Beyond the résumé — our hiring methodology evaluates candidates on competency, culture fit, and long-term potential to reduce mis-hires and improve quality of joins.",
+    // link: "Learn More",
   },
   {
-    title: "Data & AI",
+    title: "ASER",
     description:
-      "Unlock the full value of data with advanced analytics and responsible AI solutions.",
-    link: "Explore",
+      "Objective, science-backed talent assessments that remove bias from decisions — whether you're selecting campus hires, promoting managers, or benchmarking leadership teams.",
+    // link: "Learn More",
   },
   {
-    title: "Security",
+    title: "HRCAMS",
     description:
-      "Build cyber resilience with end-to-end security services and managed detection.",
-    link: "Explore",
+      "We embed as your strategic HR partner — designing org structures, building people policies, driving culture change, and managing HR operations end-to-end.",
+    // link: "Learn More",
   },
   {
-    title: "Enterprise Platforms",
+    title: "TCB",
     description:
-      "Transform with SAP, Salesforce, Oracle and other leading platforms.",
-    link: "Explore",
+      "Tailored capability building programs that upskill teams at scale — from functional training to behavioural workshops — with measurable impact on performance.",
+    // link: "Learn More",
+  },
+  {
+    title: "PACE",
+    description:
+      "Career acceleration for high-potential individuals and leadership cohorts — coaching, mentoring, and structured development journeys that retain and grow top talent.",
+    // link: "Learn More",
   },
 ];
 
 const stats = [
-  { value: "750K+", label: "Employees worldwide" },
-  { value: "120+", label: "Countries served" },
-  { value: "9,000+", label: "Clients globally" },
-  { value: "$65B+", label: "Revenue in 2025" },
+{ value: "30+", label: "Industries Served" },
+{ value: "Global", label: "Delivery Presence" },
+{ value: "98%", label: "Client Satisfaction" },
+{ value: "10+", label: "Years of Experience" }
 ];
 
 const WhatWeDo = () => (
@@ -138,8 +151,8 @@ const WhatWeDo = () => (
       />
       <QuoteSection />
       <ContentGrid
-        sectionLabel="Platforms"
-        heading="Technology platforms that drive innovation"
+        sectionLabel="OUR ECOSYSTEM"
+        heading="Five pillars. One integrated capability ecosystem."
         cards={platforms}
         columns={4}
       />

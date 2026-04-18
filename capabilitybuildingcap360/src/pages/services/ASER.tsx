@@ -4,23 +4,14 @@ import SubNavbar from "@/components/SubNavbar";
 import ASERSubNavbar from "@/components/ASERSubNavbar";
 import { motion } from "framer-motion";
 import {
-  ArrowRight,
-  Shield,
-  Settings,
   Users,
   BarChart3,
-  Building2,
-  Award,
-  ChevronLeft,
   ChevronRight,
-  Check,
   CheckCircle2,
   TrendingUp,
   Target,
   Zap,
   Brain,
-  MessageSquare,
-  ClipboardList,
   Layers,
   LineChart,
   Lightbulb,
@@ -40,9 +31,9 @@ import aser1 from "@/assets/Aser-1.avif";
 
 const serviceSubNav = [
   { label: "What to do", path: "#services" },
-  { label: "What's trending", path: "#trending" },
-  { label: "Partners", path: "#partners" },
-  { label: "How we work", path: "#how-we-work" },
+  { label: "Why Choose Cap360", path: "#trending" },
+  { label: "How We Work", path: "#howWeWork" },
+  { label: "Leaders", path: "#leaders" },
   { label: "Careers", path: "/careers" },
 ];
 
@@ -232,8 +223,7 @@ const ASER = () => {
     useScrollAnimation(0.1);
   const { ref: offerRef, isInView: offerInView } = useScrollAnimation(0.1);
   const { ref: whyRef, isInView: whyInView } = useScrollAnimation(0.1);
-  const { ref: howWeWorkRef, isInView: howWeWorkInView } =
-    useScrollAnimation(0.1);
+  const { ref: howWeWorkRef, isInView: howWeWorkInView } = useScrollAnimation(0.1);
   const { ref: trendingRef, isInView: trendingInView } =
     useScrollAnimation(0.1);
   const { ref: partnersRef, isInView: partnersInView } =
@@ -702,9 +692,9 @@ const ASER = () => {
 </section>
 
       {/* ── Why Choose Us ──────────────────────────────────────────────────────── */}
-      <section
-        id="why-us"
-        className="py-28 section-navy relative overflow-hidden"
+      <section  
+        id="trending"
+        className="py-28 section-navy relative overflow-hidden" ref={trendingRef}
       >
         <div className="absolute top-0 right-0 w-[28rem] h-[28rem] bg-cap-red/10 rounded-full blur-[120px] -z-0" />
         <div className="absolute bottom-0 left-0 w-[22rem] h-[22rem] bg-cap-red/10 rounded-full blur-[100px] -z-0" />
@@ -765,7 +755,7 @@ const ASER = () => {
       </section>
 
       {/* ===== HOW WE WORK ===== */}
-      <section id="approach" className="py-28 relative">
+      <section id="howWeWork" className="py-28 relative" ref={howWeWorkRef}>
         <div className="container mx-auto px-4 lg:px-8">
           {/* Heading */}
           <motion.div
@@ -1090,8 +1080,8 @@ const ASER = () => {
 
       {/* ===== MEET OUR LEADER ===== */}
       <section
-        id="founder"
-        className="py-24 section-navy relative overflow-hidden"
+        id="leaders"
+        className="py-24 section-navy relative overflow-hidden" ref={leadersRef}
       >
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-cap-red/5 rounded-full blur-3xl -z-0" />
         <div className="w-full px-6 lg:px-16 xl:px-24 relative z-10">

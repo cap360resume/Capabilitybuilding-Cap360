@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
@@ -10,18 +11,55 @@ import card1 from "@/assets/card-1.jpg";
 import card3 from "@/assets/card-3.jpg";
 import card4 from "@/assets/card-4.jpg";
 
-const filters = ["All", "AI & Technology", "Strategy", "Sustainability", "Talent", "Industry"];
+const filters = ["All", "Talent Acquisition", "HR Strategy", "Leadership", "Assessment", "Workforce Trends"];
 
 const articles = [
-  { category: "AI & Technology", title: "Total Enterprise Reinvention: How AI is Redefining the Enterprise", description: "Organizations that adopt a reinvention strategy anchored in technology are growing revenue 2× faster.", image: card1, tag: "Research Report" },
-  { category: "Strategy", title: "The CFO Reimagined: From Steward to Strategist", description: "Modern finance leaders are transforming from cost controllers into growth architects.", image: card3, tag: "Perspectives" },
-  { category: "Sustainability", title: "The Green Behind the Cloud: Sustainability in Technology", description: "How responsible cloud migration can cut emissions and drive business value simultaneously.", image: card4, tag: "Research Report" },
-  { category: "Talent", title: "Work, Workforce, Workers: Reinvented", description: "The future of work demands new skills, new structures and a radically human approach.", image: card1, tag: "Trends" },
-  { category: "AI & Technology", title: "Generative AI: A New Frontier for Enterprise Productivity", description: "Leaders adopting GenAI at scale are already seeing 40% productivity gains in key workflows.", image: card3, tag: "Perspectives" },
-  { category: "Industry", title: "Banking on Change: The Digital Bank of 2030", description: "Next-gen banking platforms are redefining customer engagement and operational resilience.", image: card4, tag: "Industry Brief" },
+  {
+    category: "Talent Acquisition",
+    title: "Why Résumé-First Hiring Is Costing Enterprises More Than They Realise",
+    description: "Traditional screening methods miss up to 60% of high-potential candidates. Here's how competency-based hiring changes the equation.",
+    image: card1,
+    tag: "CAP360 Perspective",
+  },
+  {
+    category: "HR Strategy",
+    title: "People Strategy Is Business Strategy — Bridging the Gap in Indian Enterprises",
+    description: "Most HR functions still operate reactively. The organizations pulling ahead are the ones treating human capital as a strategic lever.",
+    image: card3,
+    tag: "Industry Brief",
+  },
+  {
+    category: "Assessment",
+    title: "The Science Behind Objective Talent Assessment: Removing Bias from the Equation",
+    description: "How structured, data-driven evaluation frameworks lead to better hiring decisions, lower attrition, and stronger team performance.",
+    image: card4,
+    tag: "Research Note",
+  },
+  {
+    category: "Leadership",
+    title: "Building Leadership Pipelines That Don't Break Under Pressure",
+    description: "Succession planning is no longer a boardroom checkbox. Organizations that invest in pipeline depth outperform peers by 2.3× in continuity metrics.",
+    image: card1,
+    tag: "CAP360 Perspective",
+  },
+  {
+    category: "Workforce Trends",
+    title: "The Upskilling Imperative: Why L&D Is Now a Retention Tool",
+    description: "Enterprises that invest in structured capability building see 40% higher retention among high-potential employees — the numbers don't lie.",
+    image: card3,
+    tag: "Trends",
+  },
+  {
+    category: "HR Strategy",
+    title: "M&A and the People Problem: How HR Due Diligence Determines Deal Success",
+    description: "Over 70% of mergers fail to meet their targets — and most failures trace back to people and culture misalignment, not financials.",
+    image: card4,
+    tag: "Industry Brief",
+  },
 ];
 
 const WhatWeThink = () => {
+  const navigate = useNavigate();
   const [activeFilter, setActiveFilter] = useState("All");
   const { ref, isInView } = useScrollAnimation(0.05);
   const { ref: articlesRef, isInView: articlesInView } = useScrollAnimation(0.05);
@@ -34,10 +72,11 @@ const WhatWeThink = () => {
       <main>
         <PageHero
           label="What We Think"
-          title="Insights that shape the future"
-          subtitle="Research, perspectives and trend analysis from the minds behind the world's most ambitious transformations."
+          title="Thinking that shapes better workforces"
+          subtitle="Perspectives, research, and industry thinking from CAP360 — on talent, leadership, HR transformation, and the future of work."
           image={heroImg}
-          ctaText="Explore research"
+          // ctaText="Explore insights"
+          // ctaAction={() => navigate("/what-we-think")}
         />
 
         {/* Featured Insight */}
@@ -52,24 +91,28 @@ const WhatWeThink = () => {
               <div className="overflow-hidden">
                 <motion.img
                   src={card1}
-                  alt="Featured Research"
+                  alt="Featured Insight"
                   className="w-full h-80 object-cover"
                   whileHover={{ scale: 1.03 }}
                   transition={{ duration: 0.4 }}
                 />
               </div>
               <div>
-                <span className="text-xs font-bold tracking-widest text-cap-orange uppercase mb-4 block">Featured Research</span>
+                <span className="text-xs font-bold tracking-widest text-cap-orange uppercase mb-4 block">Featured Perspective</span>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
-                  Total Enterprise Reinvention
+                  The Future-Ready Workforce: What Enterprises Must Build Today
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  The most transformative companies are setting a new performance frontier by centering their strategy on a strong digital core and reinventing every part of the enterprise.
+                  The organizations winning tomorrow are building capability now — not reacting to skill gaps after they appear. From smarter hiring to structured succession, the future-ready enterprise is one that treats workforce development as a continuous, integrated system rather than a one-time programme.
                 </p>
-                <motion.a href="#" className="cta-link text-lg" whileHover={{ x: 5 }}>
-                  Read the report
-                  <ArrowRight className="w-5 h-5 text-cap-orange" />
-                </motion.a>
+                {/* <motion.button
+                  onClick={() => navigate("/what-we-think")}
+                  className="cta-link text-lg"
+                  whileHover={{ x: 5 }}
+                >
+                  Read the perspective
+                  <ChevronRight className="w-5 h-5 text-cap-orange" />
+                </motion.button> */}
               </div>
             </motion.div>
           </div>
@@ -78,14 +121,18 @@ const WhatWeThink = () => {
         {/* Filter & Articles */}
         <section className="section-dark py-24" ref={articlesRef}>
           <div className="container mx-auto px-4 lg:px-8">
-            <motion.h2
-              className="text-3xl md:text-4xl font-bold mb-8"
+            <motion.div
+              className="mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={articlesInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6 }}
             >
-              Latest Thinking
-            </motion.h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-2">Latest Thinking</h2>
+              <p className="text-muted-foreground text-base">
+                Industry news, blogs, and CAP360 perspectives — coming regularly. Stay ahead of the curve.
+              </p>
+            </motion.div>
+
             <motion.div
               className="flex flex-wrap gap-3 mb-12"
               initial={{ opacity: 0 }}
@@ -106,6 +153,7 @@ const WhatWeThink = () => {
                 </button>
               ))}
             </motion.div>
+
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeFilter}
@@ -137,15 +185,36 @@ const WhatWeThink = () => {
                       <span className="text-xs font-bold tracking-widest text-cap-blue uppercase mb-3 block">{article.tag}</span>
                       <h3 className="text-lg font-bold mb-2 group-hover:text-cap-blue transition-colors leading-snug">{article.title}</h3>
                       <p className="text-sm text-muted-foreground leading-relaxed mb-4">{article.description}</p>
-                      <span className="cta-link text-sm">
+                      {/* <span className="cta-link text-sm">
                         Read more
-                        <ArrowRight className="w-4 h-4 text-cap-orange" />
-                      </span>
+                        <ChevronRight className="w-4 h-4 text-cap-orange" />
+                      </span> */}
                     </div>
                   </motion.a>
                 ))}
               </motion.div>
             </AnimatePresence>
+
+            {/* Coming Soon nudge */}
+            <motion.div
+              className="mt-16 border border-border/30 bg-card p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={articlesInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <div>
+                <span className="text-xs font-bold tracking-widest text-cap-orange uppercase mb-2 block">Coming Soon</span>
+                <h3 className="text-xl font-bold mb-1">Industry news, blogs & CAP360 research — published regularly.</h3>
+                <p className="text-sm text-muted-foreground">We'll be sharing workforce insights, HR trends, and CAP360 thinking here. Check back soon.</p>
+              </div>
+              <a
+                href="/contact"
+                className="cta-link text-sm whitespace-nowrap"
+              >
+                Get notified
+                <ChevronRight className="w-4 h-4 text-cap-orange" />
+              </a>
+            </motion.div>
           </div>
         </section>
       </main>

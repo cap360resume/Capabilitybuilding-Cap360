@@ -35,9 +35,9 @@ import Performance from "@/assets/Performance.png";
 
 const serviceSubNav = [
   { label: "What to do", path: "#services" },
-  { label: "What's trending", path: "#trending" },
-  { label: "Partners", path: "#partners" },
-  { label: "How we work", path: "#how-we-work" },
+  { label: "About HRCAMS", path: "#trending" },
+  { label: "Who We Serve", path: "#partners" },
+  { label: "How we work", path: "#howWeWork" },
   { label: "Careers", path: "/careers" },
 ];
 
@@ -448,8 +448,8 @@ const HRCAMS = () => {
 
       {/* ===== STRATEGIC OVERVIEW ===== */}
       <section
-        id="overview"
-        className="py-24 bg-gradient-to-b from-background to-secondary/30"
+        id="trending"
+        className="py-24 bg-gradient-to-b from-background to-secondary/30" ref={trendingRef}
       >
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -780,7 +780,7 @@ const HRCAMS = () => {
 
       {/* ===== HOW WE WORK ===== */}
 
-      <section id="approach" className="py-28 relative">
+      <section id="howWeWork" className="py-28 relative" ref={howWeWorkRef}>
         <div className="container mx-auto px-4 lg:px-8">
           {/* Heading */}
           <motion.div
@@ -855,7 +855,8 @@ const HRCAMS = () => {
       </section>
 
       {/* ===== WHO WE SERVE ===== */}
-      <section className="py-32 section-navy relative overflow-hidden">
+
+      <section id="partners" className="py-32 section-navy relative overflow-hidden" ref={partnersRef}>
         <div className="container mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-16 items-start">
           {/* LEFT SIDE - STICKY CONTENT */}
           <div className="lg:sticky top-18 h-fit">
