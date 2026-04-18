@@ -19,7 +19,7 @@ const Contact = () => {
             Get in <span className="text-cap-orange">Touch</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-xl text-muted-foreground max-w-2xl">
-            Ready to transform your organization? Reach out to us or schedule a meeting.
+            Ready to transform your organization? Reach out to us or schedule a meeting .
           </motion.p>
         </div>
       </section>
