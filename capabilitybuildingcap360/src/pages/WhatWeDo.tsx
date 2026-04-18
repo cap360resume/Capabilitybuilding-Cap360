@@ -121,7 +121,7 @@ const stats = [
 { value: "30+", label: "Industries Served" },
 { value: "Global", label: "Delivery Presence" },
 { value: "98%", label: "Client Satisfaction" },
-{ value: "10+", label: "Years of Experience" }
+{ value: "8+", label: "Years of Experience" }
 ];
 
 const WhatWeDo = () => (
