@@ -27,7 +27,7 @@ import trending1 from "@/assets/trending-1.jpg";
 import trending2 from "@/assets/trending-2.jpg";
 import trending3 from "@/assets/trending-3.jpg";
 import trending4 from "@/assets/trending-4.jpg";
-import ShivinderMandhotra from "@/assets/ShivinderMandhotra.jpeg"
+import ShivinderMandhotra from "@/assets/Shivinder.png";
 
 const serviceSubNav = [
   { label: "Overview", path: "#overview" },
