@@ -4,7 +4,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const services = [
   {
     name: "ASER",
-    tag: "Assessment",
+    tag: "Assessments",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
         <path

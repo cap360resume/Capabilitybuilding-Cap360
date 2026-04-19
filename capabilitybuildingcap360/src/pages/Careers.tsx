@@ -10,12 +10,12 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import heroImg from "@/assets/careers-hero.jpg";
 
 const jobCategories = [
-  { name: "Talent Acquisition & HireTek", description: "Recruitment consultants, sourcing specialists, and hiring strategists." },
-  { name: "Assessment & ASER", description: "Psychometricians, assessment designers, and evaluation specialists." },
-  { name: "HR Consulting & HRCAMS", description: "HR advisors, org design consultants, and people strategy leads." },
+  { name: "Talent Acquisition (HireTek)", description: "Recruitment consultants, sourcing specialists, and hiring strategists." },
+  { name: "Assessment (ASER)", description: "Psychometricians, assessment designers, and evaluation specialists." },
+  { name: "HR Consulting (HRCAMS)", description: "HR advisors, org design consultants, and people strategy leads." },
   { name: "Learning & Capability Building (TCB)", description: "L&D specialists, facilitators, and instructional designers." },
-  { name: "Career Coaching & PACE", description: "Career coaches, mentors, and professional development advisors." },
-  { name: "Corporate & Operations", description: "Finance, marketing, technology, and business operations roles." },
+  { name: "Career Coaching (PACE)", description: "Career coaches, mentors, and professional development advisors." },
+  // { name: "Corporate & Operations", description: "Finance, marketing, technology, and business operations roles." },
 ];
 
 const benefits = [

@@ -500,7 +500,6 @@ const HRCAMS = () => {
         </div>
       </section>
 
-      {/* ===== SERVICES — ACCENTURE MOSAIC GRID ===== */}
     {/* ===== SERVICES — ACCENTURE MOSAIC GRID ===== */}
       <section id="services" className="py-24" ref={servicesRef}>
         <div className="container mx-auto px-4 lg:px-8">

@@ -274,11 +274,11 @@ const Navbar = () => {
                 <button onClick={openSearch} className="p-2.5 text-gray-500 hover:text-gray-800 transition-colors rounded-full hover:bg-gray-100" aria-label="Search">
                   <Search className="w-5 h-5" />
                 </button>
-                <button className="flex items-center gap-1.5 px-3 py-2 text-sm text-gray-500 hover:text-gray-800 transition-colors rounded-full hover:bg-gray-100">
+                {/* <button className="flex items-center gap-1.5 px-3 py-2 text-sm text-gray-500 hover:text-gray-800 transition-colors rounded-full hover:bg-gray-100">
                   <Globe className="w-4 h-4" />
                   <span className="text-sm">Global (EN)</span>
                   <ChevronDown className="w-3.5 h-3.5" />
-                </button>
+                </button> */}
               </>
             ) : (
               <button

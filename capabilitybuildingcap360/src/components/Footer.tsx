@@ -4,7 +4,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import logo from "@/assets/cap360-logo.png";
 
 const footerLinks = {
-  "About CAP360": [
+  "About": [
     { label: "About Us", href: "/who-we-are/our-company" },
     { label: "Our Values", href: "/who-we-are/our-values" },
   ],
@@ -65,7 +65,7 @@ const Footer = () => {
           >
             <img src={logo} alt="CAP360" className="h-8 md:h-10 mb-4 md:mb-6" />
             <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-5 max-w-sm">
-              CAP360 is a full-spectrum Capability Building Ecosystem — bringing together quality hiring, talent assessment, HR consulting, workforce upskilling, and career acceleration under one integrated platform.
+              Capability Building Ecosystem — bringing together quality hiring, talent assessment, HR consulting, workforce upskilling, and career acceleration under one integrated platform.
             </p>
             <div className="flex flex-wrap gap-3 md:gap-4">
               {socialLinks.map((social) => (
