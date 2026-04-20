@@ -34,7 +34,7 @@ const serviceSubNav = [
   { label: "Why Choose Us", path: "#why-us" },
   { label: "Our Approach", path: "#approach" },
   { label: "Programs", path: "#programs" },
-  { label: "Leaders", path: "#leaders" },
+  { label: "Leader", path: "#leaders" },
   { label: "Careers", path: "/careers" },
 ];
 

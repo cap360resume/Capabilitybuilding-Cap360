@@ -33,7 +33,7 @@ const serviceSubNav = [
   { label: "What to do", path: "#services" },
   { label: "Why Choose Cap360", path: "#trending" },
   { label: "How We Work", path: "#howWeWork" },
-  { label: "Leaders", path: "#leaders" },
+  { label: "Leader", path: "#leaders" },
   { label: "Careers", path: "/careers" },
 ];
 
@@ -126,28 +126,28 @@ const trendingInsights = [
   },
 ];
 
-const partners = [
-  {
-    name: "Hogan Assessments",
-    description:
-      "World-leading personality assessments for predicting workplace performance and leadership.",
-  },
-  {
-    name: "SHL",
-    description:
-      "Global leader in talent measurement, providing validated assessments across all levels.",
-  },
-  {
-    name: "Korn Ferry",
-    description:
-      "Organizational consulting firm delivering leadership and talent development solutions.",
-  },
-  {
-    name: "MeritTrac",
-    description:
-      "India's largest assessment services company powering large-scale talent evaluation.",
-  },
-];
+// const partners = [
+//   {
+//     name: "Hogan Assessments",
+//     description:
+//       "World-leading personality assessments for predicting workplace performance and leadership.",
+//   },
+//   {
+//     name: "SHL",
+//     description:
+//       "Global leader in talent measurement, providing validated assessments across all levels.",
+//   },
+//   {
+//     name: "Korn Ferry",
+//     description:
+//       "Organizational consulting firm delivering leadership and talent development solutions.",
+//   },
+//   {
+//     name: "MeritTrac",
+//     description:
+//       "India's largest assessment services company powering large-scale talent evaluation.",
+//   },
+// ];
 
 const targetAudiences = [
   "Large Enterprises: Designing complex, competency-based assessment architectures for global workforces",

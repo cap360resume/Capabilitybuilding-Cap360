@@ -36,8 +36,8 @@ import Performance from "@/assets/Performance.png";
 const serviceSubNav = [
   { label: "What to do", path: "#services" },
   { label: "About HRCAMS", path: "#trending" },
-  { label: "Who We Serve", path: "#partners" },
   { label: "How we work", path: "#howWeWork" },
+  { label: "Leader", path: "#partners" },
   { label: "Careers", path: "/careers" },
 ];
 
@@ -855,7 +855,7 @@ const HRCAMS = () => {
 
       {/* ===== WHO WE SERVE ===== */}
 
-      <section id="partners" className="py-32 section-navy relative overflow-hidden" ref={partnersRef}>
+      <section id="who-we-serve" className="py-32 section-navy relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-16 items-start">
           {/* LEFT SIDE - STICKY CONTENT */}
           <div className="lg:sticky top-18 h-fit">
@@ -1114,8 +1114,8 @@ const HRCAMS = () => {
 
       {/* ===== MEET OUR TRAINER ===== */}
       <section
-        id="founder"
-        className="py-24 section-navy relative overflow-hidden"
+        id="partners"
+        className="py-24 section-navy relative overflow-hidden" ref={partnersRef}
       >
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-cap-yellow/5 rounded-full blur-3xl -z-0" />
         <div className="w-full px-6 lg:px-16 xl:px-24 relative z-10">

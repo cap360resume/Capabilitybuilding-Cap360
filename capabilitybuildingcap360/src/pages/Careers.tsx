@@ -41,7 +41,7 @@ const stats = [
   { value: "2018", label: "Founded with purpose" },
   { value: "5", label: "Integrated service pillars" },
   { value: "360°", label: "Capability ecosystem" },
-  { value: "100%", label: "Annual values training" },
+  { value: "100%", label: "Talent Engagement" },
 ];
 
 const values = [

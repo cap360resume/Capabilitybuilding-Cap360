@@ -39,7 +39,7 @@ const serviceSubNav = [
   { label: "What to do", path: "#services" },
   { label: "Why Choose Cap360", path: "#trending" },
   { label: "How We work", path: "#howWeWork" },
-  {label: "Leaders", path: "#leaders" },
+  {label: "Leader", path: "#leaders" },
   { label: "Careers", path: "/careers" },
 ];
 
