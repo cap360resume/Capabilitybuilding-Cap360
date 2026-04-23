@@ -7,23 +7,23 @@ import card4 from "@/assets/card-4.jpg";
 
 const insights = [
   {
-    category: "TALENT ACQUISITION",
-    title: "Solving complex hiring challenges with structured, SLA-driven recruitment",
-    image: card1,
+    category: "HR Strategy",
+    title: "M&A and the People Problem: How HR Due Diligence Determines Deal Success",
+    image: card2,
   },
   {
-    category: "HR TRANSFORMATION",
-    title: "Designing scalable HR systems for growing organisations",
-    image: card2, // ← was null, now has image
+    category: "Workforce Trends",
+    title: "The Upskilling Imperative: Why L&D Is Now a Retention Tool",
+    image: card1, // ← was null, now has image
   },
   {
-    category: "CAREER ACCELERATION",
-    title: "Helping professionals navigate transitions with clarity and strategy",
+    category: "Workforce Trends",
+    title: "The Upskilling Imperative: Why L&D Is Now a Retention Tool",
     image: card3,
   },
   {
-    category: "CAPABILITY BUILDING",
-    title: "Closing skill gaps through outcome-driven learning programs",
+    category: "Leadership",
+    title: "Building Leadership Pipelines That Don't Break Under Pressure",
     image: card4,
   },
 ];

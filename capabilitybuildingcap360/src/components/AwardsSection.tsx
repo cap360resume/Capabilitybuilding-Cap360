@@ -8,14 +8,14 @@ const awards = [
     tab: "Business Transformation",
     title: "From Strategy to Scalable Impact",
     description:
-      "Transformation isn’t about intent—it’s about execution that delivers results. At CAP360, we partner with leadership teams to unlock business performance by aligning strategy, structure, and execution. We don’t just design transformation roadmaps—we enable organizations to operationalize them with precision and speed."
+      "Identifying high-impact levers—whether it’s scaling new revenue streams, improving productivity, or redesigning operating models for agility. Through a combination of advisory, managed services, and capability building, we ensure transformation initiatives translate into measurable outcomes."
       
   },
   {
     tab: "People Strategy",
     title: "Building Organizations that Perform & Endure",
     description:
-      "Great businesses are built on strong people systems—not just great talent. At CAP360, we help organizations design people strategies that are tightly aligned to business goals and growth ambitions. Our approach spans the entire employee lifecycle—bringing structure, clarity, and consistency to how organizations attract, develop, and retain talent."  
+      "Frameworks specially designed to enhance individual outcomes while maintaining the serenity of culture. We focus on building performance-driven processes through robust assessment frameworks, outcome-oriented PMS, and leadership capability development. Our approach spans the entire employee lifecycle—bringing structure, clarity, and consistency to how organizations attract, develop, and retain talent."  
     },
  {
   tab: "Sectors We Serve",
