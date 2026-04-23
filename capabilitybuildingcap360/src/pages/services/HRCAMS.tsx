@@ -294,15 +294,15 @@ const HRCAMS = () => {
   const stats = [
     {
       value: "50+",
-      desc: "organizations served across Asia",
+      desc: "organizations targeted across Asia",
     },
     {
       value: "40%",
-      desc: "average HR cost reduction achieved for managed services clients",
+      desc: "average HR cost reduction can be achieved through effective managed services as per our studies",
     },
     {
       value: "3x",
-      desc: "faster hiring turnaround achieved through optimized talent acquisition strategies",
+      desc: "Impact on hiring turnaround through optimized talent acquisition strategies",
     },
     {
       value: "Only 13%",

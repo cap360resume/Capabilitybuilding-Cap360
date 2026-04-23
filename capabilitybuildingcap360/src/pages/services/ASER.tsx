@@ -161,13 +161,13 @@ const phases = [
   {
     step: "01",
     title: "Discovery & Framework Design",
-    desc: "We conduct a thorough analysis of your role requirements, competency frameworks, and talent strategy. This phase identifies what capabilities to assess and maps them to validated measurement tools.",
+    desc: "We conduct a thorough analysis of role requirements, competency frameworks and talent strategy. This phase identifies what capabilities to assess and maps them to validated measurement tools.",
     icon: Target,
   },
   {
     step: "02",
     title: "Tool Selection & Customization",
-    desc: "Based on our findings, we select and customize the right mix of psychometric, situational, and competency tools — building an assessment architecture that is precise, fair, and fit-for-purpose.",
+    desc: "Based on findings, we select and customize the right mix of psychometric, situational, and competency tools — building an assessment architecture that is precise, fair, and fit-for-purpose.",
     icon: Zap,
   },
   {
@@ -856,7 +856,7 @@ const ASER = () => {
               className="p-5 rounded-2xl bg-gradient-to-br from-cap-red/20 to-transparent border border-cap-red/30 backdrop-blur-md"
             >
               <p className="text-[17px] text-whitefont-medium">
-                We don't just run assessments — we build a talent intelligence
+                These assessments — help build a talent intelligence
                 capability that powers every hire, promotion, and development
                 decision.
               </p>
