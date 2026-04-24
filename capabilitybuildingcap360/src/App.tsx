@@ -34,11 +34,11 @@ import CompetencyAssessments from "./pages/services/aser/CompetencyAssessments.t
 import AssessmentCentres from "./pages/services/aser/AssessmentCentres.tsx";
 import PsychometricTesting from "./pages/services/aser/PsychometricTesting.tsx";
 import TalentAnalytics from "./pages/services/aser/TalentAnalytics.tsx";
-import CareerPathArchitecture from "./pages/services/pace/CareerPathArchitecture.tsx";
+import CareerPathArchitecture from "./pages/services/pace/RecruiterMapping.tsx";
 import ProfessionalCoaching from "./pages/services/pace/ProfessionalCoaching.tsx";
 import JobSearchStrategy from "./pages/services/pace/JobSearchStrategy.tsx";
-import LinkedInOptimization from "./pages/services/pace/LinkedInOptimization;.tsx";
-import CareerTransition from "./pages/services/pace/CareerTransition.tsx";
+import LinkedInOptimization from "./pages/services/pace/LinkedInOptimization.tsx";
+import CareerTransition from "./pages/services/pace/ApplyOnYourBehalf.tsx";
 import InterviewPreparation from "./pages/services/pace/InterviewPreparation.tsx";
 import OurCompany from "./pages/who-we-are/OurCompany.tsx";
 import OurValues from "./pages/who-we-are/OurValues.tsx";

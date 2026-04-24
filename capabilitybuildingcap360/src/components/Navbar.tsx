@@ -33,10 +33,11 @@ const SEARCH_INDEX = [
 const megaMenuData = {
   "What we do": [
     { title: "Services", links: [
-      { label: "Assessment Services (ASER)", path: "/what-we-do/services/aser" },
+
       { label: "HR Consulting & Advisory (HRCAMS)", path: "/what-we-do/services/hrcams" },
-      { label: "Training & Capability Building (TCB)", path: "/what-we-do/services/tcb" },
       { label: "Professional Alignment & Career Enhancement (PACE)", path: "/what-we-do/services/pace" },
+      { label: "Assessment Services (ASER)", path: "/what-we-do/services/aser" },
+      { label: "Training & Capability Building (TCB)", path: "/what-we-do/services/tcb" },
     ]},
     { title: "Industries", links: [
       { label: "Banking" }, { label: "Communications & Media" }, { label: "Health" },

@@ -3,11 +3,13 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import Footer from "@/components/Footer";
 import SubNavbar from "@/components/SubNavbar";
 import HRCAMSSubNavbar from "@/components/HRCAMSSubNavbar";
-import { ArrowRight, Settings, UserCheck, FileText, Headphones, Shield, BarChart3, ClipboardList } from "lucide-react";
+import { ArrowRight, Target, Map, Calendar, TrendingUp, Users, Brain, ShieldCheck, GitBranch } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { motion, AnimatePresence } from "framer-motion";
-import HRoperations from "@/assets/HR-operations.jpg";
-import ManagedHRServices from "@/assets/Managed-HR-Services.jpg";
+
+// Replace these imports with your actual image assets
+// import SuccessionHero from "@/assets/succession-hero.jpg";
+// import LeadershipDev from "@/assets/leadership-dev.jpg";
 
 const ManagedHR = () => {
   const { ref: sRef, isInView: sInView } = useScrollAnimation(0.1);
@@ -16,116 +18,207 @@ const ManagedHR = () => {
 
   const solutions = [
     {
-      icon: Settings,
-      title: "End-to-End Employee Lifecycle Management",
+      icon: Target,
+      title: "Identification of Critical Roles",
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            Every employee touchpoint matters — from onboarding to exit. We manage the complete lifecycle to ensure consistency, compliance, and a smooth employee experience.
+            Not every role requires a succession plan. The first discipline of succession planning is identifying which roles are truly critical — where a vacancy would create disproportionate business impact or where the skill and experience required to fill the role makes internal or external replacement genuinely difficult.
+          </p>
+          <p className="text-muted-white mb-4">
+            Roles are assessed across five dimensions:
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Onboarding:</strong> Offer letters, documentation, induction, and early-stage integration support.
+                <strong className="text-white">Business Impact:</strong> What would the business impact be if this role were vacant for 3–6 months?
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Probation management:</strong> Structured reviews and confirmation processes.
+                <strong className="text-white">Replacement Difficulty:</strong> How long would it take to find and develop a fully effective replacement?
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Role changes:</strong> Managing transfers and internal movements with proper documentation.
+                <strong className="text-white">Knowledge Concentration:</strong> Does this role hold critical institutional knowledge that is not documented or distributed?
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Exit management:</strong> Resignations, notice periods, exit interviews, and full & final settlement.
+                <strong className="text-white">Strategic Leverage:</strong> Is this role pivotal to current strategic priorities or transformation programs?
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
+              <span className="text-muted-white text-md">
+                <strong className="text-white">External Market Scarcity:</strong> Is the talent profile for this role scarce in the external market?
               </span>
             </li>
           </ul>
-          <p className="text-muted-white text-md">The outcome is a seamless and well-governed employee lifecycle.</p>
+          <p className="text-muted-white text-md">Roles meeting two or more of these criteria are designated as critical and included in the formal succession process.</p>
         </>
       ),
     },
     {
-      icon: ClipboardList,
-      title: "PMS Administration",
+      icon: Map,
+      title: "Succession Mapping",
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            Running a performance cycle requires significant coordination. We manage the entire PMS process to ensure timely execution and consistency across the organisation.
+            For each critical role, a succession map is developed that identifies candidates at multiple readiness levels and explores non-traditional talent sources. We move from single-candidate succession to multi-candidate, multi-path succession maps — creating genuine organisational resilience.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Goal tracking:</strong> Distribution and completion monitoring.
+                <strong className="text-white">Ready Now (GREEN):</strong> Capable of stepping into the role within 3–6 months with minimal development.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Review cycles:</strong> Mid-year and year-end coordination.
+                <strong className="text-white">Ready Soon (YELLOW):</strong> Strong potential with identified development gaps — 12 to 18 months with a structured development plan.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Calibration:</strong> Facilitating fair and consistent ratings.
+                <strong className="text-white">Future Potential (AMBER):</strong> Early-career or high-potential candidates representing the 2–3 year long-term pipeline.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Documentation:</strong> Ratings and outcome records.
+                <strong className="text-white">At Risk (RED):</strong> No identified successor — requires urgent focus on internal capability building or external hiring.
               </span>
             </li>
           </ul>
-          <p className="text-muted-white text-md">The outcome is a smooth, structured, and efficient PMS cycle.</p>
+          <p className="text-muted-white text-md">The talent pool is expanded through horizontal succession, cross-business transfers, and active awareness of 2–3 external candidates for each critical role.</p>
         </>
       ),
     },
     {
-      icon: FileText,
-      title: "Flexible Engagement Models",
+      icon: Calendar,
+      title: "Bi-Annual Succession Reviews — SHR Panels",
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            Our Managed HR Services are designed to adapt to your growth stage and internal HR capability, offering flexible engagement models.
+            The Succession & Human Resource (SHR) Review Panel is the governance mechanism through which succession plans are validated, challenged, and acted upon. These are not routine HR reviews — they are strategic business reviews that happen to be about people.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Advisory Only:</strong> Framework design and guidance for teams with in-house HR.
+                <strong className="text-white">Frequency:</strong> Bi-annual — aligned to mid-year and year-end review cycles.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Advisory + Implementation:</strong> Design with structured rollout support.
+                <strong className="text-white">Participants:</strong> CEO, direct reports, CHRO, and HR Business Partners — with Board involvement for CEO-level succession.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Retainer Model:</strong> Ongoing strategic HR advisory and governance reviews.
+                <strong className="text-white">Format:</strong> Intensive 2-day sessions for large organisations, with each leader presenting their succession map, development actions, and future role potential.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">HR Outsourcing:</strong> End-to-end HR operations management.
+                <strong className="text-white">Critical Design Principle:</strong> SHR Panels are structurally separated from the annual performance appraisal — succession is about future potential, not past results.
               </span>
             </li>
           </ul>
-          <p className="text-muted-white text-md">A hybrid model is also available, allowing you to scale support as your organisation grows.</p>
+          <p className="text-muted-white text-md">The CEO must personally chair and actively participate — delegation signals that succession is not truly a priority.</p>
+        </>
+      ),
+    },
+    {
+      icon: TrendingUp,
+      title: "Leadership Development",
+      content: (
+        <>
+          <p className="text-muted-white leading-relaxed mb-4">
+            Succession planning without investment in leadership development is a plan without execution. This ensures identified successors are actively developed, not just tracked.
+          </p>
+          <ul className="space-y-2 mb-4">
+            <li className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
+              <span className="text-muted-white text-md">
+                <strong className="text-white">Individual Development Plans (IDPs):</strong> Co-created between the individual and their manager, addressing specific capability gaps against the target role profile.
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
+              <span className="text-muted-white text-md">
+                <strong className="text-white">Experience-based learning:</strong> Stretch assignments, cross-functional exposure, and international rotations.
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
+              <span className="text-muted-white text-md">
+                <strong className="text-white">Social learning:</strong> Mentoring, coaching, peer learning, and executive mentoring programmes.
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
+              <span className="text-muted-white text-md">
+                <strong className="text-white">HiPo Acceleration:</strong> Separate identification process for high-potential individuals — assessing potential, not just current performance.
+              </span>
+            </li>
+          </ul>
+          <p className="text-muted-white text-md">IDPs are reviewed and updated at each SHR Panel, ensuring development stays on track and accountability is maintained.</p>
+        </>
+      ),
+    },
+    {
+      icon: Brain,
+      title: "AI Enablement in Succession & Leadership Development",
+      content: (
+        <>
+          <p className="text-muted-white leading-relaxed mb-4">
+            AI applications transform succession planning from a periodic exercise into a continuous, data-driven process — surfacing insights that traditional methods miss.
+          </p>
+          <ul className="space-y-2 mb-4">
+            <li className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
+              <span className="text-muted-white text-md">
+                <strong className="text-white">Predictive HiPo Identification:</strong> Analyses performance patterns, career velocity, and behavioural signals to surface high-potential talent earlier.
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
+              <span className="text-muted-white text-md">
+                <strong className="text-white">Skill Gap Analysis:</strong> Automated mapping of candidate profiles against role requirements, identifying development priorities.
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
+              <span className="text-muted-white text-md">
+                <strong className="text-white">Personalised Learning Pathways:</strong> AI-curated development journeys based on individual gap profiles and learning preferences.
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
+              <span className="text-muted-white text-md">
+                <strong className="text-white">Flight Risk Modelling:</strong> Identifies succession candidates at risk of attrition, enabling pre-emptive action.
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
+              <span className="text-muted-white text-md">
+                <strong className="text-white">Network Analysis:</strong> Maps informal influence and collaboration patterns to surface hidden organisational leaders.
+              </span>
+            </li>
+          </ul>
+          <p className="text-muted-white text-md">Leadership readiness scoring provides objective assessment of succession readiness against defined competency frameworks.</p>
         </>
       ),
     },
@@ -147,15 +240,14 @@ const ManagedHR = () => {
 
   // ─── Infinite carousel ────────────────────────────────────────────────────
   const cards = [
-    { icon: <Settings className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />, title: "End-to-end employee lifecycle management", desc: "Manage the complete employee journey—from onboarding to exit—with structured processes, documentation, and consistent employee experience." },
-    { icon: <ClipboardList className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />, title: "Seamless PMS administration", desc: "Ensure smooth execution of performance cycles through goal tracking, review coordination, calibration support, and outcome documentation." },
-    { icon: <Shield className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />, title: "Proactive compliance & policy management", desc: "Monitor statutory compliance, manage policy updates, and ensure adherence to labour laws through structured, ongoing governance." },
-    { icon: <BarChart3 className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />, title: "Governance reporting & insights", desc: "Provide leadership with structured HR dashboards covering headcount, attrition, compliance status, and workforce trends." },
-    { icon: <Headphones className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />, title: "Flexible & scalable HR support", desc: "Access tailored HR engagement models—from advisory to fully managed outsourcing—designed to scale with your business needs." },
+    { icon: <ShieldCheck className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />, title: "Organisational resilience through leadership continuity", desc: "Maintain uninterrupted strategic momentum across leadership transitions by ensuring every critical role has multiple identified successors at different readiness levels." },
+    { icon: <GitBranch className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />, title: "Multi-path succession maps that eliminate single points of failure", desc: "Move beyond fragile single-candidate succession to structured maps that give your organisation flexibility and resilience when leadership changes happen." },
+    { icon: <Users className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />, title: "A stronger leadership bench built from within", desc: "Develop a pipeline of future-ready leaders through structured IDPs, stretch assignments, and high-potential acceleration programmes." },
+    { icon: <TrendingUp className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />, title: "Governance that makes succession a strategic priority", desc: "Bi-annual SHR Panels chaired by the CEO ensure succession planning gets the rigour, accountability, and executive attention it deserves." },
+    { icon: <Brain className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />, title: "AI-driven talent insights and flight risk prevention", desc: "Leverage predictive analytics to identify high-potential talent earlier, close skill gaps faster, and prevent the attrition of your most critical succession candidates." },
   ];
 
   const GAP = visibleCards === 1 ? 0 : 24;
-
   const infiniteCards = [...cards, ...cards, ...cards];
   const cloneOffset = cards.length;
 
@@ -243,26 +335,35 @@ const ManagedHR = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <SubNavbar title="Services" titlePath="/what-we-do" items={[
-        { label: "ASER", path: "/what-we-do/services/aser" },
-        { label: "HRCAMS", path: "/what-we-do/services/hrcams" },
-        { label: "TCB", path: "/what-we-do/services/tcb" },
-        { label: "PACE", path: "/what-we-do/services/pace" },
-      ]} />
+      <SubNavbar
+        title="Services"
+        titlePath="/what-we-do"
+        items={[
+          { label: "ASER", path: "/what-we-do/services/aser" },
+          { label: "HRCAMS", path: "/what-we-do/services/hrcams" },
+          { label: "TCB", path: "/what-we-do/services/tcb" },
+          { label: "PACE", path: "/what-we-do/services/pace" },
+        ]}
+      />
       <HRCAMSSubNavbar />
 
       {/* Breadcrumb */}
       <div className="container mx-auto px-4 lg:px-8 py-4 mt-5">
         <span className="text-xs text-muted-white">HRCAMS</span>
         <span className="text-xs text-muted-white mx-2">/</span>
-        <span className="text-xs text-cap-yellow font-semibold">Managed HR Services</span>
+        <span className="text-xs text-cap-yellow font-semibold">Succession Planning & Leadership Development</span>
       </div>
 
       {/* Hero */}
       <section className="container mx-auto px-4 lg:px-8 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="overflow-hidden">
-            <img src={ManagedHRServices} alt="Managed HR Services" className="w-full h-[400px] object-cover" />
+            {/* Replace src with your actual image asset */}
+            <img
+              src="/assets/succession-hero.jpg"
+              alt="Succession Planning & Leadership Development"
+              className="w-full h-[400px] object-cover"
+            />
           </div>
           <div>
             <motion.h1
@@ -271,7 +372,7 @@ const ManagedHR = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              Managed HR Services (Outsourced HR)
+              Succession Planning & Leadership Development
             </motion.h1>
             <motion.p
               className="text-[20px] text-muted-white leading-[1.7]"
@@ -279,7 +380,7 @@ const ManagedHR = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              Focus on your core business while we handle your entire HR operations — from payroll to compliance to employee experience — with enterprise-grade reliability.
+              A structured, disciplined, and proven approach to building leadership continuity — so your organisation sustains performance across transitions, not just during stability.
             </motion.p>
           </div>
         </div>
@@ -290,13 +391,13 @@ const ManagedHR = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_360px] gap-16 items-start">
             <p className="text-[20px] text-muted-white leading-[1.8]">
-              Managed HR Services provide a comprehensive solution for organisations looking to outsource their HR operations. By leveraging our expertise and technology, we help you streamline processes, ensure compliance, and enhance the overall employee experience — allowing you to focus on what matters most: your core business.
+              Succession planning is the discipline that separates organisations that sustain performance across leadership transitions from those that are perpetually disrupted by them. Most organisations acknowledge its importance — and most underinvest in it. The reason is simple: the benefits are long-term and the effort is immediate.
             </p>
             <div className="bg-card border border-border/30 p-8">
-              <span className="text-[20px] font-bold tracking-widest text-cap-yellow uppercase block mb-3">DATA</span>
-              <div className="text-[56px] font-black leading-none mb-3">68%</div>
+              <span className="text-[20px] font-bold tracking-widest text-cap-yellow uppercase block mb-3">INSIGHT</span>
+              <div className="text-[56px] font-black leading-none mb-3">3×</div>
               <p className="text-mid text-muted-white leading-relaxed">
-                of growing organisations operate without structured HR systems, leading to inconsistent processes, compliance risks, and poor employee experience.
+                organisations with structured succession plans are three times more likely to outperform peers during leadership transitions and executive change.
               </p>
             </div>
           </div>
@@ -307,16 +408,21 @@ const ManagedHR = () => {
       <section className="py-20 bg-card/30">
         <div className="container mx-auto px-4 lg:px-8">
           <h2 className="text-[28px] md:text-[36px] font-bold mb-12 max-w-3xl">
-            How vision, strategy and implementation are transforming{" "}
-            <span className="text-cap-yellow">HR operations</span>
+            From reactive replacement to{" "}
+            <span className="text-cap-yellow">proactive leadership continuity</span>
           </h2>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <img src={HRoperations} alt="Vision" className="w-full h-[350px] object-cover" />
+            {/* Replace src with your actual image asset */}
+            <img
+              src="/assets/leadership-dev.jpg"
+              alt="Leadership Development"
+              className="w-full h-[350px] object-cover"
+            />
             <div>
               <div className="w-12 h-1 bg-cap-yellow mb-6" />
-              <h3 className="text-[22px] font-bold mb-4">Move from informal HR to structured people management</h3>
+              <h3 className="text-[22px] font-bold mb-4">Build tomorrow's leadership bench today</h3>
               <p className="text-[20px] text-muted-white leading-[1.7]">
-                As organisations grow, managing HR informally creates inconsistencies, compliance risks, and inefficiencies. By implementing managed HR services, businesses can establish structured processes, ensure compliance, and improve employee experience—without the cost of building a full in-house HR function.
+                Leaders who are busy managing today's business find it hard to invest time in building tomorrow's leadership bench. We bring the structure, governance, and expertise to make succession planning a disciplined, continuous process — not a crisis response triggered by a departure.
               </p>
             </div>
           </div>
@@ -331,7 +437,7 @@ const ManagedHR = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={sInView ? { opacity: 1, y: 0 } : {}}
           >
-            How We Support Your Growth
+            Our Approach to Succession Planning
           </motion.h2>
           <div className="border-t border-border/30">
             {solutions.map((item, i) => {
@@ -448,7 +554,7 @@ const ManagedHR = () => {
       <section className="py-16 bg-cap-blue text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-[24px] font-bold mb-4 text-primary-white">
-            Transform your HR operations
+            Build a leadership pipeline that lasts
           </h2>
           <a
             href="/contact"

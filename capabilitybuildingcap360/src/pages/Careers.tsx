@@ -47,15 +47,15 @@ const stats = [
 const values = [
   {
     title: "People-First Mindset",
-    description: "We practice what we preach. The same focus on capability and growth we bring to clients, we bring to our own team.",
+    description: "We foster a culture of trust, collaboration, and continuous learning, where ideas are encouraged and contributions are recognized.",
   },
   {
-    title: "Expertise Over Ego",
-    description: "CAP360 is a place where deep knowledge is celebrated — where being the smartest in the room means sharing what you know.",
+    title: "Expertise Over Experience",
+    description: "We prioritize individuals who bring clarity of thought, problem-solving ability, and a strong understanding of their domain. Titles and tenure matter less to us than curiosity, capability, and the drive to continuously learn and evolve.",
   },
   {
-    title: "Outcomes Over Activity",
-    description: "We measure success by the impact we create — for our clients, their people, and the organizations we serve.",
+    title: "Outcomes & Activity",
+    description: "Sustainable outcomes are built on thoughtful action. That’s why we create a culture where planning, execution, and results go hand in hand — ensuring that every contribution moves the needle.Because at the end of the day, it’s not just about what we do — it’s about the difference it makes.",
   },
 ];
 

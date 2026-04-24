@@ -6,7 +6,8 @@ import PACESubNavbar from "@/components/PACESubNavbar";
 import { ArrowRight, Compass, Map, Send, BarChart3, Users, TrendingUp } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { motion, AnimatePresence } from "framer-motion";
-import heroImg from "@/assets/service-hero-pace.jpg";
+import jobcampaign from "@/assets/Jobcampaign.png";
+import jobsearch from "@/assets/jobsearch.jpg"
 
 const JobSearchStrategy = () => {
   const { ref: sRef, isInView: sInView } = useScrollAnimation(0.1);
@@ -336,7 +337,7 @@ const JobSearchStrategy = () => {
       <section className="container mx-auto px-4 lg:px-8 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="overflow-hidden">
-            <img src={heroImg} alt="Job Search Strategy & Targeting" className="w-full h-[400px] object-cover" />
+            <img src={jobsearch} alt="Job Search Strategy & Targeting" className="w-full h-[400px] object-cover" />
           </div>
           <div>
             <motion.h1
@@ -385,7 +386,7 @@ const JobSearchStrategy = () => {
             <span className="text-cap-green">targeted, winning campaign</span>
           </h2>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <img src={heroImg} alt="Job Search Strategy" className="w-full h-[350px] object-cover" />
+            <img src={jobcampaign} alt="Job Search Strategy" className="w-full h-[450px] object-cover" />
             <div>
               <div className="w-12 h-1 bg-cap-green mb-6" />
               <h3 className="text-[22px] font-bold mb-4">From scattered applications to a focused search engine</h3>

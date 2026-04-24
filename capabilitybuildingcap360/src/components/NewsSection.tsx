@@ -92,7 +92,7 @@ const services = [
       </svg>
     ),
     description:
-      "Specialized hiring solutions to help organizations attract, assess, and onboard top talent efficiently.",
+      "Specialized hiring solutions to help organizations attract, assess, and onboard top talent efficiently. Ensuring quality, speed, and consistency across every hire.",
     color: "purple",
     href: "https://hiretek.in/",
     wide: true,

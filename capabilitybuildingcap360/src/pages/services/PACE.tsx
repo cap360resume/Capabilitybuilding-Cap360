@@ -21,6 +21,7 @@ import {
   Search,
   Users,
   Bold,
+  BookOpen,
 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useNavigate } from "react-router-dom";
@@ -36,10 +37,10 @@ import digitalcapability from "@/assets/digital capability.png";
 
 
 const serviceSubNav = [
-  { label: "What to do", path: "#services" },
+  { label: "What We Do", path: "#services" },
   { label: "Why Choose Cap360", path: "#trending" },
-  { label: "How We work", path: "#howWeWork" },
-  {label: "Leader", path: "#leaders" },
+  { label: "How We Work", path: "#howWeWork" },
+  { label: "Leader", path: "#leaders" },
   { label: "Careers", path: "/careers" },
 ];
 
@@ -48,31 +49,24 @@ const trendingImages = [trending1, trending2, trending3, trending4];
 const mosaicImages = [creativecapability, digitalcapability];
 
 const subServices = [
-  {
-    icon: Compass,
-    title: "Career Path Architecture",
-    title2:
-      "Designing Structured Career Pathways With Clear Growth Trajectories",
-    description:
-      "Design structured career pathways with clear milestones, competency requirements, and growth trajectories for every role family across your organization.",
-    path: "/what-we-do/services/pace/career-path-architecture",
-  },
-  {
-    icon: UserCheck,
-    title: "Professional Coaching & Mentoring",
-    title2: "Accelerating Leadership Readiness Through Certified Coaching",
-    description:
-      "One-on-one and group coaching programmes led by certified coaches that accelerate leadership readiness and professional effectiveness at every level.",
-    path: "/what-we-do/services/pace/professional-coaching",
-  },
-  {
+     {
     icon: Rocket,
-    title: "Career Transition Support",
-    title2: "Comprehensive Outplacement and Career Transition Services",
+    title: "We Apply on Your Behalf",
+    title2: "Your Candidacy Stays Active — Even While You Work",
     description:
-      "Comprehensive outplacement and career transition services including resume building, interview preparation, and job placement support for transitioning employees.",
+      "Our team applies to curated, relevant roles on your behalf every single day — so your job search runs consistently and at scale, without you lifting a finger.",
     path: "/what-we-do/services/pace/career-transition",
   },
+  
+  {
+    icon: Users,
+    title: "HR & Recruiter Mapping",
+    title2: "Direct Outreach to the People Who Actually Hire",
+    description:
+      "We identify and reach out to HR heads, talent acquisition leads, and hiring managers at target companies — putting your profile directly in front of decision-makers, not just portals.",
+    path: "/what-we-do/services/pace/career-path-architecture",
+  },
+
  {
   icon: Search,
   title: "Job Search Strategy & Targeting",
@@ -96,7 +90,17 @@ const subServices = [
   description:
     "Comprehensive interview preparation including mock sessions, industry-specific questions, STAR and CARL method training, salary negotiation practice, and follow-up strategies for success.",
   path: "/what-we-do/services/pace/interview-preparation",
-}
+},
+ {
+  icon: BookOpen,
+  title: "Skills & Course Recommendations",
+  title2: "Close the Gaps That Are Costing You Interviews",
+  description:
+    "We analyse your profile as per market requirements and recommend the most relevant courses and certifications that strengthen your profile — and also make you future ready for the evolving job market.",
+  path: "/what-we-do/services/pace/professional-coaching",
+},
+
+
 ];
 
 const trendingInsights = [
@@ -158,67 +162,67 @@ const partners = [
 const whyChooseUs = [
   {
     icon: TrendingUp,
-    title: "Empowering Careers, One Step at a Time",
-    desc: "At Career Advancement Program (CAP360), we believe that a fulfilling career isn’t built by chance — it’s built by strategy, support, and the right tools. We help professionals at every stage, from fresh graduates to seasoned executives, bridge the gap between talent and opportunity.",
+    title: "We Do the Work — You Stay Focused",
+    desc: "No portals to manage. No applications to track. Our team runs your entire job search daily while you continue excelling in your current role. You stay focused; we stay relentless.",
   },
   {
     icon: Brain,
-    title: "From Resume Service to Career Platform",
-    desc: "What started as a resume writing service has evolved into a full-spectrum career growth platform offering personalized coaching, job search support, executive branding, and placement assistance.",
+    title: "HR Mapping, Not Just Job Boards",
+    desc: "We go beyond listings. Our team directly identifies and reaches out to HR heads, talent acquisition leads, and hiring managers — accessing opportunities before they are even posted.",
   },
   {
     icon: Target,
-    title: "Guiding Careers with Strategy",
-    desc: "We have helped hundreds of professionals clarify their direction, build impactful profiles, and secure roles that truly match their potential in a fast-changing and competitive job market.",
+    title: "Built for Senior Professionals",
+    desc: "We understand how hiring works at senior levels — longer cycles, referral-driven decisions, and relationship-first processes. Our approach is calibrated for leaders, not entry-level candidates.",
   },
   {
     icon: Zap,
     title: "Founded with Purpose (2018)",
-    desc: "CAP360 was founded in 2018 with a mission to help professionals achieve their full potential through structured, personalized, and strategic career guidance.",
+    desc: "CAP360 was founded in 2018 with a single mission: help senior professionals achieve their full potential through structured, personalised, and strategically executed career guidance.",
   },
   {
     icon: Users,
-    title: "Leadership with Real Experience",
-    desc: "Founded by Gurpriit Singh Anand, who experienced corporate career challenges firsthand and began helping professionals through coaching — turning that insight into a scalable career solution.",
+    title: "Founder-Led Expertise You Can Trust",
+    desc: "Built by Gurpriit Singh Anand, who navigated corporate career challenges firsthand and turned that lived experience into a proven, scalable career acceleration model.",
   },
   {
     icon: CheckCircle2,
-    title: "Proven Impact Across Industries",
-    desc: "We have supported 5,000+ professionals across 25+ industries in securing interviews, negotiating better salaries, and building meaningful, fulfilling careers through personalized attention.",
+    title: "Proven Impact Across India",
+    desc: "We have supported 50+ senior professionals across 25+ industries — helping them secure more interviews, negotiate better packages, and land roles that match their true potential.",
   },
 ];
 
 const targetAudiences = [
-  "Large Enterprises: Building enterprise-wide career architecture and succession frameworks",
-  "Mid-Market Organizations: Scaling career development while maintaining personal connection",
-  "Growth-Stage Companies: Creating career clarity that helps you attract and retain top talent",
-  "Private Equity Backed Firms: Aligning talent development across portfolio companies",
-  "Public Sector Organizations: Driving workforce capability and career progression at scale",
+  "Mid to Senior Management: Managers, Senior Managers, and AGM/DGM professionals ready to move up or across industries",
+  "VP & Director Level: Leaders seeking roles where their experience commands the right compensation and mandate",
+  "C-Suite Executives: CFOs, CTOs, COOs, and CMOs navigating a high-stakes, relationship-driven search",
+  "Industry Changers: Experienced professionals making a planned, strategic pivot to a new sector or function",
+  "Returning Professionals: Senior talent re-entering the market after a sabbatical, relocation, or transition",
 ];
 
 const phases = [
   {
     step: "01",
-    title: "Discovery & Assessment",
-    desc: "We conduct a thorough evaluation of your current career frameworks, talent landscape, and business objectives. This phase identifies gaps, quick wins, and long-term transformation opportunities.",
+    title: "Deep-Dive Consultation",
+    desc: "We understand your career history, target roles, preferred industries, compensation expectations, and geography. This forms the complete foundation of your personalised search strategy.",
     icon: Target,
   },
   {
     step: "02",
-    title: "Strategy & Planning",
-    desc: "Based on our findings, we develop a tailored career development roadmap that prioritizes initiatives, allocates resources, and defines success metrics. Your team stays engaged throughout.",
+    title: "Profile Build & Optimisation",
+    desc: "We craft or overhaul your resume, LinkedIn profile, and all job portal presences — positioning you precisely for senior roles with the right keywords, narrative, and executive framing.",
     icon: Zap,
   },
   {
     step: "03",
-    title: "Implementation & Execution",
-    desc: "Our teams execute with precision, managing stakeholder communication, change management, and day-to-day operations. We combine your internal knowledge with our external expertise.",
+    title: "Active Search & Direct Outreach",
+    desc: "We apply to roles on your behalf, map relevant HRs and hiring managers, and initiate targeted outreach — running a consistent, high-volume search that would be impossible to do alone.",
     icon: TrendingUp,
   },
   {
     step: "04",
-    title: "Optimization & Support",
-    desc: "Post-implementation, we monitor performance, gather feedback, and continuously optimize career programmes. Our support model ensures you realize full value from your investment.",
+    title: "Interview & Offer Support",
+    desc: "When interview calls come in, we prepare you thoroughly for every round. We also guide salary negotiation so you walk away with the strongest possible offer.",
     icon: CheckCircle2,
   },
 ];
@@ -238,7 +242,6 @@ const PACE = () => {
   const navigate = useNavigate();
   const trendingScrollRef = useRef<HTMLDivElement>(null);
   const { ref: whyRef, isInView: whyInView } = useScrollAnimation(0.1);
- 
 
   const scrollTrending = (dir: "left" | "right") => {
     if (trendingScrollRef.current) {
@@ -311,19 +314,19 @@ const PACE = () => {
   const stats = [
     {
       value: "50+",
-      desc: "career transformation programmes delivered across India.",
+      desc: "Senior professionals placed across the global.",
     },
     {
-      value: "40%",
-      desc: "higher employee engagement in organizations with structured career alignment programmes",
+      value: "25+",
+      desc: "Industries served — from technology and finance to manufacturing and healthcare.",
     },
     {
-      value: "30%",
-      desc: "lower attrition rates for companies investing in professional development and career coaching",
+      value: "3×",
+      desc: "More interview calls generated within the first 60 days.",
     },
     {
-      value: "Only 20%",
-      desc: "of employees say their organization has a clear and transparent career path framework.",
+      value: "50+",
+      desc: "Career programmes delivered pan-India, with measurable placement outcomes.",
     },
   ];
 
@@ -363,9 +366,8 @@ const PACE = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            Empower your people to thrive. PACE aligns individual career
-            aspirations with organizational goals, creating a workforce that is
-            engaged, purpose-driven, and future-ready.
+            PACE aligns individual career
+            aspirations with industry demand, creating a link between talent and opportunity. We empower professionals to navigate their career journeys with confidence, purpose, and strategic insight—helping them become more
           </motion.p>
 
           <motion.div
@@ -397,7 +399,7 @@ const PACE = () => {
               }}
               className="border border-white/30 text-white px-8 py-4 font-semibold hover:border-cap-green/50 hover:bg-cap-green/10 transition-all rounded-md"
             >
-              Explore Programs
+              Explore Services
             </button>
           </motion.div>
         </div>
@@ -452,11 +454,8 @@ const PACE = () => {
                 ABOUT PACE
               </p>
               <h2 className="text-[34px] md:text-[42px] font-bold leading-tight">
-                Transforming Careers Into a
-                <span className="text-cap-green">
-                  {" "}
-                  Strategic Growth Engine
-                </span>
+                Your Personal Career Team,
+                <span className="text-cap-green"> Working Every Day.</span>
               </h2>
             </div>
 
@@ -464,23 +463,17 @@ const PACE = () => {
               <div className="border-l-2 border-cap-green/40 pl-6">
                 <p className="text-[18px] text-muted-white leading-[1.8]">
                   <span className="text-white font-medium">PACE</span>{" "}
-                  (Professional Alignment & Career Enhancement) is designed to
-                  help organizations move beyond transactional talent management
-                  and build{" "}
+                  (Professional Alignment & Career Enhancement) is a fully managed job search service designed exclusively for{" "}
                   <span className="text-white font-medium">
-                    future-ready, high-impact career ecosystems
-                  </span>
-                  .
+                    mid to senior level professionals
+                  </span>{" "}
+                  who are serious about their next move.
                 </p>
               </div>
 
               <div className="border-l-2 border-cap-green/40 pl-6">
                 <p className="text-[18px] text-muted-white leading-[1.8]">
-                  We go beyond frameworks—partnering with organizations to
-                  assess, design, and transform career capabilities, powered by
-                  certified coaches and data-driven insights delivering
-                  continuous support, innovation, and measurable business
-                  outcomes.
+                  We go beyond advice and frameworks — we take ownership of your search. From profile optimisation and portal management to applying on your behalf and mapping HRs directly, PACE operates as your dedicated career team from day one.
                 </p>
               </div>
             </div>
@@ -491,7 +484,6 @@ const PACE = () => {
       </section>
 
       {/* ===== SERVICES — MOSAIC GRID ===== */}
-    {/* ===== SERVICES — MOSAIC GRID ===== */}
       <section id="services" className="py-24" ref={servicesRef}>
         <div className="container mx-auto px-4 lg:px-8">
           <motion.h2
@@ -499,13 +491,10 @@ const PACE = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={servicesInView ? { opacity: 1, y: 0 } : {}}
           >
-            Reinvent with PACE
+            Everything Your Job Search Needs — Done for You
           </motion.h2>
           <p className="text-[18px] text-muted-white mb-14 max-w-2xl">
-            Six integrated service lines designed to transform every dimension
-            of your people's careers. Each service line is modular yet
-            interconnected—choose one solution or combine multiple for
-            comprehensive transformation.
+            Six integrated service lines that cover every dimension of a senior-level job search. Choose one or combine all — each is modular yet designed to work powerfully together.
           </p>
 
           <motion.div
@@ -691,11 +680,11 @@ const PACE = () => {
           </motion.div>
         </div>
       </section>
-      {/* =====  Why Cap360 (TAB SECTION) ===== */}
- <section
+
+      {/* ===== Why Cap360 (TAB SECTION) ===== */}
+      <section
         id="trending"
         className="py-28 section-navy relative overflow-hidden" ref={trendingRef}
-        
       >
         <div className="absolute top-0 right-0 w-[28rem] h-[28rem] bg-cap-green/10 rounded-full blur-[120px] -z-0" />
         <div className="absolute bottom-0 left-0 w-[22rem] h-[22rem] bg-cap-green/10 rounded-full blur-[100px] -z-0" />
@@ -717,8 +706,7 @@ const PACE = () => {
               Why Choose <span className="text-cap-green">Cap360?</span>
             </h2>
             <p className="text-[18px] text-muted-white leading-relaxed">
-              Founder-led expertise combined with certified coaching credentials
-              and a proven track record of measurable business results.
+              Founder-led expertise, a done-for-you model, and a proven track record of placing 50+ senior professionals across India.
             </p>
           </motion.div>
 
@@ -768,9 +756,7 @@ const PACE = () => {
               How We Work With You
             </h2>
             <p className="text-[18px] text-muted-white leading-relaxed">
-              Every engagement begins with understanding your unique challenges
-              and goals. We follow a structured approach to deliver
-              transformation.
+              Every engagement begins with a deep understanding of who you are and where you want to go. We follow a structured four-step model to deliver real, measurable results.
             </p>
           </motion.div>
 
@@ -837,9 +823,7 @@ const PACE = () => {
               transition={{ delay: 0.1 }}
               className="text-muted-white text-[17px] leading-relaxed mb-10"
             >
-              From fast-scaling startups to complex enterprises, we partner with
-              organizations navigating growth, transformation, and career
-              complexity.
+              PACE is built for senior professionals who are serious about their next move — and who want experts handling the execution while they focus on what they do best.
             </motion.p>
 
             <motion.div
@@ -848,8 +832,7 @@ const PACE = () => {
               className="p-5 rounded-2xl bg-gradient-to-br from-cap-green/20 to-transparent border border-cap-green/30 backdrop-blur-md"
             >
               <p className="text-[17px] text-white font-medium">
-                We don't just support careers — we enable business scalability
-                through structured people development models.
+                We don't just guide careers — we run your search, manage your presence, and put your profile in front of the people who hire.
               </p>
             </motion.div>
           </div>
@@ -911,80 +894,8 @@ const PACE = () => {
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-cap-green/10 blur-[140px] rounded-full pointer-events-none" />
       </section>
 
-      {/* ===== TRENDING ===== */}
-      {/* <section id="trending" className="py-24" ref={trendingRef}>
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex items-center justify-between mb-4">
-            <motion.h2
-              className="text-[34px] md:text-[40px] font-bold"
-              initial={{ opacity: 0, y: 20 }}
-              animate={trendingInView ? { opacity: 1, y: 0 } : {}}
-            >
-              What's trending with PACE?
-            </motion.h2>
-            <div className="hidden md:flex gap-2">
-              <button
-                onClick={() => scrollTrending("left")}
-                className="p-2 border border-border/40 text-white/60 hover:text-white transition-colors"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-              <button
-                onClick={() => scrollTrending("right")}
-                className="p-2 border border-border/40 text-white/60 hover:text-white transition-colors"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-          <div className="mb-12">
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 text-[18px] font-semibold text-white hover:gap-3 transition-all"
-            >
-              View all work{" "}
-              <span className="inline-flex items-center justify-center w-7 h-7 bg-cap-green text-background rounded-sm">
-                <ChevronRight className="w-4 h-4" />
-              </span>
-            </a>
-          </div>
-          <div
-            ref={trendingScrollRef}
-            className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 -mx-4 px-4"
-          >
-            {trendingInsights.map((item, i) => (
-              <motion.div
-                key={item.title}
-                className="flex-shrink-0 w-[320px] overflow-hidden group cursor-pointer"
-                initial={{ opacity: 0, x: 40 }}
-                animate={trendingInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ delay: 0.1 * i, duration: 0.5 }}
-              >
-                <div className="relative h-[380px] overflow-hidden">
-                  <img
-                    src={trendingImages[i % trendingImages.length]}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent" />
-                  <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                    <span className="text-[11px] font-bold text-white/70 uppercase tracking-[0.15em] mb-3">
-                      {item.category}
-                    </span>
-                    <h3 className="text-[20px] font-bold text-white leading-snug mb-2">
-                      {item.title}
-                    </h3>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
-
       {/* ===== MEET OUR LEADER ===== */}
-    <section
+      <section
         id="leaders"
         className="py-24 section-navy relative overflow-hidden" ref={leadersRef}
       >
@@ -1000,8 +911,7 @@ const PACE = () => {
               Meet Our Leader
             </h2>
             <p className="text-[18px] text-muted-white">
-              5,000+ professionals transformed across 25+ industries | Executive
-              Coach & Career Strategist | Leadership Development Specialist
+              50+ senior professionals placed across 25+ industries | Executive Coach & Career Strategist | Leadership Development Specialist
             </p>
           </motion.div>
           <motion.div
@@ -1029,21 +939,10 @@ const PACE = () => {
                 </p>
                 <div className="space-y-4 mb-8">
                   <p className="text-[17px] text-muted-white leading-[1.8]">
-                    Founder and Career Coach at CAP360, dedicated to empowering
-                    professionals to unlock their potential and reach new career
-                    heights. With deep expertise in executive coaching, strategic
-                    career planning, and leadership development, he partners with
-                    clients — from rising managers to C-suite leaders — to
-                    navigate transitions, strengthen their leadership presence,
-                    and achieve purposeful growth.
+                    Founder and Career Coach at CAP360, dedicated to empowering senior professionals to unlock their potential and land roles that truly match their calibre. With deep expertise in executive coaching, strategic career planning, and leadership development, Gurpriit partners with clients — from rising managers to C-suite leaders — to navigate career transitions with confidence and purpose.
                   </p>
                   <p className="text-[17px] text-muted-white leading-[1.8]">
-                    His approach combines vision, practical insight, and trusted
-                    mentorship. To date, CAP360 has helped over 5,000
-                    professionals across 25+ industries secure interviews,
-                    negotiate better salaries, and build fulfilling careers —
-                    powered by industry expertise and personalised attention to
-                    each client's unique journey.
+                    Having experienced corporate career challenges firsthand, he built PACE to give senior professionals the dedicated support, strategic execution, and expert guidance that most job searches lack. To date, CAP360 has helped over 5,000 professionals across 25+ industries secure more interviews, negotiate stronger packages, and build fulfilling careers — with personalised attention at every step.
                   </p>
                 </div>
                 <div className="grid sm:grid-cols-2 gap-4 mb-8">
@@ -1054,19 +953,19 @@ const PACE = () => {
                     },
                     {
                       title: "Career Transitions",
-                      sub: "Guiding professionals through purposeful, high-confidence career moves",
+                      sub: "Guiding senior professionals through high-confidence career moves",
                     },
                     {
                       title: "Leadership Development",
                       sub: "Strengthening leadership presence and long-term growth capability",
                     },
                     {
-                      title: "Startup Mentor",
-                      sub: "Supporting founders and early-stage leaders with strategic clarity",
+                      title: "HR & Recruiter Mapping",
+                      sub: "Connecting clients directly with the people who make hiring decisions",
                     },
                     {
                       title: "Professional Branding",
-                      sub: "Building compelling personal brands that open the right doors",
+                      sub: "Building compelling profiles that open the right doors at senior level",
                     },
                     {
                       title: "Strategic Career Planning",
@@ -1087,22 +986,19 @@ const PACE = () => {
                   ))}
                 </div>
                 <a
-              href="/contact#booking"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-cap-green text-background px-6 py-3 font-semibold hover:bg-cap-green/90 transition-all rounded-md inline-flex items-center gap-2 text-white"
-            >
-              Schedule with Gurpriit Singh Anand
-              <ChevronRight className="w-4 h-4" />
-            </a>
-
+                  href="/contact#booking"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-cap-green text-background px-6 py-3 font-semibold hover:bg-cap-green/90 transition-all rounded-md inline-flex items-center gap-2 text-white"
+                >
+                  Schedule with Gurpriit Singh Anand
+                  <ChevronRight className="w-4 h-4" />
+                </a>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
-
-   
 
       {/* ── CTA Section ────────────────────────────────────────────────────────── */}
       <section className="relative bg-gradient-to-r from-background via-background to-secondary overflow-hidden py-20">
@@ -1130,11 +1026,10 @@ const PACE = () => {
                 Ready to Transform?
               </span>
               <h2 className="text-[40px] md:text-[54px] font-black leading-[1.1] mt-4 mb-6">
-                Transform Your Career with the Right Support
+                Let Us Run Your Search While You Focus on What You Do Best.
               </h2>
               <p className="text-[18px] text-muted-white mb-8 max-w-xl">
-                 Join our career development team and help people build fulfilling,
-                purpose-driven careers aligned with their fullest potential.
+                Book a free 30-minute consultation with Gurpriit Singh Anand to understand exactly how PACE will work for your career goals — and what results you can expect.
               </p>
             </motion.div>
             <motion.div
@@ -1145,13 +1040,15 @@ const PACE = () => {
               className="flex gap-4 flex-wrap"
             >
               <a
-              href="/contact"
-              target="_blank"
-              rel="noopener noreferrer" className="bg-cap-green text-white px-8 py-4 font-semibold hover:bg-cap-green/90 transition-all hover:shadow-lg rounded-md inline-flex items-center gap-2">
-                Start Your Journey <ChevronRight className="w-4 h-4" />
+                href="/contact"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-cap-green text-white px-8 py-4 font-semibold hover:bg-cap-green/90 transition-all hover:shadow-lg rounded-md inline-flex items-center gap-2"
+              >
+                Schedule a Free Consultation <ChevronRight className="w-4 h-4" />
               </a>
               <button className="border border-white/20 text-white px-8 py-4 font-semibold hover:border-cap-green/50 hover:bg-cap-green/5 transition-all rounded-md">
-                Download Program Guide
+                Download Programme Guide
               </button>
             </motion.div>
           </div>

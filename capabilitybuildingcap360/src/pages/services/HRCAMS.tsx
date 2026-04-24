@@ -49,9 +49,9 @@ const mosaicImages = [Performance, LabourLaw];
 const subServices = [
   {
     icon: BarChart3,
-    title: "Performance Management & Organisation Effectiveness",
+    title: "Goal Setting & Performance Management",
     title2:
-      "Strengthening Organisational Capability Through Structured Frameworks",
+      "Building an outcome-driven, growth focussed, transparent performance culture",
     description:
       "Design and implement performance frameworks that align individual goals with organizational strategy, driving accountability and continuous improvement.",
     path: "/what-we-do/services/hrcams/performance-management",
@@ -60,23 +60,32 @@ const subServices = [
     icon: Settings,
     title: "Total Rewards Architecture",
     title2:
-      "Aligning Compensation and Benefits with Business Goals and Workforce Expectations",
+      "Designing rewards that motivate, drives growth, retain, and align people with outcomes",
     description:
       "Build competitive compensation, benefits, and recognition programmes that attract, retain, and motivate top talent across all levels.",
     path: "/what-we-do/services/hrcams/total-rewards",
   },
+
   {
     icon: Shield,
     title: "Labour Law Compliance & HR Governance",
-    title2: "Ensuring Compliance and Effective HR Management",
+    title2: "Structured, audit-ready governance and sustained regulatory alignment",
     description:
       "Ensure full compliance with evolving labour regulations while establishing robust HR governance frameworks and audit-ready processes.",
     path: "/what-we-do/services/hrcams/labour-law",
   },
   {
+    icon: Users,
+    title: "Succession Planning & Leadership Development",
+    title2: "Ensuring leadership continuity and building future-ready pipelines",
+    description:
+      "Succession planning is the discipline that separates organizations that sustain performance across leadership transitions from those that are perpetually disrupted by them.",
+    path: "/what-we-do/services/hrcams/managed-hr",
+  },
+  {
     icon: Brain,
-    title: "Gen AI for HR & Operational Productivity",
-    title2: "Leveraging Generative AI for HR Transformation",
+    title: "AI-Led Productivity, Efficiency & Scale",
+    title2: "Amplifying human capability through intelligent automation",
     description:
       "Leverage generative AI to automate HR workflows, enhance decision-making, and drive unprecedented operational efficiency.",
     path: "/what-we-do/services/hrcams/gen-ai-hr",
@@ -89,14 +98,7 @@ const subServices = [
       "Architect agile organizational structures and workforce strategies that adapt to market dynamics and future business needs.",
     path: "/what-we-do/services/hrcams/org-design",
   },
-  {
-    icon: Users,
-    title: "Managed HR Services (Outsourced HR)",
-    title2: "End-to-End Outsourced HR Operations",
-    description:
-      "End-to-end outsourced HR operations — payroll, compliance, employee lifecycle, and more — so you can focus on core business.",
-    path: "/what-we-do/services/hrcams/managed-hr",
-  },
+  
 ];
 
 const trendingInsights = [
@@ -170,14 +172,14 @@ const leaders = [
   { name: "James Okonkwo", role: "Lead — Gen AI for HR", initials: "JO" },
 ];
 
-const gcCapabilities = [
-  "24/7 Operations: Round-the-clock support ensuring no request falls through the cracks",
-  "Specialized Teams: Subject matter experts in payroll, compliance, benefits, and technology",
-  "Scalability: Quickly scale resources up or down based on your needs",
-  "Cost Efficiency: Deliver world-class services at a fraction of in-house costs",
-  "Technology Integration: Seamless integration with your HRIS, payroll, and benefits platforms",
-  "Security & Compliance: Enterprise-grade data protection and regulatory adherence",
-];
+// const gcCapabilities = [
+//   "24/7 Operations: Round-the-clock support ensuring no request falls through the cracks",
+//   "Specialized Teams: Subject matter experts in payroll, compliance, benefits, and technology",
+//   "Scalability: Quickly scale resources up or down based on your needs",
+//   "Cost Efficiency: Deliver world-class services at a fraction of in-house costs",
+//   "Technology Integration: Seamless integration with your HRIS, payroll, and benefits platforms",
+//   "Security & Compliance: Enterprise-grade data protection and regulatory adherence",
+// ];
 
 const targetAudiences = [
   "Large Enterprises: Designing complex, multinational HR operating models",
@@ -314,25 +316,25 @@ const HRCAMS = () => {
     {
       step: "01",
       title: "Discovery & Assessment",
-      desc: "We conduct a thorough evaluation of your current HR function, technology landscape, and business objectives. This phase identifies pain points, quick wins, and long-term transformation opportunities.",
+      desc: "Conduct a thorough evaluation of current HR function, technology landscape, and business objectives. This phase identifies pain points, quick wins, and long-term transformation opportunities.",
       icon: Target,
     },
     {
       step: "02",
       title: "Strategy & Planning",
-      desc: "Based on our findings, we develop a tailored roadmap that prioritizes initiatives, allocates resources, and defines success metrics. Your team remains engaged throughout this process.",
+      desc: "Develop a tailored roadmap that prioritizes initiatives, allocates resources, and defines success metrics. Your team remains engaged throughout this process.",
       icon: Zap,
     },
     {
       step: "03",
       title: "Implementation & Execution",
-      desc: "Our teams execute with precision, managing stakeholder communication, change management, and day-to-day operations. We combine your internal knowledge with our external expertise for optimal results.",
+      desc: "Execute with precision, managing stakeholder communication, change management, and day-to-day operations. We combine your internal knowledge with our external expertise for optimal results.",
       icon: TrendingUp,
     },
     {
       step: "04",
       title: "Optimization & Support",
-      desc: "Post-implementation, we monitor performance, gather feedback, and continuously optimize. Our support model ensures you realize full value from your investment.",
+      desc: "Post-implementation, monitoring of performance, gathering feedback, and continuously optimize. Our support model ensures the best value of the realization.",
       icon: CheckCircle2,
     },
   ];
@@ -449,7 +451,8 @@ const HRCAMS = () => {
       {/* ===== STRATEGIC OVERVIEW ===== */}
       <section
         id="trending"
-        className="py-24 bg-gradient-to-b from-background to-secondary/30" ref={trendingRef}
+        className="py-24 bg-gradient-to-b from-background to-secondary/30"
+        ref={trendingRef}
       >
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -500,7 +503,7 @@ const HRCAMS = () => {
         </div>
       </section>
 
-    {/* ===== SERVICES — ACCENTURE MOSAIC GRID ===== */}
+      {/* ===== SERVICES — ACCENTURE MOSAIC GRID ===== */}
       <section id="services" className="py-24" ref={servicesRef}>
         <div className="container mx-auto px-4 lg:px-8">
           {/* Header */}
@@ -512,10 +515,11 @@ const HRCAMS = () => {
             Reinvent with HRCAMS
           </motion.h2>
           <p className="text-[18px] text-muted-White mb-14 max-w-2xl">
-            Six integrated service lines designed to transform every dimension
-            of your HR function. Each service line is modular yet
-            interconnected—choose one solution or combine multiple lines for
-            comprehensive transformation.
+            Six seamlessly connected service lines built to elevate every aspect
+            of your HR function. Each line operates as a standalone solution
+            while integrating effortlessly with others—allowing you to adopt
+            what you need or combine them for a complete, end-to-end
+            transformation.
           </p>
 
           {/* Mosaic grid */}
@@ -530,7 +534,8 @@ const HRCAMS = () => {
                 key={rowIdx}
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 340px), 1fr))",
+                  gridTemplateColumns:
+                    "repeat(auto-fit, minmax(min(100%, 340px), 1fr))",
                   gap: 8,
                 }}
               >
@@ -575,7 +580,8 @@ const HRCAMS = () => {
                         position: "relative",
                         background: "hsl(var(--card))",
                         height: "clamp(260px, 30vw, 340px)",
-                        padding: "clamp(28px, 4vw, 60px) clamp(20px, 3vw, 36px) 28px",
+                        padding:
+                          "clamp(28px, 4vw, 60px) clamp(20px, 3vw, 36px) 28px",
                         cursor: "pointer",
                         overflow: "hidden",
                         display: "flex",
@@ -705,17 +711,17 @@ const HRCAMS = () => {
       </section>
 
       {/* ===== GLOBAL CAPABILITY CENTER ===== */}
-      <section
+      {/* <section
         id="gcc"
         className="py-28 section-navy relative overflow-hidden"
         ref={gcRef}
       >
-        {/* Background Glow Effects */}
+        Background Glow Effects
         <div className="absolute top-0 right-0 w-[28rem] h-[28rem] bg-cap-yellow/10 rounded-full blur-[120px] -z-0" />
         <div className="absolute bottom-0 left-0 w-[22rem] h-[22rem] bg-cap-yellow/10 rounded-full blur-[100px] -z-0" />
 
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
-          {/* Heading Section */}
+          Heading Section
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={gcInView ? { opacity: 1, y: 0 } : {}}
@@ -738,7 +744,7 @@ const HRCAMS = () => {
             </p>
           </motion.div>
 
-          {/* Cards Grid */}
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {gcCapabilities.map((capability, i) => (
               <motion.div
@@ -748,17 +754,17 @@ const HRCAMS = () => {
                 transition={{ delay: i * 0.08, duration: 0.5 }}
                 className="group relative"
               >
-                {/* Card */}
+
                 <div
                   className="bg-card/40 border border-border/20 p-6 rounded-2xl 
                           backdrop-blur-md transition-all duration-300
                           hover:bg-card/60 hover:-translate-y-2 hover:shadow-xl
                           hover:border-cap-yellow/40"
                 >
-                  {/* Top Glow Line */}
+
                   <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-cap-yellow/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
 
-                  {/* Icon */}
+ 
                   <div
                     className="w-11 h-11 rounded-xl bg-cap-yellow/20 flex items-center justify-center mb-5 
                             transition-all duration-300 group-hover:scale-110 group-hover:bg-cap-yellow/30"
@@ -766,7 +772,6 @@ const HRCAMS = () => {
                     <Check className="w-6 h-6 text-cap-yellow" />
                   </div>
 
-                  {/* Text */}
                   <p className="text-[15px] text-muted-White leading-[1.8] tracking-[0.2px]">
                     {capability}
                   </p>
@@ -775,7 +780,7 @@ const HRCAMS = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ===== HOW WE WORK ===== */}
 
@@ -855,7 +860,10 @@ const HRCAMS = () => {
 
       {/* ===== WHO WE SERVE ===== */}
 
-      <section id="who-we-serve" className="py-32 section-navy relative overflow-hidden">
+      <section
+        id="who-we-serve"
+        className="py-32 section-navy relative overflow-hidden"
+      >
         <div className="container mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-16 items-start">
           {/* LEFT SIDE - STICKY CONTENT */}
           <div className="lg:sticky top-18 h-fit">
@@ -1115,7 +1123,8 @@ const HRCAMS = () => {
       {/* ===== MEET OUR TRAINER ===== */}
       <section
         id="partners"
-        className="py-24 section-navy relative overflow-hidden" ref={partnersRef}
+        className="py-24 section-navy relative overflow-hidden"
+        ref={partnersRef}
       >
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-cap-yellow/5 rounded-full blur-3xl -z-0" />
         <div className="w-full px-6 lg:px-16 xl:px-24 relative z-10">
@@ -1198,13 +1207,13 @@ const HRCAMS = () => {
                     </div>
                   ))}
                 </div>
-             <Link
-              to="/contact#booking"
-              className="bg-cap-yellow text-background px-6 py-3 font-semibold hover:bg-cap-yellow/90 transition-all rounded-md inline-flex items-center gap-2"
-            >
-              Schedule with Radhakrishnan K V
-              <ChevronRight className="w-4 h-4" />
-            </Link>
+                <Link
+                  to="/contact#booking"
+                  className="bg-cap-yellow text-background px-6 py-3 font-semibold hover:bg-cap-yellow/90 transition-all rounded-md inline-flex items-center gap-2"
+                >
+                  Schedule with Radhakrishnan K V
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
               </div>
             </div>
           </motion.div>
@@ -1237,11 +1246,11 @@ const HRCAMS = () => {
                 Ready to Transform?
               </span>
               <h2 className="text-[40px] md:text-[54px] font-black leading-[1.1] mt-4 mb-6">
-                Let's build your winning team
+                Let’s Build Your Winning Workforce
               </h2>
               <p className="text-[18px] text-muted-white mb-8 max-w-xl">
-                Join our assessment team and help organizations identify,
-                evaluate, and develop their most critical asset — their people.
+                Strengthen your organization by identifying, evaluating, and
+                developing your most critical asset — your people.
               </p>
             </motion.div>
             <motion.div
@@ -1257,7 +1266,7 @@ const HRCAMS = () => {
                 rel="noopener noreferrer"
                 className="bg-cap-yellow text-white px-8 py-4 font-semibold hover:bg-cap-yellow/90 transition-all hover:shadow-lg rounded-md inline-flex items-center gap-2"
               >
-                Start Your Journey
+                Get Started
                 <ChevronRight className="w-4 h-4" />
               </a>
 

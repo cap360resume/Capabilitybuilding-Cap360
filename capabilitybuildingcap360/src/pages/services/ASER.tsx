@@ -716,8 +716,7 @@ const ASER = () => {
               Why Choose <span className="text-cap-red">Cap360?</span>
             </h2>
             <p className="text-[18px] text-muted-whiteleading-relaxed">
-              Founder-led expertise combined with certified coaching credentials
-              and a proven track record of measurable business results.
+              Leadership-driven expertise combined with certified coaching credentials and a proven track record of measurable business results
             </p>
           </motion.div>
 
@@ -1240,11 +1239,10 @@ const ASER = () => {
                 Ready to Transform?
               </span>
               <h2 className="text-[40px] md:text-[54px] font-black leading-[1.1] mt-4 mb-6">
-                Join us in your journey
+                Partner With Us
               </h2>
               <p className="text-[18px] text-muted-white mb-8 max-w-xl">
-                 Join our assessment team and help organizations identify, evaluate,
-                 and develop their most critical asset — their people.
+                 Enable better people decisions through structured assessment, insight, and impact.
               </p>
             </motion.div>
             <motion.div
@@ -1258,7 +1256,7 @@ const ASER = () => {
               href="/contact"
               target="_blank"
               rel="noopener noreferrer" className="bg-cap-red text-white px-8 py-4 font-semibold hover:bg-cap-red/90 transition-all hover:shadow-lg rounded-md inline-flex items-center gap-2">
-                Start Your Journey <ChevronRight className="w-4 h-4" />
+                Contact Us <ChevronRight className="w-4 h-4" />
               </a>
               <button className="border border-white/20 text-white px-8 py-4 font-semibold hover:border-cap-red/50 hover:bg-cap-red/5 transition-all rounded-md">
                 Download Program Guide

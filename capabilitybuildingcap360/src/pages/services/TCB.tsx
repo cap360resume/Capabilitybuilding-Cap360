@@ -119,7 +119,7 @@ const whyChooseUs = [
   {
     icon: TrendingUp,
     title: "28+ Years Experience",
-    desc: "Founded by a seasoned corporate leader with real-world sales and organizational expertise",
+    desc: "Led by a seasoned corporate leader with real-world sales and organizational expertise",
   },
   {
     icon: Brain,
@@ -170,7 +170,7 @@ const phases = [
   {
     step: "04",
     title: "ROI & Improvement",
-    desc: "Transparent reporting on business impact, behavioral change validation, and continuous improvement recommendations",
+    desc: "Outcome based reporting on business impact, behavioral change validation, and continuous improvement recommendations",
     icon: CheckCircle2,
   },
 ];
@@ -185,10 +185,10 @@ const programStreams = [
 ];
 
 const stats = [
-  { value: "10K+", desc: "Professionals trained across all programmes" },
+  { value: "5K+", desc: "Professionals trained across all programmes" },
   { value: "95%", desc: "Participant satisfaction rate" },
   { value: "60%", desc: "Average capability uplift measured" },
-  { value: "28+", desc: "Years of corporate leadership experience" },
+  { value: "5 ", desc: "Decades of cumulative industry experience" },
 ];
 
 const trendingInsights = [
@@ -356,8 +356,7 @@ const TCB = () => {
           >
             Build future-ready capabilities at scale. Transform knowledge gaps
             into competitive advantages through immersive, outcome-driven
-            learning experiences designed by industry leaders with 28+ years of
-            expertise.
+            learning experiences designed by industry leaders with muilti domain expertise.
           </motion.p>
 
           <motion.div
