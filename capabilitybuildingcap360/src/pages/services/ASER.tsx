@@ -500,7 +500,7 @@ const ASER = () => {
       Reinvent with ASER
     </motion.h2>
     <p className="text-[18px] text-muted-white mb-14 max-w-2xl mb-5">
-      Six integrated assessment solutions designed to transform every stage of
+      four integrated assessment solutions designed to transform every stage of
       the talent lifecycle. Each solution is modular yet interconnected — choose
       one or combine multiple for end-to-end talent intelligence.
     </p>

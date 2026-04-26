@@ -31,7 +31,7 @@ import trending1 from "@/assets/trending-1.jpg";
 import trending2 from "@/assets/trending-2.jpg";
 import trending3 from "@/assets/trending-3.jpg";
 import trending4 from "@/assets/trending-4.jpg";
-import card1 from "@/assets/card-1.jpg";
+import GSA from "@/assets/Head-gsa.png";
 import creativecapability from "@/assets/creativecapability.png";
 import digitalcapability from "@/assets/digital capability.png";
 
@@ -168,12 +168,12 @@ const whyChooseUs = [
   {
     icon: Brain,
     title: "HR Mapping, Not Just Job Boards",
-    desc: "We go beyond listings. Our team directly identifies and reaches out to HR heads, talent acquisition leads, and hiring managers — accessing opportunities before they are even posted.",
+    desc: "Go beyond listings. Our team directly identifies and reaches out to HR heads, talent acquisition leads, and hiring managers — accessing opportunities before they are even posted.",
   },
   {
     icon: Target,
     title: "Built for Senior Professionals",
-    desc: "We understand how hiring works at senior levels — longer cycles, referral-driven decisions, and relationship-first processes. Our approach is calibrated for leaders, not entry-level candidates.",
+    desc: "Understand how hiring works at senior levels — longer cycles, referral-driven decisions, and relationship-first processes. Our approach is calibrated for leaders, not entry-level candidates.",
   },
   {
     icon: Zap,
@@ -182,13 +182,13 @@ const whyChooseUs = [
   },
   {
     icon: Users,
-    title: "Founder-Led Expertise You Can Trust",
-    desc: "Built by Gurpriit Singh Anand, who navigated corporate career challenges firsthand and turned that lived experience into a proven, scalable career acceleration model.",
+    title: "Smart Career Mapping for Better Opportunities",
+    desc: "Conduct in-depth research across both international and Indian markets to identify the most relevant opportunities aligned with your career profile. Our process begins with detailed company mapping—shortlisting organizations that match your experience, industry, and career aspirations.",
   },
   {
     icon: CheckCircle2,
-    title: "Proven Impact Across India",
-    desc: "We have supported 50+ senior professionals across 25+ industries — helping them secure more interviews, negotiate better packages, and land roles that match their true potential.",
+    title: "Proven Impact Across Global Markets",
+    desc: "Empowered 50+ senior professionals across 25+ industries — supporting their transition into high-impact roles across India and global markets through stronger visibility, better negotiations, and strategic career positioning.",
   },
 ];
 
@@ -204,13 +204,13 @@ const phases = [
   {
     step: "01",
     title: "Deep-Dive Consultation",
-    desc: "We understand your career history, target roles, preferred industries, compensation expectations, and geography. This forms the complete foundation of your personalised search strategy.",
+    desc: "Understand your career history, target roles, preferred industries, compensation expectations, and geography. This forms the complete foundation of your personalised search strategy.",
     icon: Target,
   },
   {
     step: "02",
     title: "Profile Build & Optimisation",
-    desc: "We craft or overhaul your resume, LinkedIn profile, and all job portal presences — positioning you precisely for senior roles with the right keywords, narrative, and executive framing.",
+    desc: "Craft or overhaul your resume, LinkedIn profile, and all job portal presences — positioning you precisely for senior roles with the right keywords, narrative, and executive framing.",
     icon: Zap,
   },
   {
@@ -494,7 +494,7 @@ const PACE = () => {
             Everything Your Job Search Needs — Done for You
           </motion.h2>
           <p className="text-[18px] text-muted-white mb-14 max-w-2xl">
-            Six integrated service lines that cover every dimension of a senior-level job search. Choose one or combine all — each is modular yet designed to work powerfully together.
+           Six Integrated Solutions that cover every dimension of a senior-level job search. Choose one or combine all — each is modular yet designed to work powerfully together.
           </p>
 
           <motion.div
@@ -924,7 +924,7 @@ const PACE = () => {
               <div className="md:col-span-1">
                 <div className="w-full max-w-sm mx-auto aspect-square rounded-xl overflow-hidden border border-border/40">
                   <img
-                    src={card1}
+                    src={GSA}
                     alt="Gurpriit Singh Anand"
                     className="object-cover w-full h-full"
                   />

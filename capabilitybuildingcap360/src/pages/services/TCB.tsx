@@ -118,8 +118,8 @@ const offerings = [
 const whyChooseUs = [
   {
     icon: TrendingUp,
-    title: "28+ Years Experience",
-    desc: "Led by a seasoned corporate leader with real-world sales and organizational expertise",
+    title: "Real-World Business Expertise",
+    desc: "Hands-on experience solving complex business challenges across industries with measurable performance outcomes.",
   },
   {
     icon: Brain,
@@ -133,8 +133,8 @@ const whyChooseUs = [
   },
   {
     icon: Zap,
-    title: "90-Day Reinforcement",
-    desc: "Monthly coaching, peer learning, and performance tracking ensuring behavioral change sticks",
+    title: "Sustained Behavior Transformation",
+    desc: "Continuous coaching, structured follow-ups, and real-time performance tracking to ensure learning translates into lasting on-the-job impact.",
   },
   {
     icon: Users,
@@ -703,8 +703,7 @@ const TCB = () => {
               Why Choose <span className="text-cap-blue">Cap360?</span>
             </h2>
             <p className="text-[18px] text-muted-white leading-relaxed">
-              Founder-led expertise combined with certified coaching credentials
-              and a proven track record of measurable business results.
+              Experienced trainer-driven expertise, backed by certified coaching credentials and a consistent record of delivering measurable business impact
             </p>
           </motion.div>
 
@@ -722,7 +721,7 @@ const TCB = () => {
               >
                 <div className="h-full w-full bg-background/60 backdrop-blur-xl border border-white/5 rounded-xl p-8 relative overflow-hidden transition-all duration-300 group-hover:bg-background/70 group-hover:shadow-[0_10px_40px_rgba(255,115,0,0.15)]">
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-cap-blue/5 to-transparent" />
-                  <div className="flex items-start gap-4 mb-5 relative z-10">
+                  <div className="flex items-start gap-4 mb-1 relative z-10">
                     <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-cap-blue/20 to-cap-blue/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition duration-300 shadow-inner">
                       <item.icon className="w-6 h-6 text-cap-blue" />
                     </div>
@@ -958,7 +957,7 @@ const TCB = () => {
               Meet Our Trainer
             </h2>
             <p className="text-[18px] text-muted-white">
-              28+ years of corporate leadership combined with certified coaching
+              Decades of experience in corporate leadership combined with certified coaching
               expertise
             </p>
           </motion.div>

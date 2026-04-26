@@ -7,9 +7,8 @@ import { ArrowRight, Target, Map, Calendar, TrendingUp, Users, Brain, ShieldChec
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Replace these imports with your actual image assets
-// import SuccessionHero from "@/assets/succession-hero.jpg";
-// import LeadershipDev from "@/assets/leadership-dev.jpg";
+import SuccessionHero from "@/assets/succession-hero.jpg";
+import LeadershipDev from "@/assets/leadershipcapability.jpg";
 
 const ManagedHR = () => {
   const { ref: sRef, isInView: sInView } = useScrollAnimation(0.1);
@@ -360,7 +359,7 @@ const ManagedHR = () => {
           <div className="overflow-hidden">
             {/* Replace src with your actual image asset */}
             <img
-              src="/assets/succession-hero.jpg"
+              src={SuccessionHero}
               alt="Succession Planning & Leadership Development"
               className="w-full h-[400px] object-cover"
             />
@@ -414,7 +413,7 @@ const ManagedHR = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Replace src with your actual image asset */}
             <img
-              src="/assets/leadership-dev.jpg"
+              src={LeadershipDev}
               alt="Leadership Development"
               className="w-full h-[350px] object-cover"
             />

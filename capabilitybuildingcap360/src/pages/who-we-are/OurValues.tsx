@@ -39,7 +39,7 @@ const accordionItems = [
     title: "Respect for the Individual",
     content: (
       <div className="space-y-4">
-        <p className="text-muted-foreground">We celebrate diversity and believe every individual brings unique value.</p>
+        <p className="text-muted-foreground">Celebrate diversity and believe every individual brings unique value.</p>
         <ul className="space-y-2 text-muted-foreground">
           <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />Fostering an inclusive workplace where all voices are heard</li>
           <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />Investing in continuous learning and professional growth</li>
@@ -51,11 +51,11 @@ const accordionItems = [
 ];
 
 const sliderCards = [
-  { icon: Heart, title: "Stewardship", description: "We take care of what matters — our people, our clients, our communities, and our planet." },
-  { icon: Shield, title: "Best People", description: "We attract and develop the best talent, providing them with opportunities to grow and excel." },
-  { icon: Users, title: "One Global Network", description: "We collaborate across borders and cultures to deliver seamless, integrated solutions." },
-  { icon: Sparkles, title: "Innovation", description: "We embrace change and continuously seek better ways to serve our clients and communities." },
-  { icon: HandHeart, title: "Corporate Citizenship", description: "We give back through pro-bono work, sustainability initiatives, and community engagement." },
+  { icon: Heart, title: "Stewardship", description: "Take care of what matters — our people, our clients, our communities, and our planet." },
+  { icon: Shield, title: "Best People", description: "Attract and develop the best talent, providing them with opportunities to grow and excel." },
+  { icon: Users, title: "One Global Network", description: "Collaborate across borders and cultures to deliver seamless, integrated solutions." },
+  { icon: Sparkles, title: "Innovation", description: "Embrace change and continuously seek better ways to serve our clients and communities." },
+  { icon: HandHeart, title: "Corporate Citizenship", description: "Give back through pro-bono work, sustainability initiatives, and community engagement." },
 ];
 
 const OurValues = () => {
@@ -218,7 +218,7 @@ const OurValues = () => {
                 <img src={heroImg} alt="Values in action" className="w-full h-full object-cover" />
               </div>
               <p className="text-muted-foreground leading-relaxed text-lg">
-                Our values come alive through action. From mentoring future leaders to championing sustainability, we demonstrate our commitment daily — creating an environment where integrity, innovation, and inclusion thrive together.
+                Our values come alive through action. From mentoring future leaders to championing sustainability, demonstrate our commitment daily — creating an environment where integrity, innovation, and inclusion thrive together.
               </p>
             </div>
           </div>

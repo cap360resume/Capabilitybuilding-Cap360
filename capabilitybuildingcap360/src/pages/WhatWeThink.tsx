@@ -10,6 +10,9 @@ import heroImg from "@/assets/insights-hero.jpg";
 import card1 from "@/assets/card-1.jpg";
 import card3 from "@/assets/card-3.jpg";
 import card4 from "@/assets/card-4.jpg";
+import TotalRewardsArchitecture from "@/assets/TotalRewardsArchitecture.jpg";
+import serviceshero from "@/assets/service-hero-tcb.jpg"
+import susccession from "@/assets/succession-hero.jpg"
 
 const filters = ["All", "Talent Acquisition", "HR Strategy", "Leadership", "Assessment", "Workforce Trends"];
 
@@ -25,21 +28,21 @@ const articles = [
     category: "HR Strategy",
     title: "People Strategy Is Business Strategy — Bridging the Gap in Indian Enterprises",
     description: "Most HR functions still operate reactively. The organizations pulling ahead are the ones treating human capital as a strategic lever.",
-    image: card3,
+    image: TotalRewardsArchitecture,
     tag: "Industry Brief",
   },
   {
     category: "Assessment",
     title: "The Science Behind Objective Talent Assessment: Removing Bias from the Equation",
     description: "How structured, data-driven evaluation frameworks lead to better hiring decisions, lower attrition, and stronger team performance.",
-    image: card4,
+    image: serviceshero,
     tag: "Research Note",
   },
   {
     category: "Leadership",
     title: "Building Leadership Pipelines That Don't Break Under Pressure",
     description: "Succession planning is no longer a boardroom checkbox. Organizations that invest in pipeline depth outperform peers by 2.3× in continuity metrics.",
-    image: card1,
+    image: susccession,
     tag: "CAP360 Perspective",
   },
   {
