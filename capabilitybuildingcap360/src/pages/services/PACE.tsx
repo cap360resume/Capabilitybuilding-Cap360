@@ -182,7 +182,7 @@ const whyChooseUs = [
   },
   {
     icon: Users,
-    title: "Smart Career Mapping for Better Opportunities",
+    title: "Research based outcomes",
     desc: "Conduct in-depth research across both international and Indian markets to identify the most relevant opportunities aligned with your career profile. Our process begins with detailed company mapping—shortlisting organizations that match your experience, industry, and career aspirations.",
   },
   {
@@ -942,7 +942,7 @@ const PACE = () => {
                     Founder and Career Coach at CAP360, dedicated to empowering senior professionals to unlock their potential and land roles that truly match their calibre. With deep expertise in executive coaching, strategic career planning, and leadership development, Gurpriit partners with clients — from rising managers to C-suite leaders — to navigate career transitions with confidence and purpose.
                   </p>
                   <p className="text-[17px] text-muted-white leading-[1.8]">
-                    Having experienced corporate career challenges firsthand, he built PACE to give senior professionals the dedicated support, strategic execution, and expert guidance that most job searches lack. To date, CAP360 has helped over 5,000 professionals across 25+ industries secure more interviews, negotiate stronger packages, and build fulfilling careers — with personalised attention at every step.
+                    Having experienced corporate career challenges firsthand, he built PACE to give senior professionals the dedicated support, strategic execution, and expert guidance that most job searches lack. To date, CAP360 has helped over 50+ professionals across 25+ industries secure more interviews, negotiate stronger packages, and build fulfilling careers — with personalised attention at every step.
                   </p>
                 </div>
                 <div className="grid sm:grid-cols-2 gap-4 mb-8">
