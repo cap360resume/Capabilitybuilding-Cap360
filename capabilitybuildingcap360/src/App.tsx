@@ -35,7 +35,7 @@ import AssessmentCentres from "./pages/services/aser/AssessmentCentres.tsx";
 import PsychometricTesting from "./pages/services/aser/PsychometricTesting.tsx";
 import TalentAnalytics from "./pages/services/aser/TalentAnalytics.tsx";
 import CareerPathArchitecture from "./pages/services/pace/RecruiterMapping.tsx";
-import ProfessionalCoaching from "./pages/services/pace/ProfessionalCoaching.tsx";
+import CourseRecommendations from "./pages/services/pace/CourseRecommendations.tsx";
 import JobSearchStrategy from "./pages/services/pace/JobSearchStrategy.tsx";
 import LinkedInOptimization from "./pages/services/pace/LinkedInOptimization.tsx";
 import CareerTransition from "./pages/services/pace/ApplyOnYourBehalf.tsx";
@@ -105,7 +105,7 @@ const App = () => (
             <Route path="/what-we-do/services/aser/talent-analytics" element={<TalentAnalytics />} />
             {/* PACE sub-pages */}
             <Route path="/what-we-do/services/pace/career-path-architecture" element={<CareerPathArchitecture />} />
-            <Route path="/what-we-do/services/pace/professional-coaching" element={<ProfessionalCoaching />} />
+            <Route path="/what-we-do/services/pace/professional-coaching" element={<CourseRecommendations />} />
             <Route path="/what-we-do/services/pace/job-search-strategy" element={<JobSearchStrategy />} />
             <Route path="/what-we-do/services/pace/linkedIn-optimization" element={<LinkedInOptimization />} />
             <Route path="/what-we-do/services/pace/career-transition" element={<CareerTransition />} />

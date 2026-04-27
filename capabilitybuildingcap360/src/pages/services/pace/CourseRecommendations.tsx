@@ -18,7 +18,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import peopledevelopment from "@/assets/peopledevelopment.png";
 import coaching from "@/assets/coaching.png";
 
-const ProfessionalCoaching = () => {
+const CourseRecommendations = () => {
   const { ref: sRef, isInView: sInView } = useScrollAnimation(0.1);
   const { ref: bRef, isInView: bInView } = useScrollAnimation(0.1);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -565,4 +565,4 @@ const ProfessionalCoaching = () => {
   );
 };
 
-export default ProfessionalCoaching;
+export default CourseRecommendations;
