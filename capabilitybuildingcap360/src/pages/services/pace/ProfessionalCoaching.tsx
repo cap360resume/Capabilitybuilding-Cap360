@@ -30,7 +30,7 @@ const ProfessionalCoaching = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            We assess your current experience, skills, and qualifications
+            Assess your current experience, skills, and qualifications
             against the roles you're targeting — identifying the gaps that
             matter most to hiring managers in your space.
           </p>
@@ -133,7 +133,7 @@ const ProfessionalCoaching = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            We keep our recommendations grounded in what the market is
+            Keep our recommendations grounded in what the market is
             actually hiring for — not generic skill lists, but real-time
             demand signals from your target roles and industries.
           </p>
@@ -150,7 +150,7 @@ const ProfessionalCoaching = () => {
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
                 <strong className="text-white">Emerging skill areas:</strong>{" "}
-                We highlight skills gaining momentum — AI fluency, data
+                Highlight skills gaining momentum — AI fluency, data
                 literacy, ESG, and digital leadership — before they become
                 table stakes.
               </span>
@@ -354,7 +354,7 @@ const ProfessionalCoaching = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              The right skills at the right time. We analyse your profile
+              The right skills at the right time. Analyse your profile
               against live market demand and recommend the exact courses and
               certifications that will move your candidacy forward — faster.
             </motion.p>
@@ -370,8 +370,8 @@ const ProfessionalCoaching = () => {
               Senior professionals often lose opportunities not because of
               experience — but because their profile doesn't reflect the skills
               the market is currently screening for. Pace bridges that gap.
-              We identify exactly what's missing, then point you to the most
-              effective way to address it — so every application we submit on
+              Identify exactly what's missing, then point you to the most
+              effective way to address it — so every application submit on
               your behalf is backed by a profile that's genuinely competitive.
             </p>
             <div className="bg-card border border-border/30 p-8">

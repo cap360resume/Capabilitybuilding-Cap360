@@ -30,13 +30,13 @@ const RecruiterMapping = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            We identify the exact HR heads, talent acquisition leads, and hiring managers at your target companies — and reach out to them directly on your behalf, putting your profile in front of the people who actually make hiring decisions.
+            Identify the exact HR heads, talent acquisition leads, and hiring managers at your target companies — and reach out to them directly on your behalf, putting your profile in front of the people who actually make hiring decisions.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-mid">
-                <strong className="text-white">Decision-maker identification:</strong> We research and map the specific individuals responsible for hiring at your seniority level in target organisations.
+                <strong className="text-white">Decision-maker identification:</strong> Research and map the specific individuals responsible for hiring at your seniority level in target organisations.
               </span>
             </li>
             <li className="flex items-start gap-2">
@@ -54,7 +54,7 @@ const RecruiterMapping = () => {
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-mid">
-                <strong className="text-white">Follow-up management:</strong> We manage all follow-ups and responses to keep conversations warm and moving forward.
+                <strong className="text-white">Follow-up management:</strong> Manage all follow-ups and responses to keep conversations warm and moving forward.
               </span>
             </li>
           </ul>
@@ -70,7 +70,7 @@ const RecruiterMapping = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            We build a precision target list of organisations that are the right fit for your experience, seniority, compensation expectations, and career goals — then pursue them through multiple channels simultaneously.
+            Build a precision target list of organisations that are the right fit for your experience, seniority, compensation expectations, and career goals — then pursue them through multiple channels simultaneously.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
@@ -82,7 +82,7 @@ const RecruiterMapping = () => {
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-mid">
-                <strong className="text-white">Industry mapping:</strong> We identify high-growth sectors and organisations actively expanding at your level.
+                <strong className="text-white">Industry mapping:</strong> Identify high-growth sectors and organisations actively expanding at your level.
               </span>
             </li>
             <li className="flex items-start gap-2">
@@ -110,19 +110,19 @@ const RecruiterMapping = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            We leverage our established network of senior recruiters, executive search consultants, and industry contacts to generate referrals and warm introductions — accelerating your path to the right conversations.
+            Leverage our established network of senior recruiters, executive search consultants, and industry contacts to generate referrals and warm introductions — accelerating your path to the right conversations.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-mid">
-                <strong className="text-white">Recruiter introductions:</strong> We connect your profile with relevant executive recruiters who specialise in your function and sector.
+                <strong className="text-white">Recruiter introductions:</strong> Connect your profile with relevant executive recruiters who specialise in your function and sector.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-mid">
-                <strong className="text-white">Referral strategy:</strong> We identify and activate referral pathways through your existing network that you may not have considered.
+                <strong className="text-white">Referral strategy:</strong> Identify and activate referral pathways through your existing network that you may not have considered.
               </span>
             </li>
             <li className="flex items-start gap-2">
@@ -134,7 +134,7 @@ const RecruiterMapping = () => {
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-mid">
-                <strong className="text-white">Warm outreach management:</strong> We craft and send personalised messages to your network on your behalf — professionally and strategically.
+                <strong className="text-white">Warm outreach management:</strong> Craft and send personalised messages to your network on your behalf — professionally and strategically.
               </span>
             </li>
           </ul>

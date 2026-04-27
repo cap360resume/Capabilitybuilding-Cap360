@@ -21,7 +21,7 @@ const JobSearchStrategy = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            A focused job search starts with knowing exactly what you're aiming for. We work with candidates to define clear, meaningful career goals that guide every decision in their search.
+            A focused job search starts with knowing exactly what you're aiming for. Work with candidates to define clear, meaningful career goals that guide every decision in their search.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
@@ -59,7 +59,7 @@ const JobSearchStrategy = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            We help candidates look beyond the obvious and discover where their skills have the greatest leverage — sometimes in sectors they hadn't considered.
+            Help candidates look beyond the obvious and discover where their skills have the greatest leverage — sometimes in sectors they hadn't considered.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
@@ -97,7 +97,7 @@ const JobSearchStrategy = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            Blanket applications rarely work. We coach candidates to apply strategically — fewer applications, better tailored, with higher conversion rates.
+            Strategically — focusing on quality over quantity to maximise their chances of success.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
@@ -135,7 +135,7 @@ const JobSearchStrategy = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            A job search without structure quickly loses momentum. We provide candidates with practical tracking systems that keep the pipeline visible, organised, and moving.
+            A job search without structure quickly loses momentum. Provide candidates with practical tracking systems that keep the pipeline visible, organised, and moving.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
@@ -173,8 +173,7 @@ const JobSearchStrategy = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            The best roles are rarely found on job boards. We teach candidates how to access the hidden job market through strategic targeting and smart use of their network.
-          </p>
+             The best roles are rarely found on job boards. Access to the hidden job market comes through strategic targeting and smart use of professional networks.          </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />

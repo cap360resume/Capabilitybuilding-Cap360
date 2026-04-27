@@ -3,7 +3,16 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import Footer from "@/components/Footer";
 import SubNavbar from "@/components/SubNavbar";
 import PACESubNavbar from "@/components/PACESubNavbar";
-import { ArrowRight, Rocket, FileText, Users, Heart, Target, BarChart3, Shield } from "lucide-react";
+import {
+  ArrowRight,
+  Rocket,
+  FileText,
+  Users,
+  Heart,
+  Target,
+  BarChart3,
+  Shield,
+} from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { motion, AnimatePresence } from "framer-motion";
 import Jobsearch from "@/assets/jobsearch.jpg";
@@ -21,36 +30,47 @@ const CareerTransition = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            We apply to curated, relevant roles on your behalf every single day — so your candidacy stays active and visible across all major job platforms without you lifting a finger.
+            Apply to curated, relevant roles on your behalf every single day
+            — so your candidacy stays active and visible across all major job
+            platforms without you lifting a finger.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Role curation:</strong> We filter and shortlist only roles that match your seniority, function, and compensation expectations.
+                <strong className="text-white">Role curation:</strong> We filter
+                and shortlist only roles that match your seniority, function,
+                and compensation expectations.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Tailored applications:</strong> Each application is customised to align your profile with the specific role requirements.
+                <strong className="text-white">Tailored applications:</strong>{" "}
+                Each application is customised to align your profile with the
+                specific role requirements.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Application tracking:</strong> We maintain a live tracker of every application — status, follow-ups, and outcomes.
+                <strong className="text-white">Application tracking:</strong> We
+                maintain a live tracker of every application — status,
+                follow-ups, and outcomes.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Weekly reporting:</strong> You receive a clear weekly summary of all activity, responses, and next steps.
+                <strong className="text-white">Weekly reporting:</strong> You
+                receive a clear weekly summary of all activity, responses, and
+                next steps.
               </span>
             </li>
           </ul>
           <p className="text-muted-white text-md">
-            The outcome is a high-volume, consistently active search — without taking a single hour of your time.
+            The outcome is a high-volume, consistently active search — without
+            taking a single hour of your time.
           </p>
         </>
       ),
@@ -61,36 +81,47 @@ const CareerTransition = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            We manage your active presence across Naukri, LinkedIn, Monster, Shine, and other relevant portals — keeping your profiles updated, responsive, and algorithmically optimised.
+            Manage your active presence across Naukri, LinkedIn, Monster,
+            Shine, and other relevant portals — keeping your profiles updated,
+            responsive, and algorithmically optimised.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Profile activation:</strong> We set up, optimise, and actively manage your presence on all major Indian and global portals.
+                <strong className="text-white">Profile activation:</strong> We
+                set up, optimise, and actively manage your presence on all major
+                Indian and global portals.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Keyword optimisation:</strong> Role-aligned keywords across every platform to maximise recruiter search visibility.
+                <strong className="text-white">Keyword optimisation:</strong>{" "}
+                Role-aligned keywords across every platform to maximise
+                recruiter search visibility.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Inbound management:</strong> We monitor and respond to recruiter enquiries so no opportunity is missed.
+                <strong className="text-white">Inbound management:</strong> We
+                monitor and respond to recruiter enquiries so no opportunity is
+                missed.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Profile refreshes:</strong> Regular updates to keep your profiles active and ranked higher in search results.
+                <strong className="text-white">Profile refreshes:</strong>{" "}
+                Regular updates to keep your profiles active and ranked higher
+                in search results.
               </span>
             </li>
           </ul>
           <p className="text-muted-white text-md">
-            The outcome is maximum visibility across every platform where senior hiring happens.
+            The outcome is maximum visibility across every platform where senior
+            hiring happens.
           </p>
         </>
       ),
@@ -101,36 +132,49 @@ const CareerTransition = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            A senior job search is a high-stakes process. We provide continuous strategic guidance and emotional support — so you stay focused, confident, and clear throughout your journey.
+            A senior job search is a high-stakes process. We provide continuous
+            strategic guidance and emotional support — so you stay focused,
+            confident, and clear throughout your journey.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Dedicated career advisor:</strong> A single point of contact who knows your profile deeply and guides your entire search.
+                <strong className="text-white">
+                  Dedicated career advisor:
+                </strong>{" "}
+                A single point of contact who knows your profile deeply and
+                guides your entire search.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Strategy reviews:</strong> Regular check-ins to refine targeting, adjust approach, and respond to market feedback.
+                <strong className="text-white">Strategy reviews:</strong>{" "}
+                Regular check-ins to refine targeting, adjust approach, and
+                respond to market feedback.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Confidence coaching:</strong> Support to maintain momentum, manage uncertainty, and approach each opportunity with conviction.
+                <strong className="text-white">Confidence coaching:</strong>{" "}
+                Support to maintain momentum, manage uncertainty, and approach
+                each opportunity with conviction.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Offer evaluation:</strong> Guidance on assessing, comparing, and responding to offers to maximise your outcome.
+                <strong className="text-white">Offer evaluation:</strong>{" "}
+                Guidance on assessing, comparing, and responding to offers to
+                maximise your outcome.
               </span>
             </li>
           </ul>
           <p className="text-muted-white text-md">
-            The outcome is a search journey that feels managed, supported, and strategically driven from start to finish.
+            The outcome is a search journey that feels managed, supported, and
+            strategically driven from start to finish.
           </p>
         </>
       ),
@@ -153,11 +197,41 @@ const CareerTransition = () => {
 
   // ─── Infinite carousel ────────────────────────────────────────────────────
   const cards = [
-    { icon: <Rocket className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />, title: "More interview calls, faster", desc: "A consistently active, high-volume application process that generates 3× more interview calls within 60 days." },
-    { icon: <Users className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />, title: "Full portal visibility", desc: "Optimised, active presence across Naukri, LinkedIn, Monster, and more — so recruiters find you before the competition." },
-    { icon: <Heart className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />, title: "Zero time investment from you", desc: "We handle every application, follow-up, and portal update — you focus entirely on your current role." },
-    { icon: <Shield className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />, title: "Consistent professional positioning", desc: "Every application reflects your seniority, value, and career goals — no rushed or misaligned submissions." },
-    { icon: <BarChart3 className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />, title: "Full transparency and tracking", desc: "Live dashboards and weekly reports keep you informed of every application, response, and next step." },
+    {
+      icon: (
+        <Rocket className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />
+      ),
+      title: "More interview calls, faster",
+      desc: "A consistently active, high-volume application process that generates 3× more interview calls within 60 days.",
+    },
+    {
+      icon: (
+        <Users className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />
+      ),
+      title: "Full portal visibility",
+      desc: "Optimised, active presence across Naukri, LinkedIn, Monster, and more — so recruiters find you before the competition.",
+    },
+    {
+      icon: (
+        <Heart className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />
+      ),
+      title: "Zero time investment from you",
+      desc: "Handle every application, follow-up, and portal update — you focus entirely on your current role.",
+    },
+    {
+      icon: (
+        <Shield className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />
+      ),
+      title: "Consistent professional positioning",
+      desc: "Every application reflects your seniority, value, and career goals — no rushed or misaligned submissions.",
+    },
+    {
+      icon: (
+        <BarChart3 className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />
+      ),
+      title: "Full transparency and tracking",
+      desc: "Live dashboards and weekly reports keep you informed of every application, response, and next step.",
+    },
   ];
 
   const GAP = visibleCards === 1 ? 0 : 24;
@@ -182,7 +256,10 @@ const CareerTransition = () => {
 
   useEffect(() => {
     const w = getCardWidth();
-    if (w > 0) { setOffset(w * cloneOffset); setCarouselReady(true); }
+    if (w > 0) {
+      setOffset(w * cloneOffset);
+      setCarouselReady(true);
+    }
   }, [getCardWidth, cloneOffset]);
 
   useEffect(() => {
@@ -190,7 +267,10 @@ const CareerTransition = () => {
     isTransitioningRef.current = false;
     setCurrentIndex(0);
     const w = getCardWidth();
-    if (w > 0) { setOffset(w * cloneOffset); setCarouselReady(true); }
+    if (w > 0) {
+      setOffset(w * cloneOffset);
+      setCarouselReady(true);
+    }
   }, [visibleCards]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
@@ -202,18 +282,27 @@ const CareerTransition = () => {
     return () => window.removeEventListener("resize", onResize);
   }, [getCardWidth, cloneOffset, currentIndex]);
 
-  const slideTo = useCallback((newIndex: number) => {
-    if (isTransitioningRef.current) return;
-    const w = getCardWidth();
-    if (w === 0) return;
-    isTransitioningRef.current = true;
-    setIsTransitioning(true);
-    setCurrentIndex(newIndex);
-    setOffset(w * (cloneOffset + newIndex));
-  }, [getCardWidth, cloneOffset]);
+  const slideTo = useCallback(
+    (newIndex: number) => {
+      if (isTransitioningRef.current) return;
+      const w = getCardWidth();
+      if (w === 0) return;
+      isTransitioningRef.current = true;
+      setIsTransitioning(true);
+      setCurrentIndex(newIndex);
+      setOffset(w * (cloneOffset + newIndex));
+    },
+    [getCardWidth, cloneOffset],
+  );
 
-  const handleNext = useCallback(() => slideTo(currentIndex + 1), [currentIndex, slideTo]);
-  const handlePrev = useCallback(() => slideTo(currentIndex - 1), [currentIndex, slideTo]);
+  const handleNext = useCallback(
+    () => slideTo(currentIndex + 1),
+    [currentIndex, slideTo],
+  );
+  const handlePrev = useCallback(
+    () => slideTo(currentIndex - 1),
+    [currentIndex, slideTo],
+  );
 
   const handleTransitionEnd = useCallback(() => {
     const w = getCardWidth();
@@ -247,14 +336,20 @@ const CareerTransition = () => {
       <div className="container mx-auto px-4 lg:px-8 py-4 mt-5">
         <span className="text-xs text-muted-white">PACE</span>
         <span className="text-xs text-muted-white mx-2">/</span>
-        <span className="text-xs text-cap-green font-semibold">We Apply on Your Behalf</span>
+        <span className="text-xs text-cap-green font-semibold">
+          We Apply on Your Behalf
+        </span>
       </div>
 
       {/* ── Hero ── */}
       <section className="container mx-auto px-4 lg:px-8 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="overflow-hidden">
-            <img src={ApplyNow} alt="We Apply on Your Behalf" className="w-full h-[400px] object-cover" />
+            <img
+              src={ApplyNow}
+              alt="We Apply on Your Behalf"
+              className="w-full h-[400px] object-cover"
+            />
           </div>
           <div>
             <motion.h1
@@ -271,7 +366,9 @@ const CareerTransition = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              Your job search runs every day — even while you're at work. We apply to curated, senior-level roles on your behalf so your candidacy stays active, consistent, and competitive.
+              Your job search runs every day — even while you're at work. We
+              apply to curated, senior-level roles on your behalf so your
+              candidacy stays active, consistent, and competitive.
             </motion.p>
           </div>
         </div>
@@ -282,13 +379,16 @@ const CareerTransition = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_360px] gap-16 items-start">
             <p className="text-[20px] text-muted-white leading-[1.8]">
-              Most senior professionals don't have the time or bandwidth to run an effective job search while excelling in their current role. That's exactly the gap PACE fills. Our team applies to relevant, senior-level positions on your behalf every day — managing the entire application process so you can focus entirely on performing at your best while we open the right doors.
+              Most senior professionals lack the time or bandwidth to run an effective search while excelling in their current role. That's exactly the gap PACE fills — managing the entire application process daily so you can focus on performing at your best while we open the right doors.
             </p>
             <div className="bg-card border border-border/30 p-8">
-              <span className="text-[20px] font-bold tracking-widest text-cap-green uppercase block mb-3">DATA</span>
+              <span className="text-[20px] font-bold tracking-widest text-cap-green uppercase block mb-3">
+                DATA
+              </span>
               <div className="text-[56px] font-black leading-none mb-3">3×</div>
               <p className="text-mid text-muted-white leading-relaxed">
-                more interview calls generated for senior professionals within 60 days when applications are managed daily by a dedicated team.
+                more interview calls generated for senior professionals within
+                60 days when applications are managed daily by a dedicated team.
               </p>
             </div>
           </div>
@@ -303,12 +403,24 @@ const CareerTransition = () => {
             <span className="text-cap-green">Senior Job Searches</span>
           </h2>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <img src={Jobsearch} alt="Vision" className="w-full h-[350px] object-cover" />
+            <img
+              src={Jobsearch}
+              alt="Vision"
+              className="w-full h-[350px] object-cover"
+            />
             <div>
               <div className="w-12 h-1 bg-cap-green mb-6" />
-              <h3 className="text-[22px] font-bold mb-4">From occasional effort to daily, managed execution</h3>
+              <h3 className="text-[22px] font-bold mb-4">
+                From occasional effort to daily, managed execution
+              </h3>
               <p className="text-[20px] text-muted-white leading-[1.7]">
-                A job search done alone is inconsistent — applications go out in bursts, portals go unmanaged, and opportunities slip by unnoticed. Our model replaces that with daily, structured execution. We apply on your behalf, manage your portal presence, and track every response — running a professional search operation that would be impossible to sustain alongside a full-time senior role.
+                A job search done alone is inconsistent — applications go out in
+                bursts, portals go unmanaged, and opportunities slip by
+                unnoticed. Our model replaces that with daily, structured
+                execution. We apply on your behalf, manage your portal presence,
+                and track every response — running a professional search
+                operation that would be impossible to sustain alongside a
+                full-time senior role.
               </p>
             </div>
           </div>
@@ -329,7 +441,10 @@ const CareerTransition = () => {
             {solutions.map((item, i) => {
               const isOpen = activeIndex === i;
               return (
-                <div key={item.title} className="border-b border-border/30 relative">
+                <div
+                  key={item.title}
+                  className="border-b border-border/30 relative"
+                >
                   {isOpen && (
                     <motion.div
                       className="absolute left-0 top-0 bottom-0 w-1 bg-cap-green"
@@ -340,7 +455,9 @@ const CareerTransition = () => {
                     onClick={() => setActiveIndex(isOpen ? null : i)}
                     className="flex justify-between items-center w-full text-left cursor-pointer py-5 pl-4"
                   >
-                    <span className="text-[25px] font-semibold">{item.title}</span>
+                    <span className="text-[25px] font-semibold">
+                      {item.title}
+                    </span>
                     <span className="text-2xl text-cap-green font-light w-8 text-center">
                       {isOpen ? "–" : "+"}
                     </span>
@@ -354,7 +471,9 @@ const CareerTransition = () => {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <div className="pl-4 pr-8 pb-6 text-[20px]">{item.content}</div>
+                        <div className="pl-4 pr-8 pb-6 text-[20px]">
+                          {item.content}
+                        </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -393,8 +512,14 @@ const CareerTransition = () => {
                   data-card
                   className="bg-card border border-border/30 flex-shrink-0 flex flex-col p-4 sm:p-6 md:p-8"
                   style={{
-                    width: visibleCards === 1 ? "100%" : `calc((100% - ${GAP * (visibleCards - 1)}px) / ${visibleCards})`,
-                    minWidth: visibleCards === 1 ? "100%" : `calc((100% - ${GAP * (visibleCards - 1)}px) / ${visibleCards})`,
+                    width:
+                      visibleCards === 1
+                        ? "100%"
+                        : `calc((100% - ${GAP * (visibleCards - 1)}px) / ${visibleCards})`,
+                    minWidth:
+                      visibleCards === 1
+                        ? "100%"
+                        : `calc((100% - ${GAP * (visibleCards - 1)}px) / ${visibleCards})`,
                     overflow: "hidden",
                     wordBreak: "break-word",
                   }}
@@ -411,8 +536,20 @@ const CareerTransition = () => {
             </div>
           </div>
           <div className="flex gap-2 sm:gap-3 mt-4 sm:mt-5 md:mt-6">
-            <button onClick={handlePrev} aria-label="Previous slide" className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 border border-border/50 flex items-center justify-center hover:bg-card transition-colors text-sm sm:text-base md:text-lg">←</button>
-            <button onClick={handleNext} aria-label="Next slide" className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 border border-border/50 flex items-center justify-center hover:bg-card transition-colors text-sm sm:text-base md:text-lg">→</button>
+            <button
+              onClick={handlePrev}
+              aria-label="Previous slide"
+              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 border border-border/50 flex items-center justify-center hover:bg-card transition-colors text-sm sm:text-base md:text-lg"
+            >
+              ←
+            </button>
+            <button
+              onClick={handleNext}
+              aria-label="Next slide"
+              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 border border-border/50 flex items-center justify-center hover:bg-card transition-colors text-sm sm:text-base md:text-lg"
+            >
+              →
+            </button>
           </div>
         </div>
       </section>
@@ -423,7 +560,10 @@ const CareerTransition = () => {
           <h2 className="text-[24px] font-bold mb-4 text-primary-white">
             Let us run your job search while you run your career
           </h2>
-          <a href="/contact" className="inline-flex items-center gap-2 bg-white text-background px-8 py-4 text-[16px] font-semibold hover:gap-3 transition-all">
+          <a
+            href="/contact"
+            className="inline-flex items-center gap-2 bg-white text-background px-8 py-4 text-[16px] font-semibold hover:gap-3 transition-all"
+          >
             Get started <ArrowRight className="w-5 h-5" />
           </a>
         </div>
