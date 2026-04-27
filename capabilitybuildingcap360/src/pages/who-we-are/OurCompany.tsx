@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import heroImg from "@/assets/who-we-are-hero.jpg";
+import rewardstrategies from "@/assets/rewardstrategies.jpg";
 import { Target, Users, Globe, Lightbulb, TrendingUp } from "lucide-react";
 
 const accordionItems = [
@@ -219,7 +220,7 @@ const OurCompany = () => {
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-12">Our Vision & Strategy</h2>
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="rounded-2xl overflow-hidden aspect-video">
-                <img src={heroImg} alt="Vision" className="w-full h-full object-cover" />
+                <img src={rewardstrategies} alt="Vision" className="w-full h-full object-cover" />
               </div>
               <p className="text-muted-foreground leading-relaxed text-lg">
                 Envision a world where every organization thrives through the strength of its people. Our strategy is to be the most trusted end-to-end capability partner for enterprises — delivering integrated solutions that align talent with business goals, build future-ready leadership, and create high-performing organizations. believe that people strategy is business strategy, and we exist to bridge that gap with precision, expertise, and purpose.
