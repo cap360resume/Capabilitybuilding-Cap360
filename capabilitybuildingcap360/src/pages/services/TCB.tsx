@@ -335,7 +335,7 @@ const TCB = () => {
             transition={{ duration: 0.8, delay: 0.1 }}
           >
             <span className="text-cap-blue font-semibold text-[14px] tracking-wider uppercase">
-              Transform Your Organization
+              TCB
             </span>
           </motion.div>
 
@@ -458,9 +458,7 @@ const TCB = () => {
               </div>
               <div className="border-l-2 border-cap-blue/40 pl-6">
                 <p className="text-[18px] text-muted-white leading-[1.8]">
-                  We go beyond workshops—conducting deep organizational
-                  assessments, designing tailored solutions, and delivering
-                  long-term capability building with measurable outcomes.
+                 Our approach combines in-depth organizational assessments, customized solution design, and long-term capability building with measurable impact.
                 </p>
               </div>
             </div>
@@ -954,7 +952,7 @@ const TCB = () => {
             className="mb-16"
           >
             <h2 className="text-[32px] md:text-[42px] font-bold mb-2">
-              Meet Our Trainer
+             Meet Our Principal Practitioner
             </h2>
             <p className="text-[18px] text-muted-white">
               Decades of experience in corporate leadership combined with certified coaching

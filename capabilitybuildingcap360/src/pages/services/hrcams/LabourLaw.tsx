@@ -375,12 +375,21 @@ const LabourLaw = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <SubNavbar title="Services" titlePath="/what-we-do" items={[
-        { label: "ASER", path: "/what-we-do/services/aser" },
-        { label: "HRCAMS", path: "/what-we-do/services/hrcams" },
-        { label: "TCB", path: "/what-we-do/services/tcb" },
-        { label: "PACE", path: "/what-we-do/services/pace" },
-      ]} />
+       <SubNavbar
+        title="Services"
+        titlePath="/what-we-do"
+        items={[
+          { label: "HRCAMS", path: "/what-we-do/services/hrcams" },
+          { label: "PACE", path: "/what-we-do/services/pace" },
+          { label: "TCB", path: "/what-we-do/services/tcb" },
+          { label: "ASER", path: "/what-we-do/services/aser" },
+          {
+            label: "HIRETEK",
+            path: "https://www.hiretek.in/",
+            external: true,
+          },
+        ]}
+      />
       <HRCAMSSubNavbar />
 
       {/* Breadcrumb */}

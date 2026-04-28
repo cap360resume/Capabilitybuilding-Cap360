@@ -183,7 +183,7 @@ const leaders = [
 
 const targetAudiences = [
   "Large Enterprises: Designing complex, multinational HR operating models",
-  "Mid-Market Organizations: Scaling HR functions while maintaining agility",
+  "Mid-Market Organizations: Scaling people functions while maintaining agility",
   "Growth-Stage Companies: Building HR foundations that support rapid scaling",
   "Private Equity Backed Firms: Streamlining HR operations across portfolio companies",
   "Public Sector Organizations: Navigating regulatory complexity while improving efficiency",
@@ -302,10 +302,10 @@ const HRCAMS = () => {
       value: "40%",
       desc: "average HR cost reduction can be achieved through effective managed services as per our studies",
     },
-    {
-      value: "3x",
-      desc: "Impact on hiring turnaround through optimized talent acquisition strategies",
-    },
+    // {
+    //   value: "3x",
+    //   desc: "Impact on hiring turnaround through optimized talent acquisition strategies",
+    // },
     {
       value: "Only 13%",
       desc: 'of companies are "extremely confident" they have the right HR digital capabilities for Gen AI.',
@@ -361,13 +361,14 @@ const HRCAMS = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
         </div>
         <div className="relative container mx-auto px-4 lg:px-8 py-32">
+          <span className="text-sm text-cap-yellow font-semibold">HRCAMS</span>
           <motion.h1
             className="text-[40px] md:text-[56px] lg:text-[72px] font-black tracking-tight leading-[1.05] mb-6 max-w-3xl"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            HR Consulting, Advisory & Managed Services
+            HR Consulting, Advisory & Managed Services 
           </motion.h1>
           <motion.p
             className="text-[18px] md:text-[20px] text-muted-White leading-[1.6] max-w-2xl mb-8"
@@ -375,7 +376,7 @@ const HRCAMS = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            Transform your HR function from an administrative cost centre into a
+            Transform your People function from an administrative cost centre into a
             strategic business partner. Unlock workforce excellence through
             technology-led, insight-driven consulting powered by our Global
             Capability Center.
@@ -426,7 +427,7 @@ const HRCAMS = () => {
           >
             HRCAMS now
           </motion.h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {stats.map((stat, i) => (
               <motion.div
                 key={stat.value}
@@ -477,8 +478,8 @@ const HRCAMS = () => {
             <div className="grid md:grid-cols-2 gap-10">
               <div className="border-l-2 border-cap-yellow/40 pl-6">
                 <p className="text-[18px] text-muted-White leading-[1.8]">
-                  <span className="text-White font-medium">HRCAMS</span> (HR
-                  Capability & Managed Services) is designed to help
+                  <span className="text-White font-medium">HRCAMS </span>
+                  is designed to help
                   organizations move beyond traditional HR operations and build
                   <span className="text-White font-medium">
                     {" "}
@@ -490,9 +491,8 @@ const HRCAMS = () => {
 
               <div className="border-l-2 border-cap-yellow/40 pl-6">
                 <p className="text-[18px] text-muted-White leading-[1.8]">
-                  We go beyond tools—partnering with organizations to assess,
-                  design, and transform HR capabilities, powered by a Global
-                  Capability Center delivering continuous support, innovation,
+                  We go beyond tools - partnering with organizations to assess,
+                  design, and transform HR capabilities, powered by delivering continuous support, innovation,
                   and measurable business outcomes.
                 </p>
               </div>
@@ -516,7 +516,7 @@ const HRCAMS = () => {
           </motion.h2>
           <p className="text-[18px] text-muted-White mb-14 max-w-2xl">
             Six seamlessly connected service lines built to elevate every aspect
-            of your HR function. Each line operates as a standalone solution
+            of your People function. Each line operates as a standalone solution
             while integrating effortlessly with others—allowing you to adopt
             what you need or combine them for a complete, end-to-end
             transformation.

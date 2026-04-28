@@ -41,7 +41,7 @@ const QuoteSection = () => {
               Gurpriit Singh Anand
             </p>
             <p className="text-muted-foreground text-sm">
-              CEO, CAP360
+              Founder & CEO
             </p>
           </motion.div>
         </div>

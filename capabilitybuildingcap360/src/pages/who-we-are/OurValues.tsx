@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import heroImg from "@/assets/who-we-are-hero.jpg";
+import coaching from "@/assets/coaching.png"
 import { Heart, Shield, Users, Sparkles, HandHeart } from "lucide-react";
 
 const accordionItems = [
@@ -183,7 +184,7 @@ const OurValues = () => {
           <div className="container mx-auto px-4 lg:px-8 py-16 lg:py-24">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
-                <img src={heroImg} alt="Our Values" className="w-full h-full object-cover" />
+                <img src={coaching} alt="Our Values" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
               </div>
               <div className="space-y-6">

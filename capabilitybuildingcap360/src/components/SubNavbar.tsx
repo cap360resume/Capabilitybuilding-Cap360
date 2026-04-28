@@ -6,6 +6,7 @@ import { useScrollSpy } from "@/hooks/useScrollSpy";
 interface SubNavItem {
   label: string;
   path: string;
+  external?: boolean; // ✅ added
 }
 
 interface SubNavbarProps {
@@ -20,7 +21,6 @@ const SubNavbar = ({ title, titlePath, items }: SubNavbarProps) => {
   const [navHidden, setNavHidden] = useState(false);
   const lastScrollY = useRef(0);
 
-  // Extract section IDs from hash paths for scroll spy
   const sectionIds = items
     .filter((item) => item.path.startsWith("#"))
     .map((item) => item.path.replace("#", ""));
@@ -42,6 +42,7 @@ const SubNavbar = ({ title, titlePath, items }: SubNavbarProps) => {
   }, []);
 
   const isItemActive = (item: SubNavItem) => {
+    if (item.external) return false;
     if (item.path.startsWith("#")) {
       return activeSection === item.path.replace("#", "");
     }
@@ -49,7 +50,9 @@ const SubNavbar = ({ title, titlePath, items }: SubNavbarProps) => {
   };
 
   const handleClick = (item: SubNavItem) => {
-    if (item.path.startsWith("#")) {
+    if (item.external) {
+      window.open(item.path, "_blank", "noopener,noreferrer");
+    } else if (item.path.startsWith("#")) {
       const el = document.getElementById(item.path.replace("#", ""));
       if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
     } else {
@@ -60,7 +63,7 @@ const SubNavbar = ({ title, titlePath, items }: SubNavbarProps) => {
   return (
     <div
       className={`sticky z-40 bg-primary border-b border-primary/80 transition-all duration-500 ${
-        navHidden ? "top-0" : "top-[72px]" 
+        navHidden ? "top-0" : "top-[72px]"
       }`}
     >
       <div className="container mx-auto px-4 lg:px-8">

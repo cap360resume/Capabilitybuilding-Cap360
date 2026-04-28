@@ -352,6 +352,7 @@ const PACE = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
         </div>
         <div className="relative container mx-auto px-4 lg:px-8 py-32">
+           <span className="text-sm text-cap-green font-semibold">PACE</span>
           <motion.h1
             className="text-[40px] md:text-[56px] lg:text-[72px] font-black tracking-tight leading-[1.05] mb-6 max-w-3xl"
             initial={{ opacity: 0, y: 40 }}
@@ -463,7 +464,7 @@ const PACE = () => {
               <div className="border-l-2 border-cap-green/40 pl-6">
                 <p className="text-[18px] text-muted-white leading-[1.8]">
                   <span className="text-white font-medium">PACE</span>{" "}
-                  (Professional Alignment & Career Enhancement) is a fully managed job search service designed exclusively for{" "}
+                  is a fully managed job search service designed exclusively for{" "}
                   <span className="text-white font-medium">
                     mid to senior level professionals
                   </span>{" "}
@@ -473,7 +474,7 @@ const PACE = () => {
 
               <div className="border-l-2 border-cap-green/40 pl-6">
                 <p className="text-[18px] text-muted-white leading-[1.8]">
-                  We go beyond advice and frameworks — we take ownership of your search. From profile optimisation and portal management to applying on your behalf and mapping HRs directly, PACE operates as your dedicated career team from day one.
+                  More than just advice and frameworks, we take ownership of your search. From profile optimisation and portal management to applying on your behalf and mapping HRs directly, PACE operates as your dedicated career team from day one.
                 </p>
               </div>
             </div>

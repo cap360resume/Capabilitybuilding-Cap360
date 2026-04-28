@@ -6,28 +6,27 @@ import card3 from "@/assets/card-3.jpg";
 import card4 from "@/assets/card-4.jpg";
 
 const insights = [
-  {
-    category: "HR Strategy",
-    title: "M&A and the People Problem: How HR Due Diligence Determines Deal Success",
-    image: card2,
-  },
-  {
-    category: "Workforce Trends",
-    title: "The Upskilling Imperative: Why L&D Is Now a Retention Tool",
-    image: card1, // ← was null, now has image
-  },
-  {
-    category: "Workforce Trends",
-    title: "The Upskilling Imperative: Why L&D Is Now a Retention Tool",
-    image: card3,
-  },
-  {
-    category: "Leadership",
-    title: "Building Leadership Pipelines That Don't Break Under Pressure",
-    image: card4,
-  },
+{
+  category: "HR Strategy",
+  title: "M&A and the People Problem: How HR Due Diligence Determines Deal Success",
+  image: card2,
+},
+{
+  category: "Upskilling & Retention",
+  title: "The Upskilling Imperative: Why L&D Is Now a Retention Tool",
+  image: card1,
+},
+{
+  category: "Workforce Trends",
+  title: "Hybrid Work Realities: Redefining Productivity and Culture",
+  image: card3,
+},
+{
+  category: "Leadership",
+  title: "Building Leadership Pipelines That Don't Break Under Pressure",
+  image: card4,
+},
 ];
-
 const InsightsSection = () => {
   const { ref, isInView } = useScrollAnimation(0.1);
 

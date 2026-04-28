@@ -3,11 +3,19 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import Footer from "@/components/Footer";
 import SubNavbar from "@/components/SubNavbar";
 import HRCAMSSubNavbar from "@/components/HRCAMSSubNavbar";
-import { ArrowRight, Bot, Cpu, Zap, BrainCircuit, LineChart, Target } from "lucide-react";
+import {
+  ArrowRight,
+  Bot,
+  Cpu,
+  Zap,
+  BrainCircuit,
+  LineChart,
+  Target,
+} from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { motion, AnimatePresence } from "framer-motion";
 import hrai from "@/assets/hr-ai.jpg";
-import genai from "@/assets/gen-ai.jpg"
+import genai from "@/assets/gen-ai.jpg";
 
 const GenAIHR = () => {
   const { ref: sRef, isInView: sInView } = useScrollAnimation(0.1);
@@ -29,29 +37,38 @@ const GenAIHR = () => {
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Current state diagnostics:</strong> Identifying gaps in structure, roles, and reporting.
+                <strong className="text-white">
+                  Current state diagnostics:
+                </strong>{" "}
+                Identifying gaps in structure, roles, and reporting.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Design principles:</strong> Defining the right structure — functional, matrix, or hybrid.
+                <strong className="text-white">Design principles:</strong>{" "}
+                Defining the right structure — functional, matrix, or hybrid.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Role clarity:</strong> Clear accountabilities, decision rights, and responsibilities.
+                <strong className="text-white">Role clarity:</strong> Clear
+                accountabilities, decision rights, and responsibilities.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Span of control:</strong> Optimising team sizes for effective leadership.
+                <strong className="text-white">Span of control:</strong>{" "}
+                Optimising team sizes for effective leadership.
               </span>
             </li>
           </ul>
-          <p className="text-muted-white text-md">The outcome is a streamlined structure with clear roles and accountability.</p>
+          <p className="text-muted-white text-md">
+            The outcome is a streamlined structure with clear roles and
+            accountability.
+          </p>
         </>
       ),
     },
@@ -69,23 +86,28 @@ const GenAIHR = () => {
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Benchmarking:</strong> Revenue-to-headcount comparison with industry standards.
+                <strong className="text-white">Benchmarking:</strong>{" "}
+                Revenue-to-headcount comparison with industry standards.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Productivity norms:</strong> Defining output-per-employee benchmarks.
+                <strong className="text-white">Productivity norms:</strong>{" "}
+                Defining output-per-employee benchmarks.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Scaling models:</strong> Structured headcount planning as business expands.
+                <strong className="text-white">Scaling models:</strong>{" "}
+                Structured headcount planning as business expands.
               </span>
             </li>
           </ul>
-          <p className="text-muted-white text-md">The outcome is optimal staffing aligned with efficiency and growth.</p>
+          <p className="text-muted-white text-md">
+            The outcome is optimal staffing aligned with efficiency and growth.
+          </p>
         </>
       ),
     },
@@ -95,37 +117,44 @@ const GenAIHR = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            Succession planning ensures continuity across critical roles, not just
-            leadership positions. We help build a strong internal pipeline with
-            clear readiness and development plans.
+            Succession planning ensures continuity across critical roles, not
+            just leadership positions. We help build a strong internal pipeline
+            with clear readiness and development plans.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Critical roles:</strong> Identifying positions with highest business impact.
+                <strong className="text-white">Critical roles:</strong>{" "}
+                Identifying positions with highest business impact.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Readiness mapping:</strong> 0–6, 6–12, and 12+ month successor identification.
+                <strong className="text-white">Readiness mapping:</strong> 0–6,
+                6–12, and 12+ month successor identification.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Development plans:</strong> Structured actions to build future leaders.
+                <strong className="text-white">Development plans:</strong>{" "}
+                Structured actions to build future leaders.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Succession dashboards:</strong> Clear visibility for leadership and board review.
+                <strong className="text-white">Succession dashboards:</strong>{" "}
+                Clear visibility for leadership and board review.
               </span>
             </li>
           </ul>
-          <p className="text-muted-white text-md">The outcome is a strong leadership pipeline and reduced continuity risk.</p>
+          <p className="text-muted-white text-md">
+            The outcome is a strong leadership pipeline and reduced continuity
+            risk.
+          </p>
         </>
       ),
     },
@@ -135,37 +164,44 @@ const GenAIHR = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            M&A brings significant people complexity. We help organisations manage
-            integration smoothly while minimising cultural, structural, and
-            compliance risks.
+            M&A brings significant people complexity. We help organisations
+            manage integration smoothly while minimising cultural, structural,
+            and compliance risks.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">HR due diligence:</strong> Assessing people, compliance, and cultural risks pre-deal.
+                <strong className="text-white">HR due diligence:</strong>{" "}
+                Assessing people, compliance, and cultural risks pre-deal.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Cultural integration:</strong> Structured plans to align teams and build a unified culture.
+                <strong className="text-white">Cultural integration:</strong>{" "}
+                Structured plans to align teams and build a unified culture.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Compensation alignment:</strong> Harmonising pay and policies without attrition risk.
+                <strong className="text-white">Compensation alignment:</strong>{" "}
+                Harmonising pay and policies without attrition risk.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Structural integration:</strong> Designing the combined org structure and operating model.
+                <strong className="text-white">Structural integration:</strong>{" "}
+                Designing the combined org structure and operating model.
               </span>
             </li>
           </ul>
-          <p className="text-muted-white text-md">The outcome is a smooth integration with minimal disruption and risk.</p>
+          <p className="text-muted-white text-md">
+            The outcome is a smooth integration with minimal disruption and
+            risk.
+          </p>
         </>
       ),
     },
@@ -187,11 +223,41 @@ const GenAIHR = () => {
 
   // ─── Infinite carousel ────────────────────────────────────────────────────
   const cards = [
-    { icon: <Bot className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />, title: "AI-automated HR workflows", desc: "Eliminate manual processing with intelligent bots that handle queries, approvals, and document generation." },
-    { icon: <BrainCircuit className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />, title: "Predictive talent insights", desc: "Anticipate attrition, identify high-potential employees, and forecast hiring needs with ML models." },
-    { icon: <Cpu className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />, title: "Gen AI content & productivity", desc: "Auto-generate policies, JDs, training content, and communications with enterprise-grade AI." },
-    { icon: <LineChart className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />, title: "Real-time people analytics", desc: "Dashboards that surface actionable insights from employee data across the entire lifecycle." },
-    { icon: <Zap className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />, title: "Operational efficiency gains", desc: "Reduce HR processing time by 60-80% while improving accuracy and employee satisfaction." },
+    {
+      icon: (
+        <Bot className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />
+      ),
+      title: "AI-automated HR workflows",
+      desc: "Eliminate manual processing with intelligent bots that handle queries, approvals, and document generation.",
+    },
+    {
+      icon: (
+        <BrainCircuit className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />
+      ),
+      title: "Predictive talent insights",
+      desc: "Anticipate attrition, identify high-potential employees, and forecast hiring needs with ML models.",
+    },
+    {
+      icon: (
+        <Cpu className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />
+      ),
+      title: "Gen AI content & productivity",
+      desc: "Auto-generate policies, JDs, training content, and communications with enterprise-grade AI.",
+    },
+    {
+      icon: (
+        <LineChart className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />
+      ),
+      title: "Real-time people analytics",
+      desc: "Dashboards that surface actionable insights from employee data across the entire lifecycle.",
+    },
+    {
+      icon: (
+        <Zap className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />
+      ),
+      title: "Operational efficiency gains",
+      desc: "Reduce HR processing time by 60-80% while improving accuracy and employee satisfaction.",
+    },
   ];
 
   const GAP = visibleCards === 1 ? 0 : 24;
@@ -255,11 +321,17 @@ const GenAIHR = () => {
       setCurrentIndex(newIndex);
       setOffset(w * (cloneOffset + newIndex));
     },
-    [getCardWidth, cloneOffset]
+    [getCardWidth, cloneOffset],
   );
 
-  const handleNext = useCallback(() => slideTo(currentIndex + 1), [currentIndex, slideTo]);
-  const handlePrev = useCallback(() => slideTo(currentIndex - 1), [currentIndex, slideTo]);
+  const handleNext = useCallback(
+    () => slideTo(currentIndex + 1),
+    [currentIndex, slideTo],
+  );
+  const handlePrev = useCallback(
+    () => slideTo(currentIndex - 1),
+    [currentIndex, slideTo],
+  );
 
   const handleTransitionEnd = useCallback(() => {
     const w = getCardWidth();
@@ -283,26 +355,41 @@ const GenAIHR = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <SubNavbar title="Services" titlePath="/what-we-do" items={[
-        { label: "ASER", path: "/what-we-do/services/aser" },
-        { label: "HRCAMS", path: "/what-we-do/services/hrcams" },
-        { label: "TCB", path: "/what-we-do/services/tcb" },
-        { label: "PACE", path: "/what-we-do/services/pace" },
-      ]} />
+      <SubNavbar
+        title="Services"
+        titlePath="/what-we-do"
+        items={[
+          { label: "HRCAMS", path: "/what-we-do/services/hrcams" },
+          { label: "PACE", path: "/what-we-do/services/pace" },
+          { label: "TCB", path: "/what-we-do/services/tcb" },
+          { label: "ASER", path: "/what-we-do/services/aser" },
+          {
+            label: "HIRETEK",
+            path: "https://www.hiretek.in/",
+            external: true,
+          },
+        ]}
+      />
       <HRCAMSSubNavbar />
 
       {/* Breadcrumb */}
       <div className="container mx-auto px-4 lg:px-8 py-4 mt-5">
         <span className="text-xs text-muted-white">HRCAMS</span>
         <span className="text-xs text-muted-white mx-2">/</span>
-        <span className="text-xs text-cap-yellow font-semibold">Gen AI for HR</span>
+        <span className="text-xs text-cap-yellow font-semibold">
+          Gen AI for HR
+        </span>
       </div>
 
       {/* Hero */}
       <section className="container mx-auto px-4 lg:px-8 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="overflow-hidden">
-            <img src={genai} alt="Gen AI HR" className="w-full h-[450px] object-cover" />
+            <img
+              src={genai}
+              alt="Gen AI HR"
+              className="w-full h-[450px] object-cover"
+            />
           </div>
           <div>
             <motion.h1
@@ -319,7 +406,9 @@ const GenAIHR = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              Harness the power of generative AI and machine learning to transform HR operations, predict workforce trends, and boost enterprise productivity.
+              Harness the power of generative AI and machine learning to
+              transform HR operations, predict workforce trends, and boost
+              enterprise productivity.
             </motion.p>
           </div>
         </div>
@@ -330,13 +419,21 @@ const GenAIHR = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_360px] gap-16 items-start">
             <p className="text-[20px] text-muted-white leading-[1.8]">
-              Generative AI is not a future promise — it's a present reality transforming how HR operates. From automated candidate screening to predictive attrition models, AI is enabling HR teams to move from administrative processors to strategic business partners.
+              Generative AI is not a future promise — it's a present reality
+              transforming how HR operates. From automated candidate screening
+              to predictive attrition models, AI is enabling HR teams to move
+              from administrative processors to strategic business partners.
             </p>
             <div className="bg-card border border-border/30 p-8">
-              <span className="text-[20px] font-bold tracking-widest text-cap-yellow uppercase block mb-3">DATA</span>
-              <div className="text-[56px] font-black leading-none mb-3">76%</div>
+              <span className="text-[20px] font-bold tracking-widest text-cap-yellow uppercase block mb-3">
+                DATA
+              </span>
+              <div className="text-[56px] font-black leading-none mb-3">
+                76%
+              </div>
               <p className="text-mid text-muted-white leading-relaxed">
-                of HR leaders say AI will fundamentally change how their function operates within the next 2 years.
+                of HR leaders say AI will fundamentally change how their
+                function operates within the next 2 years.
               </p>
             </div>
           </div>
@@ -351,12 +448,22 @@ const GenAIHR = () => {
             <span className="text-cap-yellow">HR with AI</span>
           </h2>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <img src={hrai} alt="Vision" className="w-full h-[350px] object-cover" />
+            <img
+              src={hrai}
+              alt="Vision"
+              className="w-full h-[350px] object-cover"
+            />
             <div>
               <div className="w-12 h-1 bg-cap-yellow mb-6" />
-              <h3 className="text-[22px] font-bold mb-4">From manual processes to intelligent automation</h3>
+              <h3 className="text-[22px] font-bold mb-4">
+                From manual processes to intelligent automation
+              </h3>
               <p className="text-[20px] text-muted-white leading-[1.7]">
-                The most impactful AI implementations in HR aren't flashy chatbots — they're the invisible automations that eliminate thousands of hours of manual work. Smart document processing, intelligent routing, and predictive analytics are turning HR from a cost centre into a strategic advantage.
+                The most impactful AI implementations in HR aren't flashy
+                chatbots — they're the invisible automations that eliminate
+                thousands of hours of manual work. Smart document processing,
+                intelligent routing, and predictive analytics are turning HR
+                from a cost centre into a strategic advantage.
               </p>
             </div>
           </div>
@@ -377,7 +484,10 @@ const GenAIHR = () => {
             {solutions.map((item, i) => {
               const isOpen = activeIndex === i;
               return (
-                <div key={item.title} className="border-b border-border/30 relative">
+                <div
+                  key={item.title}
+                  className="border-b border-border/30 relative"
+                >
                   {isOpen && (
                     <motion.div
                       className="absolute left-0 top-0 bottom-0 w-1 bg-cap-yellow"
@@ -388,7 +498,9 @@ const GenAIHR = () => {
                     onClick={() => setActiveIndex(isOpen ? null : i)}
                     className="flex justify-between items-center w-full text-left cursor-pointer py-5 pl-4"
                   >
-                    <span className="text-[25px] font-semibold">{item.title}</span>
+                    <span className="text-[25px] font-semibold">
+                      {item.title}
+                    </span>
                     <span className="text-2xl text-cap-yellow font-light w-8 text-center">
                       {isOpen ? "–" : "+"}
                     </span>
@@ -402,7 +514,9 @@ const GenAIHR = () => {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <div className="pl-4 pr-8 pb-6 text-[20px]">{item.content}</div>
+                        <div className="pl-4 pr-8 pb-6 text-[20px]">
+                          {item.content}
+                        </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -442,12 +556,14 @@ const GenAIHR = () => {
                   data-card
                   className="bg-card border border-border/30 flex-shrink-0 flex flex-col p-4 sm:p-6 md:p-8"
                   style={{
-                    width: visibleCards === 1
-                      ? "100%"
-                      : `calc((100% - ${GAP * (visibleCards - 1)}px) / ${visibleCards})`,
-                    minWidth: visibleCards === 1
-                      ? "100%"
-                      : `calc((100% - ${GAP * (visibleCards - 1)}px) / ${visibleCards})`,
+                    width:
+                      visibleCards === 1
+                        ? "100%"
+                        : `calc((100% - ${GAP * (visibleCards - 1)}px) / ${visibleCards})`,
+                    minWidth:
+                      visibleCards === 1
+                        ? "100%"
+                        : `calc((100% - ${GAP * (visibleCards - 1)}px) / ${visibleCards})`,
                     overflow: "hidden",
                     wordBreak: "break-word",
                   }}

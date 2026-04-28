@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useMemo } from "react";
-import { ChevronDown, Search, Globe, Menu, X, ChevronRight } from "lucide-react";
+import { ChevronDown, Search, Globe, Menu, X, ChevronRight, ExternalLink } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate, useLocation } from "react-router-dom";
 import logo from "@/assets/cap360-logo.png";
@@ -10,6 +10,7 @@ const SEARCH_INDEX = [
   { label: "HR Consulting & Advisory (HRCAMS)", path: "/what-we-do/services/hrcams", tags: ["hr", "consulting", "advisory", "hrcams"] },
   { label: "Training & Capability Building (TCB)", path: "/what-we-do/services/tcb", tags: ["training", "tcb", "learning", "capability"] },
   { label: "Professional Alignment & Career Enhancement (PACE)", path: "/what-we-do/services/pace", tags: ["pace", "career", "coaching"] },
+  { label: "Hiretek", path: "https://www.hiretek.in/", tags: ["hiretek", "recruitment", "hiring", "staffing"] },
   { label: "Our Company", path: "/who-we-are/our-company", tags: ["about", "company", "mission"] },
   { label: "Our Values", path: "/who-we-are/our-values", tags: ["values", "culture"] },
   { label: "Contact Us", path: "/contact", tags: ["contact", "reach"] },
@@ -32,36 +33,35 @@ const SEARCH_INDEX = [
 
 const megaMenuData = {
   "What we do": [
-    { title: "Services", links: [
-
-      { label: "HR Consulting & Advisory (HRCAMS)", path: "/what-we-do/services/hrcams" },
-      { label: "Professional Alignment & Career Enhancement (PACE)", path: "/what-we-do/services/pace" },
-      { label: "Assessment Services (ASER)", path: "/what-we-do/services/aser" },
-      { label: "Training & Capability Building (TCB)", path: "/what-we-do/services/tcb" },
-    ]},
-    { title: "Industries", links: [
-      { label: "Banking" }, { label: "Communications & Media" }, { label: "Health" },
-      { label: "High Tech" }, { label: "Insurance" }, { label: "Life Sciences" }, { label: "Retail" },
-    ]},
+    {
+      title: "Services", links: [
+        { label: "HR Consulting & Advisory Managed Services (HRCAMS)", path: "/what-we-do/services/hrcams" },
+        { label: "Talent Acquisition (HIRETEK)", path: "https://www.hiretek.in/", external: true }, // ✅ external
+        { label: "Professional Alignment & Career Enhancement (PACE)", path: "/what-we-do/services/pace" },
+        { label: "Training & Capability Building (TCB)", path: "/what-we-do/services/tcb" },
+        { label: "Assessment Services (ASER)", path: "/what-we-do/services/aser" },
+      ]
+    },
+    {
+      title: "Industries", links: [
+        { label: "Banking" }, { label: "Communications & Media" }, { label: "Health" },
+        { label: "High Tech" }, { label: "Insurance" }, { label: "Life Sciences" }, { label: "Retail" },
+      ]
+    },
   ],
   "Who we are": [
-    { title: "About CAP360", links: [
-      { label: "Our Company", path: "/who-we-are/our-company" },
-      { label: "Our Values", path: "/who-we-are/our-values" },
-    ]},
-    { title: "Contact Us", links: [
-      { label: "Contact", path: "/contact" },
-    ]},
+    {
+      title: "About CAP360", links: [
+        { label: "Our Company", path: "/who-we-are/our-company" },
+        { label: "Our Values", path: "/who-we-are/our-values" },
+      ]
+    },
+    {
+      title: "Contact Us", links: [
+        { label: "Contact", path: "/contact" },
+      ]
+    },
   ],
-  // "Careers": [
-  //   { title: "Find Your Fit", links: [
-  //     { label: "Search Careers" }, { label: "Experienced Professionals" }, { label: "Entry Level" },
-  //     { label: "Internships" }, { label: "Military & Veterans" },
-  //   ]},
-  //   { title: "Life at CAP360", links: [
-  //     { label: "Culture & Values" }, { label: "Benefits" }, { label: "Training & Development" }, { label: "Employee Stories" },
-  //   ]},
-  // ],
 };
 
 const mainPages = ["/", "/what-we-do", "/what-we-think", "/who-we-are", "/careers"];
@@ -85,6 +85,16 @@ function HighlightMatch({ text, query }) {
     </span>
   );
 }
+
+// ✅ Helper: navigate internally or open externally
+const handleLinkClick = (link, navigate, onClose?) => {
+  if (link.external) {
+    window.open(link.path, "_blank", "noopener,noreferrer");
+  } else if (link.path) {
+    navigate(link.path);
+  }
+  onClose?.();
+};
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -164,7 +174,16 @@ const Navbar = () => {
 
   const openSearch = () => { setSearchOpen(true); setActiveMenu(null); setSearchQuery(""); setActiveSuggestion(-1); };
   const closeSearch = () => { setSearchOpen(false); setSearchQuery(""); setActiveSuggestion(-1); };
-  const handleSuggestionClick = (item) => { navigate(item.path); closeSearch(); };
+
+  // ✅ Handles external links in search suggestions too
+  const handleSuggestionClick = (item) => {
+    if (item.external) {
+      window.open(item.path, "_blank", "noopener,noreferrer");
+    } else {
+      navigate(item.path);
+    }
+    closeSearch();
+  };
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
@@ -232,67 +251,6 @@ const Navbar = () => {
             </div>
           )}
 
-          {/* Inline search bar */}
-          {searchOpen && (
-            <form
-              onSubmit={handleSearchSubmit}
-              className="hidden lg:flex items-center gap-3 flex-1"
-            >
-              <Search style={{ width: 20, height: 20, color: "#9ca3af", flexShrink: 0 }} />
-              <input
-                ref={searchInputRef}
-                type="text"
-                value={searchQuery}
-                onChange={(e) => { setSearchQuery(e.target.value); setActiveSuggestion(-1); }}
-                placeholder="Search CAP360..."
-                style={{
-                  flex: 1,
-                  fontSize: "1.05rem",
-                  color: "#111827",
-                  background: "transparent",
-                  border: "none",
-                  borderBottom: "2px solid #111827",
-                  outline: "none",
-                  paddingBottom: "4px",
-                }}
-              />
-              {searchQuery && (
-                <button
-                  type="button"
-                  onClick={() => { setSearchQuery(""); setActiveSuggestion(-1); searchInputRef.current?.focus(); }}
-                  style={{ background: "none", border: "none", cursor: "pointer", color: "#9ca3af", display: "flex" }}
-                >
-                  <X style={{ width: 18, height: 18 }} />
-                </button>
-              )}
-            </form>
-          )}
-
-          {/* Right controls */}
-          <div className="hidden lg:flex items-center gap-2 flex-shrink-0 ml-auto">
-            {!searchOpen ? (
-              <>
-                <button onClick={openSearch} className="p-2.5 text-gray-500 hover:text-gray-800 transition-colors rounded-full hover:bg-gray-100" aria-label="Search">
-                  <Search className="w-5 h-5" />
-                </button>
-                {/* <button className="flex items-center gap-1.5 px-3 py-2 text-sm text-gray-500 hover:text-gray-800 transition-colors rounded-full hover:bg-gray-100">
-                  <Globe className="w-4 h-4" />
-                  <span className="text-sm">Global (EN)</span>
-                  <ChevronDown className="w-3.5 h-3.5" />
-                </button> */}
-              </>
-            ) : (
-              <button
-                onClick={closeSearch}
-                style={{ background: "none", border: "none", cursor: "pointer", fontSize: "0.95rem", fontWeight: 600, color: "#111827", padding: "6px 14px", borderRadius: "6px" }}
-                onMouseEnter={e => e.currentTarget.style.background = "#f3f4f6"}
-                onMouseLeave={e => e.currentTarget.style.background = "none"}
-              >
-                Cancel
-              </button>
-            )}
-          </div>
-
           {/* Mobile toggle */}
           <button className="lg:hidden text-gray-700 p-2 ml-auto relative z-10" onClick={() => setMobileOpen(!mobileOpen)}>
             <AnimatePresence mode="wait">
@@ -331,7 +289,11 @@ const Navbar = () => {
                         <span style={{ fontSize: "0.95rem", color: "#4b5563" }}>
                           <HighlightMatch text={item.label} query={searchQuery} />
                         </span>
-                        <ChevronRight style={{ width: 16, height: 16, color: "#d1d5db", marginLeft: "auto" }} />
+                        {/* ✅ Show external icon for Hiretek in search */}
+                        {item.external
+                          ? <ChevronRight style={{ width: 16, height: 16, color: "#d1d5db", marginLeft: "auto" }} />
+                          : <ChevronRight style={{ width: 16, height: 16, color: "#d1d5db", marginLeft: "auto" }} />
+                        }
                       </button>
                     </li>
                   ))}
@@ -363,11 +325,17 @@ const Navbar = () => {
                           {col.links.map((link) => (
                             <li key={link.label}>
                               <button
-                                onClick={() => { if (link.path) { navigate(link.path); setActiveMenu(null); } }}
+                                onClick={() => handleLinkClick(link, navigate, () => setActiveMenu(null))}
                                 className="group flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-all duration-200 text-left"
                               >
-                                <span className="group-hover:translate-x-1 transition-transform duration-200">{link.label}</span>
-                                <ChevronRight className="w-5 h-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-cap-orange" />
+                                <span className="group-hover:translate-x-1 transition-transform duration-200">
+                                  {link.label}
+                                </span>
+                                {/* ✅ Show ExternalLink icon for Hiretek, ChevronRight for others */}
+                                {link.external
+                                  ? <ChevronRight className="w-5 h-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-cap-orange" />
+                                  : <ChevronRight className="w-5 h-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-cap-orange" />
+                                }
                               </button>
                             </li>
                           ))}
@@ -426,8 +394,13 @@ const Navbar = () => {
                               <ul className="space-y-2.5 pl-2">
                                 {col.links.map((link) => (
                                   <li key={link.label}>
-                                    <button onClick={() => { if (link.path) { navigate(link.path); setMobileOpen(false); } }} className="text-sm text-gray-500 hover:text-gray-800 transition-colors text-left">
+                                    <button
+                                      onClick={() => handleLinkClick(link, navigate, () => setMobileOpen(false))}
+                                      className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-800 transition-colors text-left"
+                                    >
                                       {link.label}
+                                      {/* ✅ External icon on mobile too */}
+                                      {link.external && <ExternalLink className="w-3 h-3 text-gray-400" />}
                                     </button>
                                   </li>
                                 ))}
@@ -458,13 +431,15 @@ const Navbar = () => {
                     {suggestions.map(item => (
                       <li key={item.path}>
                         <button
-                          onClick={() => { navigate(item.path); setMobileOpen(false); setSearchQuery(""); }}
+                          onClick={() => { handleSuggestionClick(item); setMobileOpen(false); }}
                           style={{ width: "100%", textAlign: "left", display: "flex", alignItems: "center", gap: "10px", padding: "10px 0", background: "none", border: "none", borderBottom: "1px solid #f3f4f6", cursor: "pointer" }}
                         >
                           <Search style={{ width: 14, height: 14, color: "#9ca3af", flexShrink: 0 }} />
                           <span style={{ fontSize: "0.9rem", color: "#374151" }}>
                             <HighlightMatch text={item.label} query={searchQuery} />
                           </span>
+                          {/* ✅ External icon in mobile search suggestions */}
+                          {item.external && <ExternalLink style={{ width: 12, height: 12, color: "#9ca3af", marginLeft: "auto" }} />}
                         </button>
                       </li>
                     ))}

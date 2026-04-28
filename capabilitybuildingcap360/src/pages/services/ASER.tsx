@@ -67,14 +67,14 @@ const subServices = [
       "Deploy validated psychometric instruments measuring personality traits, aptitude, and emotional intelligence — ensuring every recruitment and development decision is grounded in data.",
     path: "/what-we-do/services/aser/psychometric-testing",
   },
-  {
-    icon: LineChart,
-    title: "Talent Analytics & Benchmarking",
-    title2: "Turning Talent Data Into Strategic Intelligence",
-    description:
-      "Data-driven talent analytics that benchmark individual and team capabilities against industry standards, revealing gaps and opportunities across your entire workforce.",
-    path: "/what-we-do/services/aser/talent-analytics",
-  },
+  // {
+  //   icon: LineChart,
+  //   title: "Talent Analytics & Benchmarking",
+  //   title2: "Turning Talent Data Into Strategic Intelligence",
+  //   description:
+  //     "Data-driven talent analytics that benchmark individual and team capabilities against industry standards, revealing gaps and opportunities across your entire workforce.",
+  //   path: "/what-we-do/services/aser/talent-analytics",
+  // },
   // {
   //   icon: ClipboardList,
   //   title: "360° Feedback & Leadership Diagnostics",
@@ -161,7 +161,7 @@ const phases = [
   {
     step: "01",
     title: "Discovery & Framework Design",
-    desc: "We conduct a thorough analysis of role requirements, competency frameworks and talent strategy. This phase identifies what capabilities to assess and maps them to validated measurement tools.",
+    desc: "Conduct a thorough analysis of role requirements, competency frameworks and talent strategy. This phase identifies what capabilities to assess and maps them to validated measurement tools.",
     icon: Target,
   },
   {
@@ -188,7 +188,7 @@ const whyChooseUs = [
   {
     icon: TrendingUp,
     title: "15+ Years of Expertise",
-    desc: "Led by experienced professionals with deep knowledge of talent assessment, behavioral science, and organizational effectiveness",
+    desc: "Experienced professionals with deep knowledge of talent assessment, behavioral science, and organizational effectiveness",
   },
   {
     icon: Brain,
@@ -349,7 +349,9 @@ const ASER = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
         </div>
+         
         <div className="relative container mx-auto px-4 lg:px-8 py-32">
+          <span className="text-sm text-cap-red font-semibold">ASER</span>
           <motion.h1
             className="text-[40px] md:text-[56px] lg:text-[72px] font-black tracking-tight leading-[1.05] mb-6 max-w-3xl"
             initial={{ opacity: 0, y: 40 }}
@@ -462,7 +464,7 @@ const ASER = () => {
               <div className="border-l-2 border-cap-red/40 pl-6">
                 <p className="text-[18px] text-muted-whiteleading-[1.8]">
                   <span className="text-whitefont-medium">ASER</span>{" "}
-                  (Assessment Services & Evaluation Solutions) is designed to
+                 is designed to
                   help organizations move beyond intuition-based hiring and
                   build
                   <span className="text-whitefont-medium">
@@ -475,11 +477,7 @@ const ASER = () => {
 
               <div className="border-l-2 border-cap-red/40 pl-6">
                 <p className="text-[18px] text-muted-whiteleading-[1.8]">
-                  We go beyond off-the-shelf tools — partnering with
-                  organizations to design, deploy, and interpret bespoke
-                  assessment architectures, powered by a Global Assessment
-                  Delivery Center delivering scale, consistency, and actionable
-                  intelligence.
+                 Custom-built assessment architectures, designed and implemented in partnership with your organization to deliver clear, actionable insights.
                 </p>
               </div>
             </div>
@@ -500,7 +498,7 @@ const ASER = () => {
       Reinvent with ASER
     </motion.h2>
     <p className="text-[18px] text-muted-white mb-14 max-w-2xl mb-5">
-      four integrated assessment solutions designed to transform every stage of
+      Our integrated assessment solutions designed to transform every stage of
       the talent lifecycle. Each solution is modular yet interconnected — choose
       one or combine multiple for end-to-end talent intelligence.
     </p>

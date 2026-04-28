@@ -232,16 +232,21 @@ const PerformanceManagement = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <SubNavbar
-        title="Services"
-        titlePath="/what-we-do"
-        items={[
-          { label: "ASER", path: "/what-we-do/services/aser" },
-          { label: "HRCAMS", path: "/what-we-do/services/hrcams" },
-          { label: "TCB", path: "/what-we-do/services/tcb" },
-          { label: "PACE", path: "/what-we-do/services/pace" },
-        ]}
-      />
+    <SubNavbar
+  title="Services"
+  titlePath="/what-we-do"
+  items={[
+    { label: "HRCAMS", path: "/what-we-do/services/hrcams" },
+    { label: "PACE", path: "/what-we-do/services/pace" },
+    { label: "TCB", path: "/what-we-do/services/tcb" },
+    { label: "ASER", path: "/what-we-do/services/aser" },
+    { 
+      label: "HIRETEK", 
+      path: "https://www.hiretek.in/", 
+      external: true 
+    },
+     ]}
+     />
       <HRCAMSSubNavbar />
 
       <div className="container mx-auto px-4 lg:px-8 py-4 mt-5">
@@ -262,7 +267,7 @@ const PerformanceManagement = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              Performance Management & Effectiveness
+              Goal Setting & Performance Management 
             </motion.h1>
             <motion.p
               className="text-[20px] text-muted-white leading-[1.7]"
