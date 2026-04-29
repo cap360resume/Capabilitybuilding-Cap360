@@ -1089,7 +1089,7 @@ const ASER = () => {
             className="mb-16"
           >
             <h2 className="text-[32px] md:text-[42px] font-bold mb-2">
-              Meet Our Leader
+              Meet Our Principal Practitioner
             </h2>
             <p className="text-[18px] text-muted-white">
               Career Coach & International Youth Mentor | Advisor, CAP360 |

@@ -985,7 +985,7 @@ const TCB = () => {
                 </h3>
 
                 <p className="text-cap-blue font-semibold text-[14px] mb-6 uppercase tracking-wider">
-                  Lead Trainer
+                  Principal Practitioner
                 </p>
 
                 <div className="space-y-6 mb-8">
