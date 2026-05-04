@@ -30,7 +30,7 @@ const RecruiterMapping = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            Identify the exact HR heads, talent acquisition leads, and hiring managers at your target companies — and reach out to them directly on your behalf, putting your profile in front of the people who actually make hiring decisions.
+            Identify the exact HR heads, talent acquisition leads, and hiring managers at your target companies - and reach out to them directly on your behalf, putting your profile in front of the people who actually make hiring decisions.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
@@ -42,13 +42,13 @@ const RecruiterMapping = () => {
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-mid">
-                <strong className="text-white">Direct outreach:</strong> Personalised messages sent to HR and hiring managers — not just generic portal applications.
+                <strong className="text-white">Direct outreach:</strong> Personalised messages sent to HR and hiring managers - not just generic portal applications.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-mid">
-                <strong className="text-white">Hidden opportunity access:</strong> Many senior roles are filled before they are posted publicly — our outreach gives you access to this hidden market.
+                <strong className="text-white">Hidden opportunity access:</strong> Many senior roles are filled before they are posted publicly - our outreach gives you access to this hidden market.
               </span>
             </li>
             <li className="flex items-start gap-2">
@@ -59,7 +59,7 @@ const RecruiterMapping = () => {
             </li>
           </ul>
           <p className="text-muted-white text-mid">
-            The outcome is your profile reaching decision-makers — not just portals.
+            The outcome is your profile reaching decision-makers - not just portals.
           </p>
         </>
       ),
@@ -70,13 +70,13 @@ const RecruiterMapping = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            Build a precision target list of organisations that are the right fit for your experience, seniority, compensation expectations, and career goals — then pursue them through multiple channels simultaneously.
+            Build a precision target list of organisations that are the right fit for your experience, seniority, compensation expectations, and career goals - then pursue them through multiple channels simultaneously.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-mid">
-                <strong className="text-white">Company profiling:</strong> Deep research into target organisations — culture, growth stage, leadership gaps, and hiring patterns.
+                <strong className="text-white">Company profiling:</strong> Deep research into target organisations - culture, growth stage, leadership gaps, and hiring patterns.
               </span>
             </li>
             <li className="flex items-start gap-2">
@@ -110,7 +110,7 @@ const RecruiterMapping = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            Leverage our established network of senior recruiters, executive search consultants, and industry contacts to generate referrals and warm introductions — accelerating your path to the right conversations.
+            Leverage our established network of senior recruiters, executive search consultants, and industry contacts to generate referrals and warm introductions - accelerating your path to the right conversations.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
@@ -134,7 +134,7 @@ const RecruiterMapping = () => {
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-mid">
-                <strong className="text-white">Warm outreach management:</strong> Craft and send personalised messages to your network on your behalf — professionally and strategically.
+                <strong className="text-white">Warm outreach management:</strong> Craft and send personalised messages to your network on your behalf - professionally and strategically.
               </span>
             </li>
           </ul>
@@ -170,7 +170,7 @@ const RecruiterMapping = () => {
     {
       icon: <Target className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />,
       title: "Direct decision-maker access",
-      desc: "Your profile reaches HR heads and hiring managers directly — bypassing automated screening and portal queues.",
+      desc: "Your profile reaches HR heads and hiring managers directly - bypassing automated screening and portal queues.",
     },
     {
       icon: <Users className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />,
@@ -305,7 +305,7 @@ const RecruiterMapping = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              Don't wait for job boards to find you. We identify the exact HRs, talent leads, and hiring managers at your target companies — and reach out to them directly on your behalf.
+              Don't wait for job boards to find you. We identify the exact HRs, talent leads, and hiring managers at your target companies - and reach out to them directly on your behalf.
             </motion.p>
           </div>
         </div>
@@ -316,13 +316,13 @@ const RecruiterMapping = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_360px] gap-16 items-start">
             <p className="text-[22px] text-muted-white leading-[1.8]">
-              At the senior level, the most valuable opportunities rarely appear on job boards. They are filled through relationships, referrals, and direct conversations between decision-makers. Our HR mapping service gives you access to this hidden market — by putting your profile directly in front of the people who hire, before positions are even publicly advertised.
+              At the senior level, the most valuable opportunities rarely appear on job boards. They are filled through relationships, referrals, and direct conversations between decision-makers. Our HR mapping service gives you access to this hidden market - by putting your profile directly in front of the people who hire, before positions are even publicly advertised.
             </p>
             <div className="bg-card border border-border/30 p-8">
               <span className="text-[20px] font-bold tracking-widest text-cap-green uppercase block mb-3">DATA</span>
               <div className="text-[56px] font-black leading-none mb-3">70%</div>
               <p className="text-[18px] text-muted-white leading-relaxed">
-                of senior-level positions are filled without ever being publicly advertised — making direct HR outreach essential at the leadership level.
+                of senior-level positions are filled without ever being publicly advertised - making direct HR outreach essential at the leadership level.
               </p>
             </div>
           </div>
@@ -342,7 +342,7 @@ const RecruiterMapping = () => {
               <div className="w-12 h-1 bg-cap-green mb-6" />
               <h3 className="text-[24px] font-bold mb-4">From portal dependency to direct access</h3>
               <p className="text-[20px] text-muted-white leading-[1.7]">
-                Relying solely on job portals at the senior level is like fishing in a small pond when the entire ocean is available. Our HR mapping approach expands your reach exponentially — identifying and engaging the right people at the right organisations, through personalised, professional outreach that positions you as the candidate they were looking for.
+                Relying solely on job portals at the senior level is like fishing in a small pond when the entire ocean is available. Our HR mapping approach expands your reach exponentially - identifying and engaging the right people at the right organisations, through personalised, professional outreach that positions you as the candidate they were looking for.
               </p>
             </div>
           </div>

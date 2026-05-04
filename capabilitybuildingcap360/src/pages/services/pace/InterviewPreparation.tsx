@@ -21,7 +21,7 @@ const InterviewPreparation = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            Realistic, structured practice interviews that simulate the pressure of the real thing — so candidates walk in confident, not anxious.
+            Realistic, structured practice interviews that simulate the pressure of the real thing - so candidates walk in confident, not anxious.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
@@ -97,19 +97,19 @@ const InterviewPreparation = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            Compelling answers aren't improvised — they're structured. We train candidates to communicate their experience with clarity, precision, and impact.
+            Compelling answers aren't improvised - they're structured. We train candidates to communicate their experience with clarity, precision, and impact.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">STAR framework:</strong> Situation, Task, Action, Result — the gold standard for behavioural interview responses.
+                <strong className="text-white">STAR framework:</strong> Situation, Task, Action, Result - the gold standard for behavioural interview responses.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">CARL method:</strong> Context, Action, Result, Learning — ideal for development-focused or reflective questions.
+                <strong className="text-white">CARL method:</strong> Context, Action, Result, Learning - ideal for development-focused or reflective questions.
               </span>
             </li>
             <li className="flex items-start gap-2">
@@ -225,7 +225,7 @@ const InterviewPreparation = () => {
   const cards = [
     { icon: <Mic className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />, title: "Interview confidence", desc: "Candidates who have rehearsed extensively perform better under pressure, answering with clarity and composure." },
     { icon: <Target className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />, title: "Higher offer rates", desc: "Structured preparation directly improves conversion from interview stage to offer, shortening job search timelines." },
-    { icon: <DollarSign className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />, title: "Stronger compensation outcomes", desc: "Candidates trained in negotiation consistently secure packages closer to — or above — their target range." },
+    { icon: <DollarSign className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />, title: "Stronger compensation outcomes", desc: "Candidates trained in negotiation consistently secure packages closer to - or above - their target range." },
     { icon: <CheckCircle className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />, title: "Role-fit clarity", desc: "Deep preparation helps candidates articulate their value proposition with precision, aligning their story to the role." },
     { icon: <BarChart3 className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />, title: "Measurable readiness", desc: "Progress benchmarks and mock session scoring give coaches and candidates a clear view of interview readiness." },
   ];
@@ -359,7 +359,7 @@ const InterviewPreparation = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              Master the art of interviewing. Our comprehensive preparation programmes combine mock sessions, structured storytelling techniques, and negotiation coaching — so every candidate walks in ready to win.
+              Master the art of interviewing. Our comprehensive preparation programmes combine mock sessions, structured storytelling techniques, and negotiation coaching - so every candidate walks in ready to win.
             </motion.p>
           </div>
         </div>
@@ -370,7 +370,7 @@ const InterviewPreparation = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_360px] gap-16 items-start">
             <p className="text-[20px] text-muted-white leading-[1.8]">
-              Interviews are a learnable skill. The difference between candidates who land offers and those who don't often has nothing to do with capability — it comes down to preparation. Structured practice, proven frameworks like STAR and CARL, and deliberate rehearsal of salary conversations transform nervous candidates into confident performers who can clearly articulate their value and close at every stage of the process.
+              Interviews are a learnable skill. The difference between candidates who land offers and those who don't often has nothing to do with capability - it comes down to preparation. Structured practice, proven frameworks like STAR and CARL, and deliberate rehearsal of salary conversations transform nervous candidates into confident performers who can clearly articulate their value and close at every stage of the process.
             </p>
             <div className="bg-card border border-border/30 p-8">
               <span className="text-[20px] font-bold tracking-widest text-cap-green uppercase block mb-3">DATA</span>
@@ -396,7 +396,7 @@ const InterviewPreparation = () => {
               <div className="w-12 h-1 bg-cap-green mb-6" />
               <h3 className="text-[22px] font-bold mb-4">From hoping for the best to walking in prepared</h3>
               <p className="text-[20px] text-muted-white leading-[1.7]">
-                Most candidates over-prepare on their CV and under-prepare on everything else. Our approach flips that. Through structured mock sessions, role-specific question practice, STAR and CARL storytelling training, and live salary negotiation roleplays, candidates develop the muscle memory and mental composure to perform consistently — not just on a good day. Every element of the interview is rehearsed until it feels natural.
+                Most candidates over-prepare on their CV and under-prepare on everything else. Our approach flips that. Through structured mock sessions, role-specific question practice, STAR and CARL storytelling training, and live salary negotiation roleplays, candidates develop the muscle memory and mental composure to perform consistently - not just on a good day. Every element of the interview is rehearsed until it feels natural.
               </p>
             </div>
           </div>

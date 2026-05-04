@@ -23,7 +23,7 @@ const LabourLaw = () => {
           <p className="text-muted-white leading-relaxed mb-4">
             A compliance audit is not just a checklist exercise. It is a
             systematic review of how your organisation manages its obligations
-            across all applicable labour laws — from Shops & Establishments
+            across all applicable labour laws - from Shops & Establishments
             regulations to Provident Fund, ESI, Bonus, and Maternity-related
             compliances.
           </p>
@@ -42,7 +42,7 @@ const LabourLaw = () => {
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Payroll compliance review:</strong> Covering PF, ESI, Professional Tax, and TDS — ensuring accurate calculations, timely remittances, and compliant documentation.
+                <strong className="text-white">Payroll compliance review:</strong> Covering PF, ESI, Professional Tax, and TDS - ensuring accurate calculations, timely remittances, and compliant documentation.
               </span>
             </li>
             <li className="flex items-start gap-2">
@@ -281,7 +281,7 @@ const LabourLaw = () => {
   const cards = [
     { icon: <Shield className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />, title: "100% statutory compliance", desc: "Zero-miss guarantee on all PF, ESI, PT, LWF, and other statutory filings across all states." },
     { icon: <Scale className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />, title: "Legally sound policies", desc: "HR policies that are compliant with current laws, POSH Act, and new labour codes." },
-    { icon: <FileCheck className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />, title: "Audit-ready documentation", desc: "Complete audit trails for every compliance action — ready for inspection at any time." },
+    { icon: <FileCheck className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />, title: "Audit-ready documentation", desc: "Complete audit trails for every compliance action - ready for inspection at any time." },
     { icon: <AlertTriangle className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />, title: "Risk mitigation", desc: "Proactive identification and resolution of compliance risks before they become liabilities." },
     { icon: <Gavel className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-yellow" />, title: "Labour code readiness", desc: "Full preparation for India's new labour codes with impact analysis and transition support." },
   ];
@@ -431,7 +431,7 @@ const LabourLaw = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_360px] gap-16 items-start">
             <p className="text-[20px] text-muted-white leading-[1.8]">
-              India's labour law landscape is one of the most complex globally — with 29 central laws, 100+ state-specific rules, and frequent amendments. Non-compliance doesn't just mean penalties; it can lead to criminal prosecution, reputational damage, and employee disputes.
+              India's labour law landscape is one of the most complex globally - with 29 central laws, 100+ state-specific rules, and frequent amendments. Non-compliance doesn't just mean penalties; it can lead to criminal prosecution, reputational damage, and employee disputes.
             </p>
             <div className="bg-card border border-border/30 p-8">
               <span className="text-[20px] font-bold tracking-widest text-cap-yellow uppercase block mb-3">DATA</span>
@@ -457,7 +457,7 @@ const LabourLaw = () => {
               <div className="w-12 h-1 bg-cap-yellow mb-6" />
               <h3 className="text-[22px] font-bold mb-4">From reactive firefighting to proactive governance</h3>
               <p className="text-[20px] text-muted-white leading-[1.7]">
-                Most organisations treat compliance as a checkbox exercise — until an inspection or lawsuit forces action. Forward-looking companies embed compliance into their HR DNA through automated tracking, proactive audits, and continuous governance frameworks.
+                Most organisations treat compliance as a checkbox exercise - until an inspection or lawsuit forces action. Forward-looking companies embed compliance into their HR DNA through automated tracking, proactive audits, and continuous governance frameworks.
               </p>
             </div>
           </div>

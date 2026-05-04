@@ -26,7 +26,7 @@ const articles = [
   },
   {
     category: "HR Strategy",
-    title: "People Strategy Is Business Strategy — Bridging the Gap in Indian Enterprises",
+    title: "People Strategy Is Business Strategy - Bridging the Gap in Indian Enterprises",
     description: "Most HR functions still operate reactively. The organizations pulling ahead are the ones treating human capital as a strategic lever.",
     image: TotalRewardsArchitecture,
     tag: "Industry Brief",
@@ -48,14 +48,14 @@ const articles = [
   {
     category: "Workforce Trends",
     title: "The Upskilling Imperative: Why L&D Is Now a Retention Tool",
-    description: "Enterprises that invest in structured capability building see 40% higher retention among high-potential employees — the numbers don't lie.",
+    description: "Enterprises that invest in structured capability building see 40% higher retention among high-potential employees - the numbers don't lie.",
     image: card3,
     tag: "Trends",
   },
   {
     category: "HR Strategy",
     title: "M&A and the People Problem: How HR Due Diligence Determines Deal Success",
-    description: "Over 70% of mergers fail to meet their targets — and most failures trace back to people and culture misalignment, not financials.",
+    description: "Over 70% of mergers fail to meet their targets - and most failures trace back to people and culture misalignment, not financials.",
     image: card4,
     tag: "Industry Brief",
   },
@@ -76,7 +76,7 @@ const WhatWeThink = () => {
         <PageHero
           label="What We Think"
           title="Thinking that shapes better workforces"
-          subtitle="Perspectives, research, and industry thinking from CAP360 — on talent, leadership, HR transformation, and the future of work."
+          subtitle="Perspectives, research, and industry thinking from CAP360 - on talent, leadership, HR transformation, and the future of work."
           image={heroImg}
           // ctaText="Explore insights"
           // ctaAction={() => navigate("/what-we-think")}
@@ -106,7 +106,7 @@ const WhatWeThink = () => {
                   The Future-Ready Workforce: What Enterprises Must Build Today
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  The organizations winning tomorrow are building capability now — not reacting to skill gaps after they appear. From smarter hiring to structured succession, the future-ready enterprise is one that treats workforce development as a continuous, integrated system rather than a one-time programme.
+                  The organizations winning tomorrow are building capability now - not reacting to skill gaps after they appear. From smarter hiring to structured succession, the future-ready enterprise is one that treats workforce development as a continuous, integrated system rather than a one-time programme.
                 </p>
                 {/* <motion.button
                   onClick={() => navigate("/what-we-think")}
@@ -132,7 +132,7 @@ const WhatWeThink = () => {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-2">Latest Thinking</h2>
               <p className="text-muted-foreground text-base">
-                Industry news, blogs, and CAP360 perspectives — coming regularly. Stay ahead of the curve.
+                Industry news, blogs, and CAP360 perspectives - coming regularly. Stay ahead of the curve.
               </p>
             </motion.div>
 
@@ -207,7 +207,7 @@ const WhatWeThink = () => {
             >
               <div>
                 <span className="text-xs font-bold tracking-widest text-cap-orange uppercase mb-2 block">Coming Soon</span>
-                <h3 className="text-xl font-bold mb-1">Industry news, blogs & CAP360 research — published regularly.</h3>
+                <h3 className="text-xl font-bold mb-1">Industry news, blogs & CAP360 research - published regularly.</h3>
                 <p className="text-sm text-muted-foreground">We'll be sharing workforce insights, HR trends, and CAP360 thinking here. Check back soon.</p>
               </div>
               <a

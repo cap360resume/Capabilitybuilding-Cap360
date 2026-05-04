@@ -14,7 +14,7 @@ const accordionItems = [
     title: "End-to-End Capability Ecosystem",
     content: (
       <div className="space-y-4">
-        <p className="text-muted-foreground">CAP360 is one of the few partners that covers the full talent lifecycle — from acquisition to career acceleration — under a single integrated ecosystem.</p>
+        <p className="text-muted-foreground">CAP360 is one of the few partners that covers the full talent lifecycle - from acquisition to career acceleration - under a single integrated ecosystem.</p>
         <ul className="space-y-2 text-muted-foreground">
           <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />Hiretek for smart, quality talent acquisition beyond the résumé</li>
           <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />ASER for data-driven, objective assessment of talent at every level</li>
@@ -27,7 +27,7 @@ const accordionItems = [
     title: "Strategic HR Transformation",
     content: (
       <div className="space-y-4">
-        <p className="text-muted-foreground">Through HRCAMS, go beyond advisory — we embed ourselves as strategic HR partners to drive meaningful, measurable transformation within enterprise organizations.</p>
+        <p className="text-muted-foreground">Through HRCAMS, go beyond advisory - we embed ourselves as strategic HR partners to drive meaningful, measurable transformation within enterprise organizations.</p>
         <ul className="space-y-2 text-muted-foreground">
           <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />Managed HR services tailored to the complexity of large organizations</li>
           <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />People strategy aligned directly with business objectives</li>
@@ -40,7 +40,7 @@ const accordionItems = [
     title: "Enterprise-Grade Learning & Development",
     content: (
       <div className="space-y-4">
-        <p className="text-muted-foreground">Our TCB and PACE pillars are purpose-built to upskill workforces and accelerate careers — equipping enterprises with the human capital they need to lead in a rapidly evolving world.</p>
+        <p className="text-muted-foreground">Our TCB and PACE pillars are purpose-built to upskill workforces and accelerate careers - equipping enterprises with the human capital they need to lead in a rapidly evolving world.</p>
         <ul className="space-y-2 text-muted-foreground">
           <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />Capability building programs designed for scale and measurable impact</li>
           <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />Professional alignment solutions for leadership and high-potential talent</li>
@@ -52,11 +52,11 @@ const accordionItems = [
 ];
 
 const sliderCards = [
-  { icon: Target, title: "5 Integrated Service Pillars", description: "HIRETEK, HRCAMS, PACE, ASER & TCB — a complete capability building ecosystem under one roof." },
+  { icon: Target, title: "5 Integrated Service Pillars", description: "HIRETEK, HRCAMS, PACE, ASER & TCB - a complete capability building ecosystem under one roof." },
   { icon: Users, title: "Founded in 2018", description: "Over half a decade of focused expertise in building future-ready workforces for enterprises." },
   { icon: Globe, title: "Enterprise-Focused", description: "Dedicated to serving large and complex organizations with tailored, high-impact solutions." },
-  { icon: Lightbulb, title: "Data-Driven Approach", description: "From ASER's objective evaluations to Hiretek's smart acquisition — decisions backed by insight." },
-  { icon: TrendingUp, title: "Proven Outcomes", description: "Future-ready workforce. Better leadership. High-performing organizations — delivered consistently." },
+  { icon: Lightbulb, title: "Data-Driven Approach", description: "From ASER's objective evaluations to Hiretek's smart acquisition - decisions backed by insight." },
+  { icon: TrendingUp, title: "Proven Outcomes", description: "Future-ready workforce. Better leadership. High-performing organizations - delivered consistently." },
 ];
 
 const OurCompany = () => {
@@ -192,7 +192,7 @@ const OurCompany = () => {
               <div className="space-y-6">
                 <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">Our Company</h1>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  CAP360 is a full-spectrum Capability Building Ecosystem — bringing together quality hiring, talent assessment, HR consulting, workforce upskilling, and career acceleration under one integrated platform. partner with enterprises to build workforces that are future-ready, leadership-strong, and built to perform.
+                  CAP360 is a full-spectrum Capability Building Ecosystem - bringing together quality hiring, talent assessment, HR consulting, workforce upskilling, and career acceleration under one integrated platform. partner with enterprises to build workforces that are future-ready, leadership-strong, and built to perform.
                 </p>
               </div>
             </div>
@@ -204,11 +204,11 @@ const OurCompany = () => {
           <div className="container mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               <p className="text-muted-foreground leading-relaxed text-lg">
-                Founded in 2018 with a simple yet powerful mission — to help professionals at every career stage achieve their full potential — CAP360 has grown into a trusted capability partner for enterprises. Our integrated approach spans talent acquisition, assessment science, HR advisory, learning & development, and professional career enhancement, enabling organizations to transform their human capital from the ground up.
+                Founded in 2018 with a simple yet powerful mission - to help professionals at every career stage achieve their full potential - CAP360 has grown into a trusted capability partner for enterprises. Our integrated approach spans talent acquisition, assessment science, HR advisory, learning & development, and professional career enhancement, enabling organizations to transform their human capital from the ground up.
               </p>
               <div className="bg-card border border-border/50 rounded-xl p-8">
                 <div className="text-5xl font-bold text-cap-orange mb-3">360°</div>
-                <p className="text-muted-foreground">A complete view of capability building — from the moment talent is hired to the point where leaders are made. CAP360 covers every stage of the professional journey for the enterprises we serve.</p>
+                <p className="text-muted-foreground">A complete view of capability building - from the moment talent is hired to the point where leaders are made. CAP360 covers every stage of the professional journey for the enterprises we serve.</p>
               </div>
             </div>
           </div>
@@ -223,7 +223,7 @@ const OurCompany = () => {
                 <img src={rewardstrategies} alt="Vision" className="w-full h-full object-cover" />
               </div>
               <p className="text-muted-foreground leading-relaxed text-lg">
-                Envision a world where every organization thrives through the strength of its people. Our strategy is to be the most trusted end-to-end capability partner for enterprises — delivering integrated solutions that align talent with business goals, build future-ready leadership, and create high-performing organizations. believe that people strategy is business strategy, and we exist to bridge that gap with precision, expertise, and purpose.
+                Envision a world where every organization thrives through the strength of its people. Our strategy is to be the most trusted end-to-end capability partner for enterprises - delivering integrated solutions that align talent with business goals, build future-ready leadership, and create high-performing organizations. believe that people strategy is business strategy, and we exist to bridge that gap with precision, expertise, and purpose.
               </p>
             </div>
           </div>

@@ -63,7 +63,7 @@ const industries = [
   {
     title: "Information Technology & SaaS",
     description:
-      "Accelerate talent acquisition and capability building for fast-scaling tech organizations — from engineering roles to product leadership.",
+      "Accelerate talent acquisition and capability building for fast-scaling tech organizations - from engineering roles to product leadership.",
   },
   {
     title: "Retail & Consumer Goods",
@@ -88,31 +88,31 @@ const platforms = [
   {
     title: "HireTek",
     description:
-      "Beyond the résumé — our hiring methodology evaluates candidates on competency, culture fit, and long-term potential to reduce mis-hires and improve quality of joins.",
+      "Beyond the résumé - our hiring methodology evaluates candidates on competency, culture fit, and long-term potential to reduce mis-hires and improve quality of joins.",
     // link: "Learn More",
   },
   {
     title: "ASER",
     description:
-      "Objective, science-backed talent assessments that remove bias from decisions — whether you're selecting campus hires, promoting managers, or benchmarking leadership teams.",
+      "Objective, science-backed talent assessments that remove bias from decisions - whether you're selecting campus hires, promoting managers, or benchmarking leadership teams.",
     // link: "Learn More",
   },
   {
     title: "HRCAMS",
     description:
-      "We embed as your strategic HR partner — designing org structures, building people policies, driving culture change, and managing HR operations end-to-end.",
+      "We embed as your strategic HR partner - designing org structures, building people policies, driving culture change, and managing HR operations end-to-end.",
     // link: "Learn More",
   },
   {
     title: "TCB",
     description:
-      "Tailored capability building programs that upskill teams at scale — from functional training to behavioural workshops — with measurable impact on performance.",
+      "Tailored capability building programs that upskill teams at scale - from functional training to behavioural workshops - with measurable impact on performance.",
     // link: "Learn More",
   },
   {
     title: "PACE",
     description:
-      "Career acceleration for high-potential individuals and leadership cohorts — coaching, mentoring, and structured development journeys that retain and grow top talent.",
+      "Career acceleration for high-potential individuals and leadership cohorts - coaching, mentoring, and structured development journeys that retain and grow top talent.",
     // link: "Learn More",
   },
 ];

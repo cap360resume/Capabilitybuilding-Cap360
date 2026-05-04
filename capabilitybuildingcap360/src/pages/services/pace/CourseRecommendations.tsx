@@ -31,7 +31,7 @@ const CourseRecommendations = () => {
         <>
           <p className="text-muted-white leading-relaxed mb-4">
             Assess your current experience, skills, and qualifications
-            against the roles you're targeting — identifying the gaps that
+            against the roles you're targeting - identifying the gaps that
             matter most to hiring managers in your space.
           </p>
           <ul className="space-y-2 mb-4">
@@ -63,14 +63,14 @@ const CourseRecommendations = () => {
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
                 <strong className="text-white">Priority scoring:</strong>{" "}
-                Gaps are ranked by impact — so you invest your time where it
+                Gaps are ranked by impact - so you invest your time where it
                 actually moves your candidacy forward.
               </span>
             </li>
           </ul>
           <p className="text-muted-white text-md">
             The outcome is a clear, prioritised view of exactly what to
-            address — and what to ignore.
+            address - and what to ignore.
           </p>
         </>
       ),
@@ -82,7 +82,7 @@ const CourseRecommendations = () => {
         <>
           <p className="text-muted-white leading-relaxed mb-4">
             Based on your gap analysis, we recommend specific courses,
-            certifications, and learning programmes — matched to your
+            certifications, and learning programmes - matched to your
             career goals, timeline, and learning style.
           </p>
           <ul className="space-y-2 mb-4">
@@ -90,7 +90,7 @@ const CourseRecommendations = () => {
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
                 <strong className="text-white">Curated shortlist:</strong>{" "}
-                We don't give you a list of 50 options — we recommend the
+                We don't give you a list of 50 options - we recommend the
                 3–5 most relevant courses for your specific profile.
               </span>
             </li>
@@ -98,7 +98,7 @@ const CourseRecommendations = () => {
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
                 <strong className="text-white">Platform coverage:</strong>{" "}
-                Recommendations span top platforms — Coursera, LinkedIn
+                Recommendations span top platforms - Coursera, LinkedIn
                 Learning, IIM skills, NIIT, and others relevant to your
                 domain.
               </span>
@@ -115,7 +115,7 @@ const CourseRecommendations = () => {
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
                 <strong className="text-white">Timeline guidance:</strong>{" "}
-                Suggestions are matched to your job search timeline — quick
+                Suggestions are matched to your job search timeline - quick
                 wins first, deeper learning second.
               </span>
             </li>
@@ -134,7 +134,7 @@ const CourseRecommendations = () => {
         <>
           <p className="text-muted-white leading-relaxed mb-4">
             Keep our recommendations grounded in what the market is
-            actually hiring for — not generic skill lists, but real-time
+            actually hiring for - not generic skill lists, but real-time
             demand signals from your target roles and industries.
           </p>
           <ul className="space-y-2 mb-4">
@@ -150,8 +150,8 @@ const CourseRecommendations = () => {
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
                 <strong className="text-white">Emerging skill areas:</strong>{" "}
-                Highlight skills gaining momentum — AI fluency, data
-                literacy, ESG, and digital leadership — before they become
+                Highlight skills gaining momentum - AI fluency, data
+                literacy, ESG, and digital leadership - before they become
                 table stakes.
               </span>
             </li>
@@ -167,7 +167,7 @@ const CourseRecommendations = () => {
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
                 <strong className="text-white">Leadership skill focus:</strong>{" "}
-                Senior-level skill suggestions go beyond technical — covering
+                Senior-level skill suggestions go beyond technical - covering
                 strategic thinking, stakeholder management, and P&L
                 ownership.
               </span>
@@ -221,7 +221,7 @@ const CourseRecommendations = () => {
     {
       icon: <BarChart3 className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />,
       title: "Long-term career edge",
-      desc: "Skills aligned to market trends keep you competitive not just for this role — but for the next one too.",
+      desc: "Skills aligned to market trends keep you competitive not just for this role - but for the next one too.",
     },
   ];
 
@@ -361,7 +361,7 @@ const CourseRecommendations = () => {
             >
               The right skills at the right time. Analyse your profile
               against live market demand and recommend the exact courses and
-              certifications that will move your candidacy forward — faster.
+              certifications that will move your candidacy forward - faster.
             </motion.p>
           </div>
         </div>
@@ -373,10 +373,10 @@ const CourseRecommendations = () => {
           <div className="grid lg:grid-cols-[1fr_360px] gap-16 items-start">
             <p className="text-[20px] text-muted-white leading-[1.8]">
               Senior professionals often lose opportunities not because of
-              experience — but because their profile doesn't reflect the skills
+              experience - but because their profile doesn't reflect the skills
               the market is currently screening for. Pace bridges that gap.
               Identify exactly what's missing, then point you to the most
-              effective way to address it — so every application submit on
+              effective way to address it - so every application submit on
               your behalf is backed by a profile that's genuinely competitive.
             </p>
             <div className="bg-card border border-border/30 p-8">
@@ -389,7 +389,7 @@ const CourseRecommendations = () => {
               <p className="text-mid text-muted-white leading-relaxed">
                 of senior professionals are screened out at the profile stage
                 due to skill gaps that are addressable with targeted
-                upskilling — not years of experience.
+                upskilling - not years of experience.
               </p>
             </div>
           </div>
@@ -412,15 +412,15 @@ const CourseRecommendations = () => {
             <div>
               <div className="w-12 h-1 bg-cap-green mb-6" />
               <h3 className="text-[22px] font-bold mb-4">
-                We don't recommend courses — we recommend the right courses
+                We don't recommend courses - we recommend the right courses
               </h3>
               <p className="text-[20px] text-muted-white leading-[1.8]">
                 Generic learning platforms give you hundreds of options and
-                leave the decision to you. Pace does the analysis first —
+                leave the decision to you. Pace does the analysis first -
                 identifying the specific skills your target roles demand, the
                 gaps in your current profile, and the shortest path to
                 closing them. Every suggestion is personalised, market-tested,
-                and timed to your job search — not your long-term learning
+                and timed to your job search - not your long-term learning
                 wishlist.
               </p>
             </div>
@@ -428,7 +428,7 @@ const CourseRecommendations = () => {
         </div>
       </section>
 
-      {/* Accordion — How We Support */}
+      {/* Accordion - How We Support */}
       <section className="py-20" ref={sRef}>
         <div className="container mx-auto px-4 lg:px-8">
           <motion.h2
@@ -478,7 +478,7 @@ const CourseRecommendations = () => {
         </div>
       </section>
 
-      {/* Infinite carousel — What you'll achieve */}
+      {/* Infinite carousel - What you'll achieve */}
       <section className="py-10 sm:py-14 md:py-20 bg-card/30" ref={bRef}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2
@@ -554,7 +554,7 @@ const CourseRecommendations = () => {
       <section className="py-16 bg-cap-blue text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-[24px] font-bold mb-4 text-primary-white">
-            Know exactly where to upskill — and get placed faster
+            Know exactly where to upskill - and get placed faster
           </h2>
           <a
             href="/contact"

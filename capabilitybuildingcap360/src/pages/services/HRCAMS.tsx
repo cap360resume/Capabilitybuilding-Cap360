@@ -517,7 +517,7 @@ const HRCAMS = () => {
           <p className="text-[18px] text-muted-White mb-14 max-w-2xl">
             Six seamlessly connected service lines built to elevate every aspect
             of your People function. Each line operates as a standalone solution
-            while integrating effortlessly with others—allowing you to adopt
+            while integrating effortlessly with others - allowing you to adopt
             what you need or combine them for a complete, end-to-end
             transformation.
           </p>
@@ -893,7 +893,7 @@ const HRCAMS = () => {
               className="p-5 rounded-2xl bg-gradient-to-br from-cap-yellow/20 to-transparent border border-cap-yellow/30 backdrop-blur-md"
             >
               <p className="text-[17px] text-White font-medium">
-                We don’t just support HR — we enable business scalability
+                We don’t just support HR - we enable business scalability
                 through structured workforce models.
               </p>
             </motion.div>
@@ -1164,7 +1164,7 @@ const HRCAMS = () => {
                   Radhakrishnan K V
                 </h3>
                 <p className="text-cap-yellow font-semibold text-[14px] mb-6 uppercase tracking-wider">
-                  Leader
+                 Co-Founder - CAP360
                 </p>
                 <div className="space-y-6 mb-8">
                   <p className="text-[17px] text-muted-White leading-[1.8]">
@@ -1250,7 +1250,7 @@ const HRCAMS = () => {
               </h2>
               <p className="text-[18px] text-muted-white mb-8 max-w-xl">
                 Strengthen your organization by identifying, evaluating, and
-                developing your most critical asset — your people.
+                developing your most critical asset - your people.
               </p>
             </motion.div>
             <motion.div

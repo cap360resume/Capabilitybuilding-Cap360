@@ -14,7 +14,7 @@ const accordionItems = [
     title: "Client Value Creation",
     content: (
       <div className="space-y-4">
-        <p className="text-muted-foreground">We exist to create measurable value for our clients — across every engagement, every interaction.</p>
+        <p className="text-muted-foreground">We exist to create measurable value for our clients - across every engagement, every interaction.</p>
         <ul className="space-y-2 text-muted-foreground">
           <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />Delivering outcomes that matter, not just outputs</li>
           <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />Bringing the best of our global expertise to every project</li>
@@ -52,7 +52,7 @@ const accordionItems = [
 ];
 
 const sliderCards = [
-  { icon: Heart, title: "Stewardship", description: "Take care of what matters — our people, our clients, our communities, and our planet." },
+  { icon: Heart, title: "Stewardship", description: "Take care of what matters - our people, our clients, our communities, and our planet." },
   { icon: Shield, title: "Best People", description: "Attract and develop the best talent, providing them with opportunities to grow and excel." },
   { icon: Users, title: "One Global Network", description: "Collaborate across borders and cultures to deliver seamless, integrated solutions." },
   { icon: Sparkles, title: "Innovation", description: "Embrace change and continuously seek better ways to serve our clients and communities." },
@@ -201,7 +201,7 @@ const OurValues = () => {
           <div className="container mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               <p className="text-muted-foreground leading-relaxed text-lg">
-                Values are not just words on a wall — they are lived experiences. At CAP360, our values are embedded in every client engagement, every internal initiative, and every community programme we support.
+                Values are not just words on a wall - they are lived experiences. At CAP360, our values are embedded in every client engagement, every internal initiative, and every community programme we support.
               </p>
               <div className="bg-card border border-border/50 rounded-xl p-8">
                 <div className="text-5xl font-bold text-cap-orange mb-3">100%</div>
@@ -219,7 +219,7 @@ const OurValues = () => {
                 <img src={heroImg} alt="Values in action" className="w-full h-full object-cover" />
               </div>
               <p className="text-muted-foreground leading-relaxed text-lg">
-                Our values come alive through action. From mentoring future leaders to championing sustainability, demonstrate our commitment daily — creating an environment where integrity, innovation, and inclusion thrive together.
+                Our values come alive through action. From mentoring future leaders to championing sustainability, demonstrate our commitment daily - creating an environment where integrity, innovation, and inclusion thrive together.
               </p>
             </div>
           </div>
@@ -318,7 +318,7 @@ const OurValues = () => {
         <section className="py-16 lg:py-24 bg-cap-navy">
           <div className="container mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Values That Drive Results</h2>
-            <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">Our values are not just aspirational — they are the foundation of every client relationship and every outcome we deliver.</p>
+            <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">Our values are not just aspirational - they are the foundation of every client relationship and every outcome we deliver.</p>
             <button onClick={() => navigate("/contact")} className="px-8 py-4 bg-cap-orange hover:bg-cap-orange/90 text-white font-semibold rounded-lg transition-colors">Connect With Us</button>
           </div>
         </section>

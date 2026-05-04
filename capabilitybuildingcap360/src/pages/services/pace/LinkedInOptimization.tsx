@@ -45,7 +45,7 @@ const LinkedInOptimization = () => {
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Open to Work settings:</strong> Configuring visibility so the right recruiters find you — without alerting your current employer.
+                <strong className="text-white">Open to Work settings:</strong> Configuring visibility so the right recruiters find you - without alerting your current employer.
               </span>
             </li>
           </ul>
@@ -97,7 +97,7 @@ const LinkedInOptimization = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            LinkedIn's search algorithm is keyword-driven. We identify and embed the exact terms recruiters use so your profile surfaces in the right searches — consistently.
+            LinkedIn's search algorithm is keyword-driven. We identify and embed the exact terms recruiters use so your profile surfaces in the right searches - consistently.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
@@ -125,7 +125,7 @@ const LinkedInOptimization = () => {
               </span>
             </li>
           </ul>
-          <p className="text-muted-white text-md">The outcome is a profile that recruiters find — without you having to apply.</p>
+          <p className="text-muted-white text-md">The outcome is a profile that recruiters find - without you having to apply.</p>
         </>
       ),
     },
@@ -141,7 +141,7 @@ const LinkedInOptimization = () => {
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Value-led framing:</strong> Moving beyond job titles to communicate what you actually bring — not just what you're called.
+                <strong className="text-white">Value-led framing:</strong> Moving beyond job titles to communicate what you actually bring - not just what you're called.
               </span>
             </li>
             <li className="flex items-start gap-2">
@@ -173,7 +173,7 @@ const LinkedInOptimization = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            Posting on LinkedIn isn't just for thought leaders. Strategic content makes you visible, builds credibility, and puts you in front of the right people — before they're even looking to hire.
+            Posting on LinkedIn isn't just for thought leaders. Strategic content makes you visible, builds credibility, and puts you in front of the right people - before they're even looking to hire.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
@@ -191,13 +191,13 @@ const LinkedInOptimization = () => {
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Posting cadence planning:</strong> A sustainable schedule — typically 2–3 posts per week — that builds consistency without overwhelm.
+                <strong className="text-white">Posting cadence planning:</strong> A sustainable schedule - typically 2–3 posts per week - that builds consistency without overwhelm.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Repurposing strategy:</strong> Turning existing work — reports, presentations, experiences — into content without starting from scratch.
+                <strong className="text-white">Repurposing strategy:</strong> Turning existing work - reports, presentations, experiences - into content without starting from scratch.
               </span>
             </li>
           </ul>
@@ -211,13 +211,13 @@ const LinkedInOptimization = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            A strong LinkedIn network isn't just about connection count — it's about having the right people in your orbit. We build targeted network growth strategies that open real doors.
+            A strong LinkedIn network isn't just about connection count - it's about having the right people in your orbit. We build targeted network growth strategies that open real doors.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Target connection profiling:</strong> Identifying the exact roles — recruiters, hiring managers, peers, alumni — worth prioritising.
+                <strong className="text-white">Target connection profiling:</strong> Identifying the exact roles - recruiters, hiring managers, peers, alumni - worth prioritising.
               </span>
             </li>
             <li className="flex items-start gap-2">
@@ -229,7 +229,7 @@ const LinkedInOptimization = () => {
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Alumni and community leverage:</strong> Tapping into shared networks — university, industry groups, former employers — for warm introductions.
+                <strong className="text-white">Alumni and community leverage:</strong> Tapping into shared networks - university, industry groups, former employers - for warm introductions.
               </span>
             </li>
             <li className="flex items-start gap-2">
@@ -249,7 +249,7 @@ const LinkedInOptimization = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            Visibility on LinkedIn isn't just about what you post — it's about how you show up in other people's feeds. We build an engagement rhythm that keeps you front of mind without being noise.
+            Visibility on LinkedIn isn't just about what you post - it's about how you show up in other people's feeds. We build an engagement rhythm that keeps you front of mind without being noise.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
@@ -273,11 +273,11 @@ const LinkedInOptimization = () => {
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Daily 15-minute engagement routine:</strong> A structured habit that keeps the algorithm warm and the network active — without consuming the day.
+                <strong className="text-white">Daily 15-minute engagement routine:</strong> A structured habit that keeps the algorithm warm and the network active - without consuming the day.
               </span>
             </li>
           </ul>
-          <p className="text-muted-white text-md">The outcome is a LinkedIn presence that works around the clock — even when you're not online.</p>
+          <p className="text-muted-white text-md">The outcome is a LinkedIn presence that works around the clock - even when you're not online.</p>
         </>
       ),
     },
@@ -300,7 +300,7 @@ const LinkedInOptimization = () => {
   // ─── Infinite carousel ────────────────────────────────────────────────────
   const cards = [
     { icon: <Award className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />, title: "Top applicant ranking", desc: "An algorithm-optimised profile that consistently surfaces at the top of recruiter searches and application stacks." },
-    { icon: <Search className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />, title: "Inbound recruiter interest", desc: "Keyword-rich profiles attract direct recruiter outreach — so opportunities come to you, not just the other way round." },
+    { icon: <Search className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />, title: "Inbound recruiter interest", desc: "Keyword-rich profiles attract direct recruiter outreach - so opportunities come to you, not just the other way round." },
     { icon: <TrendingUp className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />, title: "Growing professional authority", desc: "A consistent content presence that builds credibility and visibility in your industry over time." },
     { icon: <Users className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />, title: "A network that opens doors", desc: "Targeted connection growth that creates warm paths into companies and roles long before a job is advertised." },
     { icon: <Zap className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />, title: "Measurable profile performance", desc: "Tracking profile views, search appearances, and engagement to see exactly what's working and what to adjust." },
@@ -440,7 +440,7 @@ const LinkedInOptimization = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              Transform your LinkedIn profile into a powerful networking and job-hunting tool. From algorithm-beating keyword placement to a content strategy that builds authority — we turn your profile into an asset that works for you 24/7.
+              Transform your LinkedIn profile into a powerful networking and job-hunting tool. From algorithm-beating keyword placement to a content strategy that builds authority - we turn your profile into an asset that works for you 24/7.
             </motion.p>
           </div>
         </div>
@@ -451,13 +451,13 @@ const LinkedInOptimization = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_360px] gap-16 items-start">
             <p className="text-[20px] text-muted-white leading-[1.8]">
-              LinkedIn has over one billion members — but most profiles are invisible. A weak headline, generic About section, and absence of strategic keywords means recruiters scroll past without stopping. The candidates who get contacted, shortlisted, and hired aren't always the most qualified — they're the ones with profiles optimised to be found, to impress in seconds, and to signal exactly the right fit for the roles that matter most to them.
+              LinkedIn has over one billion members - but most profiles are invisible. A weak headline, generic About section, and absence of strategic keywords means recruiters scroll past without stopping. The candidates who get contacted, shortlisted, and hired aren't always the most qualified - they're the ones with profiles optimised to be found, to impress in seconds, and to signal exactly the right fit for the roles that matter most to them.
             </p>
             <div className="bg-card border border-border/30 p-8">
               <span className="text-[20px] font-bold tracking-widest text-cap-green uppercase block mb-3">DATA</span>
               <div className="text-[56px] font-black leading-none mb-3">87%</div>
               <p className="text-mid text-muted-white leading-relaxed">
-                of recruiters use LinkedIn as their primary tool to find and evaluate candidates — making profile optimisation one of the highest-ROI career investments available.
+                of recruiters use LinkedIn as their primary tool to find and evaluate candidates - making profile optimisation one of the highest-ROI career investments available.
               </p>
             </div>
           </div>
@@ -477,7 +477,7 @@ const LinkedInOptimization = () => {
               <div className="w-12 h-1 bg-cap-green mb-6" />
               <h3 className="text-[22px] font-bold mb-4">From a profile that exists to one that performs</h3>
               <p className="text-[20px] text-muted-white leading-[1.7]">
-                There's a fundamental difference between having a LinkedIn profile and having a LinkedIn strategy. Our optimisation process covers every layer — from the algorithm signals that determine your ranking in recruiter searches, to the narrative that convinces a hiring manager to reach out. Combined with a content and engagement framework that keeps you visible in your industry, the result is a profile that generates real career opportunities — not just profile views.
+                There's a fundamental difference between having a LinkedIn profile and having a LinkedIn strategy. Our optimisation process covers every layer - from the algorithm signals that determine your ranking in recruiter searches, to the narrative that convinces a hiring manager to reach out. Combined with a content and engagement framework that keeps you visible in your industry, the result is a profile that generates real career opportunities - not just profile views.
               </p>
             </div>
           </div>

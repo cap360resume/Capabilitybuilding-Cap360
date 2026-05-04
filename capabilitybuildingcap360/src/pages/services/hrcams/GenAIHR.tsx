@@ -29,7 +29,7 @@ const GenAIHR = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            Organisation design starts with a simple question — is your current
+            Organisation design starts with a simple question - is your current
             structure enabling your strategy or holding it back? We help align
             structure with business goals for clarity and efficiency.
           </p>
@@ -47,7 +47,7 @@ const GenAIHR = () => {
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
                 <strong className="text-white">Design principles:</strong>{" "}
-                Defining the right structure — functional, matrix, or hybrid.
+                Defining the right structure - functional, matrix, or hybrid.
               </span>
             </li>
             <li className="flex items-start gap-2">
@@ -419,7 +419,7 @@ const GenAIHR = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_360px] gap-16 items-start">
             <p className="text-[20px] text-muted-white leading-[1.8]">
-              Generative AI is not a future promise — it's a present reality
+              Generative AI is not a future promise - it's a present reality
               transforming how HR operates. From automated candidate screening
               to predictive attrition models, AI is enabling HR teams to move
               from administrative processors to strategic business partners.
@@ -460,7 +460,7 @@ const GenAIHR = () => {
               </h3>
               <p className="text-[20px] text-muted-white leading-[1.7]">
                 The most impactful AI implementations in HR aren't flashy
-                chatbots — they're the invisible automations that eliminate
+                chatbots - they're the invisible automations that eliminate
                 thousands of hours of manual work. Smart document processing,
                 intelligent routing, and predictive analytics are turning HR
                 from a cost centre into a strategic advantage.

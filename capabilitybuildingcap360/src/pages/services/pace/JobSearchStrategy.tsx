@@ -27,7 +27,7 @@ const JobSearchStrategy = () => {
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Values clarification:</strong> Identifying the non-negotiables — culture, flexibility, impact, growth — that define the right role.
+                <strong className="text-white">Values clarification:</strong> Identifying the non-negotiables - culture, flexibility, impact, growth - that define the right role.
               </span>
             </li>
             <li className="flex items-start gap-2">
@@ -59,7 +59,7 @@ const JobSearchStrategy = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            Help candidates look beyond the obvious and discover where their skills have the greatest leverage — sometimes in sectors they hadn't considered.
+            Help candidates look beyond the obvious and discover where their skills have the greatest leverage - sometimes in sectors they hadn't considered.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
@@ -97,7 +97,7 @@ const JobSearchStrategy = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            Strategically — focusing on quality over quantity to maximise their chances of success.
+            Strategically - focusing on quality over quantity to maximise their chances of success.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
@@ -141,7 +141,7 @@ const JobSearchStrategy = () => {
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Application pipeline tracker:</strong> A simple system to monitor every role — applied, in progress, interviewed, offered, or closed.
+                <strong className="text-white">Application pipeline tracker:</strong> A simple system to monitor every role - applied, in progress, interviewed, offered, or closed.
               </span>
             </li>
             <li className="flex items-start gap-2">
@@ -196,7 +196,7 @@ const JobSearchStrategy = () => {
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Informational interview techniques:</strong> Turning casual conversations into opportunities — before a role is even posted.
+                <strong className="text-white">Informational interview techniques:</strong> Turning casual conversations into opportunities - before a role is even posted.
               </span>
             </li>
           </ul>
@@ -358,7 +358,7 @@ const JobSearchStrategy = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              Align your skills with the roles that matter most to you. Our structured job search frameworks turn scattered effort into a focused, high-conversion strategy — so candidates spend less time searching and more time succeeding.
+              Align your skills with the roles that matter most to you. Our structured job search frameworks turn scattered effort into a focused, high-conversion strategy - so candidates spend less time searching and more time succeeding.
             </motion.p>
           </div>
         </div>
@@ -369,13 +369,13 @@ const JobSearchStrategy = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_360px] gap-16 items-start">
             <p className="text-[20px] text-muted-white leading-[1.8]">
-              Most job seekers apply to dozens of roles and hear back from very few. The problem isn't their profile — it's their approach. A purposeful strategy built around career goal alignment, smart targeting, and systematic tracking transforms a frustrating search into a manageable, momentum-driven process. When candidates know exactly which roles to pursue, how to reach the right people, and how to track progress effectively, the entire search becomes faster and far less draining.
+              Most job seekers apply to dozens of roles and hear back from very few. The problem isn't their profile - it's their approach. A purposeful strategy built around career goal alignment, smart targeting, and systematic tracking transforms a frustrating search into a manageable, momentum-driven process. When candidates know exactly which roles to pursue, how to reach the right people, and how to track progress effectively, the entire search becomes faster and far less draining.
             </p>
             <div className="bg-card border border-border/30 p-8">
               <span className="text-[20px] font-bold tracking-widest text-cap-green uppercase block mb-3">DATA</span>
               <div className="text-[56px] font-black leading-none mb-3">70%</div>
               <p className="text-mid text-muted-white leading-relaxed">
-                of jobs are never publicly advertised — filled through networks, referrals, and direct outreach before they ever reach a job board.
+                of jobs are never publicly advertised - filled through networks, referrals, and direct outreach before they ever reach a job board.
               </p>
             </div>
           </div>
@@ -395,7 +395,7 @@ const JobSearchStrategy = () => {
               <div className="w-12 h-1 bg-cap-green mb-6" />
               <h3 className="text-[22px] font-bold mb-4">From scattered applications to a focused search engine</h3>
               <p className="text-[20px] text-muted-white leading-[1.7]">
-                A job search without strategy is just wishful clicking. Our approach replaces volume with precision — defining the right roles, mapping the right industries, activating the right connections, and tracking every step of the pipeline. Candidates who follow a structured job search strategy don't just find jobs faster; they find better-fit roles with stronger offers, because they're showing up where it counts and saying exactly the right things.
+                A job search without strategy is just wishful clicking. Our approach replaces volume with precision - defining the right roles, mapping the right industries, activating the right connections, and tracking every step of the pipeline. Candidates who follow a structured job search strategy don't just find jobs faster; they find better-fit roles with stronger offers, because they're showing up where it counts and saying exactly the right things.
               </p>
             </div>
           </div>

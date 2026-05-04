@@ -21,7 +21,7 @@ const jobCategories = [
 const benefits = [
   {
     title: "Continuous Learning",
-    description: "Access to structured learning programs, certifications, and capability-building frameworks — the same ones we build for our clients.",
+    description: "Access to structured learning programs, certifications, and capability-building frameworks - the same ones we build for our clients.",
   },
   {
     title: "Meaningful Work",
@@ -33,7 +33,7 @@ const benefits = [
   },
   {
     title: "Collaborative Culture",
-    description: "Work alongside HR veterans, assessment scientists, coaches, and strategists — all united by a passion for people development.",
+    description: "Work alongside HR veterans, assessment scientists, coaches, and strategists - all united by a passion for people development.",
   },
 ];
 
@@ -55,7 +55,7 @@ const values = [
   },
   {
     title: "Outcomes & Activity",
-    description: "Sustainable outcomes are built on thoughtful action. That’s why we create a culture where planning, execution, and results go hand in hand — ensuring that every contribution moves the needle.Because at the end of the day, it’s not just about what we do — it’s about the difference it makes.",
+    description: "Sustainable outcomes are built on thoughtful action. That’s why we create a culture where planning, execution, and results go hand in hand - ensuring that every contribution moves the needle.Because at the end of the day, it’s not just about what we do - it’s about the difference it makes.",
   },
 ];
 
@@ -79,7 +79,7 @@ const CareersPage = () => {
         <PageHero
           label="Careers at CAP360"
           title="Build careers. Including yours."
-          subtitle="Join a team that helps enterprises build future-ready workforces — and is deeply committed to doing the same for its own people."
+          subtitle="Join a team that helps enterprises build future-ready workforces - and is deeply committed to doing the same for its own people."
           image={heroImg}
           ctaText="Explore opportunities"
           ctaAction={() => navigate("#jobs")}
@@ -111,7 +111,7 @@ const CareersPage = () => {
               animate={valuesInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              At CAP360, we spend every day helping enterprises hire better, develop stronger leaders, and build future-ready workforces. We hold ourselves to the same standard — creating an environment where talent grows, expertise is valued, and careers are genuinely built.
+              At CAP360, we spend every day helping enterprises hire better, develop stronger leaders, and build future-ready workforces. We hold ourselves to the same standard - creating an environment where talent grows, expertise is valued, and careers are genuinely built.
             </motion.p>
             <div className="grid md:grid-cols-3 gap-8">
               {values.map((v, i) => (

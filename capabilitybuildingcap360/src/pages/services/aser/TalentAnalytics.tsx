@@ -34,7 +34,7 @@ const TalentAnalytics = () => {
       title: "Talent Data Infrastructure & Integration",
       content: (
         <>
-          <p className="text-muted-white leading-relaxed mb-4">We help you build the data foundations needed for meaningful talent analytics — integrating disparate HR data sources into a unified, accessible platform.</p>
+          <p className="text-muted-white leading-relaxed mb-4">We help you build the data foundations needed for meaningful talent analytics - integrating disparate HR data sources into a unified, accessible platform.</p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-red mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Data audit:</strong> Assess current talent data quality, completeness, and accessibility.</span></li>
             <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-red mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Integration design:</strong> Connect HRIS, ATS, LMS, and performance data into a unified analytics layer.</span></li>
@@ -50,7 +50,7 @@ const TalentAnalytics = () => {
       title: "Predictive Workforce Analytics",
       content: (
         <>
-          <p className="text-muted-white leading-relaxed mb-4">Move beyond descriptive reporting to predictive models that anticipate workforce trends — enabling proactive talent management.</p>
+          <p className="text-muted-white leading-relaxed mb-4">Move beyond descriptive reporting to predictive models that anticipate workforce trends - enabling proactive talent management.</p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-red mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Attrition modelling:</strong> Predict flight risk at individual and team levels with actionable retention insights.</span></li>
             <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-red mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Performance prediction:</strong> Identify factors that drive high performance and replicate success patterns.</span></li>
@@ -66,7 +66,7 @@ const TalentAnalytics = () => {
       title: "Benchmarking & Talent Market Intelligence",
       content: (
         <>
-          <p className="text-muted-white leading-relaxed mb-4">Understand how your talent practices compare to industry peers — using external benchmarks to calibrate your talent strategy.</p>
+          <p className="text-muted-white leading-relaxed mb-4">Understand how your talent practices compare to industry peers - using external benchmarks to calibrate your talent strategy.</p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-red mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Compensation benchmarking:</strong> Market data analysis for pay equity and competitive positioning.</span></li>
             <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-red mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Engagement benchmarks:</strong> Compare engagement scores against industry and regional norms.</span></li>
@@ -196,7 +196,7 @@ const TalentAnalytics = () => {
       <section className="py-16 border-t border-border/20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_360px] gap-16 items-start">
-            <p className="text-[20px] text-muted-white leading-[1.8]">Talent analytics transforms raw HR data into strategic intelligence. By integrating data across your talent ecosystem — from recruitment and performance to engagement and attrition — we help organisations move from reactive reporting to predictive, prescriptive workforce management.</p>
+            <p className="text-[20px] text-muted-white leading-[1.8]">Talent analytics transforms raw HR data into strategic intelligence. By integrating data across your talent ecosystem - from recruitment and performance to engagement and attrition - we help organisations move from reactive reporting to predictive, prescriptive workforce management.</p>
             <div className="bg-card border border-border/30 p-8">
               <span className="text-[20px] font-bold tracking-widest text-cap-red uppercase block mb-3">DATA</span>
               <div className="text-[56px] font-black leading-none mb-3">5×</div>
@@ -214,7 +214,7 @@ const TalentAnalytics = () => {
             <div>
               <div className="w-12 h-1 bg-cap-red mb-6" />
               <h3 className="text-[22px] font-bold mb-4">From spreadsheet reporting to strategic workforce intelligence</h3>
-              <p className="text-[20px] text-muted-white leading-[1.7]">Most organisations have more talent data than they realise — but it's trapped in silos, inconsistent in quality, and rarely analysed beyond basic reporting. We help organisations unlock the full potential of their talent data, building analytics capabilities that drive strategic workforce planning and competitive advantage.</p>
+              <p className="text-[20px] text-muted-white leading-[1.7]">Most organisations have more talent data than they realise - but it's trapped in silos, inconsistent in quality, and rarely analysed beyond basic reporting. We help organisations unlock the full potential of their talent data, building analytics capabilities that drive strategic workforce planning and competitive advantage.</p>
             </div>
           </div>
         </div>

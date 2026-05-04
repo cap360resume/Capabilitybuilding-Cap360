@@ -20,7 +20,7 @@ const DigitalUpskilling = () => {
       title: "Digital Literacy & Fluency Programmes",
       content: (
         <>
-          <p className="text-muted-white leading-relaxed mb-4">Build foundational digital capabilities across your workforce — ensuring every employee can leverage technology confidently.</p>
+          <p className="text-muted-white leading-relaxed mb-4">Build foundational digital capabilities across your workforce - ensuring every employee can leverage technology confidently.</p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-blue mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Digital fundamentals:</strong> Cloud computing, data basics, cybersecurity awareness, and digital collaboration.</span></li>
             <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-blue mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">AI literacy:</strong> Understanding AI, machine learning, and automation for non-technical audiences.</span></li>
@@ -190,7 +190,7 @@ const DigitalUpskilling = () => {
       <section className="py-16 border-t border-border/20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_360px] gap-16 items-start">
-            <p className="text-[20px] text-muted-white leading-[1.8]">The digital skills gap is widening. As AI, cloud computing, and data analytics transform every industry, organisations must rapidly upskill their workforce to remain competitive. Our programmes cover the full spectrum — from digital literacy for all employees to deep technical training for specialists.</p>
+            <p className="text-[20px] text-muted-white leading-[1.8]">The digital skills gap is widening. As AI, cloud computing, and data analytics transform every industry, organisations must rapidly upskill their workforce to remain competitive. Our programmes cover the full spectrum - from digital literacy for all employees to deep technical training for specialists.</p>
             <div className="bg-card border border-border/30 p-8">
               <span className="text-[20px] font-bold tracking-widest text-cap-blue uppercase block mb-3">DATA</span>
               <div className="text-[56px] font-black leading-none mb-3">77%</div>

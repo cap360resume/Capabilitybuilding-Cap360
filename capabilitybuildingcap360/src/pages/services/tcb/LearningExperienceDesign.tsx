@@ -191,7 +191,7 @@ const LearningExperienceDesign = () => {
             <div className="bg-card border border-border/30 p-8">
               <span className="text-[20px] font-bold tracking-widest text-cap-blue uppercase block mb-3">DATA</span>
               <div className="text-[56px] font-black leading-none mb-3">90%</div>
-              <p className="text-mid text-muted-white leading-relaxed">of traditional training content is forgotten within one week — LXD-designed programmes achieve 3x better retention.</p>
+              <p className="text-mid text-muted-white leading-relaxed">of traditional training content is forgotten within one week - LXD-designed programmes achieve 3x better retention.</p>
             </div>
           </div>
         </div>

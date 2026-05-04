@@ -31,7 +31,7 @@ const CareerTransition = () => {
         <>
           <p className="text-muted-white leading-relaxed mb-4">
             Apply to curated, relevant roles on your behalf every single day
-            — so your candidacy stays active and visible across all major job
+            - so your candidacy stays active and visible across all major job
             platforms without you lifting a finger.
           </p>
           <ul className="space-y-2 mb-4">
@@ -55,7 +55,7 @@ const CareerTransition = () => {
               <span className="w-1.5 h-1.5 rounded-full bg-cap-green mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
                 <strong className="text-white">Application tracking:</strong> We
-                maintain a live tracker of every application — status,
+                maintain a live tracker of every application - status,
                 follow-ups, and outcomes.
               </span>
             </li>
@@ -69,7 +69,7 @@ const CareerTransition = () => {
             </li>
           </ul>
           <p className="text-muted-white text-md">
-            The outcome is a high-volume, consistently active search — without
+            The outcome is a high-volume, consistently active search - without
             taking a single hour of your time.
           </p>
         </>
@@ -82,7 +82,7 @@ const CareerTransition = () => {
         <>
           <p className="text-muted-white leading-relaxed mb-4">
             Manage your active presence across Naukri, LinkedIn, Monster,
-            Shine, and other relevant portals — keeping your profiles updated,
+            Shine, and other relevant portals - keeping your profiles updated,
             responsive, and algorithmically optimised.
           </p>
           <ul className="space-y-2 mb-4">
@@ -133,7 +133,7 @@ const CareerTransition = () => {
         <>
           <p className="text-muted-white leading-relaxed mb-4">
             A senior job search is a high-stakes process. We provide continuous
-            strategic guidance and emotional support — so you stay focused,
+            strategic guidance and emotional support - so you stay focused,
             confident, and clear throughout your journey.
           </p>
           <ul className="space-y-2 mb-4">
@@ -209,21 +209,21 @@ const CareerTransition = () => {
         <Users className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />
       ),
       title: "Full portal visibility",
-      desc: "Optimised, active presence across Naukri, LinkedIn, Monster, and more — so recruiters find you before the competition.",
+      desc: "Optimised, active presence across Naukri, LinkedIn, Monster, and more - so recruiters find you before the competition.",
     },
     {
       icon: (
         <Heart className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />
       ),
       title: "Zero time investment from you",
-      desc: "Handle every application, follow-up, and portal update — you focus entirely on your current role.",
+      desc: "Handle every application, follow-up, and portal update - you focus entirely on your current role.",
     },
     {
       icon: (
         <Shield className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-green" />
       ),
       title: "Consistent professional positioning",
-      desc: "Every application reflects your seniority, value, and career goals — no rushed or misaligned submissions.",
+      desc: "Every application reflects your seniority, value, and career goals - no rushed or misaligned submissions.",
     },
     {
       icon: (
@@ -371,7 +371,7 @@ const CareerTransition = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              Your job search runs every day — even while you're at work. We
+              Your job search runs every day - even while you're at work. We
               apply to curated, senior-level roles on your behalf so your
               candidacy stays active, consistent, and competitive.
             </motion.p>
@@ -384,7 +384,7 @@ const CareerTransition = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_360px] gap-16 items-start">
             <p className="text-[20px] text-muted-white leading-[1.8]">
-              Most senior professionals lack the time or bandwidth to run an effective search while excelling in their current role. That's exactly the gap PACE fills — managing the entire application process daily so you can focus on performing at your best while we open the right doors.
+              Most senior professionals lack the time or bandwidth to run an effective search while excelling in their current role. That's exactly the gap PACE fills - managing the entire application process daily so you can focus on performing at your best while we open the right doors.
             </p>
             <div className="bg-card border border-border/30 p-8">
               <span className="text-[20px] font-bold tracking-widest text-cap-green uppercase block mb-3">
@@ -419,11 +419,11 @@ const CareerTransition = () => {
                 From occasional effort to daily, managed execution
               </h3>
               <p className="text-[20px] text-muted-white leading-[1.7]">
-                A job search done alone is inconsistent — applications go out in
+                A job search done alone is inconsistent - applications go out in
                 bursts, portals go unmanaged, and opportunities slip by
                 unnoticed. Our model replaces that with daily, structured
                 execution. We apply on your behalf, manage your portal presence,
-                and track every response — running a professional search
+                and track every response - running a professional search
                 operation that would be impossible to sustain alongside a
                 full-time senior role.
               </p>

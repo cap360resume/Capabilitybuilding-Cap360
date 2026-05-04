@@ -25,7 +25,7 @@ const TotalRewards = () => {
             At the foundation of any Total Rewards strategy is a well-designed
             compensation structure. We design CTC (Cost to Company)
             architectures that define how pay is structured across levels,
-            functions, and roles — with clarity on fixed versus variable
+            functions, and roles - with clarity on fixed versus variable
             components, statutory deductions, and benefits.
           </p>
           <p className="text-muted-white leading-relaxed mb-4">
@@ -92,7 +92,7 @@ const TotalRewards = () => {
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Target-setting methodology:</strong> Structuring goals that are ambitious yet achievable — avoiding the "all or nothing" effect and sustaining motivation.
+                <strong className="text-white">Target-setting methodology:</strong> Structuring goals that are ambitious yet achievable - avoiding the "all or nothing" effect and sustaining motivation.
               </span>
             </li>
             <li className="flex items-start gap-2">
@@ -116,7 +116,7 @@ const TotalRewards = () => {
     },
     {
       icon: Target,
-      title: "Long-Term Incentive (LTI) Models — ESOPs, Phantom Stock & SAR Advisory",
+      title: "Long-Term Incentive (LTI) Models - ESOPs, Phantom Stock & SAR Advisory",
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
@@ -167,7 +167,7 @@ const TotalRewards = () => {
             Monetary compensation helps retain employees, but recognition is
             what truly motivates them. A well-designed Rewards & Recognition
             (R&R) programme acknowledges behaviours and contributions that
-            formal appraisals often miss — in real time, not just at year-end.
+            formal appraisals often miss - in real time, not just at year-end.
           </p>
           <p className="text-muted-white leading-relaxed mb-4">
             We design R&R frameworks that reinforce organisational values, drive
@@ -213,7 +213,7 @@ const TotalRewards = () => {
         <>
           <p className="text-muted-white leading-relaxed mb-4">
             Benefits are an increasingly critical part of the Total Rewards
-            story — especially as Gen Z and millennial employees evaluate
+            story - especially as Gen Z and millennial employees evaluate
             healthcare, flexibility, and wellbeing support alongside base
             compensation.
           </p>
@@ -416,13 +416,13 @@ const TotalRewards = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_360px] gap-16 items-start">
             <p className="text-[20px] text-muted-white leading-[1.8]">
-              Total rewards goes beyond salary. It encompasses everything an employee values from the employment relationship — compensation, benefits, career development, work-life balance, and recognition. A well-designed total rewards strategy becomes your strongest talent magnet and retention tool.
+              Total rewards goes beyond salary. It encompasses everything an employee values from the employment relationship - compensation, benefits, career development, work-life balance, and recognition. A well-designed total rewards strategy becomes your strongest talent magnet and retention tool.
             </p>
             <div className="bg-card border border-border/30 p-8">
               <span className="text-[20px] font-bold tracking-widest text-cap-yellow uppercase block mb-3">DATA</span>
               <div className="text-[56px] font-black leading-none mb-3">82%</div>
               <p className="text-mid text-muted-white leading-relaxed">
-                of employees consider total compensation — not just salary — when evaluating job offers and deciding whether to stay.
+                of employees consider total compensation - not just salary - when evaluating job offers and deciding whether to stay.
               </p>
             </div>
           </div>
@@ -441,7 +441,7 @@ const TotalRewards = () => {
               <div className="w-12 h-1 bg-cap-yellow mb-6" />
               <h3 className="text-[22px] font-bold mb-4">From cost centre to strategic investment</h3>
               <p className="text-[20px] text-muted-white leading-[1.7]">
-                Leading organisations are reimagining compensation as a strategic lever — not just a cost line. By aligning rewards with business outcomes, talent markets, and employee values, they're achieving 30% better retention and 25% improvement in offer acceptance rates.
+                Leading organisations are reimagining compensation as a strategic lever - not just a cost line. By aligning rewards with business outcomes, talent markets, and employee values, they're achieving 30% better retention and 25% improvement in offer acceptance rates.
               </p>
             </div>
           </div>

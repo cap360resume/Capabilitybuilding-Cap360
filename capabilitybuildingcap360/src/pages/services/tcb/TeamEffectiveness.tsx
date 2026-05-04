@@ -191,7 +191,7 @@ const TeamEffectiveness = () => {
             <div className="bg-card border border-border/30 p-8">
               <span className="text-[20px] font-bold tracking-widest text-cap-blue uppercase block mb-3">DATA</span>
               <div className="text-[56px] font-black leading-none mb-3">5x</div>
-              <p className="text-mid text-muted-white leading-relaxed">high-performing teams deliver 5x more output than average teams — the difference is in how they work together, not who they are.</p>
+              <p className="text-mid text-muted-white leading-relaxed">high-performing teams deliver 5x more output than average teams - the difference is in how they work together, not who they are.</p>
             </div>
           </div>
         </div>
@@ -205,7 +205,7 @@ const TeamEffectiveness = () => {
             <div>
               <div className="w-12 h-1 bg-cap-blue mb-6" />
               <h3 className="text-[22px] font-bold mb-4">From individual stars to collective intelligence</h3>
-              <p className="text-[20px] text-muted-white leading-[1.7]">Google's Project Aristotle proved that the best teams aren't made up of the smartest individuals — they're teams with psychological safety, dependability, structure, meaning, and impact. We apply these research-backed principles to transform your team dynamics.</p>
+              <p className="text-[20px] text-muted-white leading-[1.7]">Google's Project Aristotle proved that the best teams aren't made up of the smartest individuals - they're teams with psychological safety, dependability, structure, meaning, and impact. We apply these research-backed principles to transform your team dynamics.</p>
             </div>
           </div>
         </div>

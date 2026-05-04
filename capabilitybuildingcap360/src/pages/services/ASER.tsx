@@ -64,7 +64,7 @@ const subServices = [
     title: "Psychometric Testing",
     title2: "Validated Science Behind Every Talent Decision",
     description:
-      "Deploy validated psychometric instruments measuring personality traits, aptitude, and emotional intelligence — ensuring every recruitment and development decision is grounded in data.",
+      "Deploy validated psychometric instruments measuring personality traits, aptitude, and emotional intelligence - ensuring every recruitment and development decision is grounded in data.",
     path: "/what-we-do/services/aser/psychometric-testing",
   },
   // {
@@ -167,7 +167,7 @@ const phases = [
   {
     step: "02",
     title: "Tool Selection & Customization",
-    desc: "Based on findings, we select and customize the right mix of psychometric, situational, and competency tools — building an assessment architecture that is precise, fair, and fit-for-purpose.",
+    desc: "Based on findings, we select and customize the right mix of psychometric, situational, and competency tools - building an assessment architecture that is precise, fair, and fit-for-purpose.",
     icon: Zap,
   },
   {
@@ -487,7 +487,7 @@ const ASER = () => {
         </div>
       </section>
 
-      {/* ===== SERVICES — MOSAIC GRID ===== */}
+      {/* ===== SERVICES - MOSAIC GRID ===== */}
   <section id="services" className="py-24" ref={servicesRef}>
   <div className="container mx-auto px-4 lg:px-8">
     <motion.h2
@@ -499,7 +499,7 @@ const ASER = () => {
     </motion.h2>
     <p className="text-[18px] text-muted-white mb-14 max-w-2xl mb-5">
       Our integrated assessment solutions designed to transform every stage of
-      the talent lifecycle. Each solution is modular yet interconnected — choose
+      the talent lifecycle. Each solution is modular yet interconnected - choose
       one or combine multiple for end-to-end talent intelligence.
     </p>
 
@@ -595,7 +595,7 @@ const ASER = () => {
                   {s.title}
                 </div>
 
-                {/* Title — fades out on hover */}
+                {/* Title - fades out on hover */}
                 <div
                   className="mosaic-title"
                   style={{
@@ -610,7 +610,7 @@ const ASER = () => {
                   {s.title2}
                 </div>
 
-                {/* Description — fades in on hover */}
+                {/* Description - fades in on hover */}
                 <div
                   className="mosaic-desc"
                   style={{
@@ -667,7 +667,7 @@ const ASER = () => {
                   </div>
                 </div>
 
-                {/* Overlay — fades in on hover */}
+                {/* Overlay - fades in on hover */}
                 <div
                   className="mosaic-overlay"
                   style={{
@@ -842,7 +842,7 @@ const ASER = () => {
               className="text-muted-whitetext-[17px] leading-relaxed mb-10"
             >
               From hyper-growth startups to complex multinationals, we partner
-              with organizations that take talent decisions seriously — and want
+              with organizations that take talent decisions seriously - and want
               the science to back them up.
             </motion.p>
 
@@ -853,7 +853,7 @@ const ASER = () => {
               className="p-5 rounded-2xl bg-gradient-to-br from-cap-red/20 to-transparent border border-cap-red/30 backdrop-blur-md"
             >
               <p className="text-[17px] text-whitefont-medium">
-                These assessments — help build a talent intelligence
+                These assessments - help build a talent intelligence
                 capability that powers every hire, promotion, and development
                 decision.
               </p>
@@ -1048,11 +1048,11 @@ const ASER = () => {
                 description: "Recognized for market impact and vision in talent assessment and evaluation services.",
               },
               {
-                title: "Best Assessment Solutions Provider — MENA HR Excellence Awards 2024",
+                title: "Best Assessment Solutions Provider - MENA HR Excellence Awards 2024",
                 description: "Awarded for delivering measurable improvements in talent prediction and workforce quality.",
               },
               {
-                title: "Top 10 Talent Intelligence Platform — HR Tech Outlook 2024",
+                title: "Top 10 Talent Intelligence Platform - HR Tech Outlook 2024",
                 description: "Selected for innovative AI-powered assessment and analytics approaches.",
               },
             ].map((a, i) => (
@@ -1118,7 +1118,7 @@ const ASER = () => {
               <div className="md:col-span-2">
                 <h3 className="text-[28px] font-bold mb-2">Saurabh Nanda</h3>
                 <p className="text-cap-red font-semibold text-[14px] mb-6 uppercase tracking-wider">
-                  Career Coach & International Youth Mentor | Advisor — CAP360
+                  Career Coach & International Youth Mentor | Advisor - CAP360
                 </p>
 
                 <div className="space-y-6 mb-8">
@@ -1126,7 +1126,7 @@ const ASER = () => {
                     Saurabh Nanda bridges behavioural science with career
                     transformation. Supporting 2000+ professionals across 35+
                     countries, he goes beyond traditional coaching to address
-                    the psychological roots of career challenges—from burnout
+                    the psychological roots of career challenges-from burnout
                     and imposter syndrome to transitions and anxiety.
                   </p>
 
@@ -1140,7 +1140,7 @@ const ASER = () => {
                   <p className="text-[17px] text-muted-whiteleading-[1.8]">
                     He helps clients understand not just what to do, but why
                     they do it. His approach: sustainable success begins with
-                    self-understanding—honoring both professional ambition and
+                    self-understanding-honoring both professional ambition and
                     mental well-being.
                   </p>
                 </div>

@@ -20,7 +20,7 @@ const InnovationDesignThinking = () => {
       title: "Design Thinking Workshops",
       content: (
         <>
-          <p className="text-muted-white leading-relaxed mb-4">Immersive workshops teaching human-centered design methodology — empathize, define, ideate, prototype, and test.</p>
+          <p className="text-muted-white leading-relaxed mb-4">Immersive workshops teaching human-centered design methodology - empathize, define, ideate, prototype, and test.</p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-blue mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Empathy Mapping:</strong> Deep customer research and persona development for human-centered solutions.</span></li>
             <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-blue mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Ideation Sprints:</strong> Structured brainstorming with convergent and divergent thinking techniques.</span></li>
@@ -187,7 +187,7 @@ const InnovationDesignThinking = () => {
       <section className="py-16 border-t border-border/20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_360px] gap-16 items-start">
-            <p className="text-[20px] text-muted-white leading-[1.8]">Innovation isn't a department — it's a mindset. The most innovative organisations don't wait for breakthroughs; they systematically build the culture, skills, and processes that make innovation predictable and repeatable. Our approach combines design thinking methodology with intrapreneurship frameworks to unlock creative potential at every level.</p>
+            <p className="text-[20px] text-muted-white leading-[1.8]">Innovation isn't a department - it's a mindset. The most innovative organisations don't wait for breakthroughs; they systematically build the culture, skills, and processes that make innovation predictable and repeatable. Our approach combines design thinking methodology with intrapreneurship frameworks to unlock creative potential at every level.</p>
             <div className="bg-card border border-border/30 p-8">
               <span className="text-[20px] font-bold tracking-widest text-cap-blue uppercase block mb-3">DATA</span>
               <div className="text-[56px] font-black leading-none mb-3">84%</div>
@@ -205,7 +205,7 @@ const InnovationDesignThinking = () => {
             <div>
               <div className="w-12 h-1 bg-cap-blue mb-6" />
               <h3 className="text-[22px] font-bold mb-4">From ad-hoc ideas to systematic innovation</h3>
-              <p className="text-[20px] text-muted-white leading-[1.7]">The most innovative companies don't rely on random eureka moments. They build innovation systems — structured processes for identifying problems, generating ideas, testing prototypes, and scaling solutions. Design thinking provides the methodology; intrapreneurship provides the engine.</p>
+              <p className="text-[20px] text-muted-white leading-[1.7]">The most innovative companies don't rely on random eureka moments. They build innovation systems - structured processes for identifying problems, generating ideas, testing prototypes, and scaling solutions. Design thinking provides the methodology; intrapreneurship provides the engine.</p>
             </div>
           </div>
         </div>

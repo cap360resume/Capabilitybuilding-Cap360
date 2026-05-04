@@ -190,7 +190,7 @@ const CertificationCompliance = () => {
       <section className="py-16 border-t border-border/20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_360px] gap-16 items-start">
-            <p className="text-[20px] text-muted-white leading-[1.8]">In an increasingly regulated business environment, compliance training and professional certifications are not optional — they're essential. Our programmes combine mandatory regulatory training with professional development certifications, supported by digital tracking systems that keep your organisation audit-ready and your people certified.</p>
+            <p className="text-[20px] text-muted-white leading-[1.8]">In an increasingly regulated business environment, compliance training and professional certifications are not optional - they're essential. Our programmes combine mandatory regulatory training with professional development certifications, supported by digital tracking systems that keep your organisation audit-ready and your people certified.</p>
             <div className="bg-card border border-border/30 p-8">
               <span className="text-[20px] font-bold tracking-widest text-cap-blue uppercase block mb-3">DATA</span>
               <div className="text-[56px] font-black leading-none mb-3">$14M</div>
@@ -208,7 +208,7 @@ const CertificationCompliance = () => {
             <div>
               <div className="w-12 h-1 bg-cap-blue mb-6" />
               <h3 className="text-[22px] font-bold mb-4">From checkbox compliance to embedded governance culture</h3>
-              <p className="text-[20px] text-muted-white leading-[1.7]">Compliance training is often treated as a tick-box exercise — but true compliance requires a culture of accountability, awareness, and continuous learning. Our approach transforms compliance from an annual obligation into an embedded part of how your organisation operates, reducing risk and building trust.</p>
+              <p className="text-[20px] text-muted-white leading-[1.7]">Compliance training is often treated as a tick-box exercise - but true compliance requires a culture of accountability, awareness, and continuous learning. Our approach transforms compliance from an annual obligation into an embedded part of how your organisation operates, reducing risk and building trust.</p>
             </div>
           </div>
         </div>

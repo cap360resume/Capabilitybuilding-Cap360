@@ -34,7 +34,7 @@ const PsychometricTesting = () => {
       title: "Cognitive & Aptitude Assessments",
       content: (
         <>
-          <p className="text-muted-white leading-relaxed mb-4">We deploy validated cognitive assessments that measure the mental abilities most predictive of job performance — providing objective data to support selection and development decisions.</p>
+          <p className="text-muted-white leading-relaxed mb-4">We deploy validated cognitive assessments that measure the mental abilities most predictive of job performance - providing objective data to support selection and development decisions.</p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-red mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Verbal reasoning:</strong> Ability to understand and evaluate written information and draw logical conclusions.</span></li>
             <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-red mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Numerical reasoning:</strong> Capacity to interpret, analyse, and draw conclusions from numerical data.</span></li>
@@ -53,7 +53,7 @@ const PsychometricTesting = () => {
           <p className="text-muted-white leading-relaxed mb-4">Understanding personality traits helps predict how individuals will behave at work, interact with teams, and respond to challenges. Our profiling tools provide deep insights into work styles and motivational drivers.</p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-red mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Work personality:</strong> Traits that influence job performance, teamwork, and leadership style.</span></li>
-            <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-red mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Motivational drivers:</strong> What energises and engages individuals — critical for role fit and retention.</span></li>
+            <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-red mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Motivational drivers:</strong> What energises and engages individuals - critical for role fit and retention.</span></li>
             <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-red mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Derailers:</strong> Risk factors that may emerge under pressure or in specific contexts.</span></li>
             <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-red mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Cultural fit:</strong> Alignment between individual values and organisational culture.</span></li>
           </ul>
@@ -81,7 +81,7 @@ const PsychometricTesting = () => {
 
   // ─── Infinite carousel ────────────────────────────────────────────────────
   const cards = [
-    { icon: <Brain className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-red" />, title: "Objective cognitive insights", desc: "Validated assessments that measure reasoning ability and learning agility — the strongest predictors of job performance." },
+    { icon: <Brain className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-red" />, title: "Objective cognitive insights", desc: "Validated assessments that measure reasoning ability and learning agility - the strongest predictors of job performance." },
     { icon: <Fingerprint className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-red" />, title: "Deep personality understanding", desc: "Comprehensive profiles revealing work styles, motivational drivers, and potential derailers for better role fit decisions." },
     { icon: <PieChart className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-red" />, title: "Emotional intelligence data", desc: "Measure EQ competencies that drive leadership effectiveness, team dynamics, and stakeholder relationships." },
     { icon: <Shield className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-cap-red" />, title: "Reduced hiring risk", desc: "Evidence-based selection that reduces mis-hires and improves the predictive validity of talent decisions." },
@@ -205,7 +205,7 @@ const PsychometricTesting = () => {
       <section className="py-16 border-t border-border/20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_360px] gap-16 items-start">
-            <p className="text-[20px] text-muted-white leading-[1.8]">Psychometric testing brings scientific rigour to talent decisions. By measuring cognitive abilities, personality traits, emotional intelligence, and situational judgement, we provide organisations with objective data that complements interviews and assessments — enabling better hiring, development, and succession planning outcomes.</p>
+            <p className="text-[20px] text-muted-white leading-[1.8]">Psychometric testing brings scientific rigour to talent decisions. By measuring cognitive abilities, personality traits, emotional intelligence, and situational judgement, we provide organisations with objective data that complements interviews and assessments - enabling better hiring, development, and succession planning outcomes.</p>
             <div className="bg-card border border-border/30 p-8">
               <span className="text-[20px] font-bold tracking-widest text-cap-red uppercase block mb-3">DATA</span>
               <div className="text-[56px] font-black leading-none mb-3">82%</div>
@@ -223,7 +223,7 @@ const PsychometricTesting = () => {
             <div>
               <div className="w-12 h-1 bg-cap-red mb-6" />
               <h3 className="text-[22px] font-bold mb-4">From gut feeling to data-driven talent science</h3>
-              <p className="text-[20px] text-muted-white leading-[1.7]">Organisations that rely solely on interviews and CVs miss critical dimensions of candidate suitability. Psychometric testing adds layers of objective, validated data — measuring how people think, what drives them, and how they're likely to behave — creating a more complete and predictive picture of talent.</p>
+              <p className="text-[20px] text-muted-white leading-[1.7]">Organisations that rely solely on interviews and CVs miss critical dimensions of candidate suitability. Psychometric testing adds layers of objective, validated data - measuring how people think, what drives them, and how they're likely to behave - creating a more complete and predictive picture of talent.</p>
             </div>
           </div>
         </div>

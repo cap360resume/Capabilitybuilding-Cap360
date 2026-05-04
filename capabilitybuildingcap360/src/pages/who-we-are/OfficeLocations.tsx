@@ -15,9 +15,9 @@ const accordionItems = [
       <div className="space-y-4">
         <p className="text-muted-foreground">Our growing presence across Africa and the Middle East supports regional transformation agendas.</p>
         <ul className="space-y-2 text-muted-foreground">
-          <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />Johannesburg — Regional headquarters for Sub-Saharan Africa</li>
-          <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />Dubai — Middle East and North Africa hub</li>
-          <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />Lagos, Nairobi, Cairo — Key growth markets</li>
+          <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />Johannesburg - Regional headquarters for Sub-Saharan Africa</li>
+          <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />Dubai - Middle East and North Africa hub</li>
+          <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />Lagos, Nairobi, Cairo - Key growth markets</li>
         </ul>
       </div>
     ),
@@ -28,9 +28,9 @@ const accordionItems = [
       <div className="space-y-4">
         <p className="text-muted-foreground">A strong footprint across Asia Pacific, delivering innovation at scale.</p>
         <ul className="space-y-2 text-muted-foreground">
-          <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />Singapore — APAC headquarters and innovation centre</li>
-          <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />Mumbai, Bangalore — Major delivery centres</li>
-          <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />Sydney, Tokyo, Shanghai — Key client hubs</li>
+          <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />Singapore - APAC headquarters and innovation centre</li>
+          <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />Mumbai, Bangalore - Major delivery centres</li>
+          <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />Sydney, Tokyo, Shanghai - Key client hubs</li>
         </ul>
       </div>
     ),
@@ -41,9 +41,9 @@ const accordionItems = [
       <div className="space-y-4">
         <p className="text-muted-foreground">Established presence across mature markets with deep industry partnerships.</p>
         <ul className="space-y-2 text-muted-foreground">
-          <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />London, Paris, Frankfurt — European leadership centres</li>
-          <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />New York — Global headquarters</li>
-          <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />São Paulo, Toronto — Americas growth hubs</li>
+          <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />London, Paris, Frankfurt - European leadership centres</li>
+          <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />New York - Global headquarters</li>
+          <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-orange mt-2 shrink-0" />São Paulo, Toronto - Americas growth hubs</li>
         </ul>
       </div>
     ),
@@ -91,7 +91,7 @@ const OfficeLocations = () => {
               <div className="space-y-6">
                 <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">Office Locations</h1>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  With offices in 200+ cities across 49+ countries, CAP360 delivers global expertise with local insight. Our strategic locations ensure we're always close to our clients — wherever they operate.
+                  With offices in 200+ cities across 49+ countries, CAP360 delivers global expertise with local insight. Our strategic locations ensure we're always close to our clients - wherever they operate.
                 </p>
               </div>
             </div>

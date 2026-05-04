@@ -16,7 +16,7 @@ const aboutCards = [
   {
     title: "Our Values",
     description:
-      "We believe in creating 360° value — for clients, people, shareholders, partners and communities.",
+      "We believe in creating 360° value - for clients, people, shareholders, partners and communities.",
     link: "Learn more",
   },
   {

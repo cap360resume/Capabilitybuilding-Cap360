@@ -270,7 +270,7 @@ const OrgDesign = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              Build the right structure, with the right people, in the right roles — to execute your strategy with precision and agility.
+              Build the right structure, with the right people, in the right roles - to execute your strategy with precision and agility.
             </motion.p>
           </div>
         </div>
@@ -281,7 +281,7 @@ const OrgDesign = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_360px] gap-16 items-start">
             <p className="text-[20px] text-muted-white leading-[1.8]">
-              Organisation design is the invisible infrastructure that determines how well your strategy gets executed. When structure follows strategy, everything works — decisions happen faster, talent flows to where it's needed, and teams collaborate effortlessly.
+              Organisation design is the invisible infrastructure that determines how well your strategy gets executed. When structure follows strategy, everything works - decisions happen faster, talent flows to where it's needed, and teams collaborate effortlessly.
             </p>
             <div className="bg-card border border-border/30 p-8">
               <span className="text-[20px] font-bold tracking-widest text-cap-yellow uppercase block mb-3">DATA</span>

@@ -50,7 +50,7 @@ const AssessmentCentres = () => {
       title: "Development Centre Programmes",
       content: (
         <>
-          <p className="text-muted-white leading-relaxed mb-4">Development centres shift the focus from selection to growth — providing participants with deep self-awareness and actionable development insights.</p>
+          <p className="text-muted-white leading-relaxed mb-4">Development centres shift the focus from selection to growth - providing participants with deep self-awareness and actionable development insights.</p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-red mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Strengths discovery:</strong> Exercises designed to surface hidden strengths and leadership potential.</span></li>
             <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-red mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Feedback sessions:</strong> Real-time coaching and structured feedback from trained assessors.</span></li>
@@ -218,7 +218,7 @@ const AssessmentCentres = () => {
       <section className="py-16 border-t border-border/20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_360px] gap-16 items-start">
-            <p className="text-[20px] text-muted-white leading-[1.8]">Assessment and development centres combine multiple evaluation methods — simulations, exercises, interviews, and psychometrics — into an integrated programme that provides the most comprehensive view of an individual's capabilities. Whether for selection, promotion, or development, our centres deliver the insights organisations need to make high-stakes talent decisions with confidence.</p>
+            <p className="text-[20px] text-muted-white leading-[1.8]">Assessment and development centres combine multiple evaluation methods - simulations, exercises, interviews, and psychometrics - into an integrated programme that provides the most comprehensive view of an individual's capabilities. Whether for selection, promotion, or development, our centres deliver the insights organisations need to make high-stakes talent decisions with confidence.</p>
             <div className="bg-card border border-border/30 p-8">
               <span className="text-[20px] font-bold tracking-widest text-cap-red uppercase block mb-3">DATA</span>
               <div className="text-[56px] font-black leading-none mb-3">3×</div>
@@ -236,7 +236,7 @@ const AssessmentCentres = () => {
             <div>
               <div className="w-12 h-1 bg-cap-red mb-6" />
               <h3 className="text-[22px] font-bold mb-4">From interviews to immersive evaluation</h3>
-              <p className="text-[20px] text-muted-white leading-[1.7]">Traditional selection processes fail to capture the complexity of leadership and high-impact roles. Assessment centres create a controlled environment where candidates demonstrate competencies through realistic business scenarios — providing rich, observable evidence that traditional methods simply cannot match.</p>
+              <p className="text-[20px] text-muted-white leading-[1.7]">Traditional selection processes fail to capture the complexity of leadership and high-impact roles. Assessment centres create a controlled environment where candidates demonstrate competencies through realistic business scenarios - providing rich, observable evidence that traditional methods simply cannot match.</p>
             </div>
           </div>
         </div>
@@ -300,7 +300,7 @@ const AssessmentCentres = () => {
                   className="bg-card border border-border/30 flex-shrink-0 flex flex-col p-4 sm:p-6 md:p-8"
                   style={{
                     /*
-                     * Mobile  (visibleCards=1, GAP=0): card fills 100% — no gap subtraction needed
+                     * Mobile  (visibleCards=1, GAP=0): card fills 100% - no gap subtraction needed
                      * Tablet  (visibleCards=2, GAP=24): (100% - 24) / 2
                      * Desktop (visibleCards=3, GAP=24): (100% - 48) / 3
                      */

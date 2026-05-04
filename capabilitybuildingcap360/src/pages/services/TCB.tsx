@@ -452,7 +452,7 @@ const TCB = () => {
                     {" "}
                     "Capability Building 360"
                   </span>
-                  —a one-stop solution provider specializing in corporate
+                  -a one-stop solution provider specializing in corporate
                   training, executive coaching, and business consultancy.
                 </p>
               </div>
@@ -467,8 +467,8 @@ const TCB = () => {
         </div>
       </section>
 
-      {/* ── Programs / Offerings — ACCENTURE MOSAIC GRID ──────────────────────── */}
-  {/* ── Programs / Offerings — ACCENTURE MOSAIC GRID ── */}
+      {/* ── Programs / Offerings - ACCENTURE MOSAIC GRID ──────────────────────── */}
+  {/* ── Programs / Offerings - ACCENTURE MOSAIC GRID ── */}
       <section
         id="programs"
         className="py-24"
@@ -582,7 +582,7 @@ const TCB = () => {
                         {item.title}
                       </div>
 
-                      {/* Title — fades out on hover */}
+                      {/* Title - fades out on hover */}
                       <div
                         className="mosaic-title"
                         style={{
@@ -597,7 +597,7 @@ const TCB = () => {
                         {item.title}
                       </div>
 
-                      {/* Description — fades in on hover */}
+                      {/* Description - fades in on hover */}
                       <div
                         className="mosaic-desc"
                         style={{
@@ -654,7 +654,7 @@ const TCB = () => {
                         </div>
                       </div>
 
-                      {/* Overlay — fades in on hover */}
+                      {/* Overlay - fades in on hover */}
                       <div
                         className="mosaic-overlay"
                         style={{
@@ -993,7 +993,7 @@ const TCB = () => {
                     A rare combination of seasoned corporate leader and
                     certified Power Coach, Shivinder brings 28+ years of
                     hands-on experience across India's most respected
-                    organizations—Godrej & Boyce, Wipro, Amardeep Designs, and
+                    organizations-Godrej & Boyce, Wipro, Amardeep Designs, and
                     Intex Technologies.
                   </p>
 

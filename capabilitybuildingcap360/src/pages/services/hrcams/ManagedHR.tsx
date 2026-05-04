@@ -22,7 +22,7 @@ const ManagedHR = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            Not every role requires a succession plan. The first discipline of succession planning is identifying which roles are truly critical — where a vacancy would create disproportionate business impact or where the skill and experience required to fill the role makes internal or external replacement genuinely difficult.
+            Not every role requires a succession plan. The first discipline of succession planning is identifying which roles are truly critical - where a vacancy would create disproportionate business impact or where the skill and experience required to fill the role makes internal or external replacement genuinely difficult.
           </p>
           <p className="text-muted-white mb-4">
             Roles are assessed across five dimensions:
@@ -69,7 +69,7 @@ const ManagedHR = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            For each critical role, a succession map is developed that identifies candidates at multiple readiness levels and explores non-traditional talent sources. We move from single-candidate succession to multi-candidate, multi-path succession maps — creating genuine organisational resilience.
+            For each critical role, a succession map is developed that identifies candidates at multiple readiness levels and explores non-traditional talent sources. We move from single-candidate succession to multi-candidate, multi-path succession maps - creating genuine organisational resilience.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
@@ -81,7 +81,7 @@ const ManagedHR = () => {
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Ready Soon (YELLOW):</strong> Strong potential with identified development gaps — 12 to 18 months with a structured development plan.
+                <strong className="text-white">Ready Soon (YELLOW):</strong> Strong potential with identified development gaps - 12 to 18 months with a structured development plan.
               </span>
             </li>
             <li className="flex items-start gap-2">
@@ -93,7 +93,7 @@ const ManagedHR = () => {
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">At Risk (RED):</strong> No identified successor — requires urgent focus on internal capability building or external hiring.
+                <strong className="text-white">At Risk (RED):</strong> No identified successor - requires urgent focus on internal capability building or external hiring.
               </span>
             </li>
           </ul>
@@ -103,23 +103,23 @@ const ManagedHR = () => {
     },
     {
       icon: Calendar,
-      title: "Bi-Annual Succession Reviews — SHR Panels",
+      title: "Bi-Annual Succession Reviews - SHR Panels",
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            The Succession & Human Resource (SHR) Review Panel is the governance mechanism through which succession plans are validated, challenged, and acted upon. These are not routine HR reviews — they are strategic business reviews that happen to be about people.
+            The Succession & Human Resource (SHR) Review Panel is the governance mechanism through which succession plans are validated, challenged, and acted upon. These are not routine HR reviews - they are strategic business reviews that happen to be about people.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Frequency:</strong> Bi-annual — aligned to mid-year and year-end review cycles.
+                <strong className="text-white">Frequency:</strong> Bi-annual - aligned to mid-year and year-end review cycles.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Participants:</strong> CEO, direct reports, CHRO, and HR Business Partners — with Board involvement for CEO-level succession.
+                <strong className="text-white">Participants:</strong> CEO, direct reports, CHRO, and HR Business Partners - with Board involvement for CEO-level succession.
               </span>
             </li>
             <li className="flex items-start gap-2">
@@ -131,11 +131,11 @@ const ManagedHR = () => {
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">Critical Design Principle:</strong> SHR Panels are structurally separated from the annual performance appraisal — succession is about future potential, not past results.
+                <strong className="text-white">Critical Design Principle:</strong> SHR Panels are structurally separated from the annual performance appraisal - succession is about future potential, not past results.
               </span>
             </li>
           </ul>
-          <p className="text-muted-white text-md">The CEO must personally chair and actively participate — delegation signals that succession is not truly a priority.</p>
+          <p className="text-muted-white text-md">The CEO must personally chair and actively participate - delegation signals that succession is not truly a priority.</p>
         </>
       ),
     },
@@ -169,7 +169,7 @@ const ManagedHR = () => {
             <li className="flex items-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-cap-yellow mt-2 flex-shrink-0" />
               <span className="text-muted-white text-md">
-                <strong className="text-white">HiPo Acceleration:</strong> Separate identification process for high-potential individuals — assessing potential, not just current performance.
+                <strong className="text-white">HiPo Acceleration:</strong> Separate identification process for high-potential individuals - assessing potential, not just current performance.
               </span>
             </li>
           </ul>
@@ -183,7 +183,7 @@ const ManagedHR = () => {
       content: (
         <>
           <p className="text-muted-white leading-relaxed mb-4">
-            AI applications transform succession planning from a periodic exercise into a continuous, data-driven process — surfacing insights that traditional methods miss.
+            AI applications transform succession planning from a periodic exercise into a continuous, data-driven process - surfacing insights that traditional methods miss.
           </p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2">
@@ -384,7 +384,7 @@ const ManagedHR = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              A structured, disciplined, and proven approach to building leadership continuity — so your organisation sustains performance across transitions, not just during stability.
+              A structured, disciplined, and proven approach to building leadership continuity - so your organisation sustains performance across transitions, not just during stability.
             </motion.p>
           </div>
         </div>
@@ -395,7 +395,7 @@ const ManagedHR = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_360px] gap-16 items-start">
             <p className="text-[20px] text-muted-white leading-[1.8]">
-              Succession planning is the discipline that separates organisations that sustain performance across leadership transitions from those that are perpetually disrupted by them. Most organisations acknowledge its importance — and most underinvest in it. The reason is simple: the benefits are long-term and the effort is immediate.
+              Succession planning is the discipline that separates organisations that sustain performance across leadership transitions from those that are perpetually disrupted by them. Most organisations acknowledge its importance - and most underinvest in it. The reason is simple: the benefits are long-term and the effort is immediate.
             </p>
             <div className="bg-card border border-border/30 p-8">
               <span className="text-[20px] font-bold tracking-widest text-cap-yellow uppercase block mb-3">INSIGHT</span>
@@ -426,7 +426,7 @@ const ManagedHR = () => {
               <div className="w-12 h-1 bg-cap-yellow mb-6" />
               <h3 className="text-[22px] font-bold mb-4">Build tomorrow's leadership bench today</h3>
               <p className="text-[20px] text-muted-white leading-[1.7]">
-                Leaders who are busy managing today's business find it hard to invest time in building tomorrow's leadership bench. We bring the structure, governance, and expertise to make succession planning a disciplined, continuous process — not a crisis response triggered by a departure.
+                Leaders who are busy managing today's business find it hard to invest time in building tomorrow's leadership bench. We bring the structure, governance, and expertise to make succession planning a disciplined, continuous process - not a crisis response triggered by a departure.
               </p>
             </div>
           </div>

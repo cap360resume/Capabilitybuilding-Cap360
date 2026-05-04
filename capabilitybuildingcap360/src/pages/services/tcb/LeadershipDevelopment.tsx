@@ -56,7 +56,7 @@ const LeadershipDevelopment = () => {
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-blue mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Leadership competency models:</strong> Define what great leadership looks like in your organisation.</span></li>
             <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-blue mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">360° feedback systems:</strong> Multi-rater feedback aligned to your leadership framework.</span></li>
-            <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-blue mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Learning ecosystems:</strong> Blended development — coaching, peer learning, digital content.</span></li>
+            <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-blue mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Learning ecosystems:</strong> Blended development - coaching, peer learning, digital content.</span></li>
             <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-blue mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Impact measurement:</strong> Track leadership development ROI through behaviour change and business outcomes.</span></li>
           </ul>
           <p className="text-muted-white text-md">The outcome is an embedded leadership culture that sustains performance.</p>
@@ -190,7 +190,7 @@ const LeadershipDevelopment = () => {
       <section className="py-16 border-t border-border/20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_360px] gap-16 items-start">
-            <p className="text-[20px] text-muted-white leading-[1.8]">Leadership development is the single most impactful investment an organisation can make. Our programmes go beyond theory — combining experiential learning, coaching, action projects, and peer networks to build leaders who can navigate ambiguity, inspire teams, and drive results at every level.</p>
+            <p className="text-[20px] text-muted-white leading-[1.8]">Leadership development is the single most impactful investment an organisation can make. Our programmes go beyond theory - combining experiential learning, coaching, action projects, and peer networks to build leaders who can navigate ambiguity, inspire teams, and drive results at every level.</p>
             <div className="bg-card border border-border/30 p-8">
               <span className="text-[20px] font-bold tracking-widest text-cap-blue uppercase block mb-3">DATA</span>
               <div className="text-[56px] font-black leading-none mb-3">86%</div>
@@ -208,7 +208,7 @@ const LeadershipDevelopment = () => {
             <div>
               <div className="w-12 h-1 bg-cap-blue mb-6" />
               <h3 className="text-[22px] font-bold mb-4">From training events to leadership transformation</h3>
-              <p className="text-[20px] text-muted-white leading-[1.7]">Traditional leadership training delivers knowledge but rarely changes behaviour. Our approach integrates learning with real business challenges, coaching, and peer accountability — creating sustained leadership growth that translates directly into organisational performance.</p>
+              <p className="text-[20px] text-muted-white leading-[1.7]">Traditional leadership training delivers knowledge but rarely changes behaviour. Our approach integrates learning with real business challenges, coaching, and peer accountability - creating sustained leadership growth that translates directly into organisational performance.</p>
             </div>
           </div>
         </div>

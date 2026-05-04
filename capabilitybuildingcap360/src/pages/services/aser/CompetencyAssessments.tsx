@@ -34,7 +34,7 @@ const CompetencyAssessments = () => {
       title: "Competency Framework Design",
       content: (
         <>
-          <p className="text-muted-white leading-relaxed mb-4">We design robust competency frameworks tailored to your organisation's strategy, culture, and role requirements — ensuring assessments measure what truly matters.</p>
+          <p className="text-muted-white leading-relaxed mb-4">We design robust competency frameworks tailored to your organisation's strategy, culture, and role requirements - ensuring assessments measure what truly matters.</p>
           <ul className="space-y-2 mb-4">
             <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-red mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Role mapping:</strong> Identify critical competencies for each role family and level.</span></li>
             <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-cap-red mt-2 flex-shrink-0" /><span className="text-muted-white text-md"><strong className="text-white">Behavioural indicators:</strong> Define observable, measurable behaviours for each competency level.</span></li>
@@ -197,7 +197,7 @@ const CompetencyAssessments = () => {
           <div className="overflow-hidden"><img src={heroImg} alt="Competency-Based Assessments" className="w-full h-[400px] object-cover" /></div>
           <div>
             <motion.h1 className="text-[42px] md:text-[56px] font-black tracking-tight leading-[1.05] mb-6" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>Competency-Based Assessments</motion.h1>
-            <motion.p className="text-[20px] text-muted-white leading-[1.7]" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>Measure what matters. Our competency-based assessments provide objective, reliable insights into your workforce capabilities — powering better hiring, development, and succession decisions.</motion.p>
+            <motion.p className="text-[20px] text-muted-white leading-[1.7]" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>Measure what matters. Our competency-based assessments provide objective, reliable insights into your workforce capabilities - powering better hiring, development, and succession decisions.</motion.p>
           </div>
         </div>
       </section>
@@ -205,7 +205,7 @@ const CompetencyAssessments = () => {
       <section className="py-16 border-t border-border/20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_360px] gap-16 items-start">
-            <p className="text-[20px] text-muted-white leading-[1.8]">Competency-based assessments go beyond traditional evaluations by measuring the specific behaviours, skills, and attributes that predict success in each role. Our approach combines validated frameworks with multi-method assessment delivery — providing organisations with the talent intelligence they need to make confident people decisions.</p>
+            <p className="text-[20px] text-muted-white leading-[1.8]">Competency-based assessments go beyond traditional evaluations by measuring the specific behaviours, skills, and attributes that predict success in each role. Our approach combines validated frameworks with multi-method assessment delivery - providing organisations with the talent intelligence they need to make confident people decisions.</p>
             <div className="bg-card border border-border/30 p-8">
               <span className="text-[20px] font-bold tracking-widest text-cap-red uppercase block mb-3">DATA</span>
               <div className="text-[56px] font-black leading-none mb-3">74%</div>
@@ -223,7 +223,7 @@ const CompetencyAssessments = () => {
             <div>
               <div className="w-12 h-1 bg-cap-red mb-6" />
               <h3 className="text-[22px] font-bold mb-4">Move from subjective judgment to evidence-based evaluation</h3>
-              <p className="text-[20px] text-muted-white leading-[1.7]">Traditional assessments often rely on gut feeling and unstructured interviews, leading to inconsistent hiring and promotion decisions. Competency-based assessments establish a common language for talent, enabling objective evaluation against validated behavioural indicators — reducing bias and improving prediction of on-the-job performance.</p>
+              <p className="text-[20px] text-muted-white leading-[1.7]">Traditional assessments often rely on gut feeling and unstructured interviews, leading to inconsistent hiring and promotion decisions. Competency-based assessments establish a common language for talent, enabling objective evaluation against validated behavioural indicators - reducing bias and improving prediction of on-the-job performance.</p>
             </div>
           </div>
         </div>

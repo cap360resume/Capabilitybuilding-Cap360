@@ -52,9 +52,9 @@ const subServices = [
      {
     icon: Rocket,
     title: "We Apply on Your Behalf",
-    title2: "Your Candidacy Stays Active — Even While You Work",
+    title2: "Your Candidacy Stays Active - Even While You Work",
     description:
-      "Our team applies to curated, relevant roles on your behalf every single day — so your job search runs consistently and at scale, without you lifting a finger.",
+      "Our team applies to curated, relevant roles on your behalf every single day - so your job search runs consistently and at scale, without you lifting a finger.",
     path: "/what-we-do/services/pace/career-transition",
   },
   
@@ -63,7 +63,7 @@ const subServices = [
     title: "HR & Recruiter Mapping",
     title2: "Direct Outreach to the People Who Actually Hire",
     description:
-      "We identify and reach out to HR heads, talent acquisition leads, and hiring managers at target companies — putting your profile directly in front of decision-makers, not just portals.",
+      "We identify and reach out to HR heads, talent acquisition leads, and hiring managers at target companies - putting your profile directly in front of decision-makers, not just portals.",
     path: "/what-we-do/services/pace/career-path-architecture",
   },
 
@@ -96,7 +96,7 @@ const subServices = [
   title: "Skills & Course Recommendations",
   title2: "Close the Gaps That Are Costing You Interviews",
   description:
-    "We analyse your profile as per market requirements and recommend the most relevant courses and certifications that strengthen your profile — and also make you future ready for the evolving job market.",
+    "We analyse your profile as per market requirements and recommend the most relevant courses and certifications that strengthen your profile - and also make you future ready for the evolving job market.",
   path: "/what-we-do/services/pace/professional-coaching",
 },
 
@@ -162,18 +162,18 @@ const partners = [
 const whyChooseUs = [
   {
     icon: TrendingUp,
-    title: "We Do the Work — You Stay Focused",
+    title: "We Do the Work - You Stay Focused",
     desc: "No portals to manage. No applications to track. Our team runs your entire job search daily while you continue excelling in your current role. You stay focused; we stay relentless.",
   },
   {
     icon: Brain,
     title: "HR Mapping, Not Just Job Boards",
-    desc: "Go beyond listings. Our team directly identifies and reaches out to HR heads, talent acquisition leads, and hiring managers — accessing opportunities before they are even posted.",
+    desc: "Go beyond listings. Our team directly identifies and reaches out to HR heads, talent acquisition leads, and hiring managers - accessing opportunities before they are even posted.",
   },
   {
     icon: Target,
     title: "Built for Senior Professionals",
-    desc: "Understand how hiring works at senior levels — longer cycles, referral-driven decisions, and relationship-first processes. Our approach is calibrated for leaders, not entry-level candidates.",
+    desc: "Understand how hiring works at senior levels - longer cycles, referral-driven decisions, and relationship-first processes. Our approach is calibrated for leaders, not entry-level candidates.",
   },
   {
     icon: Zap,
@@ -183,12 +183,12 @@ const whyChooseUs = [
   {
     icon: Users,
     title: "Research based outcomes",
-    desc: "Conduct in-depth research across both international and Indian markets to identify the most relevant opportunities aligned with your career profile. Our process begins with detailed company mapping—shortlisting organizations that match your experience, industry, and career aspirations.",
+    desc: "Conduct in-depth research across both international and Indian markets to identify the most relevant opportunities aligned with your career profile. Our process begins with detailed company mapping-shortlisting organizations that match your experience, industry, and career aspirations.",
   },
   {
     icon: CheckCircle2,
     title: "Proven Impact Across Global Markets",
-    desc: "Empowered 50+ senior professionals across 25+ industries — supporting their transition into high-impact roles across India and global markets through stronger visibility, better negotiations, and strategic career positioning.",
+    desc: "Empowered 50+ senior professionals across 25+ industries - supporting their transition into high-impact roles across India and global markets through stronger visibility, better negotiations, and strategic career positioning.",
   },
 ];
 
@@ -210,13 +210,13 @@ const phases = [
   {
     step: "02",
     title: "Profile Build & Optimisation",
-    desc: "Craft or overhaul your resume, LinkedIn profile, and all job portal presences — positioning you precisely for senior roles with the right keywords, narrative, and executive framing.",
+    desc: "Craft or overhaul your resume, LinkedIn profile, and all job portal presences - positioning you precisely for senior roles with the right keywords, narrative, and executive framing.",
     icon: Zap,
   },
   {
     step: "03",
     title: "Active Search & Direct Outreach",
-    desc: "We apply to roles on your behalf, map relevant HRs and hiring managers, and initiate targeted outreach — running a consistent, high-volume search that would be impossible to do alone.",
+    desc: "We apply to roles on your behalf, map relevant HRs and hiring managers, and initiate targeted outreach - running a consistent, high-volume search that would be impossible to do alone.",
     icon: TrendingUp,
   },
   {
@@ -318,7 +318,7 @@ const PACE = () => {
     },
     {
       value: "25+",
-      desc: "Industries served — from technology and finance to manufacturing and healthcare.",
+      desc: "Industries served - from technology and finance to manufacturing and healthcare.",
     },
     {
       value: "3×",
@@ -368,7 +368,7 @@ const PACE = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
           >
             PACE aligns individual career
-            aspirations with industry demand, creating a link between talent and opportunity. We empower professionals to navigate their career journeys with confidence, purpose, and strategic insight—helping them become more
+            aspirations with industry demand, creating a link between talent and opportunity. We empower professionals to navigate their career journeys with confidence, purpose, and strategic insight-helping them become more
           </motion.p>
 
           <motion.div
@@ -484,7 +484,7 @@ const PACE = () => {
         </div>
       </section>
 
-      {/* ===== SERVICES — MOSAIC GRID ===== */}
+      {/* ===== SERVICES - MOSAIC GRID ===== */}
       <section id="services" className="py-24" ref={servicesRef}>
         <div className="container mx-auto px-4 lg:px-8">
           <motion.h2
@@ -492,10 +492,10 @@ const PACE = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={servicesInView ? { opacity: 1, y: 0 } : {}}
           >
-            Everything Your Job Search Needs — Done for You
+            Everything Your Job Search Needs - Done for You
           </motion.h2>
           <p className="text-[18px] text-muted-white mb-14 max-w-2xl">
-           Six Integrated Solutions that cover every dimension of a senior-level job search. Choose one or combine all — each is modular yet designed to work powerfully together.
+           Six Integrated Solutions that cover every dimension of a senior-level job search. Choose one or combine all - each is modular yet designed to work powerfully together.
           </p>
 
           <motion.div
@@ -588,7 +588,7 @@ const PACE = () => {
                         {s.title}
                       </div>
 
-                      {/* Title — fades out on hover */}
+                      {/* Title - fades out on hover */}
                       <div
                         className="mosaic-title"
                         style={{
@@ -603,7 +603,7 @@ const PACE = () => {
                         {s.title2}
                       </div>
 
-                      {/* Description — fades in on hover */}
+                      {/* Description - fades in on hover */}
                       <div
                         className="mosaic-desc"
                         style={{
@@ -660,7 +660,7 @@ const PACE = () => {
                         </div>
                       </div>
 
-                      {/* Overlay — fades in on hover */}
+                      {/* Overlay - fades in on hover */}
                       <div
                         className="mosaic-overlay"
                         style={{
@@ -824,7 +824,7 @@ const PACE = () => {
               transition={{ delay: 0.1 }}
               className="text-muted-white text-[17px] leading-relaxed mb-10"
             >
-              PACE is built for senior professionals who are serious about their next move — and who want experts handling the execution while they focus on what they do best.
+              PACE is built for senior professionals who are serious about their next move - and who want experts handling the execution while they focus on what they do best.
             </motion.p>
 
             <motion.div
@@ -833,7 +833,7 @@ const PACE = () => {
               className="p-5 rounded-2xl bg-gradient-to-br from-cap-green/20 to-transparent border border-cap-green/30 backdrop-blur-md"
             >
               <p className="text-[17px] text-white font-medium">
-                We don't just guide careers — we run your search, manage your presence, and put your profile in front of the people who hire.
+                We don't just guide careers - we run your search, manage your presence, and put your profile in front of the people who hire.
               </p>
             </motion.div>
           </div>
@@ -936,14 +936,14 @@ const PACE = () => {
                   Gurpriit Singh Anand
                 </h3>
                 <p className="text-cap-green font-semibold text-[14px] mb-6 uppercase tracking-wider">
-                  CEO & Founder — CAP360
+                  CEO & Founder - CAP360
                 </p>
                 <div className="space-y-4 mb-8">
                   <p className="text-[17px] text-muted-white leading-[1.8]">
-                    Founder and Career Coach at CAP360, dedicated to empowering senior professionals to unlock their potential and land roles that truly match their calibre. With deep expertise in executive coaching, strategic career planning, and leadership development, Gurpriit partners with clients — from rising managers to C-suite leaders — to navigate career transitions with confidence and purpose.
+                    Founder and Career Coach at CAP360, dedicated to empowering senior professionals to unlock their potential and land roles that truly match their calibre. With deep expertise in executive coaching, strategic career planning, and leadership development, Gurpriit partners with clients - from rising managers to C-suite leaders - to navigate career transitions with confidence and purpose.
                   </p>
                   <p className="text-[17px] text-muted-white leading-[1.8]">
-                    Having experienced corporate career challenges firsthand, he built PACE to give senior professionals the dedicated support, strategic execution, and expert guidance that most job searches lack. To date, CAP360 has helped over 50+ professionals across 25+ industries secure more interviews, negotiate stronger packages, and build fulfilling careers — with personalised attention at every step.
+                    Having experienced corporate career challenges firsthand, he built PACE to give senior professionals the dedicated support, strategic execution, and expert guidance that most job searches lack. To date, CAP360 has helped over 50+ professionals across 25+ industries secure more interviews, negotiate stronger packages, and build fulfilling careers - with personalised attention at every step.
                   </p>
                 </div>
                 <div className="grid sm:grid-cols-2 gap-4 mb-8">
@@ -1030,7 +1030,7 @@ const PACE = () => {
                 Let Us Run Your Search While You Focus on What You Do Best.
               </h2>
               <p className="text-[18px] text-muted-white mb-8 max-w-xl">
-                Book a free 30-minute consultation with Gurpriit Singh Anand to understand exactly how PACE will work for your career goals — and what results you can expect.
+                Book a free 30-minute consultation with Gurpriit Singh Anand to understand exactly how PACE will work for your career goals - and what results you can expect.
               </p>
             </motion.div>
             <motion.div
