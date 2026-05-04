@@ -47,6 +47,7 @@ export type Database = {
       blog_posts: {
         Row: {
           author_id: string | null
+          category: string
           content: string | null
           created_at: string
           excerpt: string | null
@@ -62,6 +63,7 @@ export type Database = {
         }
         Insert: {
           author_id?: string | null
+          category?: string
           content?: string | null
           created_at?: string
           excerpt?: string | null
@@ -77,6 +79,7 @@ export type Database = {
         }
         Update: {
           author_id?: string | null
+          category?: string
           content?: string | null
           created_at?: string
           excerpt?: string | null
@@ -212,6 +215,95 @@ export type Database = {
           name?: string | null
           page_url?: string | null
           source?: string
+        }
+        Relationships: []
+      }
+      job_applications: {
+        Row: {
+          applicant_name: string
+          cover_letter: string | null
+          created_at: string
+          email: string
+          id: string
+          job_id: string
+          phone: string | null
+          resume_url: string | null
+          status: string
+        }
+        Insert: {
+          applicant_name: string
+          cover_letter?: string | null
+          created_at?: string
+          email: string
+          id?: string
+          job_id: string
+          phone?: string | null
+          resume_url?: string | null
+          status?: string
+        }
+        Update: {
+          applicant_name?: string
+          cover_letter?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          job_id?: string
+          phone?: string | null
+          resume_url?: string | null
+          status?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "job_applications_job_id_fkey"
+            columns: ["job_id"]
+            isOneToOne: false
+            referencedRelation: "jobs"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      jobs: {
+        Row: {
+          category: string
+          created_at: string
+          description: string | null
+          id: string
+          is_active: boolean
+          location: string
+          posted_at: string
+          requirements: string | null
+          slug: string
+          title: string
+          type: string
+          updated_at: string
+        }
+        Insert: {
+          category?: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          is_active?: boolean
+          location?: string
+          posted_at?: string
+          requirements?: string | null
+          slug: string
+          title: string
+          type?: string
+          updated_at?: string
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          is_active?: boolean
+          location?: string
+          posted_at?: string
+          requirements?: string | null
+          slug?: string
+          title?: string
+          type?: string
+          updated_at?: string
         }
         Relationships: []
       }

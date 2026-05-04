@@ -4,7 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { ArrowRight, Calendar } from "lucide-react";
+import { ChevronRight, Calendar } from "lucide-react";
 
 interface BlogPost {
   id: string;
@@ -80,7 +80,7 @@ const Blog = () => {
                   <h2 className="text-xl font-bold text-foreground group-hover:text-cap-orange transition-colors mb-2">{post.title}</h2>
                   {post.excerpt && <p className="text-muted-foreground text-sm line-clamp-3">{post.excerpt}</p>}
                   <div className="flex items-center gap-1 mt-3 text-sm text-cap-blue group-hover:gap-2 transition-all">
-                    Read more <ArrowRight className="w-4 h-4" />
+                    Read more <ChevronRight className="w-4 h-4" />
                   </div>
                 </motion.article>
               ))}

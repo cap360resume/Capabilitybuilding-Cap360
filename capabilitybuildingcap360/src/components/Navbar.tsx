@@ -71,6 +71,7 @@ const navItems = [
   { label: "What we think", hasDropdown: false, path: "/what-we-think" },
   { label: "Who we are", hasDropdown: true, path: "/who-we-are" },
   { label: "Careers", hasDropdown: false, path: "/careers" },
+  { label: "Admin", hasDropdown: false, path: "/admin" },
 ];
 
 function HighlightMatch({ text, query }) {

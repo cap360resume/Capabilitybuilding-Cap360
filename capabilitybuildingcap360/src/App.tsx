@@ -6,6 +6,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { AuthProvider } from "@/contexts/AuthContext";
 import ProtectedRoute from "@/components/admin/ProtectedRoute";
 import Index from "./pages/Index.tsx";
+import JobsList from "./pages/admin/JobsList.tsx";
+import JobEditor from "./pages/admin/JobEditor.tsx";
+import JobApplications from "./pages/admin/JobApplications.tsx";
 import WhatWeDo from "./pages/WhatWeDo.tsx";
 import WhatWeThink from "./pages/WhatWeThink.tsx";
 import WhoWeAre from "./pages/WhoWeAre.tsx";
@@ -57,6 +60,7 @@ import BlogList from "./pages/admin/BlogList.tsx";
 import BlogEditor from "./pages/admin/BlogEditor.tsx";
 import Settings from "./pages/admin/Settings.tsx";
 import ManageAdmins from "./pages/admin/ManageAdmins.tsx";
+
 
 
 const queryClient = new QueryClient();
@@ -122,6 +126,11 @@ const App = () => (
             <Route path="/admin/blog/edit/:id" element={<ProtectedRoute><BlogEditor /></ProtectedRoute>} />
             <Route path="/admin/settings" element={<ProtectedRoute><Settings /></ProtectedRoute>} />
             <Route path="/admin/manage-admins" element={<ProtectedRoute><ManageAdmins /></ProtectedRoute>} />
+            <Route path="/admin/jobs" element={<ProtectedRoute><JobsList /></ProtectedRoute>} />
+            <Route path="/admin/jobs/new" element={<ProtectedRoute><JobEditor /></ProtectedRoute>} />
+            <Route path="/admin/jobs/edit/:id" element={<ProtectedRoute><JobEditor /></ProtectedRoute>} />
+            <Route path="/admin/applications" element={<ProtectedRoute><JobApplications /></ProtectedRoute>} />
+
             {/* Who We Are sub-pages */}
             <Route path="/who-we-are/our-company" element={<OurCompany />} />
             <Route path="/who-we-are/our-values" element={<OurValues />} />

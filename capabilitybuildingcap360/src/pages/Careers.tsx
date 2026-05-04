@@ -1,21 +1,34 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronRight, Search } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { ArrowRight, Search, MapPin, Clock, Briefcase, X,ChevronRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import StatsBanner from "@/components/StatsBanner";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 import heroImg from "@/assets/careers-hero.jpg";
 
-const jobCategories = [
-  { name: "Talent Acquisition (HireTek)", description: "Recruitment consultants, sourcing specialists, and hiring strategists." },
-  { name: "Assessment (ASER)", description: "Psychometricians, assessment designers, and evaluation specialists." },
-  { name: "HR Consulting (HRCAMS)", description: "HR advisors, org design consultants, and people strategy leads." },
-  { name: "Learning & Capability Building (TCB)", description: "L&D specialists, facilitators, and instructional designers." },
-  { name: "Career Coaching (PACE)", description: "Career coaches, mentors, and professional development advisors." },
-  // { name: "Corporate & Operations", description: "Finance, marketing, technology, and business operations roles." },
+interface Job {
+  id: string;
+  title: string;
+  slug: string;
+  category: string;
+  location: string;
+  type: string;
+  description: string | null;
+  requirements: string | null;
+  posted_at: string;
+}
+
+const JOB_FILTERS = ["All", "Strategy & Consulting", "Talent Acquisition", "Technology", "Assesmdent", "Leadership", "Operations"];
+
+const stats = [
+  { value: "2018", label: "Founded with purpose" },
+  { value: "5", label: "Integrated service pillars" },
+  { value: "360°", label: "Capability ecosystem" },
+  { value: "100%", label: "Talent Engagement" },
 ];
 
 const benefits = [
@@ -33,15 +46,8 @@ const benefits = [
   },
   {
     title: "Collaborative Culture",
-    description: "Work alongside HR veterans, assessment scientists, coaches, and strategists - all united by a passion for people development.",
+    description: "Work alongside HR veterans, assesmdent scientists, coaches, and strategists - all united by a passion for people development.",
   },
-];
-
-const stats = [
-  { value: "2018", label: "Founded with purpose" },
-  { value: "5", label: "Integrated service pillars" },
-  { value: "360°", label: "Capability ecosystem" },
-  { value: "100%", label: "Talent Engagement" },
 ];
 
 const values = [
@@ -59,18 +65,69 @@ const values = [
   },
 ];
 
-const CareersPage = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-  const navigate = useNavigate();
-  const { ref: jobsRef, isInView: jobsInView } = useScrollAnimation(0.1);
-  const { ref: benefitsRef, isInView: benefitsInView } = useScrollAnimation(0.1);
-  const { ref: valuesRef, isInView: valuesInView } = useScrollAnimation(0.1);
-  const { ref: ctaRef, isInView: ctaInView } = useScrollAnimation(0.1);
 
-  const filteredCategories = jobCategories.filter((cat) =>
-    cat.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    cat.description.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+
+const CareersPage = () => {
+  const [jobs, setJobs] = useState<Job[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [activeFilter, setActiveFilter] = useState("All");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedJob, setSelectedJob] = useState<Job | null>(null);
+  const [showApplicationForm, setShowApplicationForm] = useState(false);
+  const { ref: jobsRef, isInView: jobsInView } = useScrollAnimation(0.05);
+  const { ref: benefitsRef, isInView: benefitsInView } = useScrollAnimation(0.1);
+  const { ref: ctaRef, isInView: ctaInView } = useScrollAnimation(0.1);
+  const { ref: valuesRef, isInView: valuesInView } = useScrollAnimation(0.1);
+  const { toast } = useToast();
+
+  // Application form state
+  const [appForm, setAppForm] = useState({ name: "", email: "", phone: "", coverLetter: "" });
+  const [submitting, setSubmitting] = useState(false);
+
+  useEffect(() => {
+    const fetchJobs = async () => {
+      const { data, error } = await supabase
+        .from("jobs")
+        .select("*")
+        .eq("is_active", true)
+        .order("posted_at", { ascending: false });
+
+      if (!error && data) setJobs(data as Job[]);
+      setLoading(false);
+    };
+    fetchJobs();
+  }, []);
+
+  const filtered = (() => {
+    let result = activeFilter === "All" ? jobs : jobs.filter((j) => j.category === activeFilter);
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase();
+      result = result.filter((j) => j.title.toLowerCase().includes(q) || j.location.toLowerCase().includes(q) || j.category.toLowerCase().includes(q));
+    }
+    return result;
+  })();
+
+  const handleApply = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!selectedJob) return;
+    setSubmitting(true);
+    const { error } = await supabase.from("job_applications").insert({
+      job_id: selectedJob.id,
+      applicant_name: appForm.name,
+      email: appForm.email,
+      phone: appForm.phone || null,
+      cover_letter: appForm.coverLetter || null,
+    });
+    setSubmitting(false);
+    if (error) {
+      toast({ title: "Error", description: "Failed to submit application. Please try again.", variant: "destructive" });
+    } else {
+      toast({ title: "Application Submitted!", description: "We'll review your application and get back to you soon." });
+      setShowApplicationForm(false);
+      setSelectedJob(null);
+      setAppForm({ name: "", email: "", phone: "", coverLetter: "" });
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -82,11 +139,11 @@ const CareersPage = () => {
           subtitle="Join a team that helps enterprises build future-ready workforces - and is deeply committed to doing the same for its own people."
           image={heroImg}
           ctaText="Explore opportunities"
-          ctaAction={() => navigate("#jobs")}
+          ctaHref="#jobs"
         />
         <StatsBanner stats={stats} />
 
-        {/* Why CAP360 */}
+                {/* Why CAP360 */}
         <section ref={valuesRef} className="section-navy py-24">
           <div className="container mx-auto px-4 lg:px-8">
             <motion.span
@@ -125,124 +182,132 @@ const CareersPage = () => {
                 >
                   <div className="w-8 h-1 bg-cap-orange mb-5" />
                   <h3 className="text-lg font-bold mb-3">{v.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{v.description}</p>
+                  <p className="text-muted-foreground text-md leading-relaxed">{v.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Job Categories */}
+
+        {/* Open Positions — Latest Thinking style UI */}
         <section className="section-dark py-24" ref={jobsRef} id="jobs">
           <div className="container mx-auto px-4 lg:px-8">
-            <motion.span
-              className="text-xs font-bold tracking-widest text-cap-orange uppercase mb-4 block"
-              initial={{ opacity: 0 }}
-              animate={jobsInView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.5 }}
-            >
-              Open Opportunities
-            </motion.span>
             <motion.h2
-              className="text-3xl md:text-4xl font-bold mb-3"
+              className="text-4xl md:text-5xl font-bold mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={jobsInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ duration: 0.6 }}
             >
-              Find your place in the ecosystem
+              Open Positions
             </motion.h2>
             <motion.p
-              className="text-muted-foreground text-base mb-10 max-w-xl"
-              initial={{ opacity: 0 }}
-              animate={jobsInView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.5, delay: 0.15 }}
+              className="text-base md:text-lg text-muted-foreground mb-10 max-w-3xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={jobsInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.05 }}
             >
-              We're growing across all five of our service pillars. Explore areas where you can make an impact.
+              Find your perfect role — explore opportunities across consulting, technology, leadership, and more.
             </motion.p>
 
+            {/* Filter chips */}
+            <motion.div
+              className="flex flex-wrap gap-3 mb-8"
+              initial={{ opacity: 0 }}
+              animate={jobsInView ? { opacity: 1 } : {}}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              {JOB_FILTERS.map((f) => (
+                <button
+                  key={f}
+                  onClick={() => setActiveFilter(f)}
+                  className={`px-5 py-2 text-md font-medium border transition-all duration-200 ${
+                    activeFilter === f
+                      ? "bg-cap-orange text-background border-cap-orange"
+                      : "border-border text-muted-foreground hover:text-foreground hover:border-foreground/30"
+                  }`}
+                >
+                  {f}
+                </button>
+              ))}
+            </motion.div>
+
+            {/* Search */}
             <motion.div
               className="flex gap-3 max-w-xl mb-12"
               initial={{ opacity: 0, y: 15 }}
               animate={jobsInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
             >
               <div className="flex-1 relative">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                 <input
                   type="text"
-                  placeholder="Search by role or area..."
+                  placeholder="Search by role, keyword, or location..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-secondary/50 border border-border pl-11 pr-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-cap-blue transition-colors"
+                  className="w-full bg-secondary/50 border border-border pl-11 pr-4 py-3 text-md text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-cap-blue transition-colors"
                 />
               </div>
-              <button className="bg-cap-orange text-background px-6 py-3 text-sm font-semibold hover:bg-cap-orange/90 transition-colors">
-                Search
-              </button>
             </motion.div>
 
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={searchQuery}
-                className="space-y-0"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                {filteredCategories.length > 0 ? (
-                  filteredCategories.map((cat, i) => (
-                    <motion.button
-                      key={cat.name}
-                      onClick={() => navigate("/contact")}
-                      className="group w-full flex items-center justify-between py-6 border-b border-border/30 hover:bg-secondary/20 px-4 -mx-4 transition-colors text-left"
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={jobsInView ? { opacity: 1, x: 0 } : {}}
-                      transition={{ duration: 0.4, delay: 0.08 * i }}
-                      whileHover={{ x: 8 }}
-                    >
-                      <div>
-                        <h3 className="text-lg font-semibold group-hover:text-cap-blue transition-colors">{cat.name}</h3>
-                        <span className="text-sm text-muted-foreground">{cat.description}</span>
-                      </div>
-                      <ChevronRight className="w-5 h-5 text-cap-orange opacity-0 group-hover:opacity-100 transition-all duration-300 shrink-0 ml-4" />
-                    </motion.button>
-                  ))
-                ) : (
-                  <motion.div
-                    className="py-12 text-center text-muted-foreground"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                  >
-                    No roles matched your search. <button onClick={() => navigate("/contact")} className="text-cap-orange underline underline-offset-2">Send us your profile</button> and we'll be in touch.
-                  </motion.div>
-                )}
-              </motion.div>
-            </AnimatePresence>
-
-            {/* No open listings nudge */}
-            <motion.div
-              className="mt-12 border border-border/30 bg-card p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={jobsInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <div>
-                <span className="text-xs font-bold tracking-widest text-cap-orange uppercase mb-1 block">Don't see your role?</span>
-                <p className="text-sm text-muted-foreground">We're always looking for great people. Share your profile and we'll reach out when something fits.</p>
+            {/* Job cards grid */}
+            {loading ? (
+              <div className="text-center py-16 text-muted-foreground">Loading positions…</div>
+            ) : filtered.length === 0 ? (
+              <div className="text-center py-16 text-muted-foreground">
+                {jobs.length === 0 ? "No open positions at the moment. Check back soon!" : `No positions found for "${activeFilter === "All" ? searchQuery : activeFilter}".`}
               </div>
-              <button
-                onClick={() => navigate("/contact")}
-                className="cta-link text-sm whitespace-nowrap"
-              >
-                Submit your profile
-                <ChevronRight className="w-4 h-4 text-cap-orange" />
-              </button>
-            </motion.div>
+            ) : (
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeFilter + searchQuery}
+                  className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  {filtered.map((job, i) => (
+                    <motion.div
+                      key={job.id}
+                      className="group text-left bg-card border border-border/30 overflow-hidden hover:border-cap-blue/40 transition-all duration-300 cursor-pointer flex flex-col"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: 0.05 * i }}
+                      whileHover={{ y: -4 }}
+                      onClick={() => { setSelectedJob(job); setShowApplicationForm(false); }}
+                    >
+                      <div className="p-6 flex-1 flex flex-col">
+                        <span className="text-xs font-bold tracking-widest text-cap-blue uppercase mb-3 block">
+                          {job.category.toUpperCase()}
+                        </span>
+                        <h3 className="text-xl font-bold mb-3 group-hover:text-cap-blue transition-colors leading-snug">
+                          {job.title}
+                        </h3>
+                        <div className="flex flex-wrap gap-3 text-xs text-muted-foreground mb-4">
+                          <span className="flex items-center gap-1"><MapPin className="w-3 h-3" />{job.location}</span>
+                          <span className="flex items-center gap-1"><Clock className="w-3 h-3" />{job.type}</span>
+                        </div>
+                        {job.description && (
+                          <p className="text-md text-muted-foreground leading-relaxed mb-4 line-clamp-3">
+                            {job.description}
+                          </p>
+                        )}
+                        <span className="cta-link text-md mt-auto">
+                          View & Apply
+                          <ChevronRight className="w-4 h-4 text-cap-orange" />
+                        </span>
+                      </div>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </AnimatePresence>
+            )}
           </div>
         </section>
 
-        {/* Benefits */}
+             {/* Benefits */}
         <section className="section-navy py-24" ref={benefitsRef}>
           <div className="container mx-auto px-4 lg:px-8">
             <motion.span
@@ -273,7 +338,7 @@ const CareersPage = () => {
                 >
                   <div className="w-8 h-1 bg-cap-orange mb-5" />
                   <h3 className="text-xl font-bold mb-3">{b.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{b.description}</p>
+                  <p className="text-muted-foreground text-md leading-relaxed">{b.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -304,8 +369,98 @@ const CareersPage = () => {
             </motion.div>
           </div>
         </section>
+
       </main>
       <Footer />
+
+      {/* Job Detail / Application Modal */}
+      <AnimatePresence>
+        {selectedJob && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-md p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => { setSelectedJob(null); setShowApplicationForm(false); }}
+          >
+            <motion.div
+              className="bg-card border border-border/50 w-full max-w-2xl max-h-[90vh] overflow-y-auto p-8 relative"
+              initial={{ opacity: 0, y: 30, scale: 0.97 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 30, scale: 0.97 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => { setSelectedJob(null); setShowApplicationForm(false); }}
+                className="absolute top-4 right-4 text-muted-foreground hover:text-foreground"
+              >
+                <X className="w-5 h-5" />
+              </button>
+
+              <span className="text-xs font-bold tracking-widest text-cap-blue uppercase mb-3 block">
+                {selectedJob.category}
+              </span>
+              <h2 className="text-2xl font-bold mb-4">{selectedJob.title}</h2>
+              <div className="flex flex-wrap gap-4 text-md text-muted-foreground mb-6">
+                <span className="flex items-center gap-1"><MapPin className="w-4 h-4" />{selectedJob.location}</span>
+                <span className="flex items-center gap-1"><Clock className="w-4 h-4" />{selectedJob.type}</span>
+                <span className="flex items-center gap-1"><Briefcase className="w-4 h-4" />Posted {new Date(selectedJob.posted_at).toLocaleDateString()}</span>
+              </div>
+
+              {!showApplicationForm ? (
+                <>
+                  {selectedJob.description && (
+                    <div className="mb-6">
+                      <h3 className="text-md font-bold uppercase tracking-wider text-cap-orange mb-2">Description</h3>
+                      <p className="text-md text-muted-foreground leading-relaxed">{selectedJob.description}</p>
+                    </div>
+                  )}
+                  {selectedJob.requirements && (
+                    <div className="mb-8">
+                      <h3 className="text-md font-bold uppercase tracking-wider text-cap-orange mb-2">Requirements</h3>
+                      <p className="text-md text-muted-foreground leading-relaxed">{selectedJob.requirements}</p>
+                    </div>
+                  )}
+                  <button
+                    onClick={() => setShowApplicationForm(true)}
+                    className="bg-cap-orange text-background px-8 py-3 text-md font-semibold hover:bg-cap-orange/90 transition-colors"
+                  >
+                    Apply Now
+                  </button>
+                </>
+              ) : (
+                <form onSubmit={handleApply} className="space-y-5">
+                  <h3 className="text-lg font-bold mb-2">Apply for {selectedJob.title}</h3>
+                  <div>
+                    <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider block mb-1">Full Name *</label>
+                    <input required value={appForm.name} onChange={(e) => setAppForm((p) => ({ ...p, name: e.target.value }))} className="w-full bg-secondary/50 border border-border px-4 py-2.5 text-md text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-cap-blue transition-colors" placeholder="Your full name" />
+                  </div>
+                  <div>
+                    <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider block mb-1">Email *</label>
+                    <input required type="email" value={appForm.email} onChange={(e) => setAppForm((p) => ({ ...p, email: e.target.value }))} className="w-full bg-secondary/50 border border-border px-4 py-2.5 text-md text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-cap-blue transition-colors" placeholder="you@email.com" />
+                  </div>
+                  <div>
+                    <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider block mb-1">Phone</label>
+                    <input value={appForm.phone} onChange={(e) => setAppForm((p) => ({ ...p, phone: e.target.value }))} className="w-full bg-secondary/50 border border-border px-4 py-2.5 text-md text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-cap-blue transition-colors" placeholder="+91 98765 43210" />
+                  </div>
+                  <div>
+                    <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider block mb-1">Cover Letter</label>
+                    <textarea rows={4} value={appForm.coverLetter} onChange={(e) => setAppForm((p) => ({ ...p, coverLetter: e.target.value }))} className="w-full bg-secondary/50 border border-border px-4 py-2.5 text-md text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-cap-blue transition-colors resize-none" placeholder="Tell us why you're a great fit..." />
+                  </div>
+                  <div className="flex gap-3">
+                    <button type="submit" disabled={submitting} className="bg-cap-orange text-background px-8 py-3 text-md font-semibold hover:bg-cap-orange/90 transition-colors disabled:opacity-50">
+                      {submitting ? "Submitting..." : "Submit Application"}
+                    </button>
+                    <button type="button" onClick={() => setShowApplicationForm(false)} className="border border-border px-6 py-3 text-md text-muted-foreground hover:text-foreground transition-colors">
+                      Back
+                    </button>
+                  </div>
+                </form>
+              )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

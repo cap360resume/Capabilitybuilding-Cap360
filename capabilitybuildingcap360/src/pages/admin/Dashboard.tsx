@@ -2,24 +2,28 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import AdminLayout from "@/components/admin/AdminLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Calendar, Target, FileText } from "lucide-react";
+import { Mail, Calendar, Target, FileText, Briefcase, Users } from "lucide-react";
 
 const Dashboard = () => {
-  const [stats, setStats] = useState({ contacts: 0, bookings: 0, leads: 0, posts: 0 });
+  const [stats, setStats] = useState({ contacts: 0, bookings: 0, leads: 0, posts: 0, jobs: 0, applications: 0 });
 
   useEffect(() => {
     const fetchStats = async () => {
-      const [c, b, l, p] = await Promise.all([
+      const [c, b, l, p, j, a] = await Promise.all([
         supabase.from("contacts").select("id", { count: "exact", head: true }),
         supabase.from("bookings").select("id", { count: "exact", head: true }),
         supabase.from("cta_leads").select("id", { count: "exact", head: true }),
         supabase.from("blog_posts").select("id", { count: "exact", head: true }),
+        supabase.from("jobs").select("id", { count: "exact", head: true }),
+        supabase.from("job_applications").select("id", { count: "exact", head: true }),
       ]);
       setStats({
         contacts: c.count ?? 0,
         bookings: b.count ?? 0,
         leads: l.count ?? 0,
         posts: p.count ?? 0,
+        jobs: j.count ?? 0,
+        applications: a.count ?? 0,
       });
     };
     fetchStats();
@@ -30,6 +34,8 @@ const Dashboard = () => {
     { label: "Bookings", value: stats.bookings, icon: Calendar, color: "text-green-400" },
     { label: "CTA Leads", value: stats.leads, icon: Target, color: "text-orange-400" },
     { label: "Blog Posts", value: stats.posts, icon: FileText, color: "text-purple-400" },
+    { label: "Active Jobs", value: stats.jobs, icon: Briefcase, color: "text-cyan-400" },
+    { label: "Applications", value: stats.applications, icon: Users, color: "text-pink-400" },
   ];
 
   return (
