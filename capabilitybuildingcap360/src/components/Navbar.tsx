@@ -10,7 +10,7 @@ const SEARCH_INDEX = [
   { label: "HR Consulting & Advisory (HRCAMS)", path: "/what-we-do/services/hrcams", tags: ["hr", "consulting", "advisory", "hrcams"] },
   { label: "Training & Capability Building (TCB)", path: "/what-we-do/services/tcb", tags: ["training", "tcb", "learning", "capability"] },
   { label: "Professional Alignment & Career Enhancement (PACE)", path: "/what-we-do/services/pace", tags: ["pace", "career", "coaching"] },
-  { label: "Hiretek", path: "https://www.hiretek.in/", tags: ["hiretek", "recruitment", "hiring", "staffing"] },
+  { label: "Hiretek", path: "https://www.hiretek.in/", tags: ["hiretek", "recruitment", "hiring", "staffing"], external: true },
   { label: "Our Company", path: "/who-we-are/our-company", tags: ["about", "company", "mission"] },
   { label: "Our Values", path: "/who-we-are/our-values", tags: ["values", "culture"] },
   { label: "Contact Us", path: "/contact", tags: ["contact", "reach"] },
