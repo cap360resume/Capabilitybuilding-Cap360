@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate, useLocation } from "react-router-dom";
 import logo from "@/assets/cap360-logo.png";
 
+
 // ─── Searchable content index ─────────────────────────────────────────────────
 const SEARCH_INDEX = [
   { label: "Assessment Services (ASER)", path: "/what-we-do/services/aser", tags: ["assessment", "aser", "evaluation", "talent"] },

@@ -1,22 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SubNavbar from "@/components/SubNavbar";
-import ASERSubNavbar from "@/components/ASERSubNavbar";
 import { motion } from "framer-motion";
-import {
-  Users,
-  BarChart3,
-  ChevronRight,
-  CheckCircle2,
-  TrendingUp,
-  Target,
-  Zap,
-  Brain,
-  Layers,
-  LineChart,
-  Lightbulb,
-  Link,
-} from "lucide-react";
+import { Users,BarChart3,ChevronRight,CheckCircle2,TrendingUp, Target,Zap,Brain, Download } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
@@ -28,6 +14,8 @@ import trending4 from "@/assets/trending-4.jpg";
 import saurabh from "@/assets/SaurabhNanda.png";
 import aser2 from "@/assets/aser2.png";
 import aser1 from "@/assets/Aser-1.avif";
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
 
 const serviceSubNav = [
   { label: "What to do", path: "#services" },
@@ -67,30 +55,6 @@ const subServices = [
       "Deploy validated psychometric instruments measuring personality traits, aptitude, and emotional intelligence - ensuring every recruitment and development decision is grounded in data.",
     path: "/what-we-do/services/aser/psychometric-testing",
   },
-  // {
-  //   icon: LineChart,
-  //   title: "Talent Analytics & Benchmarking",
-  //   title2: "Turning Talent Data Into Strategic Intelligence",
-  //   description:
-  //     "Data-driven talent analytics that benchmark individual and team capabilities against industry standards, revealing gaps and opportunities across your entire workforce.",
-  //   path: "/what-we-do/services/aser/talent-analytics",
-  // },
-  // {
-  //   icon: ClipboardList,
-  //   title: "360° Feedback & Leadership Diagnostics",
-  //   title2: "Unlocking Self-Awareness and Leadership Growth",
-  //   description:
-  //     "Structured multi-rater feedback processes that help leaders understand their impact, identify blind spots, and accelerate personal and professional development.",
-  //   path: "/what-we-do/services/aser/360-feedback",
-  // },
-  // {
-  //   icon: Lightbulb,
-  //   title: "AI-Powered Talent Intelligence",
-  //   title2: "Redefining Assessment with Generative AI",
-  //   description:
-  //     "Leverage AI-driven simulations, adaptive assessments, and predictive models to identify high-potential talent faster and with greater precision than traditional methods.",
-  //   path: "/what-we-do/services/aser/talent",
-  // },
 ];
 
 const trendingInsights = [
@@ -125,29 +89,6 @@ const trendingInsights = [
       "A practical guide to embedding data-driven assessment into your talent strategy.",
   },
 ];
-
-// const partners = [
-//   {
-//     name: "Hogan Assessments",
-//     description:
-//       "World-leading personality assessments for predicting workplace performance and leadership.",
-//   },
-//   {
-//     name: "SHL",
-//     description:
-//       "Global leader in talent measurement, providing validated assessments across all levels.",
-//   },
-//   {
-//     name: "Korn Ferry",
-//     description:
-//       "Organizational consulting firm delivering leadership and talent development solutions.",
-//   },
-//   {
-//     name: "MeritTrac",
-//     description:
-//       "India's largest assessment services company powering large-scale talent evaluation.",
-//   },
-// ];
 
 const targetAudiences = [
   "Large Enterprises: Designing complex, competency-based assessment architectures for global workforces",
@@ -218,16 +159,28 @@ const whyChooseUs = [
 ];
 
 const ASER = () => {
+  // ✅ useQuery is now correctly inside the component
+  const { data: programGuides = [] } = useQuery({
+    queryKey: ["aser-program-guides"],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("downloadable_documents")
+        .select("*")
+        .eq("service_page", "aser")
+        .eq("is_active", true)
+        .order("created_at", { ascending: false });
+      if (error) throw error;
+      return data;
+    },
+  });
+
   const { ref: statsRef, isInView: statsInView } = useScrollAnimation(0.2);
-  const { ref: servicesRef, isInView: servicesInView } =
-    useScrollAnimation(0.1);
+  const { ref: servicesRef, isInView: servicesInView } = useScrollAnimation(0.1);
   const { ref: offerRef, isInView: offerInView } = useScrollAnimation(0.1);
   const { ref: whyRef, isInView: whyInView } = useScrollAnimation(0.1);
   const { ref: howWeWorkRef, isInView: howWeWorkInView } = useScrollAnimation(0.1);
-  const { ref: trendingRef, isInView: trendingInView } =
-    useScrollAnimation(0.1);
-  const { ref: partnersRef, isInView: partnersInView } =
-    useScrollAnimation(0.1);
+  const { ref: trendingRef, isInView: trendingInView } = useScrollAnimation(0.1);
+  const { ref: partnersRef, isInView: partnersInView } = useScrollAnimation(0.1);
   const { ref: leadersRef, isInView: leadersInView } = useScrollAnimation(0.1);
   const { ref: phaseRef, isInView: phaseInView } = useScrollAnimation(0.1);
   const navigate = useNavigate();
@@ -349,7 +302,7 @@ const ASER = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
         </div>
-         
+
         <div className="relative container mx-auto px-4 lg:px-8 py-32">
           <span className="text-sm text-cap-red font-semibold">ASER</span>
           <motion.h1
@@ -358,10 +311,10 @@ const ASER = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Assessment Services 
+            Assessment Services
           </motion.h1>
           <motion.p
-            className="text-[18px] md:text-[20px] text-muted-whiteleading-[1.6] max-w-2xl mb-8"
+            className="text-[18px] md:text-[20px] text-muted-white leading-[1.6] max-w-2xl mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -426,10 +379,10 @@ const ASER = () => {
                 transition={{ delay: 0.1 * i }}
               >
                 <div className="w-12 h-1 bg-gradient-to-r from-cap-red to-cap-red mb-6 group-hover:w-16 transition-all duration-300" />
-                <span className="text-[44px] md:text-[52px] font-black text-whiteblock mb-2">
+                <span className="text-[44px] md:text-[52px] font-black text-white block mb-2">
                   {stat.value}
                 </span>
-                <p className="text-[18px] text-muted-whiteleading-[1.6]">
+                <p className="text-[18px] text-muted-white leading-[1.6]">
                   {stat.desc}
                 </p>
               </motion.div>
@@ -462,12 +415,11 @@ const ASER = () => {
 
             <div className="grid md:grid-cols-2 gap-10">
               <div className="border-l-2 border-cap-red/40 pl-6">
-                <p className="text-[18px] text-muted-whiteleading-[1.8]">
-                  <span className="text-whitefont-medium">ASER</span>{" "}
-                 is designed to
-                  help organizations move beyond intuition-based hiring and
+                <p className="text-[18px] text-muted-white leading-[1.8]">
+                  <span className="text-white font-medium">ASER</span>{" "}
+                  is designed to help organizations move beyond intuition-based hiring and
                   build
-                  <span className="text-whitefont-medium">
+                  <span className="text-white font-medium">
                     {" "}
                     data-driven, high-performance talent pipelines
                   </span>
@@ -476,8 +428,8 @@ const ASER = () => {
               </div>
 
               <div className="border-l-2 border-cap-red/40 pl-6">
-                <p className="text-[18px] text-muted-whiteleading-[1.8]">
-                 Custom-built assessment architectures, designed and implemented in partnership with your organization to deliver clear, actionable insights.
+                <p className="text-[18px] text-muted-white leading-[1.8]">
+                  Custom-built assessment architectures, designed and implemented in partnership with your organization to deliver clear, actionable insights.
                 </p>
               </div>
             </div>
@@ -488,211 +440,212 @@ const ASER = () => {
       </section>
 
       {/* ===== SERVICES - MOSAIC GRID ===== */}
-  <section id="services" className="py-24" ref={servicesRef}>
-  <div className="container mx-auto px-4 lg:px-8">
-    <motion.h2
-      className="text-[34px] md:text-[40px] font-bold mb-4"
-      initial={{ opacity: 0, y: 20 }}
-      animate={servicesInView ? { opacity: 1, y: 0 } : {}}
-    >
-      Reinvent with ASER
-    </motion.h2>
-    <p className="text-[18px] text-muted-white mb-14 max-w-2xl mb-5">
-      Our integrated assessment solutions designed to transform every stage of
-      the talent lifecycle. Each solution is modular yet interconnected - choose
-      one or combine multiple for end-to-end talent intelligence.
-    </p>
+      <section id="services" className="py-24" ref={servicesRef}>
+        <div className="container mx-auto px-4 lg:px-8">
+          <motion.h2
+            className="text-[34px] md:text-[40px] font-bold mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={servicesInView ? { opacity: 1, y: 0 } : {}}
+          >
+            Reinvent with ASER
+          </motion.h2>
+          <p className="text-[18px] text-muted-white mb-14 max-w-2xl">
+            Our integrated assessment solutions designed to transform every stage of
+            the talent lifecycle. Each solution is modular yet interconnected - choose
+            one or combine multiple for end-to-end talent intelligence.
+          </p>
 
-    {/* Mosaic grid */}
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={servicesInView ? { opacity: 1 } : {}}
-      transition={{ duration: 0.4 }}
-      style={{ display: "flex", flexDirection: "column", gap: 8 }}
-    >
-      {mosaicRows.map((row, rowIdx) => (
-        <div
-          key={rowIdx}
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 340px), 1fr))",
-            gap: 8,
-          }}
-        >
-          {row.map((cell, colIdx) => {
-            if (cell.type === "image") {
-              return (
-                <div
-                  key={`img-${rowIdx}-${colIdx}`}
-                  style={{
-                    height: "clamp(200px, 30vw, 340px)",
-                    overflow: "hidden",
-                    background: "#111",
-                  }}
-                >
-                  <img
-                    src={cell.src}
-                    alt="service visual"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      display: "block",
-                    }}
-                  />
-                </div>
-              );
-            }
-
-            /* ── Card cell ── */
-            const s = cell.item;
-            const accentHex = "#E85C2D";
-
-            return (
-              <motion.div
-                key={s.title}
-                className="mosaic-card group"
-                initial={{ opacity: 0, y: 24 }}
-                animate={servicesInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.08 * cell.index, duration: 0.4 }}
-                onClick={() => navigate(s.path)}
+          {/* Mosaic grid */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={servicesInView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.4 }}
+            style={{ display: "flex", flexDirection: "column", gap: 8 }}
+          >
+            {mosaicRows.map((row, rowIdx) => (
+              <div
+                key={rowIdx}
                 style={{
-                  position: "relative",
-                  background: "hsl(var(--card))",
-                  height: "clamp(260px, 30vw, 340px)",
-                  padding: "clamp(28px, 4vw, 60px) clamp(20px, 3vw, 36px) 28px",
-                  cursor: "pointer",
-                  overflow: "hidden",
-                  display: "flex",
-                  flexDirection: "column",
-                  fontFamily: "inherit",
-                  border: "1px solid hsl(var(--border) / 0.3)",
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 340px), 1fr))",
+                  gap: 8,
                 }}
               >
-                {/* Accent bar */}
-                <div
-                  style={{
-                    width: 32,
-                    height: 3,
-                    background: accentHex,
-                    marginBottom: 16,
-                    flexShrink: 0,
-                  }}
-                />
+                {row.map((cell, colIdx) => {
+                  if (cell.type === "image") {
+                    return (
+                      <div
+                        key={`img-${rowIdx}-${colIdx}`}
+                        style={{
+                          height: "clamp(200px, 30vw, 340px)",
+                          overflow: "hidden",
+                          background: "#111",
+                        }}
+                      >
+                        <img
+                          src={cell.src}
+                          alt="service visual"
+                          style={{
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                            display: "block",
+                          }}
+                        />
+                      </div>
+                    );
+                  }
 
-                {/* Label */}
-                <div
-                  style={{
-                    fontSize: "clamp(0.85rem, 1.5vw, 1.15rem)",
-                    fontWeight: 700,
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                    color: "hsl(var(--muted-white))",
-                    marginBottom: 12,
-                    flexShrink: 0,
-                  }}
-                >
-                  {s.title}
-                </div>
+                  /* ── Card cell ── */
+                  const s = cell.item;
+                  const accentHex = "#E85C2D";
 
-                {/* Title - fades out on hover */}
-                <div
-                  className="mosaic-title"
-                  style={{
-                    fontSize: "clamp(1.1rem, 2vw, 1.5rem)",
-                    fontWeight: 700,
-                    lineHeight: 1.25,
-                    color: "hsl(var(--white))",
-                    flex: 1,
-                    marginTop: "clamp(16px, 3vw, 35px)",
-                  }}
-                >
-                  {s.title2}
-                </div>
+                  return (
+                    <motion.div
+                      key={s.title}
+                      className="mosaic-card group"
+                      initial={{ opacity: 0, y: 24 }}
+                      animate={servicesInView ? { opacity: 1, y: 0 } : {}}
+                      transition={{ delay: 0.08 * cell.index, duration: 0.4 }}
+                      onClick={() => navigate(s.path)}
+                      style={{
+                        position: "relative",
+                        background: "hsl(var(--card))",
+                        height: "clamp(260px, 30vw, 340px)",
+                        padding: "clamp(28px, 4vw, 60px) clamp(20px, 3vw, 36px) 28px",
+                        cursor: "pointer",
+                        overflow: "hidden",
+                        display: "flex",
+                        flexDirection: "column",
+                        fontFamily: "inherit",
+                        border: "1px solid hsl(var(--border) / 0.3)",
+                      }}
+                    >
+                      {/* Accent bar */}
+                      <div
+                        style={{
+                          width: 32,
+                          height: 3,
+                          background: accentHex,
+                          marginBottom: 16,
+                          flexShrink: 0,
+                        }}
+                      />
 
-                {/* Description - fades in on hover */}
-                <div
-                  className="mosaic-desc"
-                  style={{
-                    fontSize: "clamp(1rem, 1.5vw, 1.3rem)",
-                    fontWeight: 400,
-                    lineHeight: 1.65,
-                    color: "hsl(var(--muted-white))",
-                    position: "absolute",
-                    top: "clamp(110px, 18vw, 135px)",
-                    left: "clamp(20px, 3vw, 36px)",
-                    right: "clamp(20px, 3vw, 36px)",
-                    bottom: 60,
-                    overflow: "hidden",
-                    pointerEvents: "none",
-                  }}
-                >
-                  {s.description}
-                </div>
+                      {/* Label */}
+                      <div
+                        style={{
+                          fontSize: "clamp(0.85rem, 1.5vw, 1.15rem)",
+                          fontWeight: 700,
+                          letterSpacing: "0.08em",
+                          textTransform: "uppercase",
+                          color: "hsl(var(--muted-white))",
+                          marginBottom: 12,
+                          flexShrink: 0,
+                        }}
+                      >
+                        {s.title}
+                      </div>
 
-                {/* Learn more */}
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 8,
-                    marginTop: "auto",
-                    paddingTop: 16,
-                    flexShrink: 0,
-                    position: "relative",
-                    zIndex: 2,
-                  }}
-                >
-                  <span
-                    style={{
-                      fontSize: "1rem",
-                      fontWeight: 600,
-                      color: "hsl(var(--white))",
-                    }}
-                  >
-                    Learn more
-                  </span>
-                  <div
-                    style={{
-                      width: 24,
-                      height: 24,
-                      background: accentHex,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      flexShrink: 0,
-                    }}
-                  >
-                    <ChevronRight size={18} color="#fff" />
-                  </div>
-                </div>
+                      {/* Title - fades out on hover */}
+                      <div
+                        className="mosaic-title"
+                        style={{
+                          fontSize: "clamp(1.1rem, 2vw, 1.5rem)",
+                          fontWeight: 700,
+                          lineHeight: 1.25,
+                          color: "hsl(var(--white))",
+                          flex: 1,
+                          marginTop: "clamp(16px, 3vw, 35px)",
+                        }}
+                      >
+                        {s.title2}
+                      </div>
 
-                {/* Overlay - fades in on hover */}
-                <div
-                  className="mosaic-overlay"
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    display: "block",
-                    transition: "opacity 300ms ease",
-                    background: `linear-gradient(135deg, ${accentHex}18, transparent)`,
-                    pointerEvents: "none",
-                    zIndex: 0,
-                  }}
-                />
-              </motion.div>
-            );
-          })}
+                      {/* Description - fades in on hover */}
+                      <div
+                        className="mosaic-desc"
+                        style={{
+                          fontSize: "clamp(1rem, 1.5vw, 1.3rem)",
+                          fontWeight: 400,
+                          lineHeight: 1.65,
+                          color: "hsl(var(--muted-white))",
+                          position: "absolute",
+                          top: "clamp(110px, 18vw, 135px)",
+                          left: "clamp(20px, 3vw, 36px)",
+                          right: "clamp(20px, 3vw, 36px)",
+                          bottom: 60,
+                          overflow: "hidden",
+                          pointerEvents: "none",
+                        }}
+                      >
+                        {s.description}
+                      </div>
+
+                      {/* Learn more */}
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: 8,
+                          marginTop: "auto",
+                          paddingTop: 16,
+                          flexShrink: 0,
+                          position: "relative",
+                          zIndex: 2,
+                        }}
+                      >
+                        <span
+                          style={{
+                            fontSize: "1rem",
+                            fontWeight: 600,
+                            color: "hsl(var(--white))",
+                          }}
+                        >
+                          Learn more
+                        </span>
+                        <div
+                          style={{
+                            width: 24,
+                            height: 24,
+                            background: accentHex,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            flexShrink: 0,
+                          }}
+                        >
+                          <ChevronRight size={18} color="#fff" />
+                        </div>
+                      </div>
+
+                      {/* Overlay - fades in on hover */}
+                      <div
+                        className="mosaic-overlay"
+                        style={{
+                          position: "absolute",
+                          inset: 0,
+                          display: "block",
+                          transition: "opacity 300ms ease",
+                          background: `linear-gradient(135deg, ${accentHex}18, transparent)`,
+                          pointerEvents: "none",
+                          zIndex: 0,
+                        }}
+                      />
+                    </motion.div>
+                  );
+                })}
+              </div>
+            ))}
+          </motion.div>
         </div>
-      ))}
-    </motion.div>
-  </div>
-</section>
+      </section>
 
       {/* ── Why Choose Us ──────────────────────────────────────────────────────── */}
-      <section  
+      <section
         id="trending"
-        className="py-28 section-navy relative overflow-hidden" ref={trendingRef}
+        className="py-28 section-navy relative overflow-hidden"
+        ref={trendingRef}
       >
         <div className="absolute top-0 right-0 w-[28rem] h-[28rem] bg-cap-red/10 rounded-full blur-[120px] -z-0" />
         <div className="absolute bottom-0 left-0 w-[22rem] h-[22rem] bg-cap-red/10 rounded-full blur-[100px] -z-0" />
@@ -713,7 +666,7 @@ const ASER = () => {
             <h2 className="text-[34px] md:text-[44px] font-bold leading-tight mb-6">
               Why Choose <span className="text-cap-red">Cap360?</span>
             </h2>
-            <p className="text-[18px] text-muted-whiteleading-relaxed">
+            <p className="text-[18px] text-muted-white leading-relaxed">
               Leadership-driven expertise combined with certified coaching credentials and a proven track record of measurable business results
             </p>
           </motion.div>
@@ -740,7 +693,7 @@ const ASER = () => {
                       {item.title}
                     </h3>
                   </div>
-                  <p className="text-[18px] text-muted-whiteleading-[1.7] pl-[4.25rem] relative z-10">
+                  <p className="text-[18px] text-muted-white leading-[1.7] pl-[4.25rem] relative z-10">
                     {item.desc}
                   </p>
                   <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-cap-red group-hover:w-full transition-all duration-500" />
@@ -764,7 +717,7 @@ const ASER = () => {
             <h2 className="text-[34px] md:text-[44px] font-bold mb-6 tracking-tight">
               How We Work With You
             </h2>
-            <p className="text-[18px] text-muted-whiteleading-relaxed">
+            <p className="text-[18px] text-muted-white leading-relaxed">
               Every engagement begins with understanding your unique talent
               challenges and business goals. We follow a structured approach to
               design and deliver impactful assessments.
@@ -808,7 +761,7 @@ const ASER = () => {
                     </div>
 
                     {/* Description */}
-                    <p className="text-[17px] text-muted-whiteleading-relaxed">
+                    <p className="text-[17px] text-muted-white leading-relaxed">
                       {phase.desc}
                     </p>
 
@@ -839,7 +792,7 @@ const ASER = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-muted-whitetext-[17px] leading-relaxed mb-10"
+              className="text-muted-white text-[17px] leading-relaxed mb-10"
             >
               From hyper-growth startups to complex multinationals, we partner
               with organizations that take talent decisions seriously - and want
@@ -852,7 +805,7 @@ const ASER = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               className="p-5 rounded-2xl bg-gradient-to-br from-cap-red/20 to-transparent border border-cap-red/30 backdrop-blur-md"
             >
-              <p className="text-[17px] text-whitefont-medium">
+              <p className="text-[17px] text-white font-medium">
                 These assessments - help build a talent intelligence
                 capability that powers every hire, promotion, and development
                 decision.
@@ -875,7 +828,7 @@ const ASER = () => {
 
                 {/* Card */}
                 <div className="p-2 rounded-xl bg-card/50 border border-border/20 hover:border-cap-red/40 transition-all duration-300 group-hover:-translate-y-1">
-                  <p className="text-[18px] text-muted-whitegroup-hover:text-whitetransition">
+                  <p className="text-[18px] text-muted-white group-hover:text-white transition">
                     {audience}
                   </p>
                 </div>
@@ -911,7 +864,7 @@ const ASER = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: i * 0.05 }}
                 whileHover={{ scale: 1.1 }}
-                className="px-5 py-2 rounded-full bg-card/40 border border-border/20 text-[18px] text-muted-whitehover:border-cap-red/50 hover:text-whitetransition cursor-pointer"
+                className="px-5 py-2 rounded-full bg-card/40 border border-border/20 text-[18px] text-muted-white hover:border-cap-red/50 hover:text-white transition cursor-pointer"
               >
                 {industry}
               </motion.div>
@@ -923,169 +876,17 @@ const ASER = () => {
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-cap-red/10 blur-[140px] rounded-full pointer-events-none" />
       </section>
 
-      {/* ===== TRENDING ===== */}
-      {/* <section id="trending" className="py-24" ref={trendingRef}>
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex items-center justify-between mb-4">
-            <motion.h2
-              className="text-[32px] md:text-[40px] font-bold"
-              initial={{ opacity: 0, y: 20 }}
-              animate={trendingInView ? { opacity: 1, y: 0 } : {}}
-            >
-              What's trending with ASER?
-            </motion.h2>
-            <div className="hidden md:flex gap-2">
-              <button
-                onClick={() => scrollTrending("left")}
-                className="p-2 border border-border/40 text-foreground/60 hover:text-whitetransition-colors"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-              <button
-                onClick={() => scrollTrending("right")}
-                className="p-2 border border-border/40 text-foreground/60 hover:text-whitetransition-colors"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-          <div className="mb-12">
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 text-[18px] font-semibold text-whitehover:gap-3 transition-all"
-            >
-              View all work{" "}
-              <span className="inline-flex items-center justify-center w-7 h-7 bg-cap-red text-background rounded-sm">
-                <ChevronRight className="w-4 h-4" />
-              </span>
-            </a>
-          </div>
-          <div
-            ref={trendingScrollRef}
-            className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 -mx-4 px-4"
-          >
-            {trendingInsights.map((item, i) => (
-              <motion.div
-                key={item.title}
-                className="flex-shrink-0 w-[320px] overflow-hidden group cursor-pointer"
-                initial={{ opacity: 0, x: 40 }}
-                animate={trendingInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ delay: 0.1 * i, duration: 0.5 }}
-              >
-                <div className="relative h-[380px] overflow-hidden">
-                  <img
-                    src={trendingImages[i % trendingImages.length]}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent" />
-                  <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                    <span className="text-[11px] font-bold text-foreground/70 uppercase tracking-[0.15em] mb-3">
-                      {item.category}
-                    </span>
-                    <h3 className="text-[20px] font-bold text-whiteleading-snug mb-2">
-                      {item.title}
-                    </h3>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
-      {/* ===== PARTNERS ===== */}
-      {/* <section id="partners" className="py-24 section-navy" ref={partnersRef}>
-        <div className="container mx-auto px-4 lg:px-8">
-          <motion.h2
-            className="text-[32px] md:text-[40px] font-bold mb-14"
-            initial={{ opacity: 0, y: 20 }}
-            animate={partnersInView ? { opacity: 1, y: 0 } : {}}
-          >
-            Partners in change
-          </motion.h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {partners.map((p, i) => (
-              <motion.div
-                key={p.name}
-                className="bg-card/40 border border-border/30 p-8 hover:border-cap-red/40 transition-all group"
-                initial={{ opacity: 0, y: 20 }}
-                animate={partnersInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.1 * i }}
-                whileHover={{ y: -4 }}
-              >
-                <div
-                  className={`w-12 h-12 rounded-full mb-6 flex items-center justify-center text-[18px] font-black text-primary-white${i === 0 ? "bg-cap-red" : i === 1 ? "bg-cap-red" : i === 2 ? "bg-cap-red" : "bg-cap-green"}`}
-                >
-                  {p.name.charAt(0)}
-                </div>
-                <h3 className="text-[18px] font-bold mb-3 group-hover:text-cap-red transition-colors">
-                  {p.name}
-                </h3>
-                <p className="text-[14px] text-muted-whiteleading-[1.6] mb-4">
-                  {p.description}
-                </p>
-                <span className="cta-link text-[14px]">
-                  Learn more{" "}
-                  <ChevronRightclassName="w-3.5 h-3.5 text-cap-red" />
-                </span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
-      {/* ===== AWARDS ===== */}
-      {/* <section className="py-24">
-        <div className="container mx-auto px-4 lg:px-8">
-          <h2 className="text-[32px] md:text-[40px] font-bold mb-14">
-            Awards and recognition
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Leader in Everest Group Talent Assessment Services PEAK Matrix® 2025",
-                description: "Recognized for market impact and vision in talent assessment and evaluation services.",
-              },
-              {
-                title: "Best Assessment Solutions Provider - MENA HR Excellence Awards 2024",
-                description: "Awarded for delivering measurable improvements in talent prediction and workforce quality.",
-              },
-              {
-                title: "Top 10 Talent Intelligence Platform - HR Tech Outlook 2024",
-                description: "Selected for innovative AI-powered assessment and analytics approaches.",
-              },
-            ].map((a, i) => (
-              <motion.div
-                key={a.title}
-                className="bg-card border border-border/30 p-8"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.12 * i }}
-              >
-                <Award className="w-8 h-8 text-cap-red mb-4" />
-                <h3 className="text-[18px] font-bold mb-3">{a.title}</h3>
-                <p className="text-[14px] text-muted-whiteleading-[1.6]">
-                  {a.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
       {/* ===== MEET OUR LEADER ===== */}
       <section
         id="leaders"
-        className="py-24 section-navy relative overflow-hidden" ref={leadersRef}
+        className="py-24 section-navy relative overflow-hidden"
+        ref={leadersRef}
       >
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-cap-red/5 rounded-full blur-3xl -z-0" />
         <div className="w-full px-6 lg:px-16 xl:px-24 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={leadersInView ? { opacity: 1, y: 0 } : {}}
-            ref={leadersRef}
             className="mb-16"
           >
             <h2 className="text-[32px] md:text-[42px] font-bold mb-2">
@@ -1122,7 +923,7 @@ const ASER = () => {
                 </p>
 
                 <div className="space-y-6 mb-8">
-                  <p className="text-[17px] text-muted-whiteleading-[1.8]">
+                  <p className="text-[17px] text-muted-white leading-[1.8]">
                     Saurabh Nanda bridges behavioural science with career
                     transformation. Supporting 2000+ professionals across 35+
                     countries, he goes beyond traditional coaching to address
@@ -1130,14 +931,14 @@ const ASER = () => {
                     and imposter syndrome to transitions and anxiety.
                   </p>
 
-                  <p className="text-[17px] text-muted-whiteleading-[1.8]">
+                  <p className="text-[17px] text-muted-white leading-[1.8]">
                     A former IT professional turned career psychologist,
                     two-time TEDx speaker, and Karamveer Chakra Awardee, Saurabh
                     combines evidence-based frameworks with AI-driven insights
                     through CAP360.
                   </p>
 
-                  <p className="text-[17px] text-muted-whiteleading-[1.8]">
+                  <p className="text-[17px] text-muted-white leading-[1.8]">
                     He helps clients understand not just what to do, but why
                     they do it. His approach: sustainable success begins with
                     self-understanding-honoring both professional ambition and
@@ -1209,8 +1010,6 @@ const ASER = () => {
         </div>
       </section>
 
-      {/* ===== CTA ===== */}
-
       {/* ── CTA Section ────────────────────────────────────────────────────────── */}
       <section className="relative bg-gradient-to-r from-background via-background to-secondary overflow-hidden py-20">
         <div className="absolute inset-0 opacity-5">
@@ -1240,7 +1039,7 @@ const ASER = () => {
                 Partner With Us
               </h2>
               <p className="text-[18px] text-muted-white mb-8 max-w-xl">
-                 Enable better people decisions through structured assessment, insight, and impact.
+                Enable better people decisions through structured assessment, insight, and impact.
               </p>
             </motion.div>
             <motion.div
@@ -1251,19 +1050,27 @@ const ASER = () => {
               className="flex gap-4 flex-wrap"
             >
               <a
-              href="/contact"
-              target="_blank"
-              rel="noopener noreferrer" className="bg-cap-red text-white px-8 py-4 font-semibold hover:bg-cap-red/90 transition-all hover:shadow-lg rounded-md inline-flex items-center gap-2">
+                href="/contact"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-cap-red text-white px-8 py-4 font-semibold hover:bg-cap-red/90 transition-all hover:shadow-lg rounded-md inline-flex items-center gap-2"
+              >
                 Contact Us <ChevronRight className="w-4 h-4" />
               </a>
-              <button className="border border-white/20 text-white px-8 py-4 font-semibold hover:border-cap-red/50 hover:bg-cap-red/5 transition-all rounded-md">
-                Download Program Guide
-              </button>
+              {programGuides.length > 0 && (
+                <a
+                  href={programGuides[0].file_url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 border border-white/20 text-white px-8 py-4 font-semibold hover:border-cap-red/50 hover:bg-cap-red/5 transition-all rounded-md"
+                >
+                  <Download className="w-5 h-5" /> Download Program Guide
+                </a>
+              )}
             </motion.div>
           </div>
         </div>
       </section>
-
 
       <Footer />
     </div>

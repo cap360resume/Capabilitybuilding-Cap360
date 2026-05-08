@@ -1,6 +1,6 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
-import { LayoutDashboard, Mail, Calendar, Target, FileText, Settings, LogOut, Home, ShieldCheck, Briefcase, Users  } from "lucide-react";
+import { LayoutDashboard, Mail, Calendar, Target, FileText, Settings, LogOut, Home, ShieldCheck, Briefcase, Users, FolderDown } from "lucide-react";
 import logo from "@/assets/cap360-logo.png";
 
 const navItems = [
@@ -9,9 +9,11 @@ const navItems = [
   { label: "Bookings", icon: Calendar, path: "/admin/bookings" },
   { label: "CTA Leads", icon: Target, path: "/admin/leads" },
   { label: "Blog Posts", icon: FileText, path: "/admin/blog" },
-  { label: "Settings", icon: Settings, path: "/admin/settings" },
   { label: "Jobs", icon: Briefcase, path: "/admin/jobs" },
   { label: "Applications", icon: Users, path: "/admin/applications" },
+  { label: "Documents", icon: FolderDown, path: "/admin/documents" },
+  { label: "Manage Admins", icon: ShieldCheck, path: "/admin/manage-admins" },
+  { label: "Settings", icon: Settings, path: "/admin/settings" },
 ];
 
 const AdminSidebar = () => {
