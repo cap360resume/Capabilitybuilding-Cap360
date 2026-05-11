@@ -2,26 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SubNavbar from "@/components/SubNavbar";
 import { motion } from "framer-motion";
-import {
-  Compass,
-  Rocket,
-  Target,
-  TrendingUp,
-  UserCheck,
-  Briefcase,
-  ChevronLeft,
-  ChevronRight,
-  Check,
-  CheckCircle2,
-  Zap,
-  Brain,
-  Linkedin,
-  MessageSquare,
-  Award,
-  Search,
-  Users,
-  Bold,
-  BookOpen,
+import {  Rocket, Target, TrendingUp, UserCheck,ChevronRight,CheckCircle2,Zap, Brain, Linkedin, MessageSquare, Award, Search, Users,BookOpen, Download,
 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useNavigate } from "react-router-dom";
@@ -34,6 +15,8 @@ import trending4 from "@/assets/trending-4.jpg";
 import GSA from "@/assets/Head-gsa.png";
 import creativecapability from "@/assets/creativecapability.png";
 import digitalcapability from "@/assets/digital capability.png";
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
 
 
 const serviceSubNav = [
@@ -242,6 +225,15 @@ const PACE = () => {
   const navigate = useNavigate();
   const trendingScrollRef = useRef<HTMLDivElement>(null);
   const { ref: whyRef, isInView: whyInView } = useScrollAnimation(0.1);
+
+   const { data: programGuides = [] } = useQuery({
+    queryKey: ["pace-program-guides"],
+    queryFn: async () => {
+      const { data, error } = await supabase.from("downloadable_documents").select("*").eq("service_page", "pace").eq("is_active", true).order("created_at", { ascending: false });
+      if (error) throw error;
+      return data;
+    },
+  });
 
   const scrollTrending = (dir: "left" | "right") => {
     if (trendingScrollRef.current) {
@@ -1048,9 +1040,13 @@ const PACE = () => {
               >
                 Schedule a Free Consultation <ChevronRight className="w-4 h-4" />
               </a>
-              <button className="border border-white/20 text-white px-8 py-4 font-semibold hover:border-cap-green/50 hover:bg-cap-green/5 transition-all rounded-md">
-                Download Programme Guide
-              </button>
+             {programGuides.length > 0 && (
+              <a href={programGuides[0].file_url} target="_blank" rel="noreferrer" 
+                  className="inline-flex items-center gap-2 border border-white/20 text-white px-8 py-4 font-semibold hover:border-cap-green/50 hover:bg-cap-green/5 transition-all rounded-md"
+                >
+                  <Download className="w-5 h-5" /> Download Program Guide
+                </a>
+              )}
             </motion.div>
           </div>
         </div>

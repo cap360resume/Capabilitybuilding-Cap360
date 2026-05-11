@@ -3,22 +3,8 @@ import Footer from "@/components/Footer";
 import SubNavbar from "@/components/SubNavbar";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import card1 from "@/assets/card-1.jpg";
 import {
-  BookOpen,
-  Award,
-  Laptop,
-  Users,
-  Lightbulb,
-  GraduationCap,
-  ChevronLeft,
-  ChevronRight,
-  CheckCircle2,
-  TrendingUp,
-  Target,
-  Zap,
-  Brain,
-  MessageSquare,
+  BookOpen, Award, Laptop, Users, Lightbulb, GraduationCap,ChevronRight,CheckCircle2,TrendingUp, Target, Zap, Brain, MessageSquare, Download,
 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useRef, useState } from "react";
@@ -28,6 +14,8 @@ import trending2 from "@/assets/trending-2.jpg";
 import trending3 from "@/assets/trending-3.jpg";
 import trending4 from "@/assets/trending-4.jpg";
 import ShivinderMandhotra from "@/assets/Shivinder.png";
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
 
 const serviceSubNav = [
   { label: "Overview", path: "#overview" },
@@ -231,6 +219,16 @@ const TCB = () => {
       });
     }
   };
+
+  const { data: programGuides = [] } = useQuery({
+    queryKey: ["tcb-program-guides"],
+    queryFn: async () => {
+      const { data, error } = await supabase.from("downloadable_documents").select("*").eq("service_page", "tcb").eq("is_active", true).order("created_at", { ascending: false });
+      if (error) throw error;
+      return data;
+    },
+  });
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -1101,9 +1099,12 @@ const TCB = () => {
               rel="noopener noreferrer" className="bg-cap-blue text-white px-8 py-4 font-semibold hover:bg-cap-blue/90 transition-all hover:shadow-lg rounded-md inline-flex items-center gap-2">
                 Start Your Journey <ChevronRight className="w-4 h-4" />
               </a>
-              <button className="border border-white/20 text-white px-8 py-4 font-semibold hover:border-cap-blue/50 hover:bg-cap-blue/5 transition-all rounded-md">
-                Download Program Guide
-              </button>
+             {programGuides.length > 0 && (
+              <a href={programGuides[0].file_url} target="_blank" rel="noreferrer" 
+              className="inline-flex items-center gap-2 border border-white/20 text-white px-8 py-4 font-semibold hover:border-cap-blue/50 hover:bg-cap-blue/5 transition-all rounded-md">
+                <Download className="w-5 h-5" /> Download Program Guide
+              </a>
+            )}
             </motion.div>
           </div>
         </div>

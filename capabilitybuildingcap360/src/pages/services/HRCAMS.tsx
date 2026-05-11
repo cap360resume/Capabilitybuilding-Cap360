@@ -5,21 +5,7 @@ import HRCAMSSubNavbar from "@/components/HRCAMSSubNavbar";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
-  Shield,
-  Settings,
-  Users,
-  BarChart3,
-  Building2,
-  Award,
-  ChevronLeft,
-  ChevronRight,
-  Check,
-  CheckCircle2,
-  TrendingUp,
-  Target,
-  Zap,
-  Brain,
-  MessageSquare,
+  Shield, Settings, Users, BarChart3, Building2, ChevronRight, CheckCircle2, TrendingUp, Target, Zap, Brain, Download,
 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useNavigate } from "react-router-dom";
@@ -32,6 +18,8 @@ import trending4 from "@/assets/trending-4.jpg";
 import card1 from "@/assets/card-1.jpg";
 import LabourLaw from "@/assets/labourlow.webp";
 import Performance from "@/assets/Performance.png";
+import { supabase } from "@/integrations/supabase/client";
+import { useQuery } from "@tanstack/react-query";
 
 const serviceSubNav = [
   { label: "What to do", path: "#services" },
@@ -98,7 +86,7 @@ const subServices = [
       "Architect agile organizational structures and workforce strategies that adapt to market dynamics and future business needs.",
     path: "/what-we-do/services/hrcams/org-design",
   },
-  
+
 ];
 
 const trendingInsights = [
@@ -224,6 +212,16 @@ const HRCAMS = () => {
       });
     }
   };
+
+   const { data: programGuides = [] } = useQuery({
+    queryKey: ["hrcams-program-guides"],
+    queryFn: async () => {
+      const { data, error } = await supabase.from("downloadable_documents").select("*").eq("service_page", "hrcams").eq("is_active", true).order("created_at", { ascending: false });
+      if (error) throw error;
+      return data;
+    },
+  });
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -368,7 +366,7 @@ const HRCAMS = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            HR Consulting, Advisory & Managed Services 
+            HR Consulting, Advisory & Managed Services
           </motion.h1>
           <motion.p
             className="text-[18px] md:text-[20px] text-muted-White leading-[1.6] max-w-2xl mb-8"
@@ -743,7 +741,6 @@ const HRCAMS = () => {
               excellence.
             </p>
           </motion.div>
-
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {gcCapabilities.map((capability, i) => (
@@ -1164,7 +1161,7 @@ const HRCAMS = () => {
                   Radhakrishnan K V
                 </h3>
                 <p className="text-cap-yellow font-semibold text-[14px] mb-6 uppercase tracking-wider">
-                 Co-Founder - CAP360
+                  Co-Founder - CAP360
                 </p>
                 <div className="space-y-6 mb-8">
                   <p className="text-[17px] text-muted-White leading-[1.8]">
@@ -1269,18 +1266,28 @@ const HRCAMS = () => {
                 Get Started
                 <ChevronRight className="w-4 h-4" />
               </a>
-
-              <button className="border border-white/20 text-white px-8 py-4 font-semibold hover:border-cap-yellow/50 hover:bg-cap-yellow/5 transition-all rounded-md">
-                Download Program Guide
-              </button>
-            </motion.div>
-          </div>
+              <div className="flex flex-col sm:flex-row gap-4 flex-shrink-0">
+             {programGuides.length > 0 && (
+              <a href={programGuides[0].file_url} target="_blank" rel="noreferrer"
+                  className="inline-flex items-center gap-2 border border-white/20 text-white px-8 py-4 font-semibold hover:border-cap-yellow/50 hover:bg-cap-yellow/5 transition-all rounded-md"
+                >
+                  <Download className="w-5 h-5" /> Download Program Guide
+                </a>
+              )}
+            </div>
+            
+             
+          
+              </motion.div>
         </div>
-      </section>
-
-      <Footer />
     </div>
+      </section >
+
+  <Footer />
+    </div >
   );
 };
 
 export default HRCAMS;
+
+
