@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AuthProvider } from "@/contexts/AuthContext";
 import ProtectedRoute from "@/components/admin/ProtectedRoute";
+import { useAnalytics } from "@/hooks/useAnalytics.ts";
 
 // Lazy-loaded pages
 const Index = lazy(() => import("./pages/Index.tsx"));
@@ -65,12 +66,18 @@ const ManageAdmins = lazy(() => import("./pages/admin/ManageAdmins.tsx"));
 const Documents = lazy(() => import("./pages/admin/Documents.tsx"));
 const queryClient = new QueryClient();
 
+const AnalyticsTracker = () => {
+  useAnalytics();
+  return null;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
+       <AnalyticsTracker />
         <AuthProvider>
           <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
             <Routes>
