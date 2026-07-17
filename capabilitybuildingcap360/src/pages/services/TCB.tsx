@@ -4,7 +4,7 @@ import SubNavbar from "@/components/SubNavbar";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import {
-  BookOpen, Award, Laptop, Users, Lightbulb, GraduationCap,ChevronRight,CheckCircle2,TrendingUp, Target, Zap, Brain, MessageSquare, Download,
+  BookOpen, Award, Laptop, Users, Lightbulb, GraduationCap, ChevronRight, CheckCircle2, TrendingUp, Target, Zap, Brain, MessageSquare, Download,
 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useRef, useState } from "react";
@@ -456,7 +456,7 @@ const TCB = () => {
               </div>
               <div className="border-l-2 border-cap-blue/40 pl-6">
                 <p className="text-[18px] text-muted-white leading-[1.8]">
-                 Our approach combines in-depth organizational assessments, customized solution design, and long-term capability building with measurable impact.
+                  Our approach combines in-depth organizational assessments, customized solution design, and long-term capability building with measurable impact.
                 </p>
               </div>
             </div>
@@ -466,7 +466,7 @@ const TCB = () => {
       </section>
 
       {/* ── Programs / Offerings - ACCENTURE MOSAIC GRID ──────────────────────── */}
-  {/* ── Programs / Offerings - ACCENTURE MOSAIC GRID ── */}
+      {/* ── Programs / Offerings - ACCENTURE MOSAIC GRID ── */}
       <section
         id="programs"
         className="py-24"
@@ -950,7 +950,7 @@ const TCB = () => {
             className="mb-16"
           >
             <h2 className="text-[32px] md:text-[42px] font-bold mb-2">
-             Meet Our Practice Lead
+              Meet Our Practice Lead
             </h2>
             <p className="text-[18px] text-muted-white">
               Decades of experience in corporate leadership combined with certified coaching
@@ -1094,17 +1094,17 @@ const TCB = () => {
               className="flex gap-4 flex-wrap"
             >
               <a
-              href="/contact"
-              target="_blank"
-              rel="noopener noreferrer" className="bg-cap-blue text-white px-8 py-4 font-semibold hover:bg-cap-blue/90 transition-all hover:shadow-lg rounded-md inline-flex items-center gap-2">
+                href="/contact"
+                target="_blank"
+                rel="noopener noreferrer" className="bg-cap-blue text-white px-8 py-4 font-semibold hover:bg-cap-blue/90 transition-all hover:shadow-lg rounded-md inline-flex items-center gap-2">
                 Start Your Journey <ChevronRight className="w-4 h-4" />
               </a>
-             {programGuides.length > 0 && (
-              <a href={programGuides[0].file_url} target="_blank" rel="noreferrer" 
-              className="inline-flex items-center gap-2 border border-white/20 text-white px-8 py-4 font-semibold hover:border-cap-blue/50 hover:bg-cap-blue/5 transition-all rounded-md">
-                <Download className="w-5 h-5" /> Download Program Guide
-              </a>
-            )}
+              {programGuides.length > 0 && (
+                <a href={programGuides[0].file_url} target="_blank" rel="noreferrer"
+                  className="inline-flex items-center gap-2 border border-white/20 text-white px-8 py-4 font-semibold hover:border-cap-blue/50 hover:bg-cap-blue/5 transition-all rounded-md">
+                  <Download className="w-5 h-5" /> Download Program Guide
+                </a>
+              )}
             </motion.div>
           </div>
         </div>
