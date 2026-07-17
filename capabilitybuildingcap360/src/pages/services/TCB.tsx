@@ -950,7 +950,7 @@ const TCB = () => {
             className="mb-16"
           >
             <h2 className="text-[32px] md:text-[42px] font-bold mb-2">
-             Meet Our Principal Practitioner
+             Meet Our Practice Lead
             </h2>
             <p className="text-[18px] text-muted-white">
               Decades of experience in corporate leadership combined with certified coaching
@@ -983,7 +983,7 @@ const TCB = () => {
                 </h3>
 
                 <p className="text-cap-blue font-semibold text-[14px] mb-6 uppercase tracking-wider">
-                  Principal Practitioner
+                  Practice Lead
                 </p>
 
                 <div className="space-y-6 mb-8">
