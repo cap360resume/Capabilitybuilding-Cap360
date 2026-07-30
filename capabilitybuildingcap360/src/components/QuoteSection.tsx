@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 // import ceoHeadshot from "@/assets/ceo-headshot.jpg";
-import  GSA from "@/assets/GSA-Website.png";
+import  HeadGsa from "@/assets/head-gsa.png";
 
 const QuoteSection = () => {
   const { ref, isInView } = useScrollAnimation();
@@ -18,7 +18,7 @@ const QuoteSection = () => {
           >
             <div className="relative">
               <img
-                src={GSA}
+                src={HeadGsa}
                 alt="CEO"
                 className="w-64 h-64 lg:w-80 lg:h-80 object-cover rounded-sm relative z-10"
                 loading="lazy"
