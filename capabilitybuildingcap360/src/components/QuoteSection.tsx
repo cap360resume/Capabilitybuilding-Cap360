@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 // import ceoHeadshot from "@/assets/ceo-headshot.jpg";
-import  HeadGsa from "@/assets/Head-gsa.png";
+import  HeadGsa from "@/assets/GSA-Website.png";
 
 const QuoteSection = () => {
   const { ref, isInView } = useScrollAnimation();

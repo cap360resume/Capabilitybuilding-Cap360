@@ -15,7 +15,7 @@ import trending1 from "@/assets/trending-1.jpg";
 import trending2 from "@/assets/trending-2.jpg";
 import trending3 from "@/assets/trending-3.jpg";
 import trending4 from "@/assets/trending-4.jpg";
-import card1 from "@/assets/card-1.jpg";
+import card1 from "@/assets/RK-Website.png";
 import LabourLaw from "@/assets/labourlow.webp";
 import Performance from "@/assets/Performance.png";
 import { supabase } from "@/integrations/supabase/client";
